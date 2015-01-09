@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="10090">
+	<onload condition="Window.Previous(home)">Skin.SetString(preplay_helper,home)</onload>
+	<onload condition="Window.Previous(videolibrary)">Skin.SetString(preplay_helper,videolibrary)</onload>
+	<onload condition="IsEmpty(Skin.String(dsp_helper)) + Container.PlexContent(Movie) + Skin.HasSetting(AutoShowExtras)">SetFocus(3)</onload>
+	<onunload>Skin.Reset(pp_helper)</onunload>
+	<defaultcontrol always="true">102</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		<control type="group">
+			<visible>IsEmpty(Skin.String(pp_helper))</visible>
+			<visible>Window.Previous(home) | Window.Previous(videolibrary)</visible>
+			<control type="button" id="102">
+				<onfocus>Plex.PlayWith(VideoDefaultPlayer)</onfocus>
+				<visible>Container.PlexContent(Movie) + [Skin.HasSetting(DisablePreplayMovie) | [Skin.HasSetting(DisablePreplayEmptyPlot) + IsEmpty(ListItem.Plot)]]</visible>
+			</control>
+			<control type="button" id="102">
+				<onfocus>Plex.PlayWith(VideoDefaultPlayer)</onfocus>
+				<visible>Container.Content(episode) + [Skin.HasSetting(DisablePreplayTV) | [Skin.HasSetting(DisablePreplayEmptyPlot) + IsEmpty(ListItem.Plot)]]</visible>
+			</control>
+			<control type="button" id="102">
+				<onfocus>Skin.SetString(preplay_helper_watched,1)</onfocus>
+				<onfocus>Plex.PlayWith(VideoDefaultPlayer)</onfocus>
+				<visible>Container.Content(episode) + Skin.HasSetting(DisablePreplayEmptyPlot) + Skin.HasSetting(HidePlotForUnwatched) + [ListItem.Status(InProgress) | ListItem.Status(UnWatched)]</visible>
+			</control>
+			<control type="button" id="102">
+				<onfocus>Plex.PlayWith(VideoDefaultPlayer)</onfocus>
+				<visible>Container.PlexContent(Clip) + [Skin.HasSetting(DisablePreplayClip) | [Skin.HasSetting(DisablePreplayEmptyPlot) + IsEmpty(ListItem.Plot)]]</visible>
+			</control>
+		</control>
+		<control type="group">
+			<visible>IsEmpty(Skin.String(pp_helper))</visible>
+			<visible>![ Window.Previous(home) | Window.Previous(videolibrary) ]</visible>
+			<control type="button" id="102">
+				<onfocus>ActivateWindow($INFO[Skin.String(preplay_helper)])</onfocus>
+				<visible>Container.PlexContent(Movie) + [Skin.HasSetting(DisablePreplayMovie) | [Skin.HasSetting(DisablePreplayEmptyPlot) + IsEmpty(ListItem.Plot)]]</visible>
+			</control>
+			<control type="button" id="102">
+				<onfocus>ActivateWindow($INFO[Skin.String(preplay_helper)])</onfocus>
+				<visible>Container.Content(episode) + [Skin.HasSetting(DisablePreplayTV) | [Skin.HasSetting(DisablePreplayEmptyPlot) + IsEmpty(ListItem.Plot)]]</visible>
+			</control>
+			<control type="button" id="102">
+				<onfocus>Skin.SetString(preplay_helper_watched,)</onfocus>
+				<onfocus>ActivateWindow($INFO[Skin.String(preplay_helper)])</onfocus>
+				<visible>Container.Content(episode) + Skin.HasSetting(DisablePreplayTV) | Container.Content(episode) + Skin.HasSetting(DisablePreplayEmptyPlot) + [Skin.HasSetting(HidePlotForUnwatched) + [ListItem.Status(InProgress) | ListItem.Status(UnWatched)]]</visible>
+			</control>
+			<control type="button" id="102">
+				<onfocus>Skin.SetString(preplay_helper_watched,)</onfocus>
+				<onfocus>ActivateWindow($INFO[Skin.String(preplay_helper)])</onfocus>
+				<visible>!IsEmpty(Skin.String(preplay_helper_watched))</visible>
+			</control>
+			<control type="button" id="102">
+				<onfocus>ActivateWindow($INFO[Skin.String(preplay_helper)])</onfocus>
+				<visible>Container.PlexContent(Clip) + [Skin.HasSetting(DisablePreplayClip) | [Skin.HasSetting(DisablePreplayEmptyPlot) + IsEmpty(ListItem.Plot)]]</visible>
+			</control>
+		</control>
+		<control type="group">
+			<include>BGFanart</include>
+			<visible>[ Container.Content(movie) + [Skin.HasSetting(DisablePreplayMovie) | [Skin.HasSetting(DisablePreplayEmptyPlot) + IsEmpty(ListItem.Plot)]] + !Window.Previous(fullscreenvideo) | Container.Content(episode) + [Skin.HasSetting(DisablePreplayTV) | [Skin.HasSetting(DisablePreplayEmptyPlot) + IsEmpty(ListItem.Plot)]] + !Window.Previous(fullscreenvideo) | Container.Content(clip) + [Skin.HasSetting(DisablePreplayClip) | [Skin.HasSetting(DisablePreplayEmptyPlot) + IsEmpty(ListItem.Plot)]] + !Window.Previous(fullscreenvideo) ] | Container.Content(episode) + Skin.HasSetting(DisablePreplayEmptyPlot) + !Window.Previous(fullscreenvideo) + [Skin.HasSetting(HidePlotForUnwatched) + [ListItem.Status(InProgress) | ListItem.Status(UnWatched)]]</visible>
+		</control>
+		<control type="group">
+			<include>PreplayMovie</include>
+			<visible>![ Container.Content(movie) + [Skin.HasSetting(DisablePreplayMovie) | [Skin.HasSetting(DisablePreplayEmptyPlot) + IsEmpty(ListItem.Plot)]]]</visible>
+		</control>
+		<control type="group">
+			<include>PreplayEpisode</include>
+			<visible>!IsEmpty(Skin.String(pp_helper)) | ![Container.Content(episode) + [Skin.HasSetting(DisablePreplayTV) | [Skin.HasSetting(DisablePreplayEmptyPlot) + IsEmpty(ListItem.Plot)]]]</visible>
+			<visible>!IsEmpty(Skin.String(pp_helper)) | ![Container.Content(episode) + Skin.HasSetting(DisablePreplayEmptyPlot) + [Skin.HasSetting(HidePlotForUnwatched) + [ListItem.Status(InProgress) | ListItem.Status(UnWatched)]]]</visible>
+		</control>
+		<control type="group">
+			<include>PreplayClip</include>
+			<visible>![Container.Content(clip) + [Skin.HasSetting(DisablePreplayClip) | [Skin.HasSetting(DisablePreplayEmptyPlot) + IsEmpty(ListItem.Plot)]]]</visible>
+		</control>
+		<control type="group">
+			<include>LeftSideMenuPreplay</include>
+			<visible>!IsEmpty(Skin.String(pp_helper)) | ![ Container.Content(movie) + [Skin.HasSetting(DisablePreplayMovie) | [Skin.HasSetting(DisablePreplayEmptyPlot) + IsEmpty(ListItem.Plot)]] | Container.Content(episode) + [Skin.HasSetting(DisablePreplayTV) | [Skin.HasSetting(DisablePreplayEmptyPlot) + IsEmpty(ListItem.Plot)]] | Container.Content(clip) + [Skin.HasSetting(DisablePreplayClip) | [Skin.HasSetting(DisablePreplayEmptyPlot) + IsEmpty(ListItem.Plot)]] ]</visible>
+			<visible>!IsEmpty(Skin.String(pp_helper)) | ![Container.Content(episode) + Skin.HasSetting(DisablePreplayEmptyPlot) + [Skin.HasSetting(HidePlotForUnwatched) + [ListItem.Status(InProgress) | ListItem.Status(UnWatched)]]]</visible>
+		</control>
+		<include>viewtype_nowplaying_right</include>
+		<include>debugInfos</include>
+		<include>Grid</include>
+		<include>FadeQuickPP</include>
+		<include>Non16x9Cache</include>
+	</controls>
+</window>

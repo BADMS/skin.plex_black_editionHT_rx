@@ -1,0 +1,1635 @@
+<?xml version="1.0"?>
+<includes>
+	<variable name="FontHomeMenu">
+		<value condition="!Skin.HasSetting(BiggerFontMenu1) + !Skin.HasSetting(BiggerFontMenu2) + !Skin.HasSetting(BiggerFontMenu3)">22</value>
+		<!--normal-->
+		<value condition="Skin.HasSetting(BiggerFontMenu1)">32</value>
+		<!-- small -->
+		<value condition="Skin.HasSetting(BiggerFontMenu2)">42</value>
+		<!-- medium -->
+		<value condition="Skin.HasSetting(BiggerFontMenu3)">52</value>
+		<!-- biggest -->
+	</variable>
+	<include name="Objects_OSDButton">
+		<width>42</width>
+		<height>22</height>
+		<!--<texturefocus>candy/osd_button_focus.png</texturefocus>
+		<texturenofocus>candy/osd_button_nofocus.png</texturenofocus>-->
+	</include>
+	<include name="Objects_OSDButtonTop">
+		<width>42</width>
+		<height>22</height>
+	</include>
+	<include name="Objects_OSDSeekForward">
+		<posx>470</posx>
+		<posy>0</posy>
+		<width>499</width>
+		<height>28</height>
+		<aligny>center</aligny>
+		<align>right</align>
+		<font>font12</font>
+		<textcolor>FF363636</textcolor>
+		<include>Animation_CommonFade</include>
+	</include>
+	<include name="Objects_OSDSeekReverse">
+		<posx>29</posx>
+		<posy>0</posy>
+		<width>499</width>
+		<height>28</height>
+		<aligny>center</aligny>
+		<align>left</align>
+		<font>font12</font>
+		<textcolor>FF363636</textcolor>
+		<include>Animation_CommonFade</include>
+	</include>
+	<include name="MediaViewFade">
+		<animation effect="fade" start="0" end="100" time="500" delay="0">WindowOpen</animation>
+		<animation effect="fade" start="100" end="0" time="200" delay="0">WindowClose</animation>
+		<animation effect="fade" start="0" end="100" time="500" delay="0">Visible</animation>
+		<animation effect="fade" start="100" end="0" time="200" delay="0">Hidden</animation>
+	</include>
+	<include name="nextViewmodeRight">
+		<onright>Container.NextViewMode</onright>
+	</include>
+	<include name="nextViewmodeUp">
+		<onup>Container.NextViewMode</onup>
+	</include>
+	<include name="HomeListHeight">
+		<height>228</height>
+	</include>
+	<include name="HomeListHeightBig">
+		<height>262</height>
+	</include>
+	<include name="HomeListRecentlyAddedHeaderPosY">
+		<posy>-159</posy>
+	</include>
+	<include name="HomeListRecentlyAddedHeaderPosYBig">
+		<posy>-195</posy>
+	</include>
+	<include name="HomeListRecentlyAddedThumbPosY">
+		<posy>36</posy>
+	</include>
+	<include name="HomeListRecentlyAddedThumbPosYBig">
+		<posy>0</posy>
+	</include>
+	<include name="HomeBGPosx">
+		<posx>230</posx>
+	</include>
+	<include name="HomeBGPosxBigger">
+		<posx>280</posx>
+	</include>
+	<include name="HomeBGPosxBigger3">
+		<posx>330</posx>
+	</include>
+	<include name="HomeMenuListPosx">
+		<posx>238</posx>
+	</include>
+	<include name="HomeMenuListPosxBigger">
+		<posx>288</posx>
+	</include>
+	<include name="HomeMenuListPosxBigger3">
+		<posx>338</posx>
+	</include>
+	<include name="HomeMenuListPosxClassicHome">
+		<posx>249</posx>
+	</include>
+	<include name="HomeMenuListPosxBiggerClassicHome">
+		<posx>299</posx>
+	</include>
+	<include name="HomeMenuListPosxBigger3ClassicHome">
+		<posx>349</posx>
+	</include>
+	<include name="HomeMenuWidth">
+		<width>230</width>
+	</include>
+	<include name="HomeMenuWidthBigger">
+		<width>280</width>
+	</include>
+	<include name="HomeMenuWidthBigger3">
+		<width>330</width>
+	</include>
+	<include name="HomeMenuLabelWidth">
+		<width>165</width>
+	</include>
+	<include name="HomeMenuLabelWidthBigger">
+		<width>215</width>
+	</include>
+	<include name="HomeMenuLabelWidthBigger3">
+		<width>245</width>
+	</include>
+	<include name="HomeMenuLabelFontDefault">
+		<font>homeMenuSmall</font>
+		<!-- focused -->
+		<height>20</height>
+	</include>
+	<include name="HomeMenuLabelFont">
+		<font>homeMenu</font>
+		<!-- focused -->
+		<height>30</height>
+	</include>
+	<include name="HomeMenuLabelFontBigger">
+		<font>homeMenuBig</font>
+		<!-- focused -->
+		<height>40</height>
+	</include>
+	<include name="HomeMenuLabelFontBigger3">
+		<font>homeMenuBig3</font>
+		<!-- focused -->
+		<height>50</height>
+	</include>
+	<include name="BGMultiRoll">
+		<control type="multiimage">
+			<width>1280</width>
+			<height>720</height>
+			<imagepath>bgmultiroll</imagepath>
+			<visible>Skin.HasSetting(CerberosSmoke)</visible>
+		</control>
+	</include>
+	<include name="BiggerHomeMenuAnalogWatchPosx">
+		<posx>25</posx>
+	</include>
+	<include name="BiggerHomeMenu3AnalogWatchPosx">
+		<posx>50</posx>
+	</include>
+	<include name="HomeMenuPosy">
+		<posy>78</posy>
+	</include>
+	<include name="HomeMenuPosyHideHeader">
+		<posy>35</posy>
+	</include>
+	<include name="HomeMenuHeight">
+		<height>610</height>
+	</include>
+	<include name="HomeMenuHeightAnalogWatch">
+		<height>520</height>
+	</include>
+	<include name="sectionTitle">
+		<font>Regular-24</font>
+		<textcolor>white</textcolor>
+	</include>
+	<include name="sectionTitleMiddle">
+		<font>Regular-30</font>
+		<textcolor>white</textcolor>
+	</include>
+	<include name="sectionTitleBig">
+		<font>Regular-36</font>
+		<textcolor>white</textcolor>
+	</include>
+	<include name="sectionSupTitle">
+		<font>smallCaps</font>
+		<textcolor>title2</textcolor>
+	</include>
+	<include name="StarRatingOverlay">
+		<control type="image">
+			<width>21</width>
+			<height>21</height>
+			<texture>star.png</texture>
+			<visible>!IsEmpty(ListItem.Property(Rating))</visible>
+			<colordiffuse>title2</colordiffuse>
+		</control>
+		<control type="label">
+			<posx>25</posx>
+			<posy>2</posy>
+			<width>40</width>
+			<height>18</height>
+			<font>Regular-18</font>
+			<aligny>center</aligny>
+			<label>$INFO[ListItem.Property(Rating)]</label>
+			<textcolor>title2</textcolor>
+			<visible>!IsEmpty(ListItem.Property(Rating))</visible>
+		</control>
+	</include>
+	<include name="Home_EpisodeInfo">
+		<control type="image">
+			<posx>6</posx>
+			<posy>156</posy>
+			<width>118</width>
+			<height>19</height>
+			<texture>home/imdbBackground.png</texture>
+		</control>
+		<control type="label">
+			<posx>10</posx>
+			<posy>153</posy>
+			<align>left</align>
+			<scroll>false</scroll>
+			<label>S $INFO[ListItem.Season] [COLOR=orange]&#xB7;[/COLOR] E $INFO[ListItem.Episode]</label>
+			<font>HomeOverlay</font>
+			<wrapmultiline>false</wrapmultiline>
+			<visible>![IsEmpty(ListItem.Season) | IsEmpty(ListItem.Episode)]</visible>
+			<animation effect="fade" start="0" end="80" time="400" condition="true">Conditional</animation>
+		</control>
+	</include>
+	<include name="ViewmodeHeader">
+		<control type="group">
+			<posx>399</posx>
+			<posy>80</posy>
+			<visible>ControlGroup(1300).HasFocus() | ControlGroup(998).HasFocus() | ControlGroup(1500).HasFocus()</visible>
+			<animation effect="zoom" start="20" end="100" time="500" delay="0" center="-100,-100" condition="ControlGroup(1300).HasFocus() | ControlGroup(998).HasFocus() |ControlGroup(1500).HasFocus()">Conditional</animation>
+			<control type="image">
+				<posy>5</posy>
+				<posx>1</posx>
+				<width>52</width>
+				<height>46</height>
+				<aspectratio aligny="top">stretch</aspectratio>
+				<texture background="true">b-nextviewmode.png</texture>
+			</control>
+			<control type="label">
+				<posx>55</posx>
+				<posy>25</posy>
+				<aligny>center</aligny>
+				<font>pagelabel</font>
+				<textcolor>white</textcolor>
+				<shadowcolor>FF444444</shadowcolor>
+				<align>left</align>
+				<label>$INFO[Container.Viewmode]</label>
+			</control>
+			<control type="label">
+				<posx>801</posx>
+				<posy>25</posy>
+				<aligny>center</aligny>
+				<font>pagelabel</font>
+				<textcolor>white</textcolor>
+				<shadowcolor>FF444444</shadowcolor>
+				<align>right</align>
+				<width>300</width>
+				<label>$INFO[Container.NumItems] Items</label>
+			</control>
+		</control>
+	</include>
+	<!-- Clock -->
+	<variable name="clockSZ">
+		<value condition="system.time(06:00,06:15)">clock/clockSZ06.png</value>
+		<value condition="system.time(06:15,06:30)">clock/clockSZ0615.png</value>
+		<value condition="system.time(06:30,06:45)">clock/clockSZ0630.png</value>
+		<value condition="system.time(06:45,07:00)">clock/clockSZ0645.png</value>
+		<value condition="system.time(07:00,07:15)">clock/clockSZ07.png</value>
+		<value condition="system.time(07:15,07:30)">clock/clockSZ0715.png</value>
+		<value condition="system.time(07:30,07:45)">clock/clockSZ0730.png</value>
+		<value condition="system.time(07:45,08:00)">clock/clockSZ0745.png</value>
+		<value condition="system.time(08:00,08:15)">clock/clockSZ08.png</value>
+		<value condition="system.time(08:15,08:30)">clock/clockSZ0815.png</value>
+		<value condition="system.time(08:30,08:45)">clock/clockSZ0830.png</value>
+		<value condition="system.time(08:45,09:00)">clock/clockSZ0845.png</value>
+		<value condition="system.time(09:00,09:15)">clock/clockSZ09.png</value>
+		<value condition="system.time(09:15,09:30)">clock/clockSZ0915.png</value>
+		<value condition="system.time(09:30,09:45)">clock/clockSZ0930.png</value>
+		<value condition="system.time(09:45,10:00)">clock/clockSZ0945.png</value>
+		<value condition="system.time(10:00,10:15)">clock/clockSZ10.png</value>
+		<value condition="system.time(10:15,10:30)">clock/clockSZ1015.png</value>
+		<value condition="system.time(10:30,10:45)">clock/clockSZ1030.png</value>
+		<value condition="system.time(10:45,11:00)">clock/clockSZ1045.png</value>
+		<value condition="system.time(11:00,11:15)">clock/clockSZ11.png</value>
+		<value condition="system.time(11:15,11:30)">clock/clockSZ1115.png</value>
+		<value condition="system.time(11:30,11:45)">clock/clockSZ1130.png</value>
+		<value condition="system.time(11:45,12:00)">clock/clockSZ1145.png</value>
+		<value condition="system.time(12:00,12:15)">clock/clockSZ12.png</value>
+		<value condition="system.time(12:15,12:30)">clock/clockSZ1215.png</value>
+		<value condition="system.time(12:30,12:45)">clock/clockSZ1230.png</value>
+		<value condition="system.time(12:45,13:00)">clock/clockSZ1245.png</value>
+		<value condition="system.time(13:00,13:15)">clock/clockSZ01.png</value>
+		<value condition="system.time(13:15,13:30)">clock/clockSZ0115.png</value>
+		<value condition="system.time(13:30,13:45)">clock/clockSZ0130.png</value>
+		<value condition="system.time(13:45,14:00)">clock/clockSZ0145.png</value>
+		<value condition="system.time(14:00,14:15)">clock/clockSZ02.png</value>
+		<value condition="system.time(14:15,14:30)">clock/clockSZ0215.png</value>
+		<value condition="system.time(14:30,14:45)">clock/clockSZ0230.png</value>
+		<value condition="system.time(14:45,15:00)">clock/clockSZ0245.png</value>
+		<value condition="system.time(15:00,15:15)">clock/clockSZ03.png</value>
+		<value condition="system.time(15:15,15:30)">clock/clockSZ0315.png</value>
+		<value condition="system.time(15:30,15:45)">clock/clockSZ0330.png</value>
+		<value condition="system.time(15:45,16:00)">clock/clockSZ0345.png</value>
+		<value condition="system.time(16:00,16:15)">clock/clockSZ04.png</value>
+		<value condition="system.time(16:15,16:30)">clock/clockSZ0415.png</value>
+		<value condition="system.time(16:30,16:45)">clock/clockSZ0430.png</value>
+		<value condition="system.time(16:45,17:00)">clock/clockSZ0445.png</value>
+		<value condition="system.time(17:00,17:15)">clock/clockSZ05.png</value>
+		<value condition="system.time(17:15,17:30)">clock/clockSZ0515.png</value>
+		<value condition="system.time(17:30,17:45)">clock/clockSZ0530.png</value>
+		<value condition="system.time(17:45,18:00)">clock/clockSZ0545.png</value>
+		<value condition="system.time(18:00,18:15)">clock/clockSZ06.png</value>
+		<value condition="system.time(18:15,18:30)">clock/clockSZ0615.png</value>
+		<value condition="system.time(18:30,18:45)">clock/clockSZ0630.png</value>
+		<value condition="system.time(18:45,19:00)">clock/clockSZ0645.png</value>
+		<value condition="system.time(19:00,19:15)">clock/clockSZ07.png</value>
+		<value condition="system.time(19:15,19:30)">clock/clockSZ0715.png</value>
+		<value condition="system.time(19:30,19:45)">clock/clockSZ0730.png</value>
+		<value condition="system.time(19:45,20:00)">clock/clockSZ0745.png</value>
+		<value condition="system.time(20:00,20:15)">clock/clockSZ08.png</value>
+		<value condition="system.time(20:15,20:30)">clock/clockSZ0815.png</value>
+		<value condition="system.time(20:30,20:45)">clock/clockSZ0830.png</value>
+		<value condition="system.time(20:45,21:00)">clock/clockSZ0845.png</value>
+		<value condition="system.time(21:00,21:15)">clock/clockSZ09.png</value>
+		<value condition="system.time(21:15,21:30)">clock/clockSZ0915.png</value>
+		<value condition="system.time(21:30,21:45)">clock/clockSZ0930.png</value>
+		<value condition="system.time(21:45,22:00)">clock/clockSZ0945.png</value>
+		<value condition="system.time(22:00,22:15)">clock/clockSZ10.png</value>
+		<value condition="system.time(22:15,22:30)">clock/clockSZ1015.png</value>
+		<value condition="system.time(22:30,22:45)">clock/clockSZ1030.png</value>
+		<value condition="system.time(22:45,23:00)">clock/clockSZ1045.png</value>
+		<value condition="system.time(23:00,23:15)">clock/clockSZ11.png</value>
+		<value condition="system.time(23:15,23:30)">clock/clockSZ1115.png</value>
+		<value condition="system.time(23:30,23:45)">clock/clockSZ1130.png</value>
+		<value condition="system.time(23:45,00:00)">clock/clockSZ1145.png</value>
+		<value condition="system.time(00:00,00:15)">clock/clockSZ12.png</value>
+		<value condition="system.time(00:15,00:30)">clock/clockSZ1215.png</value>
+		<value condition="system.time(00:30,00:45)">clock/clockSZ1230.png</value>
+		<value condition="system.time(00:45,01:00)">clock/clockSZ1245.png</value>
+		<value condition="system.time(01:00,01:15)">clock/clockSZ01.png</value>
+		<value condition="system.time(01:15,01:30)">clock/clockSZ0115.png</value>
+		<value condition="system.time(01:30,01:45)">clock/clockSZ0130.png</value>
+		<value condition="system.time(01:45,02:00)">clock/clockSZ0145.png</value>
+		<value condition="system.time(02:00,02:15)">clock/clockSZ02.png</value>
+		<value condition="system.time(02:15,02:30)">clock/clockSZ0215.png</value>
+		<value condition="system.time(02:30,02:45)">clock/clockSZ0230.png</value>
+		<value condition="system.time(02:45,03:00)">clock/clockSZ0245.png</value>
+		<value condition="system.time(03:00,03:15)">clock/clockSZ03.png</value>
+		<value condition="system.time(03:15,03:30)">clock/clockSZ0315.png</value>
+		<value condition="system.time(03:30,03:45)">clock/clockSZ0330.png</value>
+		<value condition="system.time(03:45,04:00)">clock/clockSZ0345.png</value>
+		<value condition="system.time(04:00,04:15)">clock/clockSZ04.png</value>
+		<value condition="system.time(04:15,04:30)">clock/clockSZ0415.png</value>
+		<value condition="system.time(04:30,04:45)">clock/clockSZ0430.png</value>
+		<value condition="system.time(04:45,05:00)">clock/clockSZ0445.png</value>
+		<value condition="system.time(05:00,05:15)">clock/clockSZ05.png</value>
+		<value condition="system.time(05:15,05:30)">clock/clockSZ0515.png</value>
+		<value condition="system.time(05:30,05:45)">clock/clockSZ0530.png</value>
+		<value condition="system.time(05:45,06:00)">clock/clockSZ0545.png</value>
+	</variable>
+	<variable name="clockMZ">
+		<value condition="SubString(System.Time(mm),01)">clock/clockMZ01.png</value>
+		<value condition="SubString(System.Time(mm),02)">clock/clockMZ02.png</value>
+		<value condition="SubString(System.Time(mm),03)">clock/clockMZ03.png</value>
+		<value condition="SubString(System.Time(mm),04)">clock/clockMZ04.png</value>
+		<value condition="SubString(System.Time(mm),05)">clock/clockMZ05.png</value>
+		<value condition="SubString(System.Time(mm),06)">clock/clockMZ06.png</value>
+		<value condition="SubString(System.Time(mm),07)">clock/clockMZ07.png</value>
+		<value condition="SubString(System.Time(mm),08)">clock/clockMZ08.png</value>
+		<value condition="SubString(System.Time(mm),09)">clock/clockMZ09.png</value>
+		<value condition="SubString(System.Time(mm),10)">clock/clockMZ10.png</value>
+		<value condition="SubString(System.Time(mm),11)">clock/clockMZ11.png</value>
+		<value condition="SubString(System.Time(mm),12)">clock/clockMZ12.png</value>
+		<value condition="SubString(System.Time(mm),13)">clock/clockMZ13.png</value>
+		<value condition="SubString(System.Time(mm),14)">clock/clockMZ14.png</value>
+		<value condition="SubString(System.Time(mm),15)">clock/clockMZ15.png</value>
+		<value condition="SubString(System.Time(mm),16)">clock/clockMZ16.png</value>
+		<value condition="SubString(System.Time(mm),17)">clock/clockMZ17.png</value>
+		<value condition="SubString(System.Time(mm),18)">clock/clockMZ18.png</value>
+		<value condition="SubString(System.Time(mm),19)">clock/clockMZ19.png</value>
+		<value condition="SubString(System.Time(mm),20)">clock/clockMZ20.png</value>
+		<value condition="SubString(System.Time(mm),21)">clock/clockMZ21.png</value>
+		<value condition="SubString(System.Time(mm),22)">clock/clockMZ22.png</value>
+		<value condition="SubString(System.Time(mm),23)">clock/clockMZ23.png</value>
+		<value condition="SubString(System.Time(mm),24)">clock/clockMZ24.png</value>
+		<value condition="SubString(System.Time(mm),25)">clock/clockMZ25.png</value>
+		<value condition="SubString(System.Time(mm),26)">clock/clockMZ26.png</value>
+		<value condition="SubString(System.Time(mm),27)">clock/clockMZ27.png</value>
+		<value condition="SubString(System.Time(mm),28)">clock/clockMZ28.png</value>
+		<value condition="SubString(System.Time(mm),29)">clock/clockMZ29.png</value>
+		<value condition="SubString(System.Time(mm),30)">clock/clockMZ30.png</value>
+		<value condition="SubString(System.Time(mm),31)">clock/clockMZ31.png</value>
+		<value condition="SubString(System.Time(mm),32)">clock/clockMZ32.png</value>
+		<value condition="SubString(System.Time(mm),33)">clock/clockMZ33.png</value>
+		<value condition="SubString(System.Time(mm),34)">clock/clockMZ34.png</value>
+		<value condition="SubString(System.Time(mm),35)">clock/clockMZ35.png</value>
+		<value condition="SubString(System.Time(mm),36)">clock/clockMZ36.png</value>
+		<value condition="SubString(System.Time(mm),37)">clock/clockMZ37.png</value>
+		<value condition="SubString(System.Time(mm),38)">clock/clockMZ38.png</value>
+		<value condition="SubString(System.Time(mm),39)">clock/clockMZ39.png</value>
+		<value condition="SubString(System.Time(mm),40)">clock/clockMZ40.png</value>
+		<value condition="SubString(System.Time(mm),41)">clock/clockMZ41.png</value>
+		<value condition="SubString(System.Time(mm),42)">clock/clockMZ42.png</value>
+		<value condition="SubString(System.Time(mm),43)">clock/clockMZ43.png</value>
+		<value condition="SubString(System.Time(mm),44)">clock/clockMZ44.png</value>
+		<value condition="SubString(System.Time(mm),45)">clock/clockMZ45.png</value>
+		<value condition="SubString(System.Time(mm),46)">clock/clockMZ46.png</value>
+		<value condition="SubString(System.Time(mm),47)">clock/clockMZ47.png</value>
+		<value condition="SubString(System.Time(mm),48)">clock/clockMZ48.png</value>
+		<value condition="SubString(System.Time(mm),49)">clock/clockMZ49.png</value>
+		<value condition="SubString(System.Time(mm),50)">clock/clockMZ50.png</value>
+		<value condition="SubString(System.Time(mm),51)">clock/clockMZ51.png</value>
+		<value condition="SubString(System.Time(mm),52)">clock/clockMZ52.png</value>
+		<value condition="SubString(System.Time(mm),53)">clock/clockMZ53.png</value>
+		<value condition="SubString(System.Time(mm),54)">clock/clockMZ54.png</value>
+		<value condition="SubString(System.Time(mm),55)">clock/clockMZ55.png</value>
+		<value condition="SubString(System.Time(mm),56)">clock/clockMZ56.png</value>
+		<value condition="SubString(System.Time(mm),57)">clock/clockMZ57.png</value>
+		<value condition="SubString(System.Time(mm),58)">clock/clockMZ58.png</value>
+		<value condition="SubString(System.Time(mm),59)">clock/clockMZ59.png</value>
+		<value condition="SubString(System.Time(mm),00)">clock/clockMZ60.png</value>
+	</variable>
+	<include name="analog_clock">
+		<!-- clock -->
+		<control type="group">
+			<include condition="Skin.HasSetting(BiggerHomeMenu)">BiggerHomeMenuAnalogWatchPosx</include>
+			<include condition="Skin.HasSetting(BiggerHomeMenu3)">BiggerHomeMenu3AnalogWatchPosx</include>
+			<control type="group">
+				<posx>25</posx>
+				<posy>560</posy>
+				<animation effect="fade" start="100" end="0" time="500" condition="ControlGroup(5000).HasFocus">Conditional</animation>
+				<control type="image">
+					<posx>19</posx>
+					<posy>19</posy>
+					<width>142</width>
+					<height>142</height>
+					<texture>clock/clock_transparent.png</texture>
+					<align>center</align>
+					<aligny>center</aligny>
+				</control>
+				<control type="label">
+					<posx>19</posx>
+					<posy>103</posy>
+					<width>142</width>
+					<height>20</height>
+					<align>center</align>
+					<aligny>bottom</aligny>
+					<label>PLEX</label>
+					<font>watch</font>
+					<textcolor>title2</textcolor>
+					<animation effect="fade" start="70" end="70" time="0" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<posx>5</posx>
+					<posy>5</posy>
+					<width>170</width>
+					<height>170</height>
+					<texture>$VAR[clockSZ]</texture>
+					<align>center</align>
+					<aligny>center</aligny>
+					<colordiffuse>title2</colordiffuse>
+				</control>
+				<control type="image">
+					<posx>5</posx>
+					<posy>5</posy>
+					<width>170</width>
+					<height>170</height>
+					<texture>$VAR[clockMZ]</texture>
+					<align>center</align>
+					<aligny>center</aligny>
+					<colordiffuse>title2</colordiffuse>
+				</control>
+			</control>
+		</control>
+	</include>
+	<include name="custom_radiobutton">
+		<width>310</width>
+		<height>40</height>
+		<textoffsetx>10</textoffsetx>
+		<texturenofocus/>
+	</include>
+	<include name="LeftSideCustomSkinSettings">
+		<control type="group">
+			<animation effect="slide" start="0" end="960" time="500" condition="ControlGroup(1500).HasFocus()">Conditional</animation>
+			<animation effect="slide" start="0" end="-647" time="500">WindowClose</animation>
+			<control type="group">
+				<!-- Background -->
+				<control type="image">
+					<posx>-647</posx>
+					<height>720</height>
+					<width>327</width>
+					<aspectratio aligny="top">stretch</aspectratio>
+					<texture>backgrounds/background_black3.png</texture>
+					<animation effect="fade" start="0" end="61" time="0" condition="!Skin.HasSetting(DarkerBG)+!Skin.HasSetting(BrighterBG)">Conditional</animation>
+					<animation effect="fade" start="0" end="81" time="0" condition="Skin.HasSetting(DarkerBG)">Conditional</animation>
+					<animation effect="fade" start="0" end="45" time="0" condition="Skin.HasSetting(BrighterBG)">Conditional</animation>
+				</control>
+				<control type="image">
+					<posx>-647</posx>
+					<height>720</height>
+					<width>327</width>
+					<aspectratio aligny="top">stretch</aspectratio>
+					<texture background="true">bg_left.png</texture>
+				</control>
+			</control>
+			<control type="label">
+				<posy>30</posy>
+				<posx>-647</posx>
+				<width>320</width>
+				<height>40</height>
+				<align>center</align>
+				<textcolor>FFCCCCCC</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<font>Regular-26</font>
+				<label>[UPPERCASE]Skin Settings[/UPPERCASE]</label>
+				<!-->
+				<label>$LOCALIZE[31018]</label>-->
+		</control>
+		<control type="grouplist" id="1500">
+			<posx>-635</posx>
+			<posy>80</posy>
+			<width>320</width>
+			<height>660</height>
+			<!--<onright>Dialog.Close(1150)</onright>-->
+			<onup>1500</onup>
+			<ondown>1500</ondown>
+			<onright>Control.SetFocus(998)</onright>
+			<onleft>Control.SetFocus(998)</onleft>
+			<scrolltime>200</scrolltime>
+			<itemgap>0</itemgap>
+			<control type="radiobutton" id="1502">
+				<visible>Skin.String(ViewmodeID,560) | Skin.String(ViewmodeID,554)</visible>
+				<include>custom_radiobutton</include>
+				<label>Background Dim 0% (default)</label>
+				<onclick>Skin.SetString($INFO[Skin.String(ViewmodeID)]_Dim,0)</onclick>
+				<onclick>Skin.SetString(SelectedDim,0)</onclick>
+				<selected>Skin.String(SelectedDim,0) | IsEmpty(Skin.String(SelectedDim))</selected>
+			</control>
+			<control type="radiobutton" id="1503">
+				<include>custom_radiobutton</include>
+				<label>Background Dim 10%</label>
+				<onclick>Skin.SetString($INFO[Skin.String(ViewmodeID)]_Dim,10)</onclick>
+				<onclick>Skin.SetString(SelectedDim,10)</onclick>
+				<selected>Skin.String(SelectedDim,10)</selected>
+			</control>
+			<control type="radiobutton" id="1504">
+				<include>custom_radiobutton</include>
+				<label>Background Dim 20%</label>
+				<onclick>Skin.SetString($INFO[Skin.String(ViewmodeID)]_Dim,20)</onclick>
+				<onclick>Skin.SetString(SelectedDim,20)</onclick>
+				<selected>Skin.String(SelectedDim,20)</selected>
+			</control>
+			<control type="radiobutton" id="1505">
+				<include>custom_radiobutton</include>
+				<label>Background Dim 30%</label>
+				<onclick>Skin.SetString($INFO[Skin.String(ViewmodeID)]_Dim,30)</onclick>
+				<onclick>Skin.SetString(SelectedDim,30)</onclick>
+				<selected>Skin.String(SelectedDim,30)</selected>
+			</control>
+			<control type="radiobutton" id="1506">
+				<include>custom_radiobutton</include>
+				<label>Background Dim 40%</label>
+				<onclick>Skin.SetString($INFO[Skin.String(ViewmodeID)]_Dim,40)</onclick>
+				<onclick>Skin.SetString(SelectedDim,40)</onclick>
+				<selected>Skin.String(SelectedDim,40)</selected>
+			</control>
+			<control type="radiobutton" id="1507">
+				<include>custom_radiobutton</include>
+				<label>Background Dim 50%</label>
+				<onclick>Skin.SetString($INFO[Skin.String(ViewmodeID)]_Dim,50)</onclick>
+				<onclick>Skin.SetString(SelectedDim,50)</onclick>
+				<selected>Skin.String(SelectedDim,50)</selected>
+			</control>
+			<control type="radiobutton" id="1508">
+				<visible>!Skin.String(ViewmodeID,560)+!Skin.String(ViewmodeID,554)</visible>
+				<include>custom_radiobutton</include>
+				<label>Background Dim 60% (default)</label>
+				<onclick>Skin.SetString($INFO[Skin.String(ViewmodeID)]_Dim,60)</onclick>
+				<onclick>Skin.SetString(SelectedDim,60)</onclick>
+				<selected>Skin.String(SelectedDim,60) | IsEmpty(Skin.String(SelectedDim))</selected>
+			</control>
+			<control type="radiobutton" id="1509">
+				<visible>Skin.String(ViewmodeID,560)|Skin.String(ViewmodeID,554)</visible>
+				<include>custom_radiobutton</include>
+				<label>Background Dim 60%</label>
+				<onclick>Skin.SetString($INFO[Skin.String(ViewmodeID)]_Dim,60)</onclick>
+				<onclick>Skin.SetString(SelectedDim,60)</onclick>
+				<selected>Skin.String(SelectedDim,60)</selected>
+			</control>
+			<control type="radiobutton" id="1510">
+				<include>custom_radiobutton</include>
+				<label>Background Dim 70%</label>
+				<onclick>Skin.SetString($INFO[Skin.String(ViewmodeID)]_Dim,70)</onclick>
+				<onclick>Skin.SetString(SelectedDim,70)</onclick>
+				<selected>Skin.String(SelectedDim,70)</selected>
+			</control>
+			<control type="radiobutton" id="1511">
+				<include>custom_radiobutton</include>
+				<label>Background Dim 80%</label>
+				<onclick>Skin.SetString($INFO[Skin.String(ViewmodeID)]_Dim,80)</onclick>
+				<onclick>Skin.SetString(SelectedDim,80)</onclick>
+				<selected>Skin.String(SelectedDim,80)</selected>
+			</control>
+			<control type="radiobutton" id="1512">
+				<include>custom_radiobutton</include>
+				<label>Background Dim 90%</label>
+				<onclick>Skin.SetString($INFO[Skin.String(ViewmodeID)]_Dim,90)</onclick>
+				<onclick>Skin.SetString(SelectedDim,90)</onclick>
+				<selected>Skin.String(SelectedDim,90)</selected>
+			</control>
+			<control type="radiobutton" id="1513">
+				<visible>Skin.String(ViewmodeID,555) | Skin.String(ViewmodeID,556)</visible>
+				<include>custom_radiobutton</include>
+				<label>Hide Fanart</label>
+				<onclick>Skin.SetString($INFO[Skin.String(ViewmodeID)]_Dim,100)</onclick>
+				<onclick>Skin.SetString(SelectedDim,100)</onclick>
+				<selected>Skin.String(SelectedDim,100)</selected>
+			</control>
+			<control type="radiobutton" id="1514">
+				<visible>![Skin.String(ViewmodeID,555) | Skin.String(ViewmodeID,556)]</visible>
+				<include>custom_radiobutton</include>
+				<label>Hide Fanart</label>
+				<onclick>Skin.SetString($INFO[Skin.String(ViewmodeID)]_Dim,100)</onclick>
+				<onclick>Skin.SetString(SelectedDim,100)</onclick>
+				<selected>Skin.String(SelectedDim,100)</selected>
+			</control>
+		</control>
+	</control>
+</include>
+<!-- MovieTVPosterDescription -->
+<include name="MovieTVPosterDescriptionPlot">
+	<!--Plot-->
+	<control type="textbox" id="111">
+		<posx>145</posx>
+		<posy>40</posy>
+		<width>230</width>
+		<height>128</height>
+		<label>$INFO[ListItem.Property(summary)]</label>
+		<font>Regular-16</font>
+		<textcolor>title2</textcolor>
+		<autoscroll delay="10000" time="3000" repeat="10000">false</autoscroll>
+		<visible>IsEmpty(ListItem.Plot) + !IsEmpty(ListItem.Property(summary))</visible>
+		<visible>!Container.PlexContent(Seasons)</visible>
+	</control>
+	<control type="textbox" id="111">
+		<posx>145</posx>
+		<posy>40</posy>
+		<width>230</width>
+		<height>130</height>
+		<label>$VAR[ListItemFullInfoPlot]</label>
+		<font>Regular-16</font>
+		<textcolor>title2</textcolor>
+		<autoscroll delay="10000" time="3000" repeat="10000">false</autoscroll>
+		<visible>!IsEmpty(ListItem.Plot)</visible>
+		<visible>!Container.PlexContent(Seasons)</visible>
+	</control>
+	<control type="textbox">
+		<posx>145</posx>
+		<posy>40</posy>
+		<width>230</width>
+		<height>130</height>
+		<include>NoPlotDefault</include>
+		<font>Regular-16</font>
+		<textcolor>title2</textcolor>
+		<autoscroll delay="10000" time="3000" repeat="10000">false</autoscroll>
+		<visible>IsEmpty(ListItem.Plot)</visible>
+		<visible>!Container.PlexContent(Seasons)</visible>
+		<visible>!Control.IsVisible(111) + !Control.IsVisible(112) + !Control.IsVisible(113) + !Container.PlexContent(Channels) + !Container.PlexContent(Channel) + !Window.IsActive(mysharedcontent)</visible>
+	</control>
+	<control type="textbox">
+		<posx>145</posx>
+		<posy>40</posy>
+		<width>230</width>
+		<height>130</height>
+		<label>$LOCALIZE[32103]$VAR[NoPlotDefaultItem].</label>
+		<font>Regular-16</font>
+		<textcolor>title2</textcolor>
+		<autoscroll delay="10000" time="3000" repeat="10000">false</autoscroll>
+		<visible>IsEmpty(ListItem.Plot)</visible>
+		<visible>!Container.PlexContent(Seasons)</visible>
+		<visible>!Control.IsVisible(111) + !Control.IsVisible(112) + !Control.IsVisible(113) + [Container.PlexContent(Channels) | Container.PlexContent(Channel) | Window.IsActive(mysharedcontent)]</visible>
+	</control>
+</include>
+<include name="MovieTVPosterDescriptionPlotFocus">
+	<!--Plot-->
+	<control type="textbox" id="111">
+		<posx>145</posx>
+		<posy>40</posy>
+		<width>230</width>
+		<height>130</height>
+		<label>$INFO[ListItem.Property(summary)]</label>
+		<font>Regular-16</font>
+		<textcolor>title2</textcolor>
+		<autoscroll delay="10000" time="3000" repeat="10000">true</autoscroll>
+		<visible>IsEmpty(ListItem.Plot) + !IsEmpty(ListItem.Property(summary))</visible>
+		<visible>!Container.PlexContent(Seasons)</visible>
+	</control>
+	<control type="textbox" id="111">
+		<posx>145</posx>
+		<posy>40</posy>
+		<width>230</width>
+		<height>128</height>
+		<label>$VAR[ListItemFullInfoPlot]</label>
+		<font>Regular-16</font>
+		<textcolor>title2</textcolor>
+		<autoscroll delay="10000" time="3000" repeat="10000">true</autoscroll>
+		<visible>!IsEmpty(ListItem.Plot)</visible>
+		<visible>!Container.PlexContent(Seasons)</visible>
+	</control>
+	<control type="textbox">
+		<posx>145</posx>
+		<posy>40</posy>
+		<width>230</width>
+		<height>130</height>
+		<include>NoPlotDefault</include>
+		<font>Regular-16</font>
+		<textcolor>title2</textcolor>
+		<autoscroll delay="10000" time="3000" repeat="10000">true</autoscroll>
+		<visible>IsEmpty(ListItem.Plot)</visible>
+		<visible>!Container.PlexContent(Seasons)</visible>
+		<visible>!Control.IsVisible(111) + !Control.IsVisible(112) + !Control.IsVisible(113) + !Container.PlexContent(Channels) + !Container.PlexContent(Channel) + !Window.IsActive(mysharedcontent)</visible>
+	</control>
+	<control type="textbox">
+		<posx>145</posx>
+		<posy>40</posy>
+		<width>230</width>
+		<height>130</height>
+		<label>$LOCALIZE[32103]$VAR[NoPlotDefaultItem].</label>
+		<font>Regular-16</font>
+		<textcolor>title2</textcolor>
+		<autoscroll delay="10000" time="3000" repeat="10000">true</autoscroll>
+		<visible>IsEmpty(ListItem.Plot)</visible>
+		<visible>!Container.PlexContent(Seasons)</visible>
+		<visible>!Control.IsVisible(111) + !Control.IsVisible(112) + !Control.IsVisible(113) + [Container.PlexContent(Channels) | Container.PlexContent(Channel) | Window.IsActive(mysharedcontent)]</visible>
+	</control>
+</include>
+<include name="MovieTVPosterDescription">
+	<posx>5</posx>
+	<posy>5</posy>
+	<control type="group" id="101">
+		<!--BG-->
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>401</width>
+			<height>220</height>
+			<include>Shadow</include>
+		</control>
+		<control type="group">
+			<control type="image">
+				<posx>13</posx>
+				<posy>13</posy>
+				<width>375</width>
+				<height>192</height>
+				<aspectratio aligny="top">stretch</aspectratio>
+				<texture>backgrounds/background_black3.png</texture>
+				<animation effect="fade" start="0" end="61" time="0" condition="true">Conditional</animation>
+			</control>
+			<control type="image">
+				<posx>13</posx>
+				<posy>13</posy>
+				<width>375</width>
+				<height>192</height>
+				<aspectratio aligny="top">stretch</aspectratio>
+				<texture background="true">bg_left.png</texture>
+			</control>
+		</control>
+		<!--poster-->
+		<control type="image">
+			<posx>6</posx>
+			<posy>6</posy>
+			<width>146</width>
+			<height>206</height>
+			<include>Shadow</include>
+		</control>
+		<control type="image">
+			<posx>19</posx>
+			<posy>19</posy>
+			<width>120</width>
+			<height>180</height>
+			<texture background="true">default-poster-middle.png</texture>
+		</control>
+		<control type="image">
+			<posx>19</posx>
+			<posy>19</posy>
+			<width>120</width>
+			<height>180</height>
+			<texture background="true">$VAR[ListItemVideoPreviewSmall]</texture>
+			<aspectratio scalediffuse="false" align="center" aligny="top">scale</aspectratio>
+		</control>
+		<!--title-->
+		<control type="label">
+			<posx>145</posx>
+			<posy>17</posy>
+			<width>235</width>
+			<height>20</height>
+			<align>left</align>
+			<aligny>center</aligny>
+			<label>$INFO[ListItem.Label]</label>
+			<font>Regular-18</font>
+			<visible>!Container.PlexContent(Episodes)</visible>
+		</control>
+		<control type="label">
+			<posx>145</posx>
+			<posy>17</posy>
+			<width>235</width>
+			<height>20</height>
+			<align>left</align>
+			<aligny>center</aligny>
+			<label>$INFO[ListItem.Episode,E, [COLOR=orange]&#xB7;[/COLOR] ]$INFO[ListItem.Label]</label>
+			<font>Regular-18</font>
+			<visible>Container.PlexContent(Episodes)</visible>
+		</control>
+		<!--stars-->
+		<control type="image">
+			<posx>145</posx>
+			<posy>175</posy>
+			<width>21</width>
+			<height>21</height>
+			<texture>star.png</texture>
+			<visible>[Container.PlexContent(Movies) | Container.PlexContent(TVShows) | Container.PlexContent(Episodes)] + !IsEmpty(ListItem.Property(Rating))</visible>
+		</control>
+		<control type="label">
+			<posx>170</posx>
+			<posy>178</posy>
+			<width>85</width>
+			<height>18</height>
+			<font>Regular-18</font>
+			<aligny>center</aligny>
+			<label>$INFO[ListItem.Property(Rating)]</label>
+			<visible>[Container.PlexContent(Movies) | Container.PlexContent(TVShows) | Container.PlexContent(Episodes)] + !IsEmpty(ListItem.Property(Rating))</visible>
+		</control>
+		<!--Unwatched-->
+		<control type="image">
+			<posx>356</posx>
+			<posy>173</posy>
+			<width>27</width>
+			<height>27</height>
+			<info>ListItem.Overlay</info>
+			<visible>[Container.PlexContent(Movies) | Container.PlexContent(Episodes)]</visible>
+		</control>
+		<control type="image">
+			<posx>343</posx>
+			<posy>175</posy>
+			<width>39</width>
+			<height>24</height>
+			<texture>unwatchedcount_overlay.png</texture>
+			<visible>[Container.PlexContent(TVShows) | Container.PlexContent(Seasons)] + ListItem.Property(UnWatchedEpisodes)</visible>
+		</control>
+		<control type="label">
+			<posx>363</posx>
+			<posy>174</posy>
+			<width>40</width>
+			<height>27</height>
+			<label>$INFO[ListItem.Property(UnWatchedEpisodes)]</label>
+			<font>Regular-18</font>
+			<align>center</align>
+			<visible>[Container.PlexContent(TVShows) | Container.PlexContent(Seasons)] + ListItem.Property(UnWatchedEpisodes)</visible>
+		</control>
+		<control type="label">
+			<posy>40</posy>
+			<posx>145</posx>
+			<width>200</width>
+			<height>40</height>
+			<label>$INFO[ListItem.episode,, $LOCALIZE[20360]]</label>
+			<font>Regular-16</font>
+			<textcolor>title2</textcolor>
+			<visible>[Container.PlexContent(Seasons)]</visible>
+		</control>
+	</control>
+</include>
+<include name="MovieTVPosterDescriptionSelectedBorder">
+	<control type="image">
+		<posx>11</posx>
+		<posy>11</posy>
+		<width>380</width>
+		<height>197</height>
+		<include>Border</include>
+	</control>
+</include>
+<!-- banner -->
+<include name="TVPosterBanner">
+	<posx>0</posx>
+	<posy>5</posy>
+	<control type="group" id="101">
+		<!--BG-->
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>434</width>
+			<height>138</height>
+			<include>Shadow</include>
+		</control>
+		<control type="group">
+			<control type="image">
+				<posx>13</posx>
+				<posy>14</posy>
+				<width>408</width>
+				<height>110</height>
+				<aspectratio aligny="top">stretch</aspectratio>
+				<texture>backgrounds/background_black3.png</texture>
+				<animation effect="fade" start="0" end="61" time="0" condition="true">Conditional</animation>
+			</control>
+			<control type="image">
+				<posx>13</posx>
+				<posy>14</posy>
+				<width>408</width>
+				<height>110</height>
+				<aspectratio aligny="top">stretch</aspectratio>
+				<texture background="true">bg_left.png</texture>
+			</control>
+		</control>
+		<!--banner-->
+		<control type="group">
+			<visible>Container.PlexContent(TVShows)</visible>
+			<control type="image">
+				<posx>13</posx>
+				<posy>13</posy>
+				<width>408</width>
+				<height>76</height>
+				<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+				<texture  background="true">default-banner-small.png</texture>
+			</control>
+			<control type="image">
+				<posx>13</posx>
+				<posy>13</posy>
+				<width>408</width>
+				<height>76</height>
+				<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+				<texture  background="true">$INFO[ListItem.Art(banner)]</texture>
+			</control>
+		</control>
+		<!--title-->
+		<control type="label">
+			<posx>217</posx>
+			<posy>96</posy>
+			<width>300</width>
+			<height>20</height>
+			<align>center</align>
+			<aligny>center</aligny>
+			<label>$INFO[ListItem.Genre]</label>
+			<font>Regular-18</font>
+			<visible>!Container.PlexContent(Episodes)</visible>
+		</control>
+		<!--stars-->
+		<control type="image">
+			<posx>15</posx>
+			<posy>94</posy>
+			<width>21</width>
+			<height>21</height>
+			<texture>star.png</texture>
+			<visible>[Container.PlexContent(Movies) | Container.PlexContent(TVShows) | Container.PlexContent(Episodes)] + !IsEmpty(ListItem.Property(Rating))</visible>
+		</control>
+		<control type="label">
+			<posx>40</posx>
+			<posy>96</posy>
+			<width>85</width>
+			<height>20</height>
+			<font>Regular-18</font>
+			<aligny>center</aligny>
+			<label>$INFO[ListItem.Property(Rating)]</label>
+			<visible>[Container.PlexContent(Movies) | Container.PlexContent(TVShows) | Container.PlexContent(Episodes)] + !IsEmpty(ListItem.Property(Rating))</visible>
+		</control>
+		<!--Unwatched-->
+		<control type="image">
+			<posx>401</posx>
+			<posy>92</posy>
+			<width>27</width>
+			<height>27</height>
+			<info>ListItem.Overlay</info>
+			<visible>[Container.PlexContent(Movies) | Container.PlexContent(Episodes)]</visible>
+		</control>
+		<control type="image">
+			<posx>378</posx>
+			<posy>94</posy>
+			<width>39</width>
+			<height>24</height>
+			<texture>unwatchedcount_overlay.png</texture>
+			<visible>[Container.PlexContent(TVShows) | Container.PlexContent(Seasons)] + ListItem.Property(UnWatchedEpisodes)</visible>
+		</control>
+		<control type="label">
+			<posx>398</posx>
+			<posy>93</posy>
+			<width>40</width>
+			<height>27</height>
+			<label>$INFO[ListItem.Property(UnWatchedEpisodes)]</label>
+			<font>Regular-18</font>
+			<align>center</align>
+			<visible>[Container.PlexContent(TVShows) | Container.PlexContent(Seasons)] + ListItem.Property(UnWatchedEpisodes)</visible>
+		</control>
+	</control>
+</include>
+<include name="TVPosterBannerSelectedBorder">
+	<control type="image">
+		<posx>11</posx>
+		<posy>11</posy>
+		<width>412</width>
+		<height>114</height>
+		<include>Border</include>
+	</control>
+</include>
+<!-- Clearart -->
+<include name="TVPosterClearart">
+	<posx>0</posx>
+	<posy>5</posy>
+	<control type="group" id="101">
+		<!--BG-->
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>434</width>
+			<height>138</height>
+			<include>Shadow</include>
+		</control>
+		<control type="group">
+			<control type="image">
+				<posx>13</posx>
+				<posy>14</posy>
+				<width>408</width>
+				<height>110</height>
+				<aspectratio aligny="top">stretch</aspectratio>
+				<texture>backgrounds/background_black3.png</texture>
+				<animation effect="fade" start="0" end="61" time="0" condition="true">Conditional</animation>
+			</control>
+			<control type="image">
+				<posx>13</posx>
+				<posy>14</posy>
+				<width>408</width>
+				<height>110</height>
+				<aspectratio aligny="top">stretch</aspectratio>
+				<texture background="true">bg_left.png</texture>
+			</control>
+		</control>
+		<!--banner-->
+		<control type="group">
+			<visible>Container.PlexContent(TVShows)</visible>
+			<control type="image">
+				<posx>13</posx>
+				<posy>13</posy>
+				<width>408</width>
+				<height>76</height>
+				<texture background="true" fallback="default-banner-small.png">tvlogos/$INFO[ListItem.Title].png</texture>
+				<animation effect="fade" start="0" end="100" time="0" condition="true">Conditional</animation>
+				<aspectratio scalediffuse="false">keep</aspectratio>
+			</control>
+		</control>
+		<!--title-->
+		<control type="label">
+			<posx>217</posx>
+			<posy>96</posy>
+			<width>300</width>
+			<height>20</height>
+			<align>center</align>
+			<aligny>center</aligny>
+			<label>$INFO[ListItem.Genre]</label>
+			<font>Regular-18</font>
+			<visible>!Container.PlexContent(Episodes)</visible>
+		</control>
+		<!--stars-->
+		<control type="image">
+			<posx>15</posx>
+			<posy>94</posy>
+			<width>21</width>
+			<height>21</height>
+			<texture>star.png</texture>
+			<visible>[Container.PlexContent(Movies) | Container.PlexContent(TVShows) | Container.PlexContent(Episodes)] + !IsEmpty(ListItem.Property(Rating))</visible>
+		</control>
+		<control type="label">
+			<posx>40</posx>
+			<posy>96</posy>
+			<width>85</width>
+			<height>20</height>
+			<font>Regular-18</font>
+			<aligny>center</aligny>
+			<label>$INFO[ListItem.Property(Rating)]</label>
+			<visible>[Container.PlexContent(Movies) | Container.PlexContent(TVShows) | Container.PlexContent(Episodes)] + !IsEmpty(ListItem.Property(Rating))</visible>
+		</control>
+		<!--Unwatched-->
+		<control type="image">
+			<posx>401</posx>
+			<posy>92</posy>
+			<width>27</width>
+			<height>27</height>
+			<info>ListItem.Overlay</info>
+			<visible>[Container.PlexContent(Movies) | Container.PlexContent(Episodes)]</visible>
+		</control>
+		<control type="image">
+			<posx>378</posx>
+			<posy>94</posy>
+			<width>39</width>
+			<height>24</height>
+			<texture>unwatchedcount_overlay.png</texture>
+			<visible>[Container.PlexContent(TVShows) | Container.PlexContent(Seasons)] + ListItem.Property(UnWatchedEpisodes)</visible>
+		</control>
+		<control type="label">
+			<posx>398</posx>
+			<posy>93</posy>
+			<width>40</width>
+			<height>27</height>
+			<label>$INFO[ListItem.Property(UnWatchedEpisodes)]</label>
+			<font>Regular-18</font>
+			<align>center</align>
+			<visible>[Container.PlexContent(TVShows) | Container.PlexContent(Seasons)] + ListItem.Property(UnWatchedEpisodes)</visible>
+		</control>
+	</control>
+</include>
+<include name="TVPosterClearartSelectedBorder">
+	<control type="image">
+		<posx>11</posx>
+		<posy>11</posy>
+		<width>412</width>
+		<height>114</height>
+		<include>Border</include>
+	</control>
+</include>
+<!-- MoviePosterClearart -->
+<include name="MoviePosterClearart">
+	<posx>0</posx>
+	<posy>5</posy>
+	<control type="group" id="101">
+		<!--BG-->
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>434</width>
+			<height>138</height>
+			<include>Shadow</include>
+		</control>
+		<control type="group">
+			<control type="image">
+				<posx>13</posx>
+				<posy>14</posy>
+				<width>408</width>
+				<height>110</height>
+				<aspectratio aligny="top">stretch</aspectratio>
+				<texture>backgrounds/background_black3.png</texture>
+				<animation effect="fade" start="0" end="61" time="0" condition="true">Conditional</animation>
+			</control>
+			<control type="image">
+				<posx>13</posx>
+				<posy>14</posy>
+				<width>408</width>
+				<height>110</height>
+				<aspectratio aligny="top">stretch</aspectratio>
+				<texture background="true">bg_left.png</texture>
+			</control>
+		</control>
+		<!--banner/clearart-->
+		<control type="group">
+			<control type="image">
+				<posx>13</posx>
+				<posy>13</posy>
+				<width>408</width>
+				<height>76</height>
+				<texture background="true" fallback="default-banner-small.png">movielogos/$INFO[ListItem.Title].png</texture>
+				<animation effect="fade" start="0" end="100" time="0" condition="true">Conditional</animation>
+				<aspectratio scalediffuse="false">keep</aspectratio>
+				<visible>Skin.HasSetting(ShowClearart)</visible>
+			</control>
+			<control type="image">
+				<posx>13</posx>
+				<posy>13</posy>
+				<width>408</width>
+				<height>76</height>
+				<texture background="true" fallback="default-banner-small.png">movielogos/$INFO[ListItem.Title].jpg</texture>
+				<animation effect="fade" start="0" end="100" time="0" condition="true">Conditional</animation>
+				<aspectratio scalediffuse="false">keep</aspectratio>
+				<visible>!Skin.HasSetting(ShowClearart)</visible>
+			</control>
+		</control>
+		<!--title-->
+		<control type="label">
+			<posx>217</posx>
+			<posy>96</posy>
+			<width>300</width>
+			<height>20</height>
+			<align>center</align>
+			<aligny>center</aligny>
+			<label>$INFO[ListItem.Genre]</label>
+			<font>Regular-18</font>
+		</control>
+		<!--stars-->
+		<control type="image">
+			<posx>15</posx>
+			<posy>94</posy>
+			<width>21</width>
+			<height>21</height>
+			<texture>star.png</texture>
+			<visible>!IsEmpty(ListItem.Property(Rating))</visible>
+		</control>
+		<control type="label">
+			<posx>40</posx>
+			<posy>96</posy>
+			<width>85</width>
+			<height>20</height>
+			<font>Regular-18</font>
+			<aligny>center</aligny>
+			<label>$INFO[ListItem.Property(Rating)]</label>
+			<visible>!IsEmpty(ListItem.Property(Rating))</visible>
+		</control>
+		<!--Unwatched-->
+		<control type="image">
+			<posx>389</posx>
+			<posy>93</posy>
+			<width>27</width>
+			<height>27</height>
+			<info>ListItem.Overlay</info>
+		</control>
+	</control>
+</include>
+<include name="MoviePosterClearartSelectedBorder">
+	<control type="image">
+		<posx>11</posx>
+		<posy>11</posy>
+		<width>412</width>
+		<height>114</height>
+		<include>Border</include>
+	</control>
+</include>
+<!--Wall-->
+<include name="MovieTVPosterWall">
+	<control type="image">
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>170</width>
+		<height>232</height>
+		<include>Shadow</include>
+	</control>
+	<control type="image">
+		<posx>13</posx>
+		<posy>13</posy>
+		<width>144</width>
+		<height>216</height>
+		<texture background="true">default-poster-middle.png</texture>
+	</control>
+	<control type="image">
+		<posx>13</posx>
+		<posy>13</posy>
+		<width>144</width>
+		<height>216</height>
+		<texture background="true">$VAR[ListItemVideoPreviewSmall]</texture>
+		<aspectratio scalediffuse="false" align="center" aligny="top">scale</aspectratio>
+	</control>
+</include>
+<include name="MovieTVPosterWallUnwatchedOverlay">
+	<control type="group">
+		<control type="label">
+			<posy>192</posy>
+			<posx>156</posx>
+			<width>90</width>
+			<height>30</height>
+			<align>right</align>
+			<aligny>center</aligny>
+			<label>$INFO[ListItem.Property(UnWatchedEpisodes)]</label>
+			<font>Light-52</font>
+			<textcolor>white</textcolor>
+			<shadowcolor>FF222222</shadowcolor>
+			<animation effect="fade" start="0" end="100" time="400" condition="true">Conditional</animation>
+			<visible>!Skin.HasSetting(SmallerUnwatchedEpisodes)+!Skin.HasSetting(AltUnwatchedEpisodes)+!Skin.HasSetting(AltUnwatchedEpisodesTop)+!Skin.HasSetting(TVShowOverlayBottom)</visible>
+		</control>
+		<control type="label">
+			<posy>198</posy>
+			<posx>156</posx>
+			<width>90</width>
+			<height>30</height>
+			<align>right</align>
+			<aligny>center</aligny>
+			<label>$INFO[ListItem.Property(UnWatchedEpisodes)]</label>
+			<font>Light-36</font>
+			<textcolor>white</textcolor>
+			<shadowcolor>FF222222</shadowcolor>
+			<animation effect="fade" start="0" end="100" time="400" condition="true">Conditional</animation>
+			<visible>Skin.HasSetting(SmallerUnwatchedEpisodes)+!Skin.HasSetting(TVShowOverlayBottom)</visible>
+		</control>
+		<control type="group">
+			<visible>Skin.HasSetting(AltUnwatchedEpisodes) | Skin.HasSetting(TVShowOverlayBottom)</visible>
+			<control type="image">
+				<posx>114</posx>
+				<posy>197</posy>
+				<width>45</width>
+				<height>34</height>
+				<texture>unwatchedcount_overlay4.png</texture>
+				<animation effect="fade" start="95" end="95" time="0" condition="true">Conditional</animation>
+			</control>
+			<control type="label">
+				<posx>137</posx>
+				<posy>201</posy>
+				<width>40</width>
+				<height>27</height>
+				<label>$INFO[ListItem.Property(UnWatchedEpisodes)]</label>
+				<font>Regular-18</font>
+				<align>center</align>
+			</control>
+		</control>
+		<control type="group">
+			<visible>Skin.HasSetting(AltUnwatchedEpisodesTop)+!Skin.HasSetting(TVShowOverlayBottom)</visible>
+			<control type="image">
+				<posx>114</posx>
+				<posy>11</posy>
+				<width>45</width>
+				<height>34</height>
+				<texture>unwatchedcount_overlay4.png</texture>
+				<animation effect="fade" start="95" end="95" time="0" condition="true">Conditional</animation>
+			</control>
+			<control type="label">
+				<posx>137</posx>
+				<posy>15</posy>
+				<width>40</width>
+				<height>27</height>
+				<label>$INFO[ListItem.Property(UnWatchedEpisodes)]</label>
+				<font>Regular-18</font>
+				<align>center</align>
+			</control>
+		</control>
+		<visible>[Container.PlexContent(TVShows) + [ListItem.Status(Unwatched) | ListItem.Status(InProgress)] + !Skin.HasSetting(HideUnwatchedIconsTVShows)] | [Container.PlexContent(Seasons) + [ListItem.Status(Unwatched) | ListItem.Status(InProgress)] + !Skin.HasSetting(HideUnwatchedIconsTVShows)]</visible>
+	</control>
+	<control type="group">
+		<!--
+			<control type="image">
+				<texture>home/imdbBackground.png</texture>
+				<width>145</width>
+				<height>21</height>
+				<posx>13</posx>
+				<posy>206</posy>
+				<visible>[Container.PlexContent(Movies)]  + !IsEmpty(ListItem.Property(Rating))</visible>
+				<visible>!Skin.HasSetting(disableOverlayIMDB)</visible>
+			</control>
+			<control type="image">
+				<posx>14</posx>
+				<posy>206</posy>
+				<width>21</width>
+				<height>21</height>
+				<texture>star.png</texture>
+				<visible>[Container.PlexContent(Movies)] + !IsEmpty(ListItem.Property(Rating))</visible>
+				<visible>!Skin.HasSetting(disableOverlayIMDB)</visible>
+			</control>
+			<control type="label">
+				<posx>39</posx>
+				<posy>209</posy>
+				<width>85</width>
+				<height>18</height>
+				<font>IMDBOverlay</font>
+				<aligny>center</aligny>
+				<label>$INFO[ListItem.Rating]</label>
+				<animation effect="fade" start="0" end="90" time="400" condition="true">Conditional</animation>
+				<visible>[Container.PlexContent(Movies)] + !IsEmpty(ListItem.Property(Rating))</visible>
+				<visible>!Skin.HasSetting(disableOverlayIMDB)</visible>
+			</control>
+			-->
+		<control type="image">
+			<posx>129</posx>
+			<posy>201</posy>
+			<width>26</width>
+			<height>26</height>
+			<info>ListItem.Overlay</info>
+			<visible>[Container.PlexContent(Movies) + [ListItem.Status(Unwatched) | ListItem.Status(InProgress)] + !Skin.HasSetting(HideUnwatchedIconsMovies)]</visible>
+		</control>
+	</control>
+</include>
+<include name="MovieTVPosterWallSelectedBorder">
+	<control type="image">
+		<width>150</width>
+		<height>222</height>
+		<include>Border</include>
+	</control>
+</include>
+<include name="Animation_CommonFade">
+	<animation effect="fade" start="0" end="100" time="200">WindowOpen</animation>
+	<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+	<animation effect="fade" start="0" end="100" time="200">Visible</animation>
+	<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+</include>
+<!-- Now Playing (RIGHT) -->
+<include name="viewtype_nowplaying_right">
+	<include condition="Skin.HasSetting(ShowSmallClock)">BottomRightClockPad</include>
+	<!-- Video -->
+	<control type="group">
+		<visible>!Skin.HasSetting(PIPFull)</visible>
+		<posx>319</posx>
+		<posy>-640</posy>
+		<visible>Player.HasVideo</visible>
+		<!-- Content -->
+		<control type="group">
+			<include>Animation_CommonFade</include>
+			<control type="videowindow" id="8">
+				<posx>860</posx>
+				<posy>640</posy>
+				<width>100</width>
+				<height>60</height>
+				<aspectratio>keep</aspectratio>
+			</control>
+			<control type="image">
+				<posx>850</posx>
+				<posy>635</posy>
+				<width>120</width>
+				<height>70</height>
+				<texture>music/musicwallframeF.png</texture>
+				<aspectratio scalediffuse="false">stretch</aspectratio>
+			</control>
+			<!-- 1st Line -->
+			<control type="label">
+				<visible>!isEmpty(VideoPlayer.TvShowTitle)</visible>
+				<posx>850</posx>
+				<posy>642</posy>
+				<width>310</width>
+				<height>18</height>
+				<aligny>center</aligny>
+				<align>right</align>
+				<font>Regular-12</font>
+				<textcolor>white</textcolor>
+				<label>$INFO[VideoPlayer.TvShowTitle] / $INFO[VideoPlayer.Title]</label>
+				<scroll>yes</scroll>
+				<animation type="Conditional" reversible="false" condition="true" loop="true">
+					<effect type="fade" start="0" end="100" time="500" delay="0" />
+					<effect type="fade" start="100" end="0" time="500" delay="7000" />
+					<effect type="fade" start="100" end="0" time="500" delay="14000" />
+				</animation>
+			</control>
+			<control type="label">
+				<visible>isEmpty(VideoPlayer.TvShowTitle)</visible>
+				<posx>850</posx>
+				<posy>642</posy>
+				<width>310</width>
+				<height>18</height>
+				<aligny>center</aligny>
+				<align>right</align>
+				<font>Regular-12</font>
+				<textcolor>white</textcolor>
+				<label>$INFO[VideoPlayer.Title]</label>
+				<scroll>yes</scroll>
+				<animation type="Conditional" reversible="false" condition="true" loop="true">
+					<effect type="fade" start="0" end="100" time="500" delay="0" />
+					<effect type="fade" start="100" end="0" time="500" delay="7000" />
+					<effect type="fade" start="100" end="0" time="500" delay="14000" />
+				</animation>
+			</control>
+			<control type="progress">
+				<posx>861</posx>
+				<posy>694</posy>
+				<width>101</width>
+				<height>2</height>
+				<aligny>center</aligny>
+				<info>Player.Progress</info>
+				<texturebg>OSDProgressBack2.png</texturebg>
+				<midtexture>orange.png</midtexture>
+			</control>
+		</control>
+	</control>
+	<!-- Audio -->
+	<control type="group">
+		<visible>Player.HasAudio</visible>
+		<posx>319</posx>
+		<posy>-640</posy>
+		<control type="group">
+			<include>Animation_CommonFade</include>
+			<!-- Cover -->
+			<control type="image">
+				<description>cover image</description>
+				<posx>900</posx>
+				<posy>641</posy>
+				<width>60</width>
+				<height>60</height>
+				<texture diffuse="music/musicwallmatte.png">$INFO[MusicPlayer.Cover]</texture>
+				<aspectratio scalediffuse="false">scale</aspectratio>
+			</control>
+			<!-- Artist -->
+			<control type="label">
+				<posx>890</posx>
+				<posy>640</posy>
+				<width>310</width>
+				<height>18</height>
+				<aligny>center</aligny>
+				<align>right</align>
+				<font>Regular-12</font>
+				<textcolor>white</textcolor>
+				<label>$INFO[MusicPlayer.Album] / $INFO[MusicPlayer.Artist] / $INFO[MusicPlayer.Title]</label>
+				<scroll>yes</scroll>
+				<animation type="Conditional" reversible="false" condition="true" loop="true">
+					<effect type="fade" start="0" end="100" time="500" delay="0" />
+					<effect type="fade" start="100" end="0" time="500" delay="7000" />
+					<effect type="fade" start="100" end="0" time="500" delay="14000" />
+				</animation>
+			</control>
+			<!-- Streaming -->
+			<control type="label">
+				<posx>890</posx>
+				<posy>640</posy>
+				<width>310</width>
+				<height>18</height>
+				<aligny>center</aligny>
+				<align>right</align>
+				<font>Regular-12</font>
+				<textcolor>white</textcolor>
+				<label>Streaming</label>
+				<scroll>yes</scroll>
+				<visible>isEmpty(MusicPlayer.Album) + isEmpty(MusicPlayer.Artist)</visible>
+				<animation type="Conditional" reversible="false" condition="true" loop="true">
+					<effect type="fade" start="0" end="100" time="500" delay="0" />
+					<effect type="fade" start="100" end="0" time="500" delay="7000" />
+					<effect type="fade" start="100" end="0" time="500" delay="14000" />
+				</animation>
+			</control>
+		</control>
+	</control>
+</include>
+<!-- Now Playing (RIGHT) -->
+<include name="viewtype_nowplaying_right_home">
+	<!-- Video -->
+	<control type="group">
+		<visible>!Skin.HasSetting(PIPFull)</visible>
+		<posx>319</posx>
+		<posy>-640</posy>
+		<visible>Player.HasVideo</visible>
+		<!-- Content -->
+		<control type="group">
+			<include>Animation_CommonFade</include>
+			<control type="videowindow" id="8">
+				<posx>860</posx>
+				<posy>640</posy>
+				<width>100</width>
+				<height>60</height>
+				<aspectratio>keep</aspectratio>
+			</control>
+			<control type="image">
+				<posx>850</posx>
+				<posy>635</posy>
+				<width>120</width>
+				<height>70</height>
+				<texture>music/musicwallframeF.png</texture>
+				<aspectratio scalediffuse="false">stretch</aspectratio>
+			</control>
+			<!-- 1st Line -->
+			<control type="label">
+				<visible>!isEmpty(VideoPlayer.TvShowTitle)</visible>
+				<posx>850</posx>
+				<posy>642</posy>
+				<width>310</width>
+				<height>18</height>
+				<aligny>center</aligny>
+				<align>right</align>
+				<font>Regular-12</font>
+				<textcolor>white</textcolor>
+				<label>$INFO[VideoPlayer.TvShowTitle] / $INFO[VideoPlayer.Title]</label>
+				<scroll>yes</scroll>
+				<animation type="Conditional" reversible="false" condition="true" loop="true">
+					<effect type="fade" start="0" end="100" time="500" delay="0" />
+					<effect type="fade" start="100" end="0" time="500" delay="7000" />
+					<effect type="fade" start="100" end="0" time="500" delay="14000" />
+				</animation>
+			</control>
+			<control type="label">
+				<visible>isEmpty(VideoPlayer.TvShowTitle)</visible>
+				<posx>850</posx>
+				<posy>642</posy>
+				<width>310</width>
+				<height>18</height>
+				<aligny>center</aligny>
+				<align>right</align>
+				<font>Regular-12</font>
+				<textcolor>white</textcolor>
+				<label>$INFO[VideoPlayer.Title]</label>
+				<scroll>yes</scroll>
+				<animation type="Conditional" reversible="false" condition="true" loop="true">
+					<effect type="fade" start="0" end="100" time="500" delay="0" />
+					<effect type="fade" start="100" end="0" time="500" delay="7000" />
+					<effect type="fade" start="100" end="0" time="500" delay="14000" />
+				</animation>
+			</control>
+			<control type="progress">
+				<posx>861</posx>
+				<posy>694</posy>
+				<width>101</width>
+				<height>2</height>
+				<aligny>center</aligny>
+				<info>Player.Progress</info>
+				<texturebg>OSDProgressBack2.png</texturebg>
+				<midtexture>orange.png</midtexture>
+			</control>
+		</control>
+	</control>
+	<!-- Audio -->
+	<control type="group">
+		<visible>Player.HasAudio</visible>
+		<posx>319</posx>
+		<posy>-640</posy>
+		<control type="group">
+			<include>Animation_CommonFade</include>
+			<!-- Cover -->
+			<control type="image">
+				<description>cover image</description>
+				<posx>900</posx>
+				<posy>641</posy>
+				<width>60</width>
+				<height>60</height>
+				<texture diffuse="music/musicwallmatte.png">$INFO[MusicPlayer.Cover]</texture>
+				<aspectratio scalediffuse="false">scale</aspectratio>
+			</control>
+			<!-- Artist -->
+			<control type="label">
+				<posx>890</posx>
+				<posy>640</posy>
+				<width>310</width>
+				<height>18</height>
+				<aligny>center</aligny>
+				<align>right</align>
+				<font>Regular-12</font>
+				<textcolor>white</textcolor>
+				<label>$INFO[MusicPlayer.Album] / $INFO[MusicPlayer.Artist] / $INFO[MusicPlayer.Title]</label>
+				<scroll>yes</scroll>
+				<animation type="Conditional" reversible="false" condition="true" loop="true">
+					<effect type="fade" start="0" end="100" time="500" delay="0" />
+					<effect type="fade" start="100" end="0" time="500" delay="7000" />
+					<effect type="fade" start="100" end="0" time="500" delay="14000" />
+				</animation>
+			</control>
+			<!-- Streaming -->
+			<control type="label">
+				<posx>890</posx>
+				<posy>640</posy>
+				<width>310</width>
+				<height>18</height>
+				<aligny>center</aligny>
+				<align>right</align>
+				<font>Regular-12</font>
+				<textcolor>white</textcolor>
+				<label>Streaming</label>
+				<scroll>yes</scroll>
+				<visible>isEmpty(MusicPlayer.Album) + isEmpty(MusicPlayer.Artist)</visible>
+				<animation type="Conditional" reversible="false" condition="true" loop="true">
+					<effect type="fade" start="0" end="100" time="500" delay="0" />
+					<effect type="fade" start="100" end="0" time="500" delay="7000" />
+					<effect type="fade" start="100" end="0" time="500" delay="14000" />
+				</animation>
+			</control>
+		</control>
+	</control>
+</include>
+</includes>

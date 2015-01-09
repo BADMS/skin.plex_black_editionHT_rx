@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<window id="2901">
+	<defaultcontrol always="true">711</defaultcontrol>
+	<controls>
+		<!-- ViewsOSD.xml -->
+		<include>VideoOSD</include>
+		<include>debugInfos</include>
+		<include>Grid</include>
+	</controls>
+</window>

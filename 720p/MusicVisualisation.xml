@@ -1,0 +1,157 @@
+<?xml version="1.0"?>
+<window id="2006">
+	<defaultcontrol>90</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		<control type="visualisation" id="2">
+			<description>visualisation</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+		</control>
+		<control type="group">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>48</height>
+			<visible>Player.ShowInfo + !Window.IsActive(120)</visible>
+			<animation type="Visible">
+				<effect type="fade" time="400" start="0" end="100" />
+				<effect type="slide" time="400" start="0,-134" end="0,0" easing="out" tween="cubic" />
+			</animation>
+			<animation type="Hidden">
+				<effect type="fade" time="400" start="100" end="0" />
+				<effect type="slide" time="400" start="0,0" end="0,-134" easing="in" tween="cubic" />
+			</animation>
+			<animation type="WindowOpen">
+				<effect type="fade" time="400" start="0" end="100" />
+				<effect type="slide" time="400" start="0,-134" end="0,0" easing="out" tween="cubic" />
+			</animation>
+			<animation type="WindowClose">
+				<effect type="fade" time="400" start="100" end="0" />
+				<effect type="slide" time="400" start="0,0" end="0,-134" easing="in" tween="cubic" />
+			</animation>
+			<control type="label">
+				<posx>0</posx>
+				<posy>45</posy>
+				<width>1280</width>
+				<height>30</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>font12</font>
+				<label>[COLOR 91FFFFFF]$INFO[MusicPlayer.Artist][/COLOR] [COLOR AA777777]$INFO[MusicPlayer.Album][/COLOR]</label>
+				<animation effect="slide" start="0,0" end="0,-12" time="200" condition="Control.IsVisible(212)">Conditional</animation>
+			</control>
+			<control type="label">
+				<posx>0</posx>
+				<posy>75</posy>
+				<width>1280</width>
+				<height>30</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>font12</font>
+				<label>[COLOR FFFFFFFF]$INFO[MusicPlayer.Title][/COLOR]</label>
+				<animation effect="slide" start="0,0" end="0,-12" time="200" condition="Control.IsVisible(212)">Conditional</animation>
+			</control>
+			<control type="label" id="212">
+				<posx>0</posx>
+				<posy>105</posy>
+				<width>1280</width>
+				<height>30</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<visible>Player.HasAudio</visible>
+				<font>font12</font>
+				<label>[COLOR 91FFFFFF]$INFO[MusicPlayer.Time] / $INFO[MusicPlayer.Duration][/COLOR]</label>
+			</control>
+			<control type="label">
+				<posx>0</posx>
+				<posy>135</posy>
+				<width>1280</width>
+				<height>30</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<visible>Player.HasAudio + !IsEmpty(MusicPlayer.Offset(1).Title)</visible>
+				<font>font12</font>
+				<label>[COLOR AAFFFFFF]Next up[/COLOR] [COLOR AA777777]$INFO[MusicPlayer.Offset(1).Title][/COLOR] / $INFO[MusicPlayer.PlayListPosition] of  $INFO[MusicPlayer.PlayListLength]</label>
+			</control>
+			<control type="label">
+				<posx>0</posx>
+				<posy>135</posy>
+				<width>1280</width>
+				<height>30</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<visible>Player.HasAudio + IsEmpty(MusicPlayer.Offset(1).Title)</visible>
+				<font>font12</font>
+				<label>$INFO[MusicPlayer.PlayListPosition] of  $INFO[MusicPlayer.PlayListLength]</label>
+			</control>
+			<control type="progress">
+				<description>Progressbar</description>
+				<posx>0</posx>
+				<posy>670</posy>
+				<width>1280</width>
+				<height>50</height>
+				<info>Player.Progress</info>
+				<texturebg>candy/osd_progress_clear.png</texturebg>
+				<lefttexture>-</lefttexture>
+				<midtexture>candy/osd_progressmid.png</midtexture>
+				<righttexture>-</righttexture>
+				<overlaytexture>-</overlaytexture>
+				<include>Animation_CommonFade</include>
+			</control>
+		</control>
+		<!-- codec & viz infos -->
+		<control type="group" id="0">
+			<visible>Player.ShowCodec + !Window.IsVisible(script-XBMC_Lyrics-main.xml)</visible>
+			<animation effect="fade" time="500">VisibleChange</animation>
+			<control type="image" id="0">
+				<description>preset background image</description>
+				<posx>-10</posx>
+				<posy>40</posy>
+				<width>740</width>
+				<height>90</height>
+				<texture>osd_menu_bg.png</texture>
+			</control>
+			<control type="label" id="0">
+				<description>Codecinfo</description>
+				<width>630</width>
+				<posx>50</posx>
+				<posy>50</posy>
+				<label>$LOCALIZE[445] | $INFO[musicplayer.Codec,Codec: ,]$INFO[musicplayer.Bitrate, - Bitrate: ,kbps]$INFO[musicplayer.bitspersample, - Bits:,bit]$INFO[musicplayer.Samplerate, - Freq.: ,kHz]$INFO[musicplayer.Channels, - Channels: ]</label>
+				<align>left</align>
+				<font>font12</font>
+			</control>
+			<control type="label" id="0">
+				<description>Presets label</description>
+				<posx>50</posx>
+				<posy>75</posy>
+				<width>630</width>
+				<label>Visual | fps: $INFO[System.FPS] - $LOCALIZE[250] - $INFO[Visualisation.Name] - $LOCALIZE[20166]</label>
+				<font>font12</font>
+				<align>left</align>
+				<visible>Visualisation.Locked</visible>
+			</control>
+			<control type="label" id="0">
+				<description>Presets label</description>
+				<posx>50</posx>
+				<posy>75</posy>
+				<width>630</width>
+				<label>Visual | fps: $INFO[System.FPS] - $LOCALIZE[250] - $INFO[Visualisation.Name]</label>
+				<font>font12</font>
+				<align>left</align>
+				<visible>!Visualisation.Locked</visible>
+			</control>
+			<control type="label" id="0">
+				<description>Presets label</description>
+				<posx>50</posx>
+				<posy>100</posy>
+				<width>630</width>
+				<label>$LOCALIZE[13388] | $INFO[Visualisation.Preset]</label>
+				<font>font12</font>
+				<align>left</align>
+			</control>
+		</control>
+	</controls>
+</window>

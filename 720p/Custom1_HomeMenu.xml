@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<window type="dialog" id="4998">
+	<defaultcontrol always="true">1300</defaultcontrol>
+	<controls>
+		<!-- LeftSideMenu.xml -->
+		<include condition="!Skin.HasSetting(BiggerFontMenu1) + !Skin.HasSetting(BiggerFontMenu2) + !Skin.HasSetting(BiggerFontMenu3)">PivotMenuHomeDefault</include>
+		<include condition="Skin.HasSetting(BiggerFontMenu1)">PivotMenuHome1</include>
+		<include condition="Skin.HasSetting(BiggerFontMenu2)">PivotMenuHome2</include>
+		<include condition="Skin.HasSetting(BiggerFontMenu3)">PivotMenuHome3</include>
+	</controls>
+</window>

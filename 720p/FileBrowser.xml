@@ -1,0 +1,188 @@
+<?xml version="1.0"?>
+<window id="126">
+	<defaultcontrol always="true">450</defaultcontrol>
+	<include>DialogFadeInOut</include>
+	<controls>
+
+		<!-- bg's -->
+		<control type="group">
+			<posx>340</posx>
+			<posy>110</posy>
+			<control type="image">
+				<posx>-1</posx>
+				<posy>-1</posy>
+				<width>602</width>
+				<height>562</height>
+				<texture>transparent.png</texture>
+				<bordertexture border="10">border-black.png</bordertexture>
+				<bordersize>1</bordersize>
+				<animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
+			</control>
+			<control type="image">
+				<posy>80</posy>
+				<width>600</width>
+				<height>480</height>
+				<texture border="10">base-rounded-half.png</texture>
+				<colordiffuse>FF101010</colordiffuse>
+				<animation effect="fade" start="0" end="70" time="0" condition="true">Conditional</animation>
+			</control>
+			<!-- title bg -->
+			<control type="image">
+				<width>600</width>
+				<height>80</height>
+				<texture border="10" flipy="true">base-rounded-half.png</texture>
+				<colordiffuse>FF101010</colordiffuse>
+			</control>
+			<!--<control type="image">
+				<posy>480</posy>
+				<width>600</width>
+				<height>80</height>
+				<texture border="10">base-rounded-half.png</texture>
+				<colordiffuse>FF111111</colordiffuse>
+			</control>-->
+			<control type="image">
+				<posy>30</posy>
+				<width>600</width>
+				<height>50</height>
+				<texture>border-bottom-grey.png</texture>
+			</control>
+			<!-- arrow -->
+			<!--
+			<control type="image">
+				<description>Dialog arrow</description>
+				<posx>600</posx>
+				<posy>155</posy>
+				<include>ArrowBlack</include>
+			</control>
+			-->
+		</control>
+		<control type="group">
+
+			<posx>340</posx>
+			<control type="group">
+				<posy>130</posy>
+				<posx>10</posx>
+				<control type="label" id="411">
+					<description>Heading</description>
+					<include>DialogHeading</include>
+					<width>580</width>
+					<height>40</height>
+					<align>center</align>
+				</control>
+				<!-- browse list -->
+				<control type="group">
+					<posy>80</posy>
+					<posx>20</posx>
+					<control type="list" id="450">
+						<width>560</width>
+						<height>300</height>
+						<onleft>414</onleft>
+						<onright>414</onright>
+						<onup>450</onup>
+						<ondown>450</ondown>
+						<pagecontrol>61</pagecontrol>
+						<scrolltime>200</scrolltime>
+						<itemlayout height="50">
+							<control type="image">
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>560</width>
+								<height>50</height>
+								<texture border="5">border-bottom-grey.png</texture>
+							</control>
+							<control type="label">
+								<width>445</width>
+								<height>50</height>
+								<label>$INFO[ListItem.Label]</label>
+								<font>Regular-18</font>
+								<textcolor>Unfocused</textcolor>
+								<textoffsetx>20</textoffsetx>
+							</control>
+							<control type="image">
+								<posx>450</posx>
+								<posy>0</posy>
+								<width>90</width>
+								<height>49</height>
+								<texture>$INFO[ListItem.FileNameAndPath]</texture>
+								<aspectratio aligny="top" align="right">scale</aspectratio>
+							</control>
+						</itemlayout>
+						<focusedlayout height="50">
+							<control type="image">
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>560</width>
+								<height>50</height>
+								<texture border="5">black-bottom-grey.png</texture>
+							</control>
+							<control type="label">
+								<width>445</width>
+								<height>50</height>
+								<font>Regular-18</font>
+								<label>$INFO[ListItem.Label]</label>
+								<textcolor>Focused</textcolor>
+								<textoffsetx>20</textoffsetx>
+							</control>
+							<control type="image">
+								<posx>450</posx>
+								<posy>0</posy>
+								<width>90</width>
+								<height>49</height>
+								<texture>$INFO[ListItem.FileNameAndPath]</texture>
+								<aspectratio aligny="top" align="right">scale</aspectratio>
+							</control>
+						</focusedlayout>
+					</control>
+					<control type="scrollbar" id="61">
+						<description>Scroll Bar</description>
+						<posy>-5</posy>
+						<posx>570</posx>
+						<width>20</width>
+						<height>300</height>
+					</control>
+				</control>
+				<control type="label" id="412">
+					<description>Path</description>
+					<posy>420</posy>
+					<posx>30</posx>
+					<width>560</width>
+					<font>Regular-17</font>
+					<textcolor>orange</textcolor>
+					<align>left</align>
+					<label>-</label>
+					<haspath>true</haspath>
+				</control>
+				<control type="grouplist">
+					<posx>94</posx>
+					<posy>470</posy>
+					<itemgap>30</itemgap>
+					<orientation>horizontal</orientation>
+					<control type="button" id="414">
+						<description>Cancel Button</description>
+						<!--<posx>210</posx>-->
+						<!--<onleft>450</onleft>
+						<onright>450</onright>-->
+						<onup>450</onup>
+						<width>200</width>
+						<textoffsety>3</textoffsety>
+						<label>$LOCALIZE[222]</label>
+						<include>DialogPressButton</include>
+					</control>
+					<control type="button" id="413">
+						<description>Ok Button</description>
+						<!--
+						<onleft>414</onleft>
+						<onright>414</onright>
+						-->
+						<onup>450</onup>
+						<width>200</width>
+						<textoffsety>3</textoffsety>
+						<label>$LOCALIZE[186]</label>
+						<include>DialogPressButton</include>
+					</control>
+
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

@@ -1,0 +1,1348 @@
+# XBMC Media Center language file
+msgid ""
+msgstr ""
+"Project-Id-Version: XBMC-Addons\n"
+"Report-Msgid-Bugs-To: alanwww1@xbmc.org\n"
+"POT-Creation-Date: 2013-11-11 12:45+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+""
+
+msgctxt "#31000"
+msgid "Browse"
+msgstr "Gennemse"
+
+
+msgctxt "#31001"
+msgid "Videos"
+msgstr "Videoer"
+
+
+msgctxt "#31002"
+msgid "Music"
+msgstr "Musik"
+
+
+msgctxt "#31003"
+msgid "Pictures"
+msgstr "Billeder"
+
+
+msgctxt "#31004"
+msgid "Applications"
+msgstr "Applikationer"
+
+
+msgctxt "#31005"
+msgid "Weather"
+msgstr "Vejr"
+
+
+msgctxt "#31006"
+msgid "System"
+msgstr "System"
+
+
+msgctxt "#31007"
+msgid "Quit"
+msgstr "Afslut"
+
+
+msgctxt "#31008"
+msgid "TV Shows"
+msgstr "TV-Serier"
+
+
+#empty strings from id 31009 to 31010
+
+msgctxt "#31011"
+msgid "Watch your"
+msgstr "Se din"
+
+
+msgctxt "#31012"
+msgid "Listen to"
+msgstr "Lyt til"
+
+
+msgctxt "#31013"
+msgid "View your"
+msgstr "Vis dine"
+
+
+msgctxt "#31014"
+msgid "Use your"
+msgstr "Brug din"
+
+
+msgctxt "#31015"
+msgid "Check"
+msgstr "Kontroller"
+
+
+msgctxt "#31016"
+msgid "Change your"
+msgstr "Skift din"
+
+
+#empty string with id 31017
+
+msgctxt "#31018"
+msgid "Menu"
+msgstr "Menu"
+
+
+msgctxt "#31019"
+msgid "Play the"
+msgstr "Afspil"
+
+
+msgctxt "#31020"
+msgid "Options"
+msgstr "Muligheder"
+
+
+msgctxt "#31021"
+msgid "Seasons"
+msgstr "Afsnit"
+
+
+msgctxt "#31022"
+msgid "Hide"
+msgstr "Skjul"
+
+
+msgctxt "#31023"
+msgid "Sort By"
+msgstr "Sorter efter"
+
+
+msgctxt "#31024"
+msgid "Sort Direction"
+msgstr "Sortering"
+
+
+msgctxt "#31025"
+msgid "Backward"
+msgstr "Baglæns"
+
+
+msgctxt "#31026"
+msgid "Forward"
+msgstr "Fremad"
+
+
+msgctxt "#31027"
+msgid "Began"
+msgstr "Begyndte"
+
+
+msgctxt "#31028"
+msgid "Finished"
+msgstr "Sluttede"
+
+
+msgctxt "#31029"
+msgid "Writer"
+msgstr "Forfatter"
+
+
+msgctxt "#31030"
+msgid "Track No."
+msgstr "Spor nr."
+
+
+msgctxt "#31031"
+msgid "Active"
+msgstr "Aktiv"
+
+
+msgctxt "#31032"
+msgid "Instrmts"
+msgstr "Instrumenter"
+
+
+msgctxt "#31033"
+msgid "Last Refreshed"
+msgstr "Sidst opdateret"
+
+
+msgctxt "#31034"
+msgid "Build"
+msgstr "Build"
+
+
+msgctxt "#31035"
+msgid "Free RAM"
+msgstr "Ledig RAM"
+
+
+msgctxt "#31036"
+msgid "IP Addr."
+msgstr "IP adr."
+
+
+msgctxt "#31037"
+msgid "Hard Drive Space"
+msgstr "Harddisk plads"
+
+
+msgctxt "#31038"
+msgid "Choose Your"
+msgstr "Vælg dine"
+
+
+msgctxt "#31039"
+msgid "Favourite"
+msgstr "Favorit"
+
+
+msgctxt "#31040"
+msgid "Modify"
+msgstr "Ændre"
+
+
+msgctxt "#31041"
+msgid "Editor"
+msgstr "Editor"
+
+
+msgctxt "#31042"
+msgid "Picture"
+msgstr "Billede"
+
+
+msgctxt "#31043"
+msgid "Check the"
+msgstr "Kontroller"
+
+
+msgctxt "#31044"
+msgid "By"
+msgstr "Ved"
+
+
+msgctxt "#31045"
+msgid "Recently Added"
+msgstr "Tilføjet for nyeligt"
+
+
+msgctxt "#31046"
+msgid "Path to Lyrics Script"
+msgstr "Sti til lyrik script"
+
+
+msgctxt "#31047"
+msgid "Not Available"
+msgstr "Ikke tilgængelig"
+
+
+#empty strings from id 31048 to 31049
+
+msgctxt "#31050"
+msgid "Items"
+msgstr "Emner"
+
+
+#Programs
+
+msgctxt "#31051"
+msgid "Games"
+msgstr "Spil"
+
+
+msgctxt "#31052"
+msgid "Emulators"
+msgstr "Emulatorer"
+
+
+msgctxt "#31053"
+msgid "Apps"
+msgstr "Programmer"
+
+
+#System
+#empty strings from id 31054 to 31059
+
+msgctxt "#31060"
+msgid "Settings"
+msgstr "Indstillinger"
+
+
+msgctxt "#31061"
+msgid "Scripts"
+msgstr "Scripts"
+
+
+msgctxt "#31062"
+msgid "File Manager"
+msgstr "Filhåndtering"
+
+
+msgctxt "#31063"
+msgid "Favourites"
+msgstr "Favoritter"
+
+
+msgctxt "#31064"
+msgid "Profiles"
+msgstr "Profiler"
+
+
+msgctxt "#31065"
+msgid "Info"
+msgstr "Information"
+
+
+msgctxt "#31066"
+msgid "Refresh"
+msgstr "Genopfrisk"
+
+
+msgctxt "#31067"
+msgid "About Your"
+msgstr "Om dine"
+
+
+msgctxt "#31068"
+msgid "User ID:"
+msgstr "Bruger ID:"
+
+
+msgctxt "#31069"
+msgid "Password:"
+msgstr "Password:"
+
+
+#Power
+#empty string with id 31070
+
+msgctxt "#31071"
+msgid "Shutdown"
+msgstr "Nedluk"
+
+
+msgctxt "#31072"
+msgid "Restart"
+msgstr "Genstart"
+
+
+msgctxt "#31073"
+msgid "Reload XBMC"
+msgstr "Genstart Plex/HT"
+
+
+msgctxt "#31074"
+msgid "Dashboard"
+msgstr "Dashboard"
+
+
+msgctxt "#31075"
+msgid "Refresh Skin"
+msgstr "Genopfrisk tema"
+
+
+#Video
+#empty strings from id 31076 to 31110
+
+msgctxt "#31111"
+msgid "Movies"
+msgstr "Film"
+
+
+msgctxt "#31112"
+msgid "TV Shows"
+msgstr "TV-Serier"
+
+
+msgctxt "#31113"
+msgid "Clips"
+msgstr "Klip"
+
+
+msgctxt "#31114"
+msgid "Episode"
+msgstr "Afsnit"
+
+
+msgctxt "#31115"
+msgid "N/A"
+msgstr "N/A"
+
+
+msgctxt "#31116"
+msgid "Movie Title"
+msgstr "Film tittel"
+
+
+msgctxt "#31117"
+msgid "Thumb"
+msgstr "Miniaturebillede"
+
+
+msgctxt "#31118"
+msgid "Fanart"
+msgstr "Fankunst"
+
+
+msgctxt "#31119"
+msgid "Synopsis"
+msgstr "Synopsis"
+
+
+msgctxt "#31120"
+msgid "Star Rating"
+msgstr "Stjerne bedømmelse"
+
+
+msgctxt "#31121"
+msgid "Movie Details"
+msgstr "Film detaljer"
+
+
+msgctxt "#31122"
+msgid "Aired"
+msgstr "Først vist"
+
+
+msgctxt "#31123"
+msgid "MPAA"
+msgstr "MPAA"
+
+
+msgctxt "#31124"
+msgid "Eps."
+msgstr "Afs."
+
+
+msgctxt "#31125"
+msgid "Theater Times"
+msgstr "Biograf tider"
+
+
+msgctxt "#31126"
+msgid "TV Show Details"
+msgstr "TV program detaljer"
+
+
+msgctxt "#31127"
+msgid "Episode Details"
+msgstr "Afsnit detaljer"
+
+
+msgctxt "#31128"
+msgid "Banner"
+msgstr "Banner"
+
+
+msgctxt "#31129"
+msgid "Rating"
+msgstr "Bedømmelse"
+
+
+msgctxt "#31130"
+msgid "IMDb Rating"
+msgstr "IMDb bedømmelse"
+
+
+msgctxt "#31131"
+msgid "Genre"
+msgstr "Genre"
+
+
+msgctxt "#31132"
+msgid "Duration"
+msgstr "Varighed"
+
+
+msgctxt "#31133"
+msgid "Subtitles"
+msgstr "Undertekster"
+
+
+msgctxt "#31134"
+msgid "Cast"
+msgstr "Medvirkende"
+
+
+msgctxt "#31135"
+msgid "Director"
+msgstr "Instruktør"
+
+
+msgctxt "#31136"
+msgid "Writer"
+msgstr "Forfatter"
+
+
+msgctxt "#31137"
+msgid "Episodes"
+msgstr "Afsnit"
+
+
+msgctxt "#31138"
+msgid "Watched"
+msgstr "Set"
+
+
+msgctxt "#31139"
+msgid "Unwatched"
+msgstr "Uset"
+
+
+msgctxt "#31140"
+msgid "First Aired"
+msgstr "Først vist"
+
+
+msgctxt "#31141"
+msgid "Season"
+msgstr "Sæson"
+
+
+msgctxt "#31142"
+msgid "Movie"
+msgstr "Film"
+
+
+msgctxt "#31143"
+msgid "TV Show"
+msgstr "TV program"
+
+
+msgctxt "#31144"
+msgid "Video"
+msgstr "Film"
+
+
+msgctxt "#31145"
+msgid "Specials"
+msgstr "Extra materiale"
+
+
+#Music
+#empty strings from id 31146 to 31219
+
+msgctxt "#31220"
+msgid "Currently Playing"
+msgstr "Afspiller nu"
+
+
+msgctxt "#31221"
+msgid "Previous Track"
+msgstr "Forrige spor"
+
+
+msgctxt "#31222"
+msgid "Upcoming Tracks"
+msgstr "Næste spor"
+
+
+msgctxt "#31223"
+msgid "Click for Lyrics"
+msgstr "Klik for lyrik"
+
+
+msgctxt "#31224"
+msgid "Open MENU for Options"
+msgstr "Åben MENU for indstillinger"
+
+
+msgctxt "#31225"
+msgid "Rating"
+msgstr "Bedømmelse"
+
+
+msgctxt "#31226"
+msgid "Change"
+msgstr "Ændre"
+
+
+msgctxt "#31227"
+msgid "Your Preset"
+msgstr "Din forudindstilling"
+
+
+msgctxt "#31228"
+msgid "Lyrics"
+msgstr "Lyrik"
+
+
+msgctxt "#31229"
+msgid "Artist"
+msgstr "Kunstner"
+
+
+msgctxt "#31230"
+msgid "Album"
+msgstr "Album"
+
+
+#Settings
+#empty strings from id 31231 to 31600
+
+msgctxt "#31601"
+msgid "Appearance"
+msgstr "Udseende"
+
+
+msgctxt "#31602"
+msgid "Network"
+msgstr "Netværk"
+
+
+msgctxt "#31603"
+msgid "Skin"
+msgstr "Skin"
+
+
+msgctxt "#31604"
+msgid "General"
+msgstr "Generelt"
+
+
+msgctxt "#31605"
+msgid "Home"
+msgstr "Hjem"
+
+
+msgctxt "#31606"
+msgid "Change Preferences For"
+msgstr "Ændre Præferencer for"
+
+
+msgctxt "#31607"
+msgid "Current"
+msgstr "Nuværende"
+
+
+msgctxt "#31608"
+msgid "Source"
+msgstr "Kilde"
+
+
+msgctxt "#31609"
+msgid "Dest"
+msgstr "Destination"
+
+
+msgctxt "#31610"
+msgid "Playback"
+msgstr "Afspil"
+
+
+#empty strings from id 31611 to 31619
+
+msgctxt "#31620"
+msgid "Menu"
+msgstr "Menu"
+
+
+msgctxt "#31621"
+msgid "Disable"
+msgstr "Deaktiver"
+
+
+msgctxt "#31622"
+msgid "Enable"
+msgstr "Aktiver"
+
+
+msgctxt "#31623"
+msgid "Background"
+msgstr "Baggrund"
+
+
+msgctxt "#31624"
+msgid "Select"
+msgstr "Vælg"
+
+
+msgctxt "#31625"
+msgid "Use Default"
+msgstr "Brug standard"
+
+
+#empty strings from id 31626 to 31649
+
+msgctxt "#31650"
+msgid "Hide right blade"
+msgstr "Gem højre side"
+
+
+msgctxt "#31651"
+msgid "Enable custom backgrounds"
+msgstr "Aktiver brugerdefinerede baggrunde"
+
+
+msgctxt "#31652"
+msgid "Enable"
+msgstr "Aktiver"
+
+
+msgctxt "#31653"
+msgid "View"
+msgstr "Udseende"
+
+
+msgctxt "#31654"
+msgid "Hide Thumb Labels in File Browser dialog"
+msgstr "Gem miniaturebillede label i filbrowser dialogen"
+
+
+msgctxt "#31655"
+msgid "Display rotated Season thumb in Episodes view"
+msgstr "Vis roterede sæson miniaturebillede i afsnits udseende"
+
+
+msgctxt "#31656"
+msgid "Backgrounds"
+msgstr "Baggrunde"
+
+
+msgctxt "#31657"
+msgid "Image"
+msgstr "Billede"
+
+
+msgctxt "#31658"
+msgid "Folder"
+msgstr "Folder"
+
+
+msgctxt "#31659"
+msgid "Reset"
+msgstr "Nulstil"
+
+
+msgctxt "#31660"
+msgid "Enable Custom BG's on Home"
+msgstr "Aktiver brugerdefineret BG'e i Hjem"
+
+
+msgctxt "#31661"
+msgid "Apple Movie Trailers"
+msgstr "Apple Film Trailere"
+
+
+msgctxt "#31662"
+msgid "Hide clock"
+msgstr "Gem uret"
+
+
+msgctxt "#31663"
+msgid "Show Media Count"
+msgstr "Vis Medie Tæller"
+
+
+msgctxt "#31664"
+msgid "Hide Scrollbars on Media Screens"
+msgstr "Gem scrollbar i Medie vinduer"
+
+
+msgctxt "#31665"
+msgid "Hide Watched/Unwatched icons"
+msgstr "Gem Set/Uset ikoner"
+
+
+msgctxt "#31666"
+msgid "Show Blade in Centre of Screen"
+msgstr "Vis Fane i midten af skærmen"
+
+
+msgctxt "#31667"
+msgid "MediaStream"
+msgstr "MediaStream"
+
+
+msgctxt "#31668"
+msgid "Show Larger Clock"
+msgstr "Vis Større Ur"
+
+
+msgctxt "#31669"
+msgid "Show Weather on Home"
+msgstr "Vis Vejret på Hjem"
+
+
+msgctxt "#31670"
+msgid "Show Fanart"
+msgstr "Vis Fankunst"
+
+
+msgctxt "#31671"
+msgid "Hide Plot in Video OSD"
+msgstr "Skjul handling i Video OSD"
+
+
+msgctxt "#31672"
+msgid "Hide Info"
+msgstr "Gem information"
+
+
+msgctxt "#31673"
+msgid "Media Views"
+msgstr "Medie Udseende"
+
+
+msgctxt "#31674"
+msgid "Hide Fanart"
+msgstr "Skjul fankunst"
+
+
+msgctxt "#31675"
+msgid "with Movies Views"
+msgstr "med Film Område"
+
+
+msgctxt "#31676"
+msgid "In Media Preview"
+msgstr "I Media Forhåndsvisning"
+
+
+msgctxt "#31677"
+msgid "with TV Shows List"
+msgstr "med TV-Serier liste"
+
+
+msgctxt "#31678"
+msgid "Show Season thumb"
+msgstr "Vis sæson miniaturebillede "
+
+
+msgctxt "#31679"
+msgid "Hide Focus Details in Panel Stream"
+msgstr "Skjul fokusdetaljer i Panel Stream"
+
+
+msgctxt "#31680"
+msgid "Hide Thumbs in List View"
+msgstr "Skjul miniaturebilleder i listevisning"
+
+
+msgctxt "#31681"
+msgid "in Files Mode"
+msgstr "I fil tilstand"
+
+
+msgctxt "#31682"
+msgid "on TV Wall"
+msgstr "på TV Væg"
+
+
+msgctxt "#31683"
+msgid "with TV Views"
+msgstr "med TV Visning"
+
+
+msgctxt "#31684"
+msgid "Hide Custom Backgrounds"
+msgstr "Skjul brugerdefinerede baggrunde"
+
+
+msgctxt "#31685"
+msgid "Show Animated"
+msgstr "Vis Animerede"
+
+
+msgctxt "#31686"
+msgid "Show Horizontal Music Vis"
+msgstr "Vis Horisontal Musik Visualisering"
+
+
+msgctxt "#31687"
+msgid "with Video Views"
+msgstr "med Video Visning"
+
+
+msgctxt "#31688"
+msgid "with Music Views"
+msgstr "med Musik Visning"
+
+
+msgctxt "#31689"
+msgid "with Pictures Views"
+msgstr "med Billede Visning"
+
+
+msgctxt "#31690"
+msgid "Hide No Thumb Icons"
+msgstr "Skjul ingen-miniature ikoner"
+
+
+msgctxt "#31691"
+msgid "Use Low Overlay for TV Shows Coverflow"
+msgstr "Brug Lav Overlay for TV Program Coverflow"
+
+
+msgctxt "#31692"
+msgid "Hide Info in Wall Stream view"
+msgstr "Gem information i Væg Strøm visning"
+
+
+msgctxt "#31693"
+msgid "Hide Thumbs in Options Menu"
+msgstr "Skjul miniaturebilleder i indstillingsmenuen"
+
+
+msgctxt "#31694"
+msgid "Show Now Playing UI on Left"
+msgstr "Vis Afspiller Nu i GUI til højre"
+
+
+msgctxt "#31695"
+msgid "Show AM/PM in clock"
+msgstr "Vi AM/PM i uret"
+
+
+#empty string with id 31696
+
+msgctxt "#31697"
+msgid "Hide Photo Description in Slideshow"
+msgstr "Gem Billede Beskrivelse i Lysbilledeshow"
+
+
+#Options Menu
+#empty strings from id 31698 to 31700
+
+msgctxt "#31701"
+msgid "Setup"
+msgstr "Opsætning"
+
+
+msgctxt "#31702"
+msgid "Showcase"
+msgstr "Udstillingsvindue"
+
+
+msgctxt "#31703"
+msgid "Seasons"
+msgstr "Afsnit"
+
+
+msgctxt "#31704"
+msgid "Photo"
+msgstr "Billede"
+
+
+msgctxt "#31705"
+msgid "Convex"
+msgstr "Konveks"
+
+
+msgctxt "#31706"
+msgid "Episode Thumbs"
+msgstr "Afsnit Miniatyrebillede"
+
+
+msgctxt "#31707"
+msgid "Media Preview"
+msgstr "Medie Forhåndsvisning"
+
+
+msgctxt "#31708"
+msgid "Media List"
+msgstr "Medie Liste"
+
+
+msgctxt "#31709"
+msgid "Concave"
+msgstr "Konkave"
+
+
+msgctxt "#31710"
+msgid "Display"
+msgstr "Skærm"
+
+
+msgctxt "#31711"
+msgid "Info List"
+msgstr "Info Liste"
+
+
+msgctxt "#31712"
+msgid "Image Stream"
+msgstr "Billede Strøm"
+
+
+msgctxt "#31713"
+msgid "Setup Options"
+msgstr "Oprettelses Muligheder"
+
+
+msgctxt "#31714"
+msgid "Wall Stream"
+msgstr "Væg Strøm"
+
+
+msgctxt "#31715"
+msgid "Panel Stream"
+msgstr "Panel Strøm"
+
+
+msgctxt "#31716"
+msgid "Coverflow"
+msgstr "Coverflow"
+
+
+msgctxt "#31717"
+msgid "Options Menu"
+msgstr "Indstillings Menu"
+
+
+#empty strings from id 31718 to 31719
+
+msgctxt "#31720"
+msgid "Grid"
+msgstr "Grid"
+
+
+msgctxt "#31721"
+msgid "Episodes List"
+msgstr "Afsnit liste"
+
+
+msgctxt "#31722"
+msgid "Plugin Stream"
+msgstr "Plugin Strøm"
+
+
+#Credits
+#empty strings from id 31723 to 31799
+
+msgctxt "#31800"
+msgid "About Plex"
+msgstr "Om Plex"
+
+
+msgctxt "#31801"
+msgid "Welcome to"
+msgstr "Velkommen til"
+
+
+msgctxt "#31802"
+msgid "your media....[COLOR Highlighted]your[/COLOR] way"
+msgstr "dine medier på....[COLOR Highlighted]din[/COLOR] måde"
+
+
+#empty string with id 31803
+
+msgctxt "#31804"
+msgid "MediaStream is a new user interface for the popular multimedia XBMC.  Created by the newly-formed \"Team RazorFish\", this new interface seeks to combine functionality with form, merging style with substance.  Designed and optimized for the 'High-Def' generation, this interface seeks to bring a new experience to the already popular platform."
+msgstr "MediaStream er et nyt brugerinterface for det populære multimedie Plex/HT. Lavet af \"Team RazorFish\" og opdateret af Plex Inc, dette nye interface forsøget at kombinere funktionalitet med form, ved at smelte stil og substans sammen. Designet og optimeret til \"High-Def\" generationen, er dette interface's intention at bringe en ny oplevelse til en allerede populær platform."
+
+
+msgctxt "#31805"
+msgid "Note"
+msgstr "Bemærk"
+
+
+msgctxt "#31806"
+msgid "Please ensure that you have the very latest build of XBMC.  We recommend the latest SVN build of XBMC, and would ask that you always download the full skin package."
+msgstr "Vær venlig at sikre dig, at du har den seneste udgave af Plex/HT."
+
+
+msgctxt "#31807"
+msgid "Skin Credits"
+msgstr "Skin Kreditter"
+
+
+msgctxt "#31808"
+msgid "The entire project was a collaborative effort between many talented individuals.  These are as follows: skunkmonkee, manturafs, justmed, timdog82001, wir3d, syphon, jmarshall, jezz_x, blittan, mikebeecham, grrowl, modplug, nuka1195 and aenima99x.  Special thanks goes to emilio (a.k.a. thedeViL), without whom this project would never have happened.  Of course all thanks go to you, the XBMC community... without you there would be no reason to do what we do... keep rocking guys, you're the best!!!"
+msgstr "Hele dette projekt var et samarbejde mellem mange tallentfulde individualister. Disse er som følger: skunkmonkee, manturafs, justmed, timdog82001, wir3d, syphon, jmarshall, jezz_x, blittan, mikebeecham, grrowl, modplug, nuka1195 and aenima99x. Specielt tak til emelio (a.k.a thedeViL), som dette projekt ikke havde været muligt uden. Selfølgelige tak til hele XBMC forummet.. uden dig ville der ikke være nogen grund til at gøre hvad vi gør... Bliv ved med at fyre den af drenge. I er de bedste!!"
+
+
+msgctxt "#31809"
+msgid "Special Thanks: entire XBMC team, supporters at the xbmc and xbox-scene forums"
+msgstr "Speciel Tak: til hele Plex holdet, tilhængere og hele Plex forummet."
+
+
+msgctxt "#31810"
+msgid "Click \"OK\" to continue and begin using our skin"
+msgstr "Klik på \"OK\" for at fortsætte og begynde at bruge vores skin"
+
+
+msgctxt "#31811"
+msgid "Note: This is the only time you will see this message once you hit \"OK\""
+msgstr "Note: Dette er den eneste gang du ser denne besked når du har klikket \"OK\""
+
+
+#empty strings from id 31812 to 31850
+
+msgctxt "#31851"
+msgid "[COLOR=orange]Plex[/COLOR] bridges the gap between your Mac and your home theater, doing so with a visually appealing user interface that provides instant access to your media. [COLOR=orange]Plex[/COLOR] can play a wide range of video, audio and photo formats as well as online streaming audio and video. The real power of [COLOR=orange]Plex[/COLOR] is found in its library features: Organize your media into versatile libraries, automatically retrieve metadata from the Internet and display your library using one of the visually stunning skins."
+msgstr "[COLOR=orange]Plex[/COLOR] dækker hullet mellem din Mac og din hjemmebiograf, og gør det samtidig i et visuels tiltrækkende brugerinterface som yder øjblikkelig adgang til din medier. [COLOR=orange]Plex[/COLOR] Kan afspille en lang række video, lyd og billede formater samt online streaming af lyd og billede. Den ægte kraft i [COLOR=orange]Plex[/COLOR] er fundet i dens medie bibloteks funktioner: Organiser dine medier i fleksible bibloteker med automatisk hentning af metadata fra Internettet og få det præsenteret i et af de visuelle betagende skins."
+
+
+msgctxt "#31852"
+msgid "At Plex, we would like to thank the following projects, without whom none of this would be possible:"
+msgstr "Vi hos Plex, vil gerne takke følgende projekter uden hvem intet af dette ville være muligt:"
+
+
+msgctxt "#31853"
+msgid "[COLOR=orange]XBMC[/COLOR]: The most important one, for supplying us with a great foundation to build on."
+msgstr "[COLOR=orange]XBMC[/COLOR]: Det mest vigtige, for at forsyne os med et stort fundament at bygge på."
+
+
+msgctxt "#31854"
+msgid "[COLOR=orange]Team RazorFish[/COLOR]: The talented team who created the original MediaStream skin."
+msgstr "[COLOR=orange]Team RazorFish[/COLOR]: Det talentfulde team som lavede den originale MediaStream Skin."
+
+
+msgctxt "#31855"
+msgid "[COLOR=orange]FFmpeg[/COLOR]: Without this, there would be no decoding of video inside Plex. A critical component, to be sure."
+msgstr "[COLOR=orange]FFmpeg[/COLOR]: Uden dette ville der ikke være nogen dekodning af video i Plex. Helt sikkert en kritisk komponent."
+
+
+msgctxt "#31856"
+msgid "[COLOR=orange]SQLite[/COLOR]: The media database is stored using this excellent, industry standard free database."
+msgstr "[COLOR=orange]SQLite[/COLOR]: Mediedatabasen gemmes ved hjælp af denne fremragende gratis database der er industristandard."
+
+
+msgctxt "#31857"
+msgid "[COLOR=orange]CxImage[/COLOR]: The workhorse code responsible for loading images and photos. It uses lots of other libraries like libPNG, libJPEG, etc."
+msgstr "[COLOR=orange]CxImage[/COLOR]: Code arbejdshesten som er ansvarlig for at loade billeder. Den bruger en del andre bibloteker som libPNG, libJPEG etc."
+
+
+msgctxt "#31858"
+msgid "[COLOR=orange]FreeType[/COLOR]: This code is responsible for the beautiful rendering of fonts within the application."
+msgstr "[COLOR=orange]FreeType[/COLOR]: Denne kode er ansvarlig for de smukke renderinger af skrifttyper inden i programmet."
+
+
+msgctxt "#31859"
+msgid "[COLOR=orange]Python[/COLOR]: The media center embeds the Python interpreter to provide powerful scripting functionality."
+msgstr "[COLOR=orange]Python[/COLOR]: Media centeret inkorporerer Python for at understøtte kraftig script funktionalitet."
+
+
+msgctxt "#31860"
+msgid "Please visit http://www.plexapp.com/credits.php for links and more information."
+msgstr "Besøg venligst http://www.plexapp.com/credits.php for links og mere information."
+
+
+#Profiles
+#empty strings from id 31861 to 31899
+
+msgctxt "#31900"
+msgid "Login As"
+msgstr "Log på som"
+
+
+msgctxt "#31901"
+msgid "Modify Your"
+msgstr "Rediger din"
+
+
+msgctxt "#31902"
+msgid "Profile"
+msgstr "Profil"
+
+
+msgctxt "#31903"
+msgid "Profile name"
+msgstr "Profil navn"
+
+
+msgctxt "#31904"
+msgid "Profile picture"
+msgstr "Profilbillede"
+
+
+#Plex additions
+#empty strings from id 31905 to 31949
+
+msgctxt "#31950"
+msgid "Go to your"
+msgstr "Gå til din"
+
+
+msgctxt "#31951"
+msgid "Visit"
+msgstr "Besøg"
+
+
+msgctxt "#31952"
+msgid "Channel Directory"
+msgstr "Kanal oversigt"
+
+
+msgctxt "#31953"
+msgid "Get"
+msgstr "Få"
+
+
+msgctxt "#31954"
+msgid "Help"
+msgstr "Hjælp"
+
+
+msgctxt "#31955"
+msgid "Preferences"
+msgstr "Præferencer"
+
+
+msgctxt "#31956"
+msgid "Show"
+msgstr "Vis"
+
+
+#empty strings from id 31957 to 31959
+
+msgctxt "#31960"
+msgid "Sleep"
+msgstr "Dvale"
+
+
+msgctxt "#31961"
+msgid "Shut Down"
+msgstr "Sluk"
+
+
+msgctxt "#31962"
+msgid "Power Menu"
+msgstr "Power Menu"
+
+
+msgctxt "#31963"
+msgid "displays"
+msgstr "skærme"
+
+
+msgctxt "#31964"
+msgid "Sleep Display"
+msgstr "Skærmdvale"
+
+
+#empty strings from id 31965 to 31969
+
+msgctxt "#31970"
+msgid "Channels"
+msgstr "Kanaler"
+
+
+msgctxt "#31971"
+msgid "Video Channels"
+msgstr "Video kanaler"
+
+
+msgctxt "#31972"
+msgid "Music Channels"
+msgstr "Musik kanaler"
+
+
+msgctxt "#31973"
+msgid "Picture Channels"
+msgstr "Billede kanaler"
+
+
+#empty strings from id 31974 to 31980
+
+msgctxt "#31981"
+msgid "Show Thumbnails in List View"
+msgstr "Vis miniaturebilleder i listevisning"
+
+
+msgctxt "#31982"
+msgid "Show Plot in Video OSD"
+msgstr "Vis handling i Video OSD"
+
+
+msgctxt "#31983"
+msgid "Show Picture Descriptions in Slideshow"
+msgstr "Vis billedoplysninger i lysbilledshow"
+
+
+msgctxt "#31984"
+msgid "Show Now Playing Information in Visualisations"
+msgstr "Vis Afspiller Nu Information i Visualiseringer"
+
+
+msgctxt "#31985"
+msgid "Show Separate Menu Items for Plug-in Sections"
+msgstr "Vis Seperate Menu Emner for Plug-in Sektioner"
+
+
+#empty strings from id 31986 to 31998
+
+msgctxt "#31999"
+msgid "End Time"
+msgstr "Sluttid"
+
+
+#Startup helper
+
+msgctxt "#32000"
+msgid "Please choose the type of audio connector used on this computer.  If you're unsure, or if you're using built-in speakers, you can accept the default and continue.  You can access this setting at any time in the Preferences."
+msgstr "Vælg venligst lydforbindelsen for denne computer. Hvis du er usikker, eller hvis du bruger de indbyggede højtalere, can du aceptere standard indstillingerne og fortsætte. Du kan altid komme tilbage til disse indstillinger via Præference menuen."
+
+
+msgctxt "#32001"
+msgid "Plex Home Theater Setup"
+msgstr "Plex Home Theater opsætning"
+
+
+#empty string with id 32002
+
+msgctxt "#32003"
+msgid "[B]Welcome to Plex![/B]  [CR][CR]In order to ensure the best experience, let's take a minute to determine some audio settings and get signed in to [B]myPlex[/B].  [CR][CR][B]myPlex[/B] lets you queue and share online videos, and access shared media from your friends' libraries.  [CR][CR]If you don't already have a free [B]myPlex[/B] account, you can create one now at [COLOR=orange]http://my.plexapp.com[/COLOR] before continuing."
+msgstr "[B]Velkommen til Plex![/B] [CR][CR]For at sikre dig den bedste oplevelse, bør du tage et minut og indstille dine lydopsætning og logge på [B]myPlex[/B]. [CR][CR][B]myPlex[/B] lader dig lægge online videor i din kø og dele dem med venner samt at tilgå dine venners delte bibloteker. [CR][CR]Hvis du ikke allerede har en gratis [B]myPlex[/B] konto, can du oprette en nu på [COLOR=orange]http://my.plexapp.com[/COLOR] før du fortsætter."
+
+
+#Other
+#empty strings from id 32004 to 32099
+
+msgctxt "#32100"
+msgid "Set Rating"
+msgstr "Bedøm"
+
+
+msgctxt "#32101"
+msgid "Episodes added"
+msgstr "Afsnit tilføjet"
+
+
+msgctxt "#32102"
+msgid "All Episodes"
+msgstr "Alle afsnit"
+
+
+msgctxt "#32103"
+msgid "There is no description available for this "
+msgstr "Der er ingen beskrivelse til rådighed for denne"
+
+
+msgctxt "#32104"
+msgid "You can add one for it in the Media Manager"
+msgstr "Du kan tilføje en beskrivelse i Media Manager"
+
+
+msgctxt "#32105"
+msgid "* Plot hidden to avoid spoilers *"
+msgstr "* Plottet er gemt for ikke at afsløre handlingen *"
+
+
+msgctxt "#32201"
+msgid "Episodes"
+msgstr "Episodes"
+
+msgctxt "#32202"
+msgid "unwatched"
+msgstr "unwatched"
+
+msgctxt "#32203"
+msgid "Metadata not available"
+msgstr "Metadata not available"
+
+
+msgctxt "#32204"
+msgid "Menu"
+msgstr "Menu"
+
+msgctxt "#41008"
+msgid "Extras"
+msgstr "Extras"

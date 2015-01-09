@@ -1,0 +1,760 @@
+<?xml version="1.0"?>
+<includes>
+	<!-- Common -->
+	<include name="MusicThumbCard">
+		<control type="image">
+			<posx>13</posx>
+			<posy>173</posy>
+			<width>166</width>
+			<height>36</height>
+			<include>Card</include>
+			<animation effect="fade" start="0" end="40" time="0" condition="true">Conditional</animation>
+		</control>
+	</include>
+	<include name="MusicThumbCardNoSpace">
+		<control type="image">
+			<posx>13</posx>
+			<posy>147</posy>
+			<width>162</width>
+			<height>28</height>
+			<include>Card</include>
+			<animation effect="fade" start="0" end="50" time="0" condition="true">Conditional</animation>
+		</control>
+	</include>
+	<include name="MusicThumbCardNoSpaceAlbum">
+		<control type="image">
+			<posx>13</posx>
+			<posy>147</posy>
+			<width>162</width>
+			<height>28</height>
+			<include>Card</include>
+			<animation effect="fade" start="0" end="50" time="0" condition="true">Conditional</animation>
+		</control>
+		<control type="image">
+			<posx>13</posx>
+			<posy>120</posy>
+			<width>162</width>
+			<height>56</height>
+			<include>Card</include>
+			<animation effect="fade" start="0" end="50" time="400" condition="true">Conditional</animation>
+		</control>
+	</include>
+	<include name="MusicSelectedBorder">
+		<control type="image">
+			<posx>12</posx>
+			<posy>12</posy>
+			<width>168</width>
+			<height>168</height>
+			<include>Border</include>
+		</control>
+	</include>
+	<include name="MusicSelectedBorderNoSpace">
+		<control type="image">
+			<posx>10</posx>
+			<posy>10</posy>
+			<width>168</width>
+			<height>168</height>
+			<include>Border</include>
+		</control>
+	</include>
+	<include name="MusicThumb">
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>192</width>
+			<height>192</height>
+			<include>Shadow</include>
+		</control>
+		<control type="group">
+			<visible>!Skin.HasSetting(ShowThumbBorder)</visible>
+			<control type="image">
+				<description>Poster image</description>
+				<posx>12</posx>
+				<posy>12</posy>
+				<width>168</width>
+				<height>168</height>
+				<texture background="true">default-square-small.png</texture>	
+			</control>
+			<control type="image">
+				<description>Poster image</description>
+				<posx>12</posx>
+				<posy>12</posy>
+				<width>168</width>
+				<height>168</height>
+				<texture background="true">$INFO[ListItem.Art(smallThumb)]</texture>
+				<aspectratio scalediffuse="false" align="center" aligny="top">scale</aspectratio>
+			</control>
+		</control>
+		<control type="group">
+			<visible>Skin.HasSetting(ShowThumbBorder)</visible>
+			<control type="image">
+				<description>Poster image</description>
+				<posx>13</posx>
+				<posy>13</posy>
+				<width>166</width>
+				<height>166</height>
+				<texture background="true">default-square-small.png</texture>
+				<bordertexture border="1">thumb_border.png</bordertexture>
+				<bordersize>1</bordersize>	
+			</control>
+			<control type="image">
+				<description>Poster image</description>
+				<posx>13</posx>
+				<posy>13</posy>
+				<width>166</width>
+				<height>166</height>
+				<texture background="true">$INFO[ListItem.Art(smallThumb)]</texture>
+				<aspectratio scalediffuse="false" align="center" aligny="top">scale</aspectratio>
+				<bordertexture border="1">thumb_border.png</bordertexture>
+				<bordersize>1</bordersize>	
+			</control>
+		</control>
+	</include>
+	<include name="MusicThumbNoSpace">
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>188</width>
+			<height>188</height>
+			<include>Shadow</include>
+		</control>
+		<control type="image">
+			<description>Poster image</description>
+			<posx>13</posx>
+			<posy>13</posy>
+			<width>162</width>
+			<height>162</height>
+			<texture background="true">default-square-small.png</texture>
+		</control>
+		<control type="image">
+			<description>Poster image</description>
+			<posx>13</posx>
+			<posy>13</posy>
+			<width>162</width>
+			<height>162</height>
+			<texture background="true">$INFO[ListItem.Art(smallThumb)]</texture><!-- diffuse="base.png"-->
+			<aspectratio scalediffuse="false" align="center" aligny="top">scale</aspectratio>
+		</control>
+	</include>
+	<include name="MusicLabel">
+		<posy>185</posy>
+		<posx>95</posx>
+		<width>164</width>
+		<height>20</height>
+		<align>center</align>
+		<aligny>center</aligny>
+		<label>$INFO[ListItem.Label]</label>
+		<font>Regular-17</font>
+	</include>
+	<include name="MusicLabelNoSpace">
+		<posy>151</posy>
+		<posx>94</posx>
+		<width>152</width>
+		<height>20</height>
+		<align>center</align>
+		<aligny>center</aligny>
+		<label>$INFO[ListItem.Label]</label>
+		<font>Regular-17</font>
+	</include>
+	<include name="MusicLabelNoSpaceArtist">
+		<posy>125</posy>
+		<posx>94</posx>
+		<width>152</width>
+		<height>20</height>
+		<align>center</align>
+		<aligny>center</aligny>
+		<label>$INFO[ListItem.Artist]</label>
+		<font>Regular-17</font>
+	</include>
+	<include name="MusicPlotBG">
+	</include>
+	<!-- Library -->
+	<include name="LibraryMusic">
+		<control type="group">
+			<visible>Control.IsVisible(52)</visible>
+			<visible>!Skin.String(52_Dim,100)</visible>
+			<include>BGFanart</include>
+			<include>viewtype_nowplaying_right</include>
+		</control>
+		<control type="group">
+			<visible>Control.IsVisible(53)</visible>
+			<visible>!Skin.String(53_Dim,100)</visible>
+			<include>BGFanart</include>
+		</control>
+		<control type="group">
+			<visible>!Container.Content(addons) + !Container.Content(plugins) + !Container.PlexContent(Channel)</visible>
+			<include>FadeDialog</include>
+			<include>rightSideSlide</include>
+			<!--BG Dim 52-->		
+			<control type="group">
+				<visible>Control.IsVisible(52)</visible>
+				<visible>!Skin.String(52_Dim,100)</visible>
+				<control type="group">
+					<visible>Skin.String(52_Dim,10)</visible>
+					<include>BGDim10</include>
+				</control>
+				<control type="group">
+					<visible>Skin.String(52_Dim,20)</visible>
+					<include>BGDim20</include>
+				</control>
+				<control type="group">
+					<visible>Skin.String(52_Dim,30)</visible>
+					<include>BGDim30</include>
+				</control>
+				<control type="group">
+					<visible>Skin.String(52_Dim,40)</visible>
+					<include>BGDim40</include>
+				</control>
+				<control type="group">
+					<visible>Skin.String(52_Dim,50)</visible>
+					<include>BGDim50</include>
+				</control>
+				<control type="group">
+					<visible>Skin.String(52_Dim,60) | IsEmpty(Skin.String(52_Dim))</visible>
+					<include>BGDim60</include>
+				</control>
+				<control type="group">
+					<visible>Skin.String(52_Dim,70)</visible>
+					<include>BGDim70</include>
+				</control>
+				<control type="group">
+					<visible>Skin.String(52_Dim,80)</visible>
+					<include>BGDim80</include>
+				</control>
+				<control type="group">
+					<visible>Skin.String(52_Dim,90)</visible>
+					<include>BGDim90</include>
+				</control>
+			</control>
+			<!--BG Dim 53-->		
+			<control type="group">
+				<visible>Control.IsVisible(53)</visible>
+				<visible>!Skin.String(53_Dim,100)</visible>
+				<control type="group">
+					<visible>Skin.String(53_Dim,10)</visible>
+					<include>BGDim10</include>
+				</control>
+				<control type="group">
+					<visible>Skin.String(53_Dim,20)</visible>
+					<include>BGDim20</include>
+				</control>
+				<control type="group">
+					<visible>Skin.String(53_Dim,30)</visible>
+					<include>BGDim30</include>
+				</control>
+				<control type="group">
+					<visible>Skin.String(53_Dim,40)</visible>
+					<include>BGDim40</include>
+				</control>
+				<control type="group">
+					<visible>Skin.String(53_Dim,50)</visible>
+					<include>BGDim50</include>
+				</control>
+				<control type="group">
+					<visible>Skin.String(53_Dim,60) | IsEmpty(Skin.String(53_Dim))</visible>
+					<include>BGDim60</include>
+				</control>
+				<control type="group">
+					<visible>Skin.String(53_Dim,70)</visible>
+					<include>BGDim70</include>
+				</control>
+				<control type="group">
+					<visible>Skin.String(53_Dim,80)</visible>
+					<include>BGDim80</include>
+				</control>
+				<control type="group">
+					<visible>Skin.String(53_Dim,90)</visible>
+					<include>BGDim90</include>
+				</control>
+			</control>
+			<!-- Library -->
+			<control type="group" id="777">
+				<control type="panel" id="52">
+					<viewtype label="MusicLibrary">panel</viewtype>
+					<visible>[[Container.PlexContent(Albums) + [Container.PlexFilter(Albums) | Container.PlexFilter(recentlyAdded)]] | [Container.PlexContent(Artists) + Container.PlexFilter(All)]] + !Container.PlexContent(Songs) + !Container.Content(addons) + !Container.Content(plugins) + !Container.PlexContent(Channel)</visible>
+					<posy>30</posy>
+					<posx>54</posx>
+					<width>1200</width>
+					<height>660</height>
+					<onup>52</onup>
+					<ondown>52</ondown>
+					<onright>52</onright>
+					<onleft>998</onleft>
+					<orientation>vertical</orientation>
+					<itemlayout width="196" height="220">
+						<!--<include>MusicThumbCard</include>-->
+						<include>MusicThumb</include>
+						<control type="label">
+							<include>MusicLabel</include>
+							<textcolor>Unfocused</textcolor>
+						</control>
+					</itemlayout>
+					<focusedlayout width="196" height="220">
+						<!--<include>MusicThumbCard</include>-->
+						<include>MusicThumb</include>
+						<control type="label">
+							<include>MusicLabel</include>
+							<textcolor>Focused</textcolor>
+							<!--<animation effect="rotate" center="360,640" start="-1" end="1" time="110" tween="cubic" easing="inout" pulse="true"  condition="Skin.HasSetting(List1_Rotate)">Conditional</animation>-->
+						</control>
+						<include>MusicSelectedBorder</include>
+					</focusedlayout>
+				</control>
+			</control>
+			<!-- Artist Albums -->
+			<control type="group" id="777">
+				<posy>-34</posy>
+				<visible>[Container.PlexContent(Albums) + !Container.PlexFilter(Albums)] + !Container.Content(addons) + !Container.Content(plugins) + !Container.PlexContent(Secondary) + IsEmpty(Container.Property(mixedParents)) + Control.IsVisible(53)</visible>
+				<!-- backgrounds & plot -->
+				<control type="group">
+					<posx>0</posx>
+					<!-- backgrounds -->
+					<control type="group">				
+						<!--gernot include missing<include>MusicRightBG</include>-->
+						<!--<include>MusicPlotBG</include>-->
+						<visible>Control.IsVisible(53)</visible>
+						<!-- artist thumb -->
+						<control type="group">
+							<posx>27</posx>
+							<posy>62</posy>
+							<control type="image">
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>300</width>
+								<height>300</height>
+								<include>Shadow</include>
+							</control>
+							<control type="image">
+								<description>Poster image</description>
+								<posx>13</posx>
+								<posy>13</posy>
+								<width>274</width>
+								<height>274</height>
+								<texture background="true" diffuse="mask-square.png">$INFO[ListItem.Property(fanart_image)]</texture>
+								<aspectratio scalediffuse="false" align="center" aligny="top">scale</aspectratio>
+							</control>
+							<control type="image">
+								<description>Poster image</description>
+								<posx>13</posx>
+								<posy>13</posy>
+								<width>274</width>
+								<height>274</height>
+								<texture background="true" diffuse="mask-square.png">$INFO[Container.FolderThumb]</texture>
+								<aspectratio scalediffuse="false" align="center" aligny="top">scale</aspectratio>
+							</control>
+						</control>
+						<!-- plot text -->
+						<control type="textbox">
+							<posx>41</posx>
+							<posy>420</posy>
+							<width>630</width>
+							<height>246</height>
+							<include>PlotFormat</include>
+							<label>$INFO[Container.Property(summary)]</label>
+						</control>
+						<control type="textbox">
+							<posx>41</posx>
+							<posy>420</posy>
+							<width>630</width>
+							<height>246</height>
+							<include>PlotFormat</include>
+							<include>NoPlotDefault</include>
+							<visible>IsEmpty(Container.Property(summary))</visible>
+						</control>
+					</control>
+				</control>
+				<!-- Infos Left -->
+				<control type="group">
+					<posx>0</posx>
+					<control type="group">
+						<posy>70</posy>
+						<posx>340</posx>
+						<!-- Title -->
+						<control type="label">
+							<width>344</width>
+							<height>44</height>
+							<label>$INFO[Container.SecondTitle]</label>
+							<include>sectionTitleMiddle</include>
+						</control>
+						<!-- Genre -->
+						<!--<control type="grouplist">
+							<posy>63</posy>
+							<orientation>horizontal</orientation>
+							<itemgap>10</itemgap>
+							<control type="label">
+								<width min="29" max="200">auto</width>
+								<height>15</height>
+								<label>[UPPERCASE]$LOCALIZE[31131][/UPPERCASE]</label>
+								<font>Regular-18</font>
+								<include>Grey1</include>
+								<visible>true</visible>
+							</control>
+							<control type="label">
+								<width min="29" max="600">auto</width>
+								<height>15</height>
+								<label>$INFO[Container.Genre]</label>
+								<font>Regular-18</font>
+								<include>WhiteShadow</include>
+								<visible>true</visible>
+							</control>
+						</control>-->
+						<!-- Count -->
+						<control type="grouplist">
+							<posy>63</posy>
+							<orientation>horizontal</orientation>
+							<itemgap>10</itemgap>
+							<control type="label">
+								<width min="29" max="296">auto</width>
+								<height>20</height>
+								<label>$VAR[TopBarItemCountStrings]</label>
+								<include>sectionTitleSub</include>
+								<visible>true</visible>
+							</control>
+						</control>
+						<!-- Members -->
+						<!--><control type="grouplist">
+							<posy>121</posy>
+							<orientation>horizontal</orientation>
+							<itemgap>10</itemgap>
+							<control type="label">
+								<width min="29" max="100">auto</width>
+								<height>15</height>
+								<label>[UPPERCASE]Members[/UPPERCASE]</label>
+								<include>sectionTitleSub</include>
+								<visible>true</visible>
+							</control>
+							<control type="label">
+								<width min="29" max="330">auto</width>
+								<height>15</height>
+								<label>Band members</label>
+								<include>sectionTitleSub</include>
+								<visible>true</visible>
+							</control>
+						</control>-->
+				</control>
+			</control>
+			<!-- list -->
+			<control type="panel" id="53">
+				<visible>[Container.PlexContent(Albums) + !Container.PlexFilter(Albums)] + !Container.Content(addons) + !Container.Content(plugins) + !Container.PlexContent(Secondary) + IsEmpty(Container.Property(mixedParents))</visible>
+				<viewtype label="MusicLibraryAlbums">panel</viewtype>
+				<onup>53</onup>
+				<ondown>53</ondown>
+				<onright>53</onright>
+				<onleft>998</onleft>
+				<orientation>vertical</orientation>
+				<posx>786</posx>
+				<posy>60</posy>
+				<width>480</width>
+				<height>670</height>
+				<itemlayout width="235" height="223">
+					<include>MusicThumbCard</include>
+					<include>MusicThumb</include>
+					<control type="label">
+						<include>MusicLabel</include>
+						<textcolor>white</textcolor>
+					</control>
+				</itemlayout>
+				<focusedlayout width="235" height="223">
+					<include>MusicThumbCard</include>
+					<include>MusicThumb</include>
+					<control type="label">
+						<include>MusicLabel</include>
+						<textcolor>orangeLight</textcolor>
+					</control>
+					<include>MusicSelectedBorder</include>
+				</focusedlayout>
+			</control>
+		</control>
+		<!-- Album Tracks - disabled for the moment because ... this looks so shitty-->
+		<control type="group" id="777">
+			<posx>0</posx>
+			<posy>-34</posy>
+			<visible>false</visible>
+			<visible>Container.PlexContent(Songs) + !Container.Content(addons) + !Container.Content(plugins) + !Container.PlexContent(Secondary)</visible>
+			<!-- backgrounds & plot -->
+			<control type="group">
+				<visible>Control.IsVisible(54)</visible>
+				<posx>0</posx>
+				<!-- backgrounds -->
+				<control type="group">
+					<include>MusicPlotBG</include>
+				</control>
+				<!--List BG-->
+				<control type="image">
+					<posx>718</posx>
+					<posy>34</posy>
+					<width>570</width>
+					<height>720</height>
+					<texture>bg_left.png</texture>
+				</control>
+				<!-- artist thumb -->
+				<control type="group">
+					<posx>27</posx>
+					<posy>62</posy>
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>300</width>
+						<height>300</height>
+						<include>Shadow</include>
+					</control>
+					<control type="image">
+						<description>Poster image</description>
+						<posx>13</posx>
+						<posy>13</posy>
+						<width>274</width>
+						<height>274</height>
+						<texture background="true" diffuse="mask-square.png">$INFO[ListItem.Art(thumb)]</texture>
+						<aspectratio scalediffuse="false" align="center" aligny="top">scale</aspectratio>
+					</control>
+					<!-- show fanart if track has no thumb -->
+					<control type="image">
+						<description>Poster image</description>
+						<posx>13</posx>
+						<posy>13</posy>
+						<width>274</width>
+						<height>274</height>
+						<texture background="true" diffuse="mask-square.png">$INFO[ListItem.Property(Fanart_Image)]</texture>
+						<aspectratio scalediffuse="false" align="center" aligny="top">scale</aspectratio>
+						<visible>IsEmpty(ListItem.Art(thumb))</visible>
+					</control>
+				</control>
+				<!-- plot text -->
+				<control type="textbox">
+					<posx>41</posx>
+					<posy>412</posy>
+					<width>596</width>
+					<height>246</height>
+					<include>PlotFormat</include>
+					<label>$INFO[Container.Property(summary)]</label>
+				</control>
+				<control type="textbox">
+					<posx>41</posx>
+					<posy>420</posy>
+					<width>596</width>
+					<height>246</height>
+					<include>PlotFormat</include>
+					<include>NoPlotDefault</include>
+					<visible>IsEmpty(Container.Property(summary))</visible>
+				</control>
+			</control>
+			<!-- Infos Left -->
+			<control type="group">
+				<visible>Control.IsVisible(54)</visible>
+				<posy>70</posy>
+				<posx>340</posx>
+				<!-- Titles -->
+				<control type="label">
+					<width>346</width>
+					<height>44</height>
+					<label>$INFO[ListItem.Artist]</label>
+					<font>Regular-30</font>
+					<textcolor>white</textcolor>
+					<!--<shadowcolor>ff333333</shadowcolor>-->
+					<visible>true</visible>
+				</control>
+				<control type="label">
+					<posy>40</posy>
+					<width>346</width>
+					<height>44</height>
+					<label>$INFO[ListItem.Album]</label>
+					<font>Regular-30</font>
+					<textcolor>white</textcolor>
+					<!--<shadowcolor>ff333333</shadowcolor>-->
+					<visible>true</visible>
+				</control>
+				<!-- Genre -->
+				<!--
+					<control type="grouplist">
+						<posy>85</posy>
+						<orientation>horizontal</orientation>
+						<itemgap>10</itemgap>
+						<control type="label">
+							<width min="29" max="200">auto</width>
+							<height>40</height>
+							<label>[UPPERCASE]$LOCALIZE[31131][/UPPERCASE]</label>
+							<font>smallCaps</font>
+							<textcolor>title2</textcolor>
+							<shadowcolor>ff333333</shadowcolor>
+							<visible>true</visible>
+						</control>
+						<control type="label">
+							<width min="29" max="600">auto</width>
+							<height>40</height>
+							<label>$INFO[ListItem.Property(Genre)]</label>
+							<font>smallCaps</font>
+							<textcolor>title2</textcolor>
+							<shadowcolor>ff333333</shadowcolor>
+							<visible>true</visible>
+						</control>
+					</control>
+					-->
+				<!-- Count -->
+				<control type="grouplist">
+					<posy>95</posy>
+					<orientation>horizontal</orientation>
+					<itemgap>10</itemgap>
+					<control type="label">
+						<width min="29" max="296">auto</width>
+						<height>40</height>
+						<label>$VAR[TopBarItemCountStrings]</label>
+						<font>smallCaps</font>
+						<textcolor>title2</textcolor>
+						<!--<shadowcolor>ff333333</shadowcolor>-->
+						<visible>true</visible>
+					</control>
+				</control>
+				<!-- Unavailable indicator -->
+				<include>UnavailableIndicator</include>
+			</control>
+			<!-- list -->
+			<control type="list" id="54">
+				<visible>false</visible>
+				<visible>Container.PlexContent(Songs)</visible>
+				<viewtype label="MusicLibraryAlbumTracks">list</viewtype>
+				<posx>720</posx>
+				<posy>55</posy>
+				<width>520</width>
+				<height>650</height>
+				<scrolltime>200</scrolltime>
+				<pagecontrol>61</pagecontrol>
+				<onleft>998</onleft>
+				<onright>54</onright>
+				<onup>54</onup>
+				<ondown>54</ondown>
+				<itemlayout height="49" width="520">
+					<control type="image">
+						<posx>20</posx>
+						<posy>0</posy>
+						<width>600</width>
+						<height>50</height>
+						<texture>border-bottom-grey.png</texture>
+					</control>
+					<control type="label">
+						<posx>35</posx>
+						<width>434</width>
+						<height>50</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label]</label>
+						<font>Regular-18</font>
+						<include>White2</include>
+					</control>
+					<control type="label">
+						<posx>505</posx>
+						<width>120</width>
+						<height>50</height>
+						<align>right</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.DurationStr]</label>
+						<font>Regular-18</font>
+						<include>White2</include>
+					</control>
+				</itemlayout>
+				<focusedlayout height="49" width="520">
+					<control type="image">
+						<posx>20</posx>
+						<posy>0</posy>
+						<width>600</width>
+						<height>50</height>
+						<texture>border-bottom-grey.png</texture>
+					</control>
+					<control type="label">
+						<posx>35</posx>
+						<width>434</width>
+						<height>50</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label]</label>
+						<font>Regular-18</font>
+						<scroll>true</scroll>
+						<animation effect="fade" start="0" end="100" time="100" delay="50" reversible="false" condition="Container.OnNext">Focus</animation>
+						<animation effect="fade" start="0" end="100" time="100" delay="50" reversible="false" condition="Container.OnPrevious">Focus</animation>
+						<textcolor>orange</textcolor>
+					</control>
+					<control type="label">
+						<posx>505</posx>
+						<width>120</width>
+						<height>50</height>
+						<align>right</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.DurationStr]</label>
+						<font>Regular-18</font>
+						<textcolor>orange</textcolor>
+						<animation effect="fade" start="0" end="100" time="100" delay="50" reversible="false" condition="Container.OnNext">Focus</animation>
+						<animation effect="fade" start="0" end="100" time="100" delay="50" reversible="false" condition="Container.OnPrevious">Focus</animation>
+					</control>
+				</focusedlayout>
+			</control>
+		</control>
+	</control>
+</include>
+<include name="LibraryMusicNoSpace">
+	<control type="group">
+		<visible>!Container.Content(addons) + !Container.Content(plugins) + !Container.PlexContent(Channel)</visible>
+		<include>FadeDialog</include>
+		<include>rightSideSlide</include>
+		<!-- Library -->
+		<control type="group" id="777">
+			<!--BG-->
+			<control type="group">
+				<visible>Control.IsVisible(559)</visible>
+				<include>BGBlackEdition</include>
+			</control>
+			<control type="panel" id="559">
+				<viewtype label="Wall">panel</viewtype>
+				<visible>[[Container.PlexContent(Albums) + [Container.PlexFilter(Albums) | Container.PlexFilter(recentlyAdded)]] | [Container.PlexContent(Artists) + Container.PlexFilter(All)]] + !Container.PlexContent(Songs) + !Container.Content(addons) + !Container.Content(plugins) + !Container.PlexContent(Channel)</visible>
+				<posy>17</posy>
+				<posx>48</posx>
+				<width>1200</width>
+				<height>677</height>
+				<onup>559</onup>
+				<ondown>559</ondown>
+				<onright>559</onright>
+				<onleft>998</onleft>
+				<orientation>vertical</orientation>
+				<itemlayout width="166" height="166">
+					<include>MusicThumbNoSpace</include>
+					<control type="group">
+						<visible>![Container.PlexContent(Albums) | Container.PlexFilter(Albums)]</visible>
+						<include>MusicThumbCardNoSpace</include>
+						<control type="label">
+							<include>MusicLabelNoSpace</include>
+							<textcolor>white</textcolor>
+						</control>
+					</control>
+				</itemlayout>
+				<focusedlayout width="166" height="166" condition="!Container.PlexContent(Albums) + !Container.PlexFilter(Albums)">
+					<control type="group">
+						<animation effect="zoom" start="100" end="110" center="110,110" time="300">Focus</animation>
+						<include>MusicThumbNoSpace</include>
+						<include>MusicThumbCardNoSpace</include>
+						<control type="label">
+							<include>MusicLabelNoSpace</include>
+							<textcolor>orange</textcolor>
+						</control>
+						<include>MusicSelectedBorderNoSpace</include>
+					</control>
+				</focusedlayout>
+				<focusedlayout width="166" height="166" condition="[Container.PlexContent(Albums) | Container.PlexFilter(Albums)]">
+					<control type="group">
+						<animation effect="zoom" start="100" end="110" center="110,110" time="300">Focus</animation>
+						<include>MusicThumbNoSpace</include>
+						<include>MusicThumbCardNoSpaceAlbum</include>
+						<control type="label">
+							<include>MusicLabelNoSpace</include>
+							<textcolor>white</textcolor>
+						</control>
+						<control type="label">
+							<include>MusicLabelNoSpaceArtist</include>
+							<textcolor>title2</textcolor>
+						</control>
+						<include>MusicSelectedBorderNoSpace</include>
+					</control>
+				</focusedlayout>
+			</control>
+			<include>viewtype_nowplaying_right</include>
+		</control>
+	</control>
+</include>
+</includes>

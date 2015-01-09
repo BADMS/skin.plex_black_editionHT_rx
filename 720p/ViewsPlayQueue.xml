@@ -1,0 +1,155 @@
+<?xml version="1.0"?>
+<includes>
+	<variable name="PlayQueueTitle">
+		<value condition="!Container.UniformProperty(Artist)">$INFO[ListItem.Label][COLOR=FFCCCCCC]$INFO[ListItem.Artist, &#xB7; ][/COLOR]</value>
+		<value condition="Container.UniformProperty(Artist) + !Container.UniformProperty(Album)">$INFO[ListItem.Label]$INFO[ListItem.Album, &#xB7; ]</value>
+		<value>$INFO[ListItem.Label]</value>
+	</variable>
+	<variable name="PlayQueueArtist">
+		<value condition="Player.HasAudio">$INFO[MusicPlayer.Artist]</value>
+		<value condition="!Player.HasAudio">$INFO[ListItem.Artist]</value>
+	</variable>
+	<variable name="PlayQueueSong">
+		<value condition="Player.HasAudio">$INFO[MusicPlayer.Title]</value>
+		<value condition="!Player.HasAudio">$INFO[ListItem.Title]</value>
+	</variable>
+	<variable name="PlayQueueVideoTitle">
+		<value condition="Player.HasVideo + VideoPlayer.PlexContent(episode)">$INFO[VideoPlayer.TVShowTitle]</value>
+		<value condition="!Player.HasVideo + ListItem.Type(episode)">$INFO[ListItem.TVShowTitle]</value>
+		<value condition="Player.HasVideo + [VideoPlayer.PlexContent(clip) | VideoPlayer.PlexContent(movie)]">$INFO[VideoPlayer.Title]</value>
+		<value condition="!Player.HasVideo + [ListItem.Type(clip) | ListItem.Type(movie)]">$INFO[ListItem.Title]</value>
+	</variable>
+	<variable name="PlayQueueVideoTitle2">
+		<value condition="Player.HasVideo + VideoPlayer.PlexContent(episode)">$INFO[VideoPlayer.Title]</value>
+		<value condition="!Player.HasVideo + ListItem.Type(episode)">$INFO[ListItem.Title]</value>
+		<value condition="Player.HasVideo + VideoPlayer.PlexContent(clip)">$INFO[VideoPlayer.Date]$INFO[VideoPlayer.Property(sourceTitle), &#xB7; ]</value>
+		<value condition="!Player.HasVideo + ListItem.Type(clip)">$INFO[ListItem.Date]$INFO[ListItem.Property(sourceTitle), &#xB7; ]</value>
+		<value condition="Player.HasVideo + VideoPlayer.PlexContent(movie)">[UPPERCASE]$INFO[VideoPlayer.Genre][/UPPERCASE]</value>
+		<value condition="!Player.HasVideo + ListItem.Type(movie)">[UPPERCASE]$INFO[ListItem.Genre][/UPPERCASE]</value>
+	</variable>
+	<variable name="PlayQueueVideoTitle3">
+		<value condition="Player.HasVideo + [VideoPlayer.PlexContent(episode) | VideoPlayer.PlexContent(movie)]">$INFO[VideoPlayer.DurationStr]</value>
+		<value condition="!Player.HasVideo + [ListItem.Type(episode) | ListItem.Type(movie)]">$INFO[ListItem.DurationStr]</value>
+		<value condition="Player.HasVideo + VideoPlayer.PlexContent(clip)">$INFO[VideoPlayer.DurationStr]</value>
+		<value condition="!Player.HasVideo + ListItem.Type(clip)">$INFO[ListItem.DurationStr]</value>
+	</variable>
+	<variable name="PlayQueueVideoCardTitle">
+		<value>$INFO[ListItem.Title]</value>
+	</variable>
+	<variable name="PlayQueueVideoCardTitle2">
+		<value condition="ListItem.Type(episode)">$INFO[ListItem.Date]</value>
+		<value condition="ListItem.Type(clip)">$INFO[ListItem.DurationStr]</value>
+		<value condition="ListItem.Type(movie)">$INFO[ListItem.DurationStr]</value>
+	</variable>
+	<variable name="PlayQueueAlbum">
+		<value condition="Player.HasAudio">$INFO[MusicPlayer.Album]</value>
+		<value condition="!Player.HasAudio">$INFO[ListItem.Album]</value>
+	</variable>
+	<variable name="PlayQueueCover0">
+		<value condition="Player.HasAudio">$INFO[MusicPlayer.Cover]</value>
+		<value condition="!Player.HasAudio">$INFO[ListItem.Art(thumb)]</value>
+	</variable>
+	<variable name="PlayQueueCover1">
+		<value condition="Player.HasAudio">$INFO[MusicPlayer.Offset(1).Cover]</value>
+		<value condition="!Player.HasAudio">$INFO[ListItem(1).Art(thumb)]</value>
+	</variable>
+	<variable name="PlayQueueCover2">
+		<value condition="Player.HasAudio">$INFO[MusicPlayer.Offset(2).Cover]</value>
+		<value condition="!Player.HasAudio">$INFO[ListItem(2).Art(thumb)]</value>
+	</variable>
+	<variable name="PlayQueueCover3">
+		<value condition="Player.HasAudio">$INFO[MusicPlayer.Offset(3).Cover]</value>
+		<value condition="!Player.HasAudio">$INFO[ListItem(3).Art(thumb)]</value>
+	</variable>
+	<variable name="PlayQueueCover4">
+		<value condition="Player.HasAudio">$INFO[MusicPlayer.Offset(4).Cover]</value>
+		<value condition="!Player.HasAudio">$INFO[ListItem(4).Art(thumb)]</value>
+	</variable>
+	<variable name="PlayQueueCover5">
+		<value condition="Player.HasAudio">$INFO[MusicPlayer.Offset(5).Cover]</value>
+		<value condition="!Player.HasAudio">$INFO[ListItem(5).Art(thumb)]</value>
+	</variable>
+	<variable name="PlayQueueCover6">
+		<value condition="Player.HasAudio">$INFO[MusicPlayer.Offset(6).Cover]</value>
+		<value condition="!Player.HasAudio">$INFO[ListItem(6).Art(thumb)]</value>
+	</variable>
+	<variable name="PlayQueueCover7">
+		<value condition="Player.HasAudio">$INFO[MusicPlayer.Offset(7).Cover]</value>
+		<value condition="!Player.HasAudio">$INFO[ListItem(7).Art(thumb)]</value>
+	</variable>
+	<variable name="PlayQueueCover8">
+		<value condition="Player.HasAudio">$INFO[MusicPlayer.Offset(8).Cover]</value>
+		<value condition="!Player.HasAudio">$INFO[ListItem(8).Art(thumb)]</value>
+	</variable>
+	<variable name="PlayQueueCover9">
+		<value condition="Player.HasAudio">$INFO[MusicPlayer.Offset(9).Cover]</value>
+		<value condition="!Player.HasAudio">$INFO[ListItem(9).Art(thumb)]</value>
+	</variable>
+	<variable name="PlayQueueCover10">
+		<value condition="Player.HasAudio">$INFO[MusicPlayer.Offset(10).Cover]</value>
+		<value condition="!Player.HasAudio">$INFO[ListItem(10).Art(thumb)]</value>
+	</variable>
+	<include name="PlayQueueCoverFormat">
+		<fadetime>200</fadetime>
+		<aspectratio scalediffuse="false" align="center" aligny="middle">scale</aspectratio>
+	</include>
+	<variable name="PlayQueueListThumb">
+		<value condition="ListItem.Type(Episode) | ListItem.Type(Clip)">$INFO[ListItem.Art(smallThumb)]</value>
+		<value condition="ListItem.Type(Movie)">$INFO[ListItem.Art(fanart)]</value>
+	</variable>
+	<include name="PlayQueueListThumb">
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>224</width>
+			<height>132</height>
+			<include>Shadow</include>
+		</control>
+		<control type="image">
+			<posx>13</posx>
+			<posy>13</posy>
+			<width>198</width>
+			<height>106</height>
+			<texture background="true">default-thumb-small.png</texture>
+		</control>
+		<control type="image">
+			<posx>13</posx>
+			<posy>13</posy>
+			<width>198</width>
+			<height>106</height>
+			<texture background="true" diffuse="mask-clip-small.png">$VAR[PlayQueueListThumb]</texture>
+			<aspectratio scalediffuse="false" align="center" aligny="top">scale</aspectratio>
+		</control>
+	</include>
+	<include name="PlayQueueOSDProgress">
+		<control type="progress">
+			<posx>255</posx>
+			<posy>341</posy>
+			<width>334</width>
+			<height>16</height>
+			<aligny>center</aligny>
+			<info>Player.Progress</info>
+			<texturebg border="8">OSDProgressBack2.png</texturebg>
+			<midtexture border="8">OSDProgressMid-white2.png</midtexture>
+		</control>
+		<control type="label">
+			<posx>235</posx>
+			<posy>350</posy>
+			<width>500</width>
+			<textcolor>white</textcolor>
+			<font>Regular-16</font>
+			<align>right</align>
+			<label>$INFO[Player.Time]</label>
+			<shadowcolor>ff222222</shadowcolor>
+		</control>
+		<control type="label">
+			<posy>350</posy>
+			<posx>610</posx>
+			<width>100</width>
+			<textcolor>white</textcolor>
+			<font>Regular-16</font>
+			<label>$INFO[Player.Duration]</label>
+			<shadowcolor>ff222222</shadowcolor>
+		</control>
+	</include>
+</includes>

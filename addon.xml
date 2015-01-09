@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon id="skin.plex_black_editionHT_rx" version="1.0" name="Plex - Black Edition HT_rx" provider-name="DeadEyeFlint, Plex Inc.">
+	<requires>
+		<import addon="xbmc.gui" version="4.0.0"/>
+	</requires>
+	<extension point="xbmc.gui.skin" defaultthemename="textures.xbt" debugging="false" effectslowdown="0.75">
+		<res width="1280" height="720" aspect="16:9" default="true" folder="720p"/>
+		<res width="1280" height="800" aspect="16:10" default="false" folder="720p"/>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Plex by DeadEyeFlint (Plex's better skin)</summary>
+		<description lang="en">"Plex" is the default skin for Plex.</description>
+		<disclaimer lang="en">"Plex" is the default skin for Plex, removing it may cause issues.</disclaimer>
+		<platform>all</platform>
+		<website>www.plexapp.com</website>
+		<forum>forums.plexapp.com</forum>
+		<email>contact@plexapp.com</email>
+	</extension>
+</addon>

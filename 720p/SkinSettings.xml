@@ -1,0 +1,917 @@
+<?xml version="1.0"?>
+<window>
+	<defaultcontrol always="true">101</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		<control type="group">
+			<posx>45</posx>
+			<include>SettingsBG</include>
+			<include>FadeDialog</include>
+			<control type="group" id="302">
+				<control type="list" id="101">
+					<posy>135</posy>
+					<posx>120</posx>
+					<width>350</width>
+					<onup>1000</onup>
+					<ondown>101</ondown>
+					<onleft>Plex.ActivateWindow(4997)</onleft>
+					<onright>5</onright>
+					<height>500</height>
+					<scrolltime>200</scrolltime>
+					<itemlayout width="300" height="50">
+						<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>300</width>
+							<height>50</height>
+							<texture border="5">border-bottom-grey.png</texture>
+						</control>
+						<control type="label">
+							<posx>20</posx>
+							<posy>0</posy>
+							<width>300</width>
+							<font>Regular-18</font>
+							<height>50</height>
+							<align>left</align>
+							<aligny>center</aligny>
+							<info>ListItem.Label</info>
+							<textcolor>Unfocused</textcolor>
+						</control>
+					</itemlayout>
+					<focusedlayout width="300" height="50">
+						<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>300</width>
+							<height>50</height>
+							<texture border="5">black-bottom-grey.png</texture>
+						</control>
+						<control type="label">
+							<posx>20</posx>
+							<posy>0</posy>
+							<width>300</width>
+							<font>Regular-18</font>
+							<height>50</height>
+							<align>left</align>
+							<aligny>center</aligny>
+							<info>ListItem.Label</info>
+							<textcolor>Focused</textcolor>
+						</control>
+					</focusedlayout>
+					<content>
+						<item id="1">
+							<description>General</description>
+							<label>$LOCALIZE[31604]</label>
+							<onclick>SetFocus(201)</onclick>
+						</item>
+						<item id="2">
+							<description>Home Screen</description>
+							<label>Home Screen</label>
+							<onclick>SetFocus(202)</onclick>
+						</item>
+						<item id="3">
+							<description>Background</description>
+							<label>Backgrounds</label>
+							<onclick>SetFocus(203)</onclick>
+						</item>
+						<item id="4">
+							<description>Channels</description>
+							<label>Channels</label>
+							<onclick>SetFocus(204)</onclick>
+						</item>
+						<item id="5">
+							<description>Visuals</description>
+							<label>Visuals</label>
+							<onclick>SetFocus(205)</onclick>
+						</item>
+					</content>
+				</control>
+				<!-- a hack for highlighting the parent category while in settings list -->
+				<control type="group">
+					<control type="image">
+						<posx>120</posx>
+						<posy>135</posy>
+						<width>300</width>
+						<height>50</height>
+						<texture border="5">black-bottom-grey.png</texture>
+						<animation effect="fade" start="0" end="80" time="0" condition="true">Conditional</animation>
+						<visible>ControlGroup(201).HasFocus</visible>
+					</control>
+					<control type="label">
+						<description>General</description>
+						<posx>140</posx>
+						<posy>135</posy>
+						<width>300</width>
+						<font>Regular-18</font>
+						<height>50</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>$LOCALIZE[31604]</label>
+						<textcolor>Focused</textcolor>
+						<visible>ControlGroup(201).HasFocus</visible>
+					</control>
+					<control type="image">
+						<posx>120</posx>
+						<posy>185</posy>
+						<width>300</width>
+						<height>50</height>
+						<texture border="5">black-bottom-grey.png</texture>
+						<animation effect="fade" start="0" end="80" time="0" condition="true">Conditional</animation>
+						<visible>ControlGroup(202).HasFocus</visible>
+					</control>
+					<control type="label">
+						<description>General</description>
+						<posx>140</posx>
+						<posy>185</posy>
+						<width>300</width>
+						<font>Regular-18</font>
+						<height>50</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>Home Screen</label>
+						<textcolor>Focused</textcolor>
+						<visible>ControlGroup(202).HasFocus</visible>
+					</control>
+					<control type="image">
+						<posx>120</posx>
+						<posy>235</posy>
+						<width>300</width>
+						<height>50</height>
+						<texture border="5">black-bottom-grey.png</texture>
+						<animation effect="fade" start="0" end="80" time="0" condition="true">Conditional</animation>
+						<visible>ControlGroup(203).HasFocus</visible>
+					</control>
+					<control type="label">
+						<description>General</description>
+						<posx>140</posx>
+						<posy>235</posy>
+						<width>300</width>
+						<font>Regular-18</font>
+						<height>50</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>Backgrounds</label>
+						<textcolor>Focused</textcolor>
+						<visible>ControlGroup(203).HasFocus</visible>
+					</control>
+					<control type="image">
+						<posx>120</posx>
+						<posy>285</posy>
+						<width>300</width>
+						<height>50</height>
+						<texture border="5">black-bottom-grey.png</texture>
+						<animation effect="fade" start="0" end="80" time="0" condition="true">Conditional</animation>
+						<visible>Control.HasFocus(204)</visible>
+					</control>
+					<control type="label">
+						<description>General</description>
+						<posx>140</posx>
+						<posy>285</posy>
+						<width>300</width>
+						<font>Regular-18</font>
+						<height>50</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>Channels</label>
+						<textcolor>Focused</textcolor>
+						<visible>Control.HasFocus(204)</visible>
+					</control>
+					<control type="image">
+						<posx>120</posx>
+						<posy>335</posy>
+						<width>300</width>
+						<height>50</height>
+						<texture border="5">black-bottom-grey.png</texture>
+						<animation effect="fade" start="0" end="80" time="0" condition="true">Conditional</animation>
+						<visible>ControlGroup(205).HasFocus</visible>
+					</control>
+					<control type="label">
+						<description>General</description>
+						<posx>140</posx>
+						<posy>335</posy>
+						<width>300</width>
+						<font>Regular-18</font>
+						<height>50</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>Visuals</label>
+						<textcolor>Focused</textcolor>
+						<visible>ControlGroup(205).HasFocus</visible>
+					</control>
+				</control>
+			</control>
+			<!-- Main control area -->
+			<control type="group" id="5">
+				<posx>400</posx>
+				<posy>135</posy>
+				<!-- General Options -->
+				<control type="grouplist" id="201">
+					<posy>0</posy>
+					<posx>105</posx>
+					<width>625</width>
+					<height>500</height>
+					<onup>201</onup>
+					<onleft>101</onleft>
+					<itemgap>0</itemgap>
+					<pagecontrol>61</pagecontrol>
+					<visible allowhiddenfocus="false">Container(101).HasFocus(1) | ControlGroup(201).HasFocus()</visible>
+					<orientation>vertical</orientation>
+					<control type="radiobutton" id="240">
+						<description>Time on every screen</description>
+						<width>625</width>
+						<label>Show small clock</label>
+						<onclick>Skin.ToggleSetting(ShowSmallClock)</onclick>
+						<selected>Skin.HasSetting(ShowSmallClock)</selected>
+					</control>
+				</control>
+				<!-- Home Screen Options-->
+				<control type="grouplist" id="202">
+					<posy>0</posy>
+					<posx>105</posx>
+					<width>625</width>
+					<height>500</height>
+					<onup>202</onup>
+					<onleft>101</onleft>
+					<itemgap>0</itemgap>
+					<pagecontrol>61</pagecontrol>
+					<visible allowhiddenfocus="false">Container(101).HasFocus(2) | ControlGroup(202).HasFocus()</visible>
+					<orientation>vertical</orientation>
+					<control type="radiobutton" id="211">
+						<description>ClassicHome</description>
+						<width>625</width>
+						<label>Classic Homescreen</label>
+						<onclick>Skin.ToggleSetting(ClassicHome)</onclick>
+						<selected>Skin.HasSetting(ClassicHome)</selected>
+					</control>
+					<control type="radiobutton" id="212">
+						<description>Show List immediately</description>
+						<width>625</width>
+						<label>Show Ondeck/Recently Added immediately</label>
+						<onclick>Skin.ToggleSetting(showNewLists)</onclick>
+						<selected>Skin.HasSetting(showNewLists)</selected>
+						<!--<enable>Skin.HasSetting(ClassicHome)</enable>-->
+					</control>
+					<control type="radiobutton" id="213">
+						<description>NoTransOnDeck</description>
+						<width>625</width>
+						<label>Disable transparency for unfocused Ondeck/Recently Added Thumbs</label>
+						<onclick>Skin.ToggleSetting(NoTransOnDeck)</onclick>
+						<selected>Skin.HasSetting(NoTransOnDeck)</selected>
+					</control>	
+					<control type="radiobutton" id="214">
+						<description>HomeBigIcons</description>
+						<width>625</width>
+						<label>Bigger Ondeck/Recently Added Thumbs (disables Plot/Summary)</label>
+						<onclick>Skin.ToggleSetting(HomeBigIcons)</onclick>
+						<selected>Skin.HasSetting(HomeBigIcons)</selected>
+					</control>	
+					<control type="radiobutton" id="215">
+						<description>Bigger Home Menu</description>
+						<width>625</width>
+						<label>Home Menu size medium</label>
+						<onclick>Skin.ToggleSetting(BiggerHomeMenu)</onclick>
+						<onclick>Skin.Reset(BiggerHomeMenu3)</onclick>
+						<selected>Skin.HasSetting(BiggerHomeMenu)</selected>
+					</control>
+					<control type="radiobutton" id="216">
+						<description>Bigger Home Menu</description>
+						<width>625</width>
+						<label>Home Menu size big</label>
+						<onclick>Skin.ToggleSetting(BiggerHomeMenu3)</onclick>
+						<onclick>Skin.Reset(BiggerHomeMenu)</onclick>
+						<selected>Skin.HasSetting(BiggerHomeMenu3)</selected>
+					</control>
+					<control type="radiobutton" id="626">
+						<description>Font Home Menu</description>
+						<width>625</width>
+						<label>Home Menu Font size small (Forces Skin reload)</label>
+						<onclick>Skin.ToggleSetting(BiggerFontMenu1)</onclick>
+						<onclick>Skin.Reset(BiggerFontMenu3)</onclick>
+						<onclick>Skin.Reset(BiggerFontMenu2)</onclick>
+						<selected>Skin.HasSetting(BiggerFontMenu1)</selected>
+						<onclick>ReloadSkin</onclick>
+					</control>
+					<control type="radiobutton" id="627">
+						<description>Font Home Menu</description>
+						<width>625</width>
+						<label>Home Menu Font size medium (Forces Skin reload)</label>
+						<onclick>Skin.ToggleSetting(BiggerFontMenu2)</onclick>
+						<onclick>Skin.Reset(BiggerFontMenu1)</onclick>
+						<onclick>Skin.Reset(BiggerFontMenu3)</onclick>
+						<selected>Skin.HasSetting(BiggerFontMenu2)</selected>
+						<onclick>ReloadSkin</onclick>
+					</control>
+					<control type="radiobutton" id="628">
+						<description>Font Home Menu</description>
+						<width>625</width>
+						<label>Home Menu Font size big (Forces Skin reload)</label>
+						<onclick>Skin.ToggleSetting(BiggerFontMenu3)</onclick>
+						<onclick>Skin.Reset(BiggerFontMenu1)</onclick>
+						<onclick>Skin.Reset(BiggerFontMenu2)</onclick>
+						<selected>Skin.HasSetting(BiggerFontMenu3)</selected>
+						<onclick>ReloadSkin</onclick>
+					</control>
+					<control type="radiobutton" id="217">
+						<description>Fade out Home Menu</description>
+						<width>625</width>
+						<label>Fade out Home menu when idle</label>
+						<onclick>Skin.ToggleSetting(FadeOutHomeMenu)</onclick>
+						<selected>Skin.HasSetting(FadeOutHomeMenu)</selected>
+					</control>
+					<control type="radiobutton" id="218">
+						<description>Hide Menu Header</description>
+						<width>625</width>
+						<label>Hide "Menu" Header</label>
+						<onclick>Skin.ToggleSetting(HideMenuHeader)</onclick>
+						<selected>Skin.HasSetting(HideMenuHeader)</selected>
+					</control>
+					<control type="radiobutton" id="251">
+						<description>Kenburns</description>
+						<width>625</width>
+						<label>Kenburns effect</label>
+						<onclick>Skin.ToggleSetting(List1_Kenburns)</onclick>
+						<selected>Skin.HasSetting(List1_Kenburns)</selected>
+					</control>
+					<control type="radiobutton" id="254">
+						<description>Rotate</description>
+						<width>625</width>
+						<label>Rotate effect</label>
+						<onclick>Skin.ToggleSetting(List1_Rotate)</onclick>
+						<selected>Skin.HasSetting(List1_Rotate)</selected>
+						<enable>Skin.HasSetting(List1_Kenburns)</enable>
+					</control>
+					<control type="radiobutton" id="253">
+						<description>Grainy</description>
+						<width>625</width>
+						<label>Grain effect</label>
+						<onclick>Skin.ToggleSetting(List1_Grain)</onclick>
+						<selected>Skin.HasSetting(List1_Grain)</selected>
+					</control>
+					<control type="radiobutton" id="219">
+						<description>Analog watch</description>
+						<width>625</width>
+						<label>Analog Watch in Home menu</label>
+						<onclick>Skin.ToggleSetting(AnalogWatch)</onclick>
+						<selected>Skin.HasSetting(AnalogWatch)</selected>
+					</control>
+					<control type="radiobutton" id="228">
+						<description>HideSearch</description>
+						<width>625</width>
+						<label>Display Search in Submenu</label>
+						<onclick>Skin.ToggleSetting(HideSearch)</onclick>
+						<selected>Skin.HasSetting(HideSearch)</selected>
+					</control>
+					<control type="radiobutton" id="229">
+						<description>Hide  Channel Directory from Submenu</description>
+						<width>625</width>
+						<label>Hide Channel Directory from Submenu</label>
+						<onclick>Skin.ToggleSetting(HideChannelDirectoryItem)</onclick>
+						<selected>Skin.HasSetting(HideChannelDirectoryItem)</selected>
+					</control>
+					<control type="radiobutton" id="230">
+						<description>Hide Quit from Submenu</description>
+						<width>625</width>
+						<label>Hide Quit from Submenu</label>
+						<onclick>Skin.ToggleSetting(HideQuitItem)</onclick>
+						<selected>Skin.HasSetting(HideQuitItem)</selected>
+						<!--<visible>!System.isSystem(openelec)</visible>-->
+					</control>
+					<control type="radiobutton" id="231">
+						<description>Hide Sleep from Submenu</description>
+						<width>625</width>
+						<label>Hide Sleep from Submenu</label>
+						<onclick>Skin.ToggleSetting(HideSleepItem)</onclick>
+						<selected>Skin.HasSetting(HideSleepItem)</selected>
+						<!--<visible>!System.isSystem(rasplex)</visible>-->
+					</control>
+					<control type="radiobutton" id="232">
+						<description>Hide Shut Down from Submenu</description>
+						<width>625</width>
+						<label>Hide Shut Down from Submenu</label>
+						<onclick>Skin.ToggleSetting(HideShutDownItem)</onclick>
+						<selected>Skin.HasSetting(HideShutDownItem)</selected>
+					</control>
+					<control type="radiobutton" id="233">
+						<description>Hide Restart from Submenu</description>
+						<width>625</width>
+						<label>Hide Restart from Submenu</label>
+						<onclick>Skin.ToggleSetting(HideRestartItem)</onclick>
+						<selected>Skin.HasSetting(HideRestartItem)</selected>
+						<!--<visible>System.isSystem(openelec)</visible>-->
+					</control>
+				</control>
+				<!-- Home Screen Options-->
+				<control type="grouplist" id="203">
+					<posy>0</posy>
+					<posx>105</posx>
+					<width>625</width>
+					<height>500</height>
+					<onup>203</onup>
+					<onleft>101</onleft>
+					<itemgap>0</itemgap>
+					<pagecontrol>61</pagecontrol>
+					<visible allowhiddenfocus="false">Container(101).HasFocus(3) | ControlGroup(203).HasFocus()</visible>
+					<orientation>vertical</orientation>
+					<control type="radiobutton" id="211">
+						<description>Hide Slideshows</description>
+						<width>625</width>
+						<label>$LOCALIZE[32119]</label>
+						<onclick>Skin.ToggleSetting(HideFanart)</onclick>
+						<selected>Skin.HasSetting(HideFanart)</selected>
+					</control>
+					<control type="radiobutton" id="280">
+						<description>PIP Full Screen Video</description>
+						<width>625</width>
+						<label>PIP Full Screen Video</label>
+						<onclick>Skin.ToggleSetting(PIPFull)</onclick>
+						<selected>Skin.HasSetting(PIPFull)</selected>
+					</control>
+					<control type="radiobutton" id="212">
+						<description>Background 80%</description>
+						<width>625</width>
+						<label>Darker Homescreen Background Overlay</label>
+						<onclick>Skin.ToggleSetting(DarkerBG)</onclick>
+						<selected>Skin.HasSetting(DarkerBG)</selected>
+						<enable>!Skin.HasSetting(BrighterBG)</enable>
+					</control>
+					<control type="radiobutton" id="213">
+						<description>Brighter Backgrounds</description>
+						<width>625</width>
+						<label>Brighter Homescreen Background Overlay</label>
+						<onclick>Skin.ToggleSetting(BrighterBG)</onclick>
+						<selected>Skin.HasSetting(BrighterBG)</selected>
+						<enable>!Skin.HasSetting(DarkerBG)</enable>
+					</control>
+					<control type="radiobutton" id="220">
+						<width>625</width>
+						<texturefocus border="5">black-bottom-grey.png</texturefocus>
+						<texturenofocus border="5">-</texturenofocus>
+						<description>Custom Single Background Image</description>
+						<label>Custom Single Home Background Image</label>
+						<onclick>Skin.Reset(HomeBGMulti)</onclick>
+						<onclick>Skin.SetLargeImage(HomeBGSingle)</onclick>
+						<selected>!isEmpty(Skin.String(HomeBGSingle))</selected>				
+					</control>
+					<control type="button" id="221">
+						<width>625</width>
+						<height>30</height>
+						<description>Custom Single Home Background Image</description>
+						<label> - Reset</label>
+						<onclick>Skin.Reset(HomeBGSingle)</onclick>	
+					</control>
+					<control type="radiobutton" id="2210">
+						<width>625</width>
+						<description>Custom Single Home Background Image Transparent</description>
+						<label> - Transparent 10%</label>
+						<onclick>Skin.ToggleSetting(HomeBGSingleOverlay10)</onclick>
+						<onclick>Skin.Reset(HomeBGSingleOverlay20)</onclick>
+						<onclick>Skin.Reset(HomeBGSingleOverlay30)</onclick>
+						<onclick>Skin.Reset(HomeBGSingleOverlay40)</onclick>
+						<onclick>Skin.Reset(HomeBGSingleOverlay50)</onclick>
+						<selected>Skin.HasSetting(HomeBGSingleOverlay10)</selected>
+					</control>
+					<control type="radiobutton" id="2220">
+						<width>625</width>
+						<description>Custom Single Home Background Image Transparent</description>
+						<label> - Transparent 20%</label>
+						<onclick>Skin.ToggleSetting(HomeBGSingleOverlay20)</onclick>
+						<onclick>Skin.Reset(HomeBGSingleOverlay10)</onclick>
+						<onclick>Skin.Reset(HomeBGSingleOverlay30)</onclick>
+						<onclick>Skin.Reset(HomeBGSingleOverlay40)</onclick>
+						<onclick>Skin.Reset(HomeBGSingleOverlay50)</onclick>
+						<selected>Skin.HasSetting(HomeBGSingleOverlay20)</selected>
+					</control>
+					<control type="radiobutton" id="2230">
+						<width>625</width>
+						<description>Custom Single Home Background Image Transparent</description>
+						<label> - Transparent 30%</label>
+						<onclick>Skin.ToggleSetting(HomeBGSingleOverlay30)</onclick>
+						<onclick>Skin.Reset(HomeBGSingleOverlay10)</onclick>
+						<onclick>Skin.Reset(HomeBGSingleOverlay20)</onclick>
+						<onclick>Skin.Reset(HomeBGSingleOverlay40)</onclick>
+						<onclick>Skin.Reset(HomeBGSingleOverlay50)</onclick>
+						<selected>Skin.HasSetting(HomeBGSingleOverlay30)</selected>
+					</control>
+					<control type="radiobutton" id="2240">
+						<width>625</width>
+						<description>Custom Single Home Background Image Transparent</description>
+						<label> - Transparent 40%</label>
+						<onclick>Skin.ToggleSetting(HomeBGSingleOverlay40)</onclick>
+						<onclick>Skin.Reset(HomeBGSingleOverlay10)</onclick>
+						<onclick>Skin.Reset(HomeBGSingleOverlay20)</onclick>
+						<onclick>Skin.Reset(HomeBGSingleOverlay30)</onclick>
+						<onclick>Skin.Reset(HomeBGSingleOverlay50)</onclick>
+						<selected>Skin.HasSetting(HomeBGSingleOverlay40)</selected>
+					</control>
+					<control type="radiobutton" id="2250">
+						<width>625</width>
+						<description>Custom Single Home Background Image Transparent</description>
+						<label> - Transparent 50%</label>
+						<onclick>Skin.ToggleSetting(HomeBGSingleOverlay50)</onclick>
+						<onclick>Skin.Reset(HomeBGSingleOverlay10)</onclick>
+						<onclick>Skin.Reset(HomeBGSingleOverlay20)</onclick>
+						<onclick>Skin.Reset(HomeBGSingleOverlay30)</onclick>
+						<onclick>Skin.Reset(HomeBGSingleOverlay40)</onclick>
+						<selected>Skin.HasSetting(HomeBGSingleOverlay50)</selected>
+					</control>
+					<control type="radiobutton" id="222">
+						<width>625</width>
+						<texturefocus border="5">black-bottom-grey.png</texturefocus>
+						<texturenofocus border="5">-</texturenofocus>
+						<description>Custom Multi Home Image</description>
+						<label>Custom Multi Home Background Images</label>
+						<onclick>Skin.Reset(HomeBGSingle)</onclick>
+						<onclick>Skin.SetPath(HomeBGMulti)</onclick>
+						<selected>!isEmpty(Skin.String(HomeBGMulti))</selected>
+					</control>
+					<control type="button" id="223">
+						<width>625</width>
+						<height>30</height>
+						<description>Custom Multi Images</description>
+						<label> - Reset</label>
+						<onclick>Skin.Reset(HomeBGMulti)</onclick>	
+					</control>
+					<control type="radiobutton" id="224">
+						<width>625</width>
+						<texturefocus border="5">black-bottom-grey.png</texturefocus>
+						<texturenofocus border="5">-</texturenofocus>
+						<description>Custom Playlists Background Image</description>
+						<label>Custom Playlists Background Image</label>
+						<onclick>Skin.SetLargeImage(HomeBGPlaylists)</onclick>
+						<selected>!isEmpty(Skin.String(HomeBGPlaylists))</selected>				
+					</control>
+					<control type="button" id="225">
+						<width>625</width>
+						<height>30</height>
+						<description>Custom Playlists Images</description>
+						<label> - Reset</label>
+						<onclick>Skin.Reset(HomeBGPlaylists)</onclick>	
+					</control>
+					<control type="radiobutton" id="226">
+						<width>625</width>
+						<texturefocus border="5">black-bottom-grey.png</texturefocus>
+						<texturenofocus border="5">-</texturenofocus>
+						<description>Custom Shared Content Background Image</description>
+						<label>Custom Shared Content Background Image</label>
+						<onclick>Skin.SetLargeImage(BGSharedContent)</onclick>
+						<selected>!isEmpty(Skin.String(BGSharedContent))</selected>				
+					</control>
+					<control type="button" id="227">
+						<width>625</width>
+						<height>30</height>
+						<description>Custom Shared Content Images</description>
+						<label> - Reset</label>
+						<onclick>Skin.Reset(BGSharedContent)</onclick>	
+					</control>
+				</control>
+				<!-- Channel Screen Options-->
+				<control type="grouplist" id="204">
+					<posy>0</posy>
+					<posx>105</posx>
+					<width>625</width>
+					<height>500</height>
+					<onup>204</onup>
+					<onleft>101</onleft>
+					<itemgap>0</itemgap>
+					<pagecontrol>61</pagecontrol>
+					<visible allowhiddenfocus="false">Container(101).HasFocus(4) | ControlGroup(204).HasFocus()</visible>
+					<orientation>vertical</orientation>
+					<control type="radiobutton" id="260">
+						<width>625</width>
+						<texturefocus border="5">black-bottom-grey.png</texturefocus>
+						<texturenofocus border="5">-</texturenofocus>
+						<description>Custom Channel</description>
+						<label>Custom Channel in Menu (Channel/Menu/Art)</label>
+						<onclick>Skin.SetString(Channel1_Name)</onclick>
+						<onclick>Skin.SetString(Channel1_Name_Menu)</onclick>
+						<onclick>Skin.SetLargeImage(Channel1_Name_Art)</onclick>
+						<selected>!isEmpty(Skin.String(Channel1_Name))</selected>				
+					</control>
+					<control type="button" id="261">
+						<width>625</width>
+						<height>30</height>
+						<description>Custom Channel</description>
+						<label> - Reset</label>
+						<onclick>Skin.Reset(Channel1_Name)</onclick>	
+						<onclick>Skin.Reset(Channel1_Name_Menu)</onclick>	
+						<onclick>Skin.Reset(Channel1_Name_Art)</onclick>	
+					</control>
+					<control type="radiobutton" id="262">
+						<width>625</width>
+						<texturefocus border="5">black-bottom-grey.png</texturefocus>
+						<texturenofocus border="5">-</texturenofocus>
+						<description>Custom Channel</description>
+						<label>Custom Channel in Menu (Channel/Menu/Art)</label>
+						<onclick>Skin.SetString(Channel2_Name)</onclick>
+						<onclick>Skin.SetString(Channel2_Name_Menu)</onclick>
+						<onclick>Skin.SetLargeImage(Channel2_Name_Art)</onclick>
+						<selected>!isEmpty(Skin.String(Channel2_Name))</selected>				
+					</control>
+					<control type="button" id="263">
+						<width>625</width>
+						<height>30</height>
+						<description>Custom Channel</description>
+						<label> - Reset</label>
+						<onclick>Skin.Reset(Channel2_Name)</onclick>	
+						<onclick>Skin.Reset(Channel2_Name_Menu)</onclick>	
+						<onclick>Skin.Reset(Channel2_Name_Art)</onclick>	
+					</control>
+					<control type="radiobutton" id="264">
+						<width>625</width>
+						<texturefocus border="5">black-bottom-grey.png</texturefocus>
+						<texturenofocus border="5">-</texturenofocus>
+						<description>Custom Channel</description>
+						<label>Custom Channel in Menu (Channel/Menu/Art)</label>
+						<onclick>Skin.SetString(Channel3_Name)</onclick>
+						<onclick>Skin.SetString(Channel3_Name_Menu)</onclick>
+						<onclick>Skin.SetLargeImage(Channel3_Name_Art)</onclick>
+						<selected>!isEmpty(Skin.String(Channel3_Name))</selected>				
+					</control>
+					<control type="button" id="265">
+						<width>625</width>
+						<height>30</height>
+						<description>Custom Channel</description>
+						<label> - Reset</label>
+						<onclick>Skin.Reset(Channel3_Name)</onclick>	
+						<onclick>Skin.Reset(Channel3_Name_Menu)</onclick>	
+						<onclick>Skin.Reset(Channel3_Name_Art)</onclick>	
+					</control>
+					<control type="radiobutton" id="266">
+						<width>625</width>
+						<texturefocus border="5">black-bottom-grey.png</texturefocus>
+						<texturenofocus border="5">-</texturenofocus>
+						<description>Custom Channel</description>
+						<label>Custom Shortcut in Menu (URL/Menu/Art)</label>
+						<onclick>Skin.SetString(Channel4_Name)</onclick>
+						<onclick>Skin.SetString(Channel4_Name_Menu)</onclick>
+						<onclick>Skin.SetLargeImage(Channel4_Name_Art)</onclick>
+						<selected>!isEmpty(Skin.String(Channel4_Name))</selected>				
+					</control>
+					<control type="button" id="267">
+						<width>625</width>
+						<height>30</height>
+						<description>Custom Channel</description>
+						<label> - Reset</label>
+						<onclick>Skin.Reset(Channel4_Name)</onclick>	
+						<onclick>Skin.Reset(Channel4_Name_Menu)</onclick>	
+						<onclick>Skin.Reset(Channel4_Name_Art)</onclick>	
+					</control>
+					<control type="radiobutton" id="268">
+						<width>625</width>
+						<texturefocus border="5">black-bottom-grey.png</texturefocus>
+						<texturenofocus border="5">-</texturenofocus>
+						<description>Custom Channel</description>
+						<label>Custom Shortcut in Menu (URL/Menu/Art)</label>
+						<onclick>Skin.SetString(Channel5_Name)</onclick>
+						<onclick>Skin.SetString(Channel5_Name_Menu)</onclick>
+						<onclick>Skin.SetLargeImage(Channel5_Name_Art)</onclick>
+						<selected>!isEmpty(Skin.String(Channel5_Name))</selected>				
+					</control>
+					<control type="button" id="269">
+						<width>625</width>
+						<height>30</height>
+						<description>Custom Channel</description>
+						<label> - Reset</label>
+						<onclick>Skin.Reset(Channel5_Name)</onclick>	
+						<onclick>Skin.Reset(Channel5_Name_Menu)</onclick>	
+						<onclick>Skin.Reset(Channel5_Name_Art)</onclick>	
+					</control>
+					<control type="radiobutton" id="270">
+						<width>625</width>
+						<texturefocus border="5">black-bottom-grey.png</texturefocus>
+						<texturenofocus border="5">-</texturenofocus>
+						<description>Custom Channel</description>
+						<label>Custom Shortcut in Menu (URL/Menu/Art)</label>
+						<onclick>Skin.SetString(Channel6_Name)</onclick>
+						<onclick>Skin.SetString(Channel6_Name_Menu)</onclick>
+						<onclick>Skin.SetLargeImage(Channel6_Name_Art)</onclick>
+						<selected>!isEmpty(Skin.String(Channel6_Name))</selected>				
+					</control>
+					<control type="button" id="271">
+						<width>625</width>
+						<height>30</height>
+						<description>Custom Channel</description>
+						<label> - Reset</label>
+						<onclick>Skin.Reset(Channel6_Name)</onclick>	
+						<onclick>Skin.Reset(Channel6_Name_Menu)</onclick>	
+						<onclick>Skin.Reset(Channel6_Name_Art)</onclick>	
+					</control>
+					<control type="radiobutton" id="272">
+						<width>625</width>
+						<texturefocus border="5">black-bottom-grey.png</texturefocus>
+						<texturenofocus border="5">-</texturenofocus>
+						<description>Custom Channel</description>
+						<label>Custom User Shortcut in Menu (URL/Menu/Art)</label>
+						<onclick>Skin.SetString(Channel7_Name)</onclick>
+						<onclick>Skin.SetString(Channel7_Name_Menu)</onclick>
+						<onclick>Skin.SetLargeImage(Channel7_Name_Art)</onclick>
+						<selected>!isEmpty(Skin.String(Channel7_Name))</selected>				
+					</control>
+					<control type="button" id="273">
+						<width>625</width>
+						<height>30</height>
+						<description>Custom Channel</description>
+						<label> - Reset</label>
+						<onclick>Skin.Reset(Channel7_Name)</onclick>	
+						<onclick>Skin.Reset(Channel7_Name_Menu)</onclick>	
+						<onclick>Skin.Reset(Channel7_Name_Art)</onclick>	
+					</control>
+					<control type="radiobutton" id="274">
+						<width>625</width>
+						<texturefocus border="5">black-bottom-grey.png</texturefocus>
+						<texturenofocus border="5">-</texturenofocus>
+						<description>Custom Channel</description>
+						<label>Custom User Shortcut in Menu (URL/Menu/Art)</label>
+						<onclick>Skin.SetString(Channel8_Name)</onclick>
+						<onclick>Skin.SetString(Channel8_Name_Menu)</onclick>
+						<onclick>Skin.SetLargeImage(Channel8_Name_Art)</onclick>
+						<selected>!isEmpty(Skin.String(Channel8_Name))</selected>				
+					</control>
+					<control type="button" id="275">
+						<width>625</width>
+						<height>30</height>
+						<description>Custom Channel</description>
+						<label> - Reset</label>
+						<onclick>Skin.Reset(Channel8_Name)</onclick>	
+						<onclick>Skin.Reset(Channel8_Name_Menu)</onclick>	
+						<onclick>Skin.Reset(Channel8_Name_Art)</onclick>	
+					</control>
+					<control type="radiobutton" id="276">
+						<width>625</width>
+						<texturefocus border="5">black-bottom-grey.png</texturefocus>
+						<texturenofocus border="5">-</texturenofocus>
+						<description>Custom Channel</description>
+						<label>Custom User Shortcut in Menu (URL/Menu/Art)</label>
+						<onclick>Skin.SetString(Channel9_Name)</onclick>
+						<onclick>Skin.SetString(Channel9_Name_Menu)</onclick>
+						<onclick>Skin.SetLargeImage(Channel9_Name_Art)</onclick>
+						<selected>!isEmpty(Skin.String(Channel9_Name))</selected>				
+					</control>
+					<control type="button" id="277">
+						<width>625</width>
+						<height>30</height>
+						<description>Custom Channel</description>
+						<label> - Reset</label>
+						<onclick>Skin.Reset(Channel9_Name)</onclick>	
+						<onclick>Skin.Reset(Channel9_Name_Menu)</onclick>	
+						<onclick>Skin.Reset(Channel9_Name_Art)</onclick>	
+					</control>
+				</control>
+				<!-- Visual Screen Options-->
+				<control type="grouplist" id="205">
+					<posy>0</posy>
+					<posx>105</posx>
+					<width>625</width>
+					<height>500</height>
+					<onup>205</onup>
+					<onleft>101</onleft>
+					<itemgap>0</itemgap>
+					<pagecontrol>61</pagecontrol>
+					<visible allowhiddenfocus="false">Container(101).HasFocus(5) | ControlGroup(205).HasFocus()</visible>
+					<orientation>vertical</orientation>
+					<control type="radiobutton" id="278">
+						<width>625</width>
+						<description>Custom</description>
+						<label>Display all Media Tags</label>
+						<onclick>Skin.ToggleSetting(AllMediaTags)</onclick>
+						<selected>Skin.HasSetting(AllMediaTags)</selected>
+					</control>
+					<control type="radiobutton" id="279">
+						<description>Auto show Extras</description>
+						<width>625</width>
+						<label>Auto show Extras</label>
+						<onclick>Skin.ToggleSetting(AutoShowExtras)</onclick>
+						<selected>Skin.HasSetting(AutoShowExtras)</selected>
+					</control>
+					<control type="radiobutton" id="223">
+						<description>FadeoutUnfocusedThumb</description>
+						<width>625</width>
+						<label>Dim unfocused Thumbs</label>
+						<onclick>Skin.ToggleSetting(FadeoutUnfocusedThumb)</onclick>
+						<selected>Skin.HasSetting(FadeoutUnfocusedThumb)</selected>
+					</control>
+					<control type="radiobutton" id="229">
+						<description>ShowThumbBorder</description>
+						<width>625</width>
+						<label>Show Thumb Border</label>
+						<onclick>Skin.ToggleSetting(ShowThumbBorder)</onclick>
+						<selected>Skin.HasSetting(ShowThumbBorder)</selected>
+					</control>	
+					<control type="radiobutton" id="222">
+						<description>Show OSD Movieinfo</description>
+						<width>625</width>
+						<label>Show Movie/TV Infos in OSD when Player is paused</label>
+						<onclick>Skin.ToggleSetting(ShowPausedInfos)</onclick>
+						<selected>Skin.HasSetting(ShowPausedInfos)</selected>
+					</control>
+					<control type="radiobutton" id="226">
+						<description>AltUnwatchedEpisodes</description>
+						<width>625</width>
+						<label>Unwatched Episodes Overlay Count</label>
+						<onclick>Skin.ToggleSetting(AltUnwatchedEpisodes)</onclick>
+						<selected>Skin.HasSetting(AltUnwatchedEpisodes)</selected>
+					</control> 
+					<control type="radiobutton" id="225">
+						<description>Unwatched Episodes Overlay Background</description>
+						<width>625</width>
+						<label>Unwatched Episodes Overlay Background</label>
+						<onclick>Skin.ToggleSetting(OverlayUnwatchedEpisodes)</onclick>
+						<selected>Skin.HasSetting(OverlayUnwatchedEpisodes)</selected>
+						<enable>Skin.HasSetting(AltUnwatchedEpisodes)</enable>
+					</control> 
+					<control type="radiobutton" id="255">
+						<description>Unwatched Episodes StandardUnwatchedEpisodes</description>
+						<width>625</width>
+						<label>Unwatched Episodes Standard</label>
+						<onclick>Skin.ToggleSetting(StandardUnwatchedEpisodes)</onclick>
+						<selected>Skin.HasSetting(StandardUnwatchedEpisodes)</selected>
+						<enable>!Skin.HasSetting(AltUnwatchedEpisodes) + !Skin.HasSetting(LargerUnwatchedEpisodes)</enable>
+					</control> 
+					<control type="radiobutton" id="256">
+						<description>Unwatched Episodes LargerUnwatchedEpisodes</description>
+						<width>625</width>
+						<label>Unwatched Episodes Larger</label>
+						<onclick>Skin.ToggleSetting(LargerUnwatchedEpisodes)</onclick>
+						<selected>Skin.HasSetting(LargerUnwatchedEpisodes)</selected>
+						<enable>!Skin.HasSetting(AltUnwatchedEpisodes) + !Skin.HasSetting(StandardUnwatchedEpisodes)</enable>
+					</control> 
+					<control type="radiobutton" id="250">
+						<description>Hide IMDB Poster Overlay</description>
+						<width>625</width>
+						<label>Hide star rating overlay</label>
+						<onclick>Skin.ToggleSetting(disableOverlayIMDB)</onclick>
+						<selected>Skin.HasSetting(disableOverlayIMDB)</selected>
+					</control>
+					<control type="radiobutton" id="252">
+						<description>Show TV Banner</description>
+						<width>625</width>
+						<label>Show TV Banner Decoration</label>
+						<onclick>Skin.ToggleSetting(ShowTVBanner)</onclick>
+						<selected>Skin.HasSetting(ShowTVBanner)</selected>
+					</control>
+					<control type="radiobutton" id="257">
+						<description>Show Clearart</description>
+						<width>625</width>
+						<label>Show Clearart in Banner View</label>
+						<onclick>Skin.ToggleSetting(ShowClearart)</onclick>
+						<selected>Skin.HasSetting(ShowClearart)</selected>
+					</control>
+					<control type="radiobutton" id="227">
+						<description>Hide Unwatched indicators for Movies</description>
+						<width>625</width>
+						<label>$LOCALIZE[32115]</label>
+						<onclick>Skin.ToggleSetting(HideUnwatchedIconsMovies)</onclick>
+						<selected>Skin.HasSetting(HideUnwatchedIconsMovies)</selected>
+					</control>
+					<control type="radiobutton" id="230">
+						<description>Hide plot/preview for Unwatched/In Progress</description>
+						<width>625</width>
+						<label>$LOCALIZE[32114]</label>
+						<onclick>Skin.ToggleSetting(HidePlotForUnwatched)</onclick>
+						<selected>Skin.HasSetting(HidePlotForUnwatched)</selected>
+					</control>
+					<control type="radiobutton" id="275">
+						<description>Disable preplay</description>
+						<width>625</width>
+						<label>Disable Movie Preplay View</label>
+						<onclick>Skin.ToggleSetting(DisablePreplayMovie)</onclick>
+						<selected>Skin.HasSetting(DisablePreplayMovie)</selected>
+					</control>
+					<control type="radiobutton" id="276">
+						<description>Disable preplay</description>
+						<width>625</width>
+						<label>Disable TV Preplay View</label>
+						<onclick>Skin.ToggleSetting(DisablePreplayTV)</onclick>
+						<selected>Skin.HasSetting(DisablePreplayTV)</selected>
+					</control>
+					<control type="radiobutton" id="277">
+						<description>Disable preplay</description>
+						<width>625</width>
+						<label>Disable Clip Preplay View</label>
+						<onclick>Skin.ToggleSetting(DisablePreplayClip)</onclick>
+						<selected>Skin.HasSetting(DisablePreplayClip)</selected>
+					</control>
+					<control type="radiobutton" id="281">
+						<description>Disable preplay</description>
+						<width>625</width>
+						<label>Disable Empty/Hidden Plot Preplay View</label>
+						<onclick>Skin.ToggleSetting(DisablePreplayEmptyPlot)</onclick>
+						<selected>Skin.HasSetting(DisablePreplayEmptyPlot)</selected>
+					</control>
+				</control>
+				<!-- Scrollbar -->
+				<control type="scrollbar" id="61">
+					<description>Scroll Bar</description>
+					<posx>735</posx>
+					<posy>0</posy>
+					<height>500</height>
+				</control>
+			</control>
+		</control>
+		<include>LeftSideMenuSettings</include>
+		<include>debugInfos</include>
+		<include>Grid</include>
+		<include>WindowFade</include>
+		<include>Non16x9Cache</include>
+	</controls>
+</window>

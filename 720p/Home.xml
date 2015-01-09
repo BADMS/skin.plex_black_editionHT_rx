@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<window id="0">
+	<defaultcontrol always="true">301</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<onload>Skin.SetString(AspectRatio,$INFO[Skin.AspectRatio])</onload>
+	<onload>Skin.Reset(dsp_helper)</onload>
+	<controls>
+		<!-- PHT NoFocus Bug Workaround -->
+		<control type="button" id="301">
+			<posx>-20</posx>
+			<posy>-20</posy>
+			<width>0</width>
+			<height>0</height>
+			<texturenofocus>-</texturenofocus>
+			<texturefocus>-</texturefocus>
+			<onfocus>SetFocus(300)</onfocus>
+		</control>
+		<include condition="Skin.HasSetting(HideFanart)">BGBlackEdition</include>
+		<include>SlideshowHome</include>
+		<include>HomeMenuDefault</include>
+		<include>HomeLists</include>
+		<include>viewtype_nowplaying_right_home</include>
+		<include>CurrentUserAvatar</include>
+		<include>debugInfos</include>
+		<include>Grid</include>
+		<include>WindowFade</include>
+		<include>Non16x9Cache</include>
+	</controls>
+</window>

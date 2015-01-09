@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<colors>
+	<color name="orange">FFF8FE52</color>
+	<color name="orangeLight">FFF8FE52</color>
+	<color name="Selected">FFF8FE52</color>
+	
+	<color name="greyLight">FFa5a4a4</color>
+	<color name="greyLighter">FFbfbdbd</color>
+
+	<color name="Focused">FFffffff</color>
+	<color name="Unfocused">FFAFAFAF</color>
+	
+	<color name="ButtonFocused">FFffffff</color>
+	<color name="ButtonUnfocused">FF777777</color>
+	
+	<color name="Highlighted">FFd1801c</color>
+	<color name="Disabled">FF505050</color>
+
+	<color name="mediatag">FFB0B0B0</color>
+	<color name="title">ffffffff</color>
+	<color name="title2">FFC4C4C4</color>
+	<color name="data">ff6aa6cb</color>
+	<color name="text">ffffffff</color>
+	<color name="separator">FF9D9D9D</color>
+	
+	<color name="Color0">FFebebeb</color>
+	<color name="Color1">FFffffff</color>
+	<color name="Color3">FF999999</color>
+	<color name="Color5">FF000000</color>
+
+</colors>

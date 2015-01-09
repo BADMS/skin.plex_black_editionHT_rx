@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<window id="1">
+	<defaultcontrol>777</defaultcontrol>
+	<views>40,74</views>
+	<allowoverlay>yes</allowoverlay>
+	<controls>
+		<!-- bg's (Backgrounds.xml) -->
+		<include>BGBlackEdition</include>
+		<!--<include condition="!Skin.hasSetting(HideFanartChannel)">BGFanart</include>-->
+		<include>BGDarken2</include>
+		<!-- views (Views.xml & ViewsChannels.xml) -->
+		<!-- ByFolder ID 40 -->
+		<include>ByFolder</include>
+		<!-- ChannelsDirectory ID 74 -->
+		<include>ChannelsDirectory</include>
+		<!-- top-level ui (IncludesGlobals.xml & Debug.xml) -->
+		<!--<include>TopBar</include>-->	
+		<include>LeftSideMenu</include>	
+		<include>debugInfos</include>
+		<include>Non16x9Cache</include>
+	</controls>
+</window>
