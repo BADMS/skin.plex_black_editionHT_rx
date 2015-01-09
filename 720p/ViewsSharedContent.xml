@@ -24,7 +24,7 @@
 			<posy>13</posy>
 			<width>238</width>
 			<height>238</height>
-			<texture background="true" diffuse="mask-4leaf1.png">$INFO[ListItem.CompositeImage(width=720;height=720;cols=2;rows=2)]</texture>
+			<texture background="true">$INFO[ListItem.CompositeImage(width=720;height=720;cols=2;rows=2)]</texture>
 			<aspectratio scalediffuse="false" align="center" aligny="middle">scale</aspectratio>
 		</control>
 	</include>
@@ -53,7 +53,7 @@
 		<height>30</height>
 		<align>center</align>
 		<aligny>center</aligny>
-		<label>$INFO[ListItem.Property(sourceTitle), &#xB7; ]$INFO[ListItem.Property(serverName)]</label>
+		<label>$INFO[ListItem.Property(serverOwner)] &#xB7; $INFO[ListItem.Property(serverName)]</label>
 		<textcolor>Color3</textcolor>
 		<font>Regular-17</font>
 		<shadowcolor>FF222222</shadowcolor>
@@ -143,52 +143,6 @@
 					</focusedlayout>
 				</control>
 			</control>
-			<!-- right side thumbs -->
-			<!--<control type="group">
-				<posx>800</posx>
-				<posy>300</posy>
-				<visible>!Container.OnNext + !Container.OnPrevious</visible>
-				<animation effect="fade" start="0" end="100" time="1000" delay="300" condition="Control.HasFocus(56)" reversible="false">Conditional</animation>
-				<animation effect="fade" start="0" end="100" time="2000" delay="0">WindowOpen</animation>
-				<animation effect="fade" start="0" end="100" time="400" delay="0">Visible</animation>
-				<animation effect="fade" start="0" end="0" time="0">Hidden</animation>
-				<control type="grouplist">
-					<orientation>horizontal</orientation>
-					<itemgap>16</itemgap>					
-					<control type="image">
-						<width max="200">auto</width>
-						<height>350</height>
-						<bordertexture border="14">bigPosterFrameShadow.png</bordertexture>
-						<bordersize>9</bordersize>
-						<texture background="true" diffuse="bigPosterMask.png">$INFO[ListItem(0).Thumb0]</texture>
-						<aspectratio scalediffuse="true" align="center" aligny="center">keep</aspectratio>
-						<visible>!IsEmpty(ListItem(0).Thumb0)</visible>
-					</control>
-					<control type="grouplist">
-						<orientation>vertical</orientation>
-						<itemgap>16</itemgap>
-						<control type="image">
-							<width max="175">auto</width>
-							<height>175</height>
-							<bordertexture border="14">bigPosterFrameShadow.png</bordertexture>
-							<bordersize>9</bordersize>
-							<texture background="true" diffuse="bigPosterMask.png">$INFO[ListItem(0).Thumb1]</texture>
-							<aspectratio scalediffuse="true" align="center" aligny="top">keep</aspectratio>
-							<visible>!IsEmpty(ListItem(0).Thumb1)</visible>
-						</control>
-						<control type="image">
-							<width max="175">auto</width>
-							<height>175</height>
-							<bordertexture border="14">bigPosterFrameShadow.png</bordertexture>
-							<bordersize>9</bordersize>
-							<texture background="true" diffuse="bigPosterMask.png">$INFO[ListItem(0).Thumb2]</texture>
-							<aspectratio scalediffuse="true" align="center" aligny="bottom">keep</aspectratio>
-							<visible>!IsEmpty(ListItem(0).Thumb2)</visible>
-						</control>
-					</control>
-				</control>
-			</control>
-		-->
 		</control>
 	</include>
 </includes>

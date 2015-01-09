@@ -6,10 +6,6 @@
 	<allowoverlay>yes</allowoverlay>
 	<controls>
 		<include>BGBlackEdition</include>
-		<!--
-		<include condition="!Skin.hasSetting(HideFanartSharedContent)">SharedContentMainBG</include>
-		<include>BGDarken2</include>
-		-->
 		<!-- List ID 58 -->
 		<include>List</include>
 		<!-- views (ViewsSharedContent.xml) -->
@@ -19,7 +15,6 @@
 			<include>ListItemFullInfo</include>
 		</control>
 		<!-- top-level ui (IncludesGlobals.xml & Debug.xml) -->
-		<!--<include>TopBar</include>-->
 		<include>viewtype_nowplaying_right</include>
 		<include>LeftSideMenu</include>
 		<include>debugInfos</include>
