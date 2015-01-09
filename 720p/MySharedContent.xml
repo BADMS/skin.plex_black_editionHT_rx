@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<window id="100">
+	<onload>Skin.SetString(dsp_helper,1)</onload>
+	<defaultcontrol>777</defaultcontrol>
+	<views>54,58</views>
+	<allowoverlay>yes</allowoverlay>
+	<controls>
+		<include>BGBlackEdition</include>
+		<include>viewtype_nowplaying_right</include>
+		<!--
+		<include condition="!Skin.hasSetting(HideFanartSharedContent)">SharedContentMainBG</include>
+		<include>BGDarken2</include>
+		-->
+		<!-- List ID 58 -->
+		<include>List</include>
+		<!-- views (ViewsSharedContent.xml) -->
+		<include>SharedContent</include>
+		<!-- Item Full Info -->
+		<control type="group">
+			<include>ListItemFullInfo</include>
+		</control>
+		<!-- top-level ui (IncludesGlobals.xml & Debug.xml) -->
+		<!--<include>TopBar</include>-->
+		<include>LeftSideMenu</include>
+		<include>debugInfos</include>
+		<include>Grid</include>
+		<include>WindowFade</include>
+		<include>Non16x9Cache</include>
+	</controls>
+</window>

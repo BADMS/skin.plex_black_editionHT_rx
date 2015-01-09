@@ -1,0 +1,759 @@
+<?xml version="1.0"?>
+<includes>
+	<!--deadeye home abdunkeln-->
+	<include name="home_background_Image">
+		<texture background="true">backgrounds/background_home11.png</texture>
+	</include>
+	<include name="BGHomeClassic">
+		<control type="image">
+			<include>FullScreenScaled</include>
+			<texture>backgrounds/background_home11.png</texture>
+		</control>
+	</include>
+	<include name="BGHome">
+		<control type="image">
+			<posy>0</posy>
+			<posx>0</posx>
+			<width>1280</width>
+			<height>720</height>
+			<aspectratio aligny="top">stretch</aspectratio>
+			<texture background="true">home/bg_menu.png</texture>
+			<animation effect="fade" start="100" end="87" time="0" condition="Skin.HasSetting(BrighterBG)">Conditional</animation>
+			<visible>!Skin.HasSetting(DarkerBG)</visible>
+		</control>
+		<control type="image">
+			<posy>0</posy>
+			<posx>0</posx>
+			<width>1280</width>
+			<height>720</height>
+			<aspectratio aligny="top">stretch</aspectratio>
+			<texture background="true">home/bg_menu_dark.png</texture>
+			<visible>Skin.HasSetting(DarkerBG)</visible>
+		</control>
+	</include>
+	<include name="BGSettings">
+		<control type="image">
+			<posx>-45</posx>
+			<include>FullScreenScaled</include>
+			<texture>backgrounds/settings.png</texture>
+		</control>
+	</include>
+	<include name="BGDarken">
+		<control type="group">
+			<control type="largeimage">
+				<posy>0</posy>
+				<posx>0</posx>
+				<width>1280</width>
+				<height>720</height>
+				<aspectratio aligny="top">stretch</aspectratio>
+				<texture>backgrounds/background_black3.png</texture>
+				<animation effect="fade" start="0" end="61" time="0" condition="!Skin.HasSetting(DarkerBG)+!Skin.HasSetting(BrighterBG)">Conditional</animation>
+				<animation effect="fade" start="0" end="81" time="0" condition="Skin.HasSetting(DarkerBG)">Conditional</animation>
+				<animation effect="fade" start="0" end="45" time="0" condition="Skin.HasSetting(BrighterBG)">Conditional</animation>
+			</control>
+		</control>
+	</include>	
+	<include name="BGMainOverlay">
+		<control type="largeimage">
+			<posy>0</posy>
+			<posx>0</posx>
+			<width>1280</width>
+			<height>720</height>
+			<aspectratio aligny="top">stretch</aspectratio>
+			<texture background="true">bg_left.png</texture>
+		</control>
+	</include>
+	<include name="BGDim0">
+		<visible>![Player.HasVideo + Skin.HasSetting(PIPFull)]</visible>
+		<aspectratio aligny="top">stretch</aspectratio>
+	</include>
+	<include name="BGDim10">
+		<control type="largeimage">
+			<include>FullScreenScaled</include>
+			<aspectratio aligny="top">stretch</aspectratio>
+			<texture>backgrounds/background_black3.png</texture>
+			<animation effect="fade" start="0" end="16" time="0" condition="true">Conditional</animation>
+		</control>
+		<include>BGMainOverlay</include>
+		<visible>![Player.HasVideo + Skin.HasSetting(PIPFull)]</visible>
+	</include>
+	<include name="BGDim20">
+		<control type="largeimage">
+			<include>FullScreenScaled</include>
+			<aspectratio aligny="top">stretch</aspectratio>
+			<texture>backgrounds/background_black3.png</texture>
+			<animation effect="fade" start="0" end="25" time="0" condition="true">Conditional</animation>
+		</control>
+		<include>BGMainOverlay</include>
+		<visible>![Player.HasVideo + Skin.HasSetting(PIPFull)]</visible>
+	</include>
+	<include name="BGDim30">
+		<control type="largeimage">
+			<include>FullScreenScaled</include>
+			<aspectratio aligny="top">stretch</aspectratio>
+			<texture>backgrounds/background_black3.png</texture>
+			<animation effect="fade" start="0" end="34" time="0" condition="true">Conditional</animation>
+		</control>
+		<include>BGMainOverlay</include>
+		<visible>![Player.HasVideo + Skin.HasSetting(PIPFull)]</visible>
+	</include>
+	<include name="BGDim40">
+		<control type="largeimage">
+			<include>FullScreenScaled</include>
+			<aspectratio aligny="top">stretch</aspectratio>
+			<texture>backgrounds/background_black3.png</texture>
+			<animation effect="fade" start="0" end="43" time="0" condition="true">Conditional</animation>
+		</control>
+		<include>BGMainOverlay</include>
+		<visible>![Player.HasVideo + Skin.HasSetting(PIPFull)]</visible>
+	</include>
+	<include name="BGDim50">
+		<control type="largeimage">
+			<include>FullScreenScaled</include>
+			<aspectratio aligny="top">stretch</aspectratio>
+			<texture>backgrounds/background_black3.png</texture>
+			<animation effect="fade" start="0" end="52" time="0" condition="true">Conditional</animation>
+		</control>
+		<include>BGMainOverlay</include>
+		<visible>![Player.HasVideo + Skin.HasSetting(PIPFull)]</visible>
+	</include>
+	<include name="BGDim60">
+		<control type="largeimage">
+			<include>FullScreenScaled</include>
+			<aspectratio aligny="top">stretch</aspectratio>
+			<texture>backgrounds/background_black3.png</texture>
+			<animation effect="fade" start="0" end="61" time="0" condition="true">Conditional</animation>
+		</control>
+		<include>BGMainOverlay</include>
+		<visible>![Player.HasVideo + Skin.HasSetting(PIPFull)]</visible>
+	</include>
+	<include name="BGDim70">
+		<control type="largeimage">
+			<include>FullScreenScaled</include>
+			<aspectratio aligny="top">stretch</aspectratio>
+			<texture>backgrounds/background_black3.png</texture>
+			<animation effect="fade" start="0" end="68" time="0" condition="true">Conditional</animation>
+		</control>
+		<include>BGMainOverlay</include>
+		<visible>![Player.HasVideo + Skin.HasSetting(PIPFull)]</visible>
+	</include>
+	<include name="BGDim80">
+		<control type="largeimage">
+			<include>FullScreenScaled</include>
+			<aspectratio aligny="top">stretch</aspectratio>
+			<texture>backgrounds/background_black3.png</texture>
+			<animation effect="fade" start="0" end="75" time="0" condition="true">Conditional</animation>
+		</control>
+		<include>BGMainOverlay</include>
+		<visible>![Player.HasVideo + Skin.HasSetting(PIPFull)]</visible>
+	</include>
+	<include name="BGDim90">
+		<control type="largeimage">
+			<include>FullScreenScaled</include>
+			<aspectratio aligny="top">stretch</aspectratio>
+			<texture>backgrounds/background_black3.png</texture>
+			<animation effect="fade" start="0" end="82" time="0" condition="true">Conditional</animation>
+		</control>
+		<include>BGMainOverlay</include>
+		<visible>![Player.HasVideo + Skin.HasSetting(PIPFull)]</visible>
+	</include>
+	<include name="Scaled109">
+		<posy>611</posy>
+		<posx>0</posx>
+		<width>1280</width>
+		<height>109</height>
+	</include>
+	<include name="BGMainOverlay_109">
+		<control type="largeimage">
+			<posy>611</posy>
+			<posx>0</posx>
+			<width>1280</width>
+			<height>109</height>
+			<aspectratio aligny="top">stretch</aspectratio>
+			<texture background="true">bg_left.png</texture>
+		</control>
+	</include>
+	<include name="BGDim0_109">
+	</include>
+	<include name="BGDim10_109">
+		<control type="largeimage">
+			<include>Scaled109</include>
+			<aspectratio aligny="top">stretch</aspectratio>
+			<texture>backgrounds/background_black3.png</texture>
+			<animation effect="fade" start="0" end="16" time="0" condition="true">Conditional</animation>
+		</control>
+		<include>BGMainOverlay_109</include>
+		<visible>![Player.HasVideo + Skin.HasSetting(PIPFull)]</visible>
+	</include>
+	<include name="BGDim20_109">
+		<control type="largeimage">
+			<include>Scaled109</include>
+			<aspectratio aligny="top">stretch</aspectratio>
+			<texture>backgrounds/background_black3.png</texture>
+			<animation effect="fade" start="0" end="25" time="0" condition="true">Conditional</animation>
+		</control>
+		<include>BGMainOverlay_109</include>
+		<visible>![Player.HasVideo + Skin.HasSetting(PIPFull)]</visible>
+	</include>
+	<include name="BGDim30_109">
+		<control type="largeimage">
+			<include>Scaled109</include>
+			<aspectratio aligny="top">stretch</aspectratio>
+			<texture>backgrounds/background_black3.png</texture>
+			<animation effect="fade" start="0" end="34" time="0" condition="true">Conditional</animation>
+		</control>
+		<include>BGMainOverlay_109</include>
+		<visible>![Player.HasVideo + Skin.HasSetting(PIPFull)]</visible>
+	</include>
+	<include name="BGDim40_109">
+		<control type="largeimage">
+			<include>Scaled109</include>
+			<aspectratio aligny="top">stretch</aspectratio>
+			<texture>backgrounds/background_black3.png</texture>
+			<animation effect="fade" start="0" end="43" time="0" condition="true">Conditional</animation>
+		</control>
+		<include>BGMainOverlay_109</include>
+		<visible>![Player.HasVideo + Skin.HasSetting(PIPFull)]</visible>
+	</include>
+	<include name="BGDim50_109">
+		<control type="largeimage">
+			<include>Scaled109</include>
+			<aspectratio aligny="top">stretch</aspectratio>
+			<texture>backgrounds/background_black3.png</texture>
+			<animation effect="fade" start="0" end="52" time="0" condition="true">Conditional</animation>
+		</control>
+		<include>BGMainOverlay_109</include>
+		<visible>![Player.HasVideo + Skin.HasSetting(PIPFull)]</visible>
+	</include>
+	<include name="BGDim60_109">
+		<control type="largeimage">
+			<include>Scaled109</include>
+			<aspectratio aligny="top">stretch</aspectratio>
+			<texture>backgrounds/background_black3.png</texture>
+			<animation effect="fade" start="0" end="61" time="0" condition="true">Conditional</animation>
+		</control>
+		<include>BGMainOverlay_109</include>
+		<visible>![Player.HasVideo + Skin.HasSetting(PIPFull)]</visible>
+	</include>
+	<include name="BGDim70_109">
+		<control type="largeimage">
+			<include>Scaled109</include>
+			<aspectratio aligny="top">stretch</aspectratio>
+			<texture>backgrounds/background_black3.png</texture>
+			<animation effect="fade" start="0" end="68" time="0" condition="true">Conditional</animation>
+		</control>
+		<include>BGMainOverlay_109</include>
+		<visible>![Player.HasVideo + Skin.HasSetting(PIPFull)]</visible>
+	</include>
+	<include name="BGDim80_109">
+		<control type="largeimage">
+			<include>Scaled109</include>
+			<aspectratio aligny="top">stretch</aspectratio>
+			<texture>backgrounds/background_black3.png</texture>
+			<animation effect="fade" start="0" end="75" time="0" condition="true">Conditional</animation>
+		</control>
+		<include>BGMainOverlay_109</include>
+		<visible>![Player.HasVideo + Skin.HasSetting(PIPFull)]</visible>
+	</include>
+	<include name="BGDim90_109">
+		<control type="largeimage">
+			<include>Scaled109</include>
+			<aspectratio aligny="top">stretch</aspectratio>
+			<texture>backgrounds/background_black3.png</texture>
+			<animation effect="fade" start="0" end="82" time="0" condition="true">Conditional</animation>
+		</control>
+		<include>BGMainOverlay_109</include>
+		<visible>![Player.HasVideo + Skin.HasSetting(PIPFull)]</visible>
+	</include>
+	<include name="BGDim100_109">
+		<control type="largeimage">
+			<include>Scaled109</include>
+			<aspectratio aligny="top">stretch</aspectratio>
+			<texture>backgrounds/background_black_edition2.jpg</texture>
+		</control>
+		<visible>![Player.HasVideo + Skin.HasSetting(PIPFull)]</visible>
+	</include>
+	<include name="Scaled280">
+		<posy>448</posy>
+		<posx>0</posx>
+		<width>1280</width>
+		<height>280</height>
+	</include>
+	<include name="BGMainOverlay_280">
+		<control type="largeimage">
+			<posy>448</posy>
+			<posx>0</posx>
+			<width>1280</width>
+			<height>280</height>
+			<aspectratio aligny="top">stretch</aspectratio>
+			<texture background="true">bg_left.png</texture>
+		</control>
+	</include>
+	<include name="BGDim0_280">
+	</include>
+	<include name="BGDim10_280">
+		<control type="largeimage">
+			<include>Scaled280</include>
+			<aspectratio aligny="top">stretch</aspectratio>
+			<texture>backgrounds/background_black3.png</texture>
+			<animation effect="fade" start="0" end="16" time="0" condition="true">Conditional</animation>
+		</control>
+		<include>BGMainOverlay_280</include>
+		<visible>![Player.HasVideo + Skin.HasSetting(PIPFull)]</visible>
+	</include>
+	<include name="BGDim20_280">
+		<control type="largeimage">
+			<include>Scaled280</include>
+			<aspectratio aligny="top">stretch</aspectratio>
+			<texture>backgrounds/background_black3.png</texture>
+			<animation effect="fade" start="0" end="25" time="0" condition="true">Conditional</animation>
+		</control>
+		<include>BGMainOverlay_280</include>
+		<visible>![Player.HasVideo + Skin.HasSetting(PIPFull)]</visible>
+	</include>
+	<include name="BGDim30_280">
+		<control type="largeimage">
+			<include>Scaled280</include>
+			<aspectratio aligny="top">stretch</aspectratio>
+			<texture>backgrounds/background_black3.png</texture>
+			<animation effect="fade" start="0" end="34" time="0" condition="true">Conditional</animation>
+		</control>
+		<include>BGMainOverlay_280</include>
+		<visible>![Player.HasVideo + Skin.HasSetting(PIPFull)]</visible>
+	</include>
+	<include name="BGDim40_280">
+		<control type="largeimage">
+			<include>Scaled280</include>
+			<aspectratio aligny="top">stretch</aspectratio>
+			<texture>backgrounds/background_black3.png</texture>
+			<animation effect="fade" start="0" end="43" time="0" condition="true">Conditional</animation>
+		</control>
+		<include>BGMainOverlay_280</include>
+		<visible>![Player.HasVideo + Skin.HasSetting(PIPFull)]</visible>
+	</include>
+	<include name="BGDim50_280">
+		<control type="largeimage">
+			<include>Scaled280</include>
+			<aspectratio aligny="top">stretch</aspectratio>
+			<texture>backgrounds/background_black3.png</texture>
+			<animation effect="fade" start="0" end="52" time="0" condition="true">Conditional</animation>
+		</control>
+		<include>BGMainOverlay_280</include>
+		<visible>![Player.HasVideo + Skin.HasSetting(PIPFull)]</visible>
+	</include>
+	<include name="BGDim60_280">
+		<control type="largeimage">
+			<include>Scaled280</include>
+			<aspectratio aligny="top">stretch</aspectratio>
+			<texture>backgrounds/background_black3.png</texture>
+			<animation effect="fade" start="0" end="61" time="0" condition="true">Conditional</animation>
+		</control>
+		<include>BGMainOverlay_280</include>
+		<visible>![Player.HasVideo + Skin.HasSetting(PIPFull)]</visible>
+	</include>
+	<include name="BGDim70_280">
+		<control type="largeimage">
+			<include>Scaled280</include>
+			<aspectratio aligny="top">stretch</aspectratio>
+			<texture>backgrounds/background_black3.png</texture>
+			<animation effect="fade" start="0" end="68" time="0" condition="true">Conditional</animation>
+		</control>
+		<include>BGMainOverlay_280</include>
+		<visible>![Player.HasVideo + Skin.HasSetting(PIPFull)]</visible>
+	</include>
+	<include name="BGDim80_280">
+		<control type="largeimage">
+			<include>Scaled280</include>
+			<aspectratio aligny="top">stretch</aspectratio>
+			<texture>backgrounds/background_black3.png</texture>
+			<animation effect="fade" start="0" end="75" time="0" condition="true">Conditional</animation>
+		</control>
+		<include>BGMainOverlay_280</include>
+		<visible>![Player.HasVideo + Skin.HasSetting(PIPFull)]</visible>
+	</include>
+	<include name="BGDim90_280">
+		<control type="largeimage">
+			<include>Scaled280</include>
+			<aspectratio aligny="top">stretch</aspectratio>
+			<texture>backgrounds/background_black3.png</texture>
+			<animation effect="fade" start="0" end="82" time="0" condition="true">Conditional</animation>
+		</control>
+		<include>BGMainOverlay_280</include>
+		<visible>![Player.HasVideo + Skin.HasSetting(PIPFull)]</visible>
+	</include>
+	<include name="BGDim100_280">
+		<control type="largeimage">
+			<include>Scaled280</include>
+			<aspectratio aligny="top">stretch</aspectratio>
+			<texture>backgrounds/background_black_edition2.jpg</texture>
+		</control>
+		<visible>![Player.HasVideo + Skin.HasSetting(PIPFull)]</visible>
+	</include>
+	<include name="BGDarken2">
+		<control type="group">
+			<control type="largeimage">
+				<posy>0</posy>
+				<posx>0</posx>
+				<width>1280</width>
+				<height>720</height>
+				<aspectratio aligny="top">stretch</aspectratio>
+				<texture>backgrounds/background_black3.png</texture>
+				<animation effect="fade" start="0" end="61" time="0" condition="!Skin.HasSetting(DarkerBG)+!Skin.HasSetting(BrighterBG)">Conditional</animation>
+				<animation effect="fade" start="0" end="81" time="0" condition="Skin.HasSetting(DarkerBG)">Conditional</animation>
+				<animation effect="fade" start="0" end="45" time="0" condition="Skin.HasSetting(BrighterBG)">Conditional</animation>
+			</control>
+			<include>BGMainOverlay</include>
+		</control>
+	</include>
+	<include name="BGBlackEdition">
+		<control type="largeimage">
+			<include>FullScreenScaled</include>
+			<texture>backgrounds/background_black_edition2.jpg</texture>
+			<visible>![Player.HasVideo + Skin.HasSetting(PIPFull)]</visible>
+		</control>
+	</include>
+	<include name="BGBlackEditionImage">
+		<texture>backgrounds/background_black_edition2.jpg</texture>
+		<visible>![Player.HasVideo + Skin.HasSetting(PIPFull)]</visible>
+	</include>
+	<include name="BGGrainy">
+		<control type="image">
+			<include>FullScreenScaled</include>
+			<texture>bg-overlay-grainy.png</texture>
+			<animation effect="fade" start="0" end="100" time="600">WindowOpen</animation>
+			<animation effect="fade" start="100" end="0" time="600">WindowClose</animation>
+		</control>
+	</include>
+	<include name="BGVideoPlaying">
+		<visible>[Player.HasVideo + Skin.HasSetting(PIPFull)]</visible>
+		<!-- Content -->
+		<control type="group">
+			<include>Animation_CommonFade</include>
+			<control type="videowindow">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+				<aspectratio>keep</aspectratio>
+				<fadetime>500</fadetime>
+			</control>
+		</control>
+	</include>
+	<include name="BGFanart">
+		<!-- Content -->
+		<control type="group">
+			<visible>[Player.HasVideo + Skin.HasSetting(PIPFull)]</visible>
+			<include>Animation_CommonFade</include>
+			<control type="videowindow">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+				<aspectratio>keep</aspectratio>
+				<fadetime>500</fadetime>
+			</control>
+		</control>
+		<control type="group">
+			<visible>![Player.HasVideo + Skin.HasSetting(PIPFull)]</visible>
+			<!-- generic global fanart for when the container is empty -->
+			<control type="multiimage">
+				<include>FullScreenScaled</include>
+				<timeperimage>8000</timeperimage>
+				<fadetime>1000</fadetime>
+				<randomize>true</randomize>
+				<loop>yes</loop>
+				<imagepath background="true">plexserver://best:32400/library/arts</imagepath>
+				<animation effect="fade" end="50" time="400" condition="true">Conditional</animation>
+				<animation type="WindowClose">
+					<effect type="fade" start="100" end="0" time="800"/>
+				</animation>
+				<visible>Container.Content(empty)</visible>
+			</control>
+			<control type="largeimage">
+				<include>FullScreenScaled</include>
+				<fadetime>400</fadetime>
+				<animation effect="fade" end="100" time="300" delay="0">Visible</animation>
+				<animation effect="fade" end="0" time="300" delay="0">Hidden</animation>
+				<texture background="true">backgrounds/movietv.jpg</texture>
+				<visible>IsEmpty(ListItem.Property(Fanart_Image))</visible>
+			</control>
+			<control type="largeimage">
+				<include>FullScreenScaled</include>
+				<fadetime>400</fadetime>
+				<animation effect="fade" end="100" time="300" delay="0">Visible</animation>
+				<animation effect="fade" end="0" time="300" delay="0">Hidden</animation>
+				<texture background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
+			</control>	
+		</control>
+		<!-- Clip backgrounds use item thumb, not as pretty so we'll hide them a bit more -->
+		<control type="group">
+			<visible>![Player.HasVideo + Skin.HasSetting(PIPFull)]</visible>
+			<visible>Container.PlexContent(Clips)</visible>
+			<control type="largeimage">
+				<include>FullScreenScaled</include>
+				<fadetime>400</fadetime>
+				<animation effect="fade" end="100" time="300" delay="0">Visible</animation>
+				<animation effect="fade" end="0" time="300" delay="0">Hidden</animation>
+				<texture background="true">$INFO[ListItem.Art(thumb)]</texture>
+			</control>
+			<control type="largeimage">
+				<include>FullScreenScaled</include>
+				<texture>backgrounds/background_black3.png</texture>
+				<animation effect="fade" start="0" end="81" time="600">WindowOpen</animation>
+				<animation effect="fade" start="81" end="0" time="600">WindowClose</animation>
+			</control>
+		</control>
+	</include>
+	<include name="BGSharedContent">
+		<control type="largeimage">
+			<include>FullScreenScaled</include>
+			<animation effect="fade" end="100" time="300" delay="0">Visible</animation>
+			<animation effect="fade" end="0" time="300" delay="0">Hidden</animation>
+			<texture background="true">backgrounds/earth.png</texture>
+			<visible>isEmpty(Skin.String(BGSharedContent))</visible>
+			<visible>![Player.HasVideo + Skin.HasSetting(PIPFull)]</visible>
+		</control>
+		<!-- Custom Shared Content BG -->
+		<control type="largeimage">
+			<include>FullScreenScaled</include>
+			<texture background="true">$INFO[Skin.String(BGSharedContent)]</texture>
+			<visible>!isEmpty(Skin.String(BGSharedContent))</visible>
+			<visible>![Player.HasVideo + Skin.HasSetting(PIPFull)]</visible>
+		</control>
+		<control type="videowindow">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<aspectratio>keep</aspectratio>
+			<fadetime>500</fadetime>
+			<visible>[Player.HasVideo + Skin.HasSetting(PIPFull)]</visible>
+		</control>
+	</include>
+	<include name="BGHomeList">
+		<include>FullScreenScaled</include>
+		<fadetime>500</fadetime>
+		<animation effect="fade" start="30" end="100" time="400" delay="0">Visible</animation>
+		<animation effect="fade" start="100" end="30" time="400" delay="0">Hidden</animation>
+	</include>
+	<include name="background_kenburns">
+		<animation effect="zoom" start="115" end="135" center="auto" time="15000" tween="cubic" easing="inout" pulse="true" condition="true">Conditional</animation>
+		<animation effect="slide" start="-10,-10" end="20,20" time="7000" tween="cubic" easing="inout" pulse="true" condition="true">Conditional</animation>
+		<animation effect="rotate" center="360,640" start="-2" end="2" time="11000" tween="cubic" easing="inout" pulse="true"  condition="Skin.HasSetting(List1_Rotate)">Conditional</animation>
+	</include>
+	<include name="SlideshowHome">
+		<!-- Content -->
+		<control type="group">
+			<visible>[Player.HasVideo + Skin.HasSetting(PIPFull)]</visible>
+			<include>Animation_CommonFade</include>
+			<control type="videowindow">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+				<aspectratio>keep</aspectratio>
+				<fadetime>500</fadetime>
+			</control>
+		</control>
+		<control type="group">
+			<visible>![Player.HasVideo + Skin.HasSetting(PIPFull)]</visible>
+			<!-- generic autopopulated fanart slideshow -->
+			<visible>!Skin.HasSetting(HideFanart)</visible>
+			<control type="multiimage" id="10101">
+				<visible>isEmpty(Skin.String(HomeBGMulti)) + !Container(300).hasFocus(560) + !Container(300).hasFocus(561) + !Container(300).hasFocus(562) + !Container(300).hasFocus(563) + !Container(300).hasFocus(564) + !Container(300).hasFocus(565)</visible>
+				<include>FullScreenScaled</include>
+				<timeperimage>8000</timeperimage>
+				<fadetime>1000</fadetime>
+				<randomize>true</randomize>
+				<loop>yes</loop>
+				<include condition="Skin.HasSetting(List1_Kenburns)">background_kenburns</include>
+				<animation effect="fade" start="100" end="0" time="400" condition="ControlGroup(5000).HasFocus">Conditional</animation>
+				<animation type="WindowClose">
+					<effect type="fade" start="100" end="0" time="800"/>
+				</animation>
+			</control>
+			<control type="largeimage">
+				<include condition="Skin.HasSetting(List1_Kenburns)">BGHomeList</include>
+				<visible>Container(300).hasFocus(560)</visible>
+				<texture>$VAR[Var_Favourite_Background]</texture>
+				<include condition="Skin.HasSetting(List1_Kenburns)">background_kenburns</include>
+			</control>
+			<control type="largeimage">
+				<include condition="Skin.HasSetting(List1_Kenburns)">BGHomeList</include>
+				<visible>Container(300).hasFocus(561)</visible>
+				<texture>$VAR[Var_Favourite_Background]</texture>
+				<include condition="Skin.HasSetting(List1_Kenburns)">background_kenburns</include>
+			</control>
+			<control type="largeimage">
+				<include condition="Skin.HasSetting(List1_Kenburns)">BGHomeList</include>
+				<visible>Container(300).hasFocus(562)</visible>
+				<texture>$VAR[Var_Favourite_Background]</texture>
+				<include condition="Skin.HasSetting(List1_Kenburns)">background_kenburns</include>
+			</control>
+			<control type="largeimage">
+				<include condition="Skin.HasSetting(List1_Kenburns)">BGHomeList</include>
+				<visible>Container(300).hasFocus(563)</visible>
+				<texture>$VAR[Var_Favourite_Background]</texture>
+				<include condition="Skin.HasSetting(List1_Kenburns)">background_kenburns</include>
+			</control>
+			<control type="largeimage">
+				<include condition="Skin.HasSetting(List1_Kenburns)">BGHomeList</include>
+				<visible>Container(300).hasFocus(564)</visible>
+				<texture>$VAR[Var_Favourite_Background]</texture>
+				<include condition="Skin.HasSetting(List1_Kenburns)">background_kenburns</include>
+			</control>
+			<control type="largeimage">
+				<include condition="Skin.HasSetting(List1_Kenburns)">BGHomeList</include>
+				<visible>Container(300).hasFocus(565)</visible>
+				<texture>$VAR[Var_Favourite_Background]</texture>
+				<include condition="Skin.HasSetting(List1_Kenburns)">background_kenburns</include>
+			</control>
+			<control type="largeimage">
+				<include condition="Skin.HasSetting(List1_Kenburns)">BGHomeList</include>
+				<visible>Container(300).hasFocus(566)</visible>
+				<texture>$VAR[Var_Favourite_Background]</texture>
+				<include condition="Skin.HasSetting(List1_Kenburns)">background_kenburns</include>
+			</control>
+			<control type="largeimage">
+				<include condition="Skin.HasSetting(List1_Kenburns)">BGHomeList</include>
+				<visible>Container(300).hasFocus(567)</visible>
+				<texture>$VAR[Var_Favourite_Background]</texture>
+				<include condition="Skin.HasSetting(List1_Kenburns)">background_kenburns</include>
+			</control>
+			<control type="largeimage">
+				<include condition="Skin.HasSetting(List1_Kenburns)">BGHomeList</include>
+				<visible>Container(300).hasFocus(568)</visible>
+				<texture>$VAR[Var_Favourite_Background]</texture>
+				<include condition="Skin.HasSetting(List1_Kenburns)">background_kenburns</include>
+			</control>
+			<control type="largeimage">
+				<include>BGHomeList</include>
+				<visible>ControlGroup(7002).HasFocus</visible>
+				<texture background="true">$INFO[Container(11001).ListItem(0).Art(fanart)]</texture>
+			</control>
+			<control type="largeimage">
+				<include>BGHomeList</include>
+				<visible>ControlGroup(7001).HasFocus</visible>
+				<texture background="true">$INFO[Container(11000).ListItem(0).Art(fanart)]</texture>
+			</control>
+			<!-- queue & recommendations -->
+			<control type="largeimage">
+				<include>BGHomeList</include>
+				<visible>ControlGroup(7003).HasFocus</visible>
+				<texture background="true">$INFO[Container(11003).ListItem(0).Art(thumb)]</texture>
+			</control>
+			<!-- recently used -->
+			<control type="largeimage">
+				<include>BGHomeList</include>
+				<visible>ControlGroup(7004).HasFocus</visible>
+				<texture background="true">$INFO[Container(11002).ListItem(0).Art(fanart)]</texture>
+			</control>
+			<!-- "default Playlists bg" -->
+			<control type="largeimage">
+				<include>BGHomeList</include>
+				<texture background="true">backgrounds/movie.jpg</texture>
+				<visible>isEmpty(Skin.String(HomeBGPlaylists))</visible>
+				<visible>ControlGroup(7005).HasFocus</visible>	
+				<visible>Container(11005).ListItem(0).Type(videoplaylist) | Container(11005).ListItem(0).Type(videoplayqueue)</visible>
+			</control>
+			<control type="largeimage">
+				<include>BGHomeList</include>
+				<texture background="true">backgrounds/music.jpg</texture>
+				<visible>isEmpty(Skin.String(HomeBGPlaylists))</visible>
+				<visible>ControlGroup(7005).HasFocus</visible>
+				<visible>Container(11005).ListItem(0).Type(musicplaylist) | Container(11005).ListItem(0).Type(musicplayqueue)</visible>
+			</control>
+			<!-- Custom Playlists BG -->
+			<control type="largeimage">
+				<include>FullScreenScaled</include>
+				<texture background="true">$INFO[Skin.String(HomeBGPlaylists)]</texture>
+				<visible>!isEmpty(Skin.String(HomeBGPlaylists))</visible>
+				<visible>ControlGroup(7005).HasFocus</visible>
+			</control>
+			<!-- "Play Queues" -->
+			<control type="largeimage">
+				<include>BGHomeList</include>
+				<visible>ControlGroup(7007).HasFocus + System.PlexPlayQueue(Clip)</visible>
+				<texture background="true">$INFO[Container(11007).ListItem(0).Art(thumb)]</texture>
+			</control>
+			<control type="largeimage">
+				<include>BGHomeList</include>
+				<visible>ControlGroup(7007).HasFocus + System.PlexPlayQueue(Video)</visible>
+				<texture background="true">$INFO[Container(11007).ListItem(0).Art(fanart)]</texture>
+			</control>
+			<control type="largeimage">
+				<include>BGHomeList</include>
+				<visible>ControlGroup(7006).HasFocus + System.PlexPlayQueue(Music)</visible>
+				<texture background="true">$INFO[Container(11006).ListItem(0).Art(fanart)]</texture>
+			</control>
+		</control>
+		<!-- Custom Single -->
+		<control type="image">
+			<visible>![Player.HasVideo + Skin.HasSetting(PIPFull)]</visible>
+			<include>FullScreenScaled</include>
+			<texture background="true">$INFO[Skin.String(HomeBGSingle)]</texture>
+			<include condition="Skin.HasSetting(List1_Kenburns) + !Skin.HasSetting(HomeBGSingleOverlay10) + !Skin.HasSetting(HomeBGSingleOverlay20) + !Skin.HasSetting(HomeBGSingleOverlay30) + !Skin.HasSetting(HomeBGSingleOverlay40) + !Skin.HasSetting(HomeBGSingleOverlay50)">background_kenburns</include>
+			<visible>!isEmpty(Skin.String(HomeBGSingle)) + isEmpty(Skin.String(HomeBGMulti))</visible>
+			<animation effect="fade" start="100" end="0" time="400" condition="ControlGroup(5000).HasFocus">Conditional</animation>
+			<animation type="WindowClose">
+				<effect type="fade" start="100" end="0" time="800"/>
+			</animation>
+			<animation effect="fade" start="0" end="10" time="400" condition="Skin.HasSetting(HomeBGSingleOverlay10)">Conditional</animation>
+			<animation effect="fade" start="0" end="20" time="400" condition="Skin.HasSetting(HomeBGSingleOverlay20)">Conditional</animation>
+			<animation effect="fade" start="0" end="30" time="400" condition="Skin.HasSetting(HomeBGSingleOverlay30)">Conditional</animation>
+			<animation effect="fade" start="0" end="40" time="400" condition="Skin.HasSetting(HomeBGSingleOverlay40)">Conditional</animation>
+			<animation effect="fade" start="0" end="50" time="400" condition="Skin.HasSetting(HomeBGSingleOverlay50)">Conditional</animation>
+		</control>
+		<!-- Custom Multi -->
+		<control type="multiimage">
+			<visible>![Player.HasVideo + Skin.HasSetting(PIPFull)]</visible>
+			<include>FullScreenScaled</include>
+			<info>Skin.String(HomeBGMulti)</info>
+			<timeperimage>8000</timeperimage>
+			<fadetime>1000</fadetime>
+			<randomize>true</randomize>
+			<loop>yes</loop>
+			<include condition="Skin.HasSetting(List1_Kenburns)">background_kenburns</include>
+			<animation effect="fade" start="100" end="0" time="400" condition="ControlGroup(5000).HasFocus">Conditional</animation>
+			<animation type="WindowClose">
+				<effect type="fade" start="100" end="0" time="800"/>
+			</animation>
+			<visible>isEmpty(Skin.String(HomeBGSingle)) + !isEmpty(Skin.String(HomeBGMulti))</visible>
+		</control>
+		<include condition="Skin.HasSetting(List1_Grain) + ![Player.HasVideo + Skin.HasSetting(PIPFull)]">BGGrainy</include>
+	</include>
+	<include name="SlideshowDimmed">
+		<control type="multiimage">
+			<visible>!Skin.HasSetting(HideFanart)</visible>
+			<include>FullScreenScaled</include>
+			<timeperimage>8000</timeperimage>
+			<fadetime>1000</fadetime>
+			<randomize>true</randomize>
+			<loop>yes</loop>
+			<imagepath background="true">plexserver://best:32400/library/arts</imagepath>
+			<animation effect="fade" end="100" time="400" condition="true">Conditional</animation>
+			<animation type="WindowClose">
+				<effect type="fade" start="100" end="0" time="800"/>
+			</animation>
+		</control>
+		<include>BGDarken2</include>
+	</include>
+	<include name="BeginnersBackground">
+		<control type="image">
+			<width>1280</width>
+			<height>720</height>
+			<texture>bg-beginner.jpg</texture>
+			<aspectratio>stretch</aspectratio>
+			<animation effect="fade" start="0" end="70" time="0" condition="true">Conditional</animation>
+			<visible>true</visible>
+		</control>
+		<control type="image">
+			<width>1280</width>
+			<height>720</height>
+			<texture>bg-overlay-grainy.png</texture>
+			<aspectratio>stretch</aspectratio>
+			<animation effect="fade" start="0" end="100" time="0" condition="true">Conditional</animation>
+			<visible>true</visible>
+		</control>
+	</include>
+</includes>
