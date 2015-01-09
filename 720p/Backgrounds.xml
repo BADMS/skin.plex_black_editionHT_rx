@@ -425,7 +425,7 @@
 		</control>
 	</include>
 	<include name="BGVideoPlaying">
-		<visible>Player.HasVideo</visible>
+		<visible>[Player.HasVideo + Skin.HasSetting(PIPFull)]</visible>
 		<!-- Content -->
 		<control type="group">
 			<include>Animation_CommonFade</include>
@@ -435,14 +435,14 @@
 				<width>1280</width>
 				<height>720</height>
 				<aspectratio>keep</aspectratio>
-				<fadetime>1000</fadetime>
+				<fadetime>500</fadetime>
 			</control>
 		</control>
 	</include>
 	<include name="BGFanart">
 		<!-- Content -->
 		<control type="group">
-			<visible>Player.HasVideo</visible>
+			<visible>[Player.HasVideo + Skin.HasSetting(PIPFull)]</visible>
 			<include>Animation_CommonFade</include>
 			<control type="videowindow">
 				<posx>0</posx>
@@ -450,7 +450,7 @@
 				<width>1280</width>
 				<height>720</height>
 				<aspectratio>keep</aspectratio>
-				<fadetime>1000</fadetime>
+				<fadetime>500</fadetime>
 			</control>
 		</control>
 		<control type="group">
@@ -511,12 +511,23 @@
 			<animation effect="fade" end="0" time="300" delay="0">Hidden</animation>
 			<texture background="true">backgrounds/earth.png</texture>
 			<visible>isEmpty(Skin.String(BGSharedContent))</visible>
+			<visible>![Player.HasVideo + Skin.HasSetting(PIPFull)]</visible>
 		</control>
 		<!-- Custom Shared Content BG -->
 		<control type="largeimage">
 			<include>FullScreenScaled</include>
 			<texture background="true">$INFO[Skin.String(BGSharedContent)]</texture>
 			<visible>!isEmpty(Skin.String(BGSharedContent))</visible>
+			<visible>![Player.HasVideo + Skin.HasSetting(PIPFull)]</visible>
+		</control>
+		<control type="videowindow">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<aspectratio>keep</aspectratio>
+			<fadetime>500</fadetime>
+			<visible>[Player.HasVideo + Skin.HasSetting(PIPFull)]</visible>
 		</control>
 	</include>
 	<include name="BGHomeList">
@@ -533,7 +544,7 @@
 	<include name="SlideshowHome">
 		<!-- Content -->
 		<control type="group">
-			<visible>Player.HasVideo</visible>
+			<visible>[Player.HasVideo + Skin.HasSetting(PIPFull)]</visible>
 			<include>Animation_CommonFade</include>
 			<control type="videowindow">
 				<posx>0</posx>
@@ -541,7 +552,7 @@
 				<width>1280</width>
 				<height>720</height>
 				<aspectratio>keep</aspectratio>
-				<fadetime>1000</fadetime>
+				<fadetime>500</fadetime>
 			</control>
 		</control>
 		<control type="group">

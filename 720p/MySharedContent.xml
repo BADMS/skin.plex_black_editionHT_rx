@@ -6,6 +6,7 @@
 	<allowoverlay>yes</allowoverlay>
 	<controls>
 		<include>BGBlackEdition</include>
+		<include>viewtype_nowplaying_right</include>
 		<!--
 		<include condition="!Skin.hasSetting(HideFanartSharedContent)">SharedContentMainBG</include>
 		<include>BGDarken2</include>
