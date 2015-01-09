@@ -18,7 +18,7 @@ https://forums.plex.tv/index.php/topic/130576-plex-black-edition-remix/page-2#en
 
 2015-01-09
 
-- COMMTTED TO GITHUB PLEASE CHECK THERE FROM NOW ON
+- COMMITTED TO GITHUB PLEASE CHECK THERE FROM NOW ON
 
 
 SHORTCUTS HOW TO
