@@ -12,20 +12,16 @@
 		<height>20</height>
 		<font>Regular-18</font>
 		<textcolor>orange</textcolor>
-		<!--<shadowcolor>FF444444</shadowcolor>-->
 	</include>
 	<include name="LeftInfoFormatWhite">
 		<width min="29" max="600">auto</width>
 		<height>20</height>
 		<font>Regular-18</font>
 		<textcolor>white</textcolor>
-		<!--
-		<include>WhiteShadow</include>-->
 	</include>
 	<include name="Cast">
 		<font>Regular-18_1</font>
 		<textcolor>white</textcolor>
-		<!--<include>WhiteShadow</include>-->
 	</include>
 	<!-- bg's -->
 	<include name="PlotBGShowAndSeason">
@@ -100,7 +96,6 @@
 		<aligny>center</aligny>
 		<label>$INFO[ListItem.Label]</label>
 		<font>Regular-17</font>
-		<!--<shadowcolor>ff222222</shadowcolor>-->
 	</include>
 	<include name="EpisodeDate">
 		<control type="group">
@@ -114,9 +109,7 @@
 				<label>$INFO[ListItem.Date]</label>
 				<font>Regular-17</font>
 				<textcolor>FF999999</textcolor>
-				<!--<shadowcolor>ff222222</shadowcolor>-->
 			</control>
-			<!--deadeye Episode duration-->
 			<control type="label">
 				<posy>144</posy>
 				<posx>204</posx>
@@ -127,7 +120,6 @@
 				<label>$INFO[ListItem.DurationStr]</label>
 				<font>Regular-17</font>
 				<textcolor>FF999999</textcolor>
-				<!--<shadowcolor>ff222222</shadowcolor>-->
 			</control>
 		</control>
 	</include>
@@ -286,7 +278,6 @@
 		<aligny>center</aligny>
 		<label>$INFO[ListItem.Label]</label>
 		<font>Regular-22</font>
-		<!--<shadowcolor>FF222222</shadowcolor>-->
 	</include>
 	<include name="ExtraTitle">
 		<posy>144</posy>
@@ -297,7 +288,6 @@
 		<aligny>center</aligny>
 		<label>$INFO[ListItem.Property(extraTypeStr)]</label>
 		<font>Regular-17</font>
-		<!--<shadowcolor>FF222222</shadowcolor>-->
 	</include>
 	<include name="ExtraSecondTitle">
 		<control type="label">
@@ -310,7 +300,6 @@
 			<font>Regular-17</font>
 			<textcolor>FF999999</textcolor>
 			<label>$INFO[ListItem.DurationStr]</label>
-			<!--<shadowcolor>FF222222</shadowcolor>-->
 		</control>
 	</include>
 	<!-- poster movie -->
@@ -328,7 +317,6 @@
 			<width>385</width>
 			<height>577</height>
 			<texture background="true">$INFO[ListItem.Art(bigThumb)]</texture>
-			<!--><texture background="true" diffuse="preplay-poster-big-mask.png">$INFO[ListItem.Art(bigPoster)]</texture>-->
 		<aspectratio scalediffuse="false" align="center" aligny="top">scale</aspectratio>
 		<animation effect="fade" start="0" end="100" time="0" condition="true">Conditional</animation>
 		<visible>Container.PlexContent(Movie)</visible>
@@ -341,7 +329,6 @@
 		<width>385</width>
 		<height>577</height>
 		<texture background="true">$INFO[ListItem.GrandparentThumb]</texture>
-		<!--><texture background="true" diffuse="preplay-poster-big-mask.png">$INFO[ListItem.Art(bigPoster)]</texture>-->
 	<aspectratio scalediffuse="false" align="center" aligny="top">scale</aspectratio>
 	<animation effect="fade" start="0" end="100" time="0" condition="true">Conditional</animation>
 	<visible>Container.PlexContent(Episode)</visible>
@@ -386,32 +373,28 @@
 		<!-- Audio & Subtitles buttons -->
 		<control type="label">
 			<textoffsetx>0</textoffsetx>
-			<!-- NOTE: NEED STRING FOR THIS -->
-			<!--><label>[UPPERCASE]$LOCALIZE[31134][/UPPERCASE]</label>-->
-		<label>[UPPERCASE]Audio[/UPPERCASE]</label>
+			<label>[UPPERCASE]Audio[/UPPERCASE]</label>
+			<include>LeftInfoFormatOrange</include>
+		</control>
+		<control type="label">
+			<label>$INFO[ListItem.Property(SelectedAudioStream)]</label>
+			<include>LeftInfoFormatWhite</include>
+		</control>
+	</control>
+	<control type="grouplist">
+		<posy>397</posy>
+		<posx>550</posx>
+		<orientation>vertical</orientation>
+		<itemgap>5</itemgap>
+		<control type="label">
+			<textoffsetx>0</textoffsetx>
+			<label>[UPPERCASE]Subtitles[/UPPERCASE]</label>
 		<include>LeftInfoFormatOrange</include>
 	</control>
 	<control type="label">
-		<label>$INFO[ListItem.Property(SelectedAudioStream)]</label>
+		<label>$INFO[ListItem.Property(SelectedSubtitleStream)]</label>
 		<include>LeftInfoFormatWhite</include>
 	</control>
-</control>
-<control type="grouplist">
-	<posy>397</posy>
-	<posx>550</posx>
-	<orientation>vertical</orientation>
-	<itemgap>5</itemgap>
-	<control type="label">
-		<textoffsetx>0</textoffsetx>
-		<!-- NOTE: NEED STRING FOR THIS -->
-		<!--><label>[UPPERCASE]$LOCALIZE[31134][/UPPERCASE]</label>-->
-	<label>[UPPERCASE]Subtitles[/UPPERCASE]</label>
-	<include>LeftInfoFormatOrange</include>
-</control>
-<control type="label">
-	<label>$INFO[ListItem.Property(SelectedSubtitleStream)]</label>
-	<include>LeftInfoFormatWhite</include>
-</control>
 </control>
 </include>
 <include name="PreplayInfosEpisode">
@@ -454,9 +437,7 @@
 		<!-- Audio & Subtitles buttons -->
 		<control type="label">
 			<textoffsetx>0</textoffsetx>
-			<!-- NOTE: NEED STRING FOR THIS -->
-			<!--><label>[UPPERCASE]$LOCALIZE[31134][/UPPERCASE]</label>-->
-		<label>[UPPERCASE]Audio[/UPPERCASE]</label>
+			<label>[UPPERCASE]Audio[/UPPERCASE]</label>
 		<include>LeftInfoFormatOrange</include>
 	</control>
 	<control type="label">
@@ -471,15 +452,13 @@
 	<itemgap>5</itemgap>
 	<control type="label">
 		<textoffsetx>0</textoffsetx>
-		<!-- NOTE: NEED STRING FOR THIS -->
-		<!--><label>[UPPERCASE]$LOCALIZE[31134][/UPPERCASE]</label>-->
-	<label>[UPPERCASE]Subtitles[/UPPERCASE]</label>
-	<include>LeftInfoFormatOrange</include>
-</control>
-<control type="label">
-	<label>$INFO[ListItem.Property(SelectedSubtitleStream)]</label>
-	<include>LeftInfoFormatWhite</include>
-</control>
+		<label>[UPPERCASE]Subtitles[/UPPERCASE]</label>
+		<include>LeftInfoFormatOrange</include>
+	</control>
+	<control type="label">
+		<label>$INFO[ListItem.Property(SelectedSubtitleStream)]</label>
+		<include>LeftInfoFormatWhite</include>
+	</control>
 </control>
 </include>
 <include name="PreplayPlot">
@@ -688,31 +667,6 @@
 					<label>Seasons view</label>
 					<include>sectionTitleMiddle</include>
 				</control>
-				<!-- MPAA flag -->
-				<!--rausgeschmissen weils scheisse ausschaut
-					<control type="image">
-						<posy>60</posy>
-						<width>60</width>
-						<height>30</height>
-						<texture>$INFO[Listitem.Art(mediaTag::contentRating)]</texture>
-						<aspectratio align="left" aligny="center">keep</aspectratio>
-						<colordiffuse>mediatag</colordiffuse>
-						<animation effect="fade" start="0" end="100" time="0" condition="true">Conditional</animation>
-						<visible>true</visible>
-					</control>
-					-->
-				<!-- Star Rating -->
-				<!--
-					<control type="image">
-						<posy>89</posy>
-						<width>200</width>
-						<height>20</height>
-						<texture>$INFO[ListItem.StarRating]</texture>
-						<aspectratio align="right" aligny="center">keep</aspectratio>
-						<animation effect="fade" start="0" end="100" time="0" condition="true">Conditional</animation>
-						<visible>true</visible>
-					</control>
-					-->
 				<!-- Genre -->
 				<control type="label">
 					<posy>53</posy>
@@ -765,16 +719,6 @@
 				<include>NoPlotDefault</include>
 				<visible>IsEmpty(Container.ShowPlot)</visible>
 			</control>
-			<!-- <control type="image">
-						<posx>0</posx>
-						<posy>640</posy>
-						<width>464</width>
-						<height>80</height>
-						<texture>$INFO[ListItem.Art(banner)]</texture>
-						<fadetime>1000</fadetime>
-						<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-						<visible>Skin.HasSetting(ShowTVBanner)</visible>
-					</control> -->
 		</control>
 		<!-- main list -->
 		<control type="panel" id="60">
@@ -985,16 +929,6 @@
 			</control>
 			<!-- Infos right side from poster -->
 			<control type="group">
-				<!-- clock -->
-				<!-- finish time
-					<control type="label">
-						<posy>660</posy>
-						<posx>948</posx>
-						<width>200</width>
-						<font>Regular-16</font>
-						<label>$INFO[Player.FinishTime]</label>
-						<textcolor>title2</textcolor>
-					</control> -->
 				<posy>38</posy>
 				<posx>251</posx>
 				<!-- Titles -->
@@ -1051,20 +985,6 @@
 						<visible>true</visible>
 					</control>
 				</control>
-				<!-- Duration -->
-				<!--
-					<control type="label">
-						<posy>122</posy>
-						<width>226</width>
-						<height>40</height>
-						<align>left</align>
-						<label>$INFO[ListItem.DurationStr]</label>
-						<font>Regular-24</font>
-						<textcolor>title2</textcolor>
-						<shadowcolor>ff333333</shadowcolor>
-						<visible>false</visible>
-					</control>
-					-->
 				<!--Studio-->
 				<control type="image">
 					<posy>210</posy>
@@ -1266,16 +1186,6 @@
 		<control type="group">
 			<posx>251</posx>
 			<posy>66</posy>
-			<!-- clock -->
-			<!-- finish time
-					<control type="label">
-						<posy>660</posy>
-						<posx>948</posx>
-						<width>200</width>
-						<font>Regular-16</font>
-						<label>$INFO[Player.FinishTime]</label>
-						<textcolor>title2</textcolor>
-					</control> -->
 		</control>
 		<control type="grouplist">
 			<orientation>vertical</orientation>
@@ -1321,7 +1231,6 @@
 				<label>$LOCALIZE[31141] $INFO[ListItem.Season] &#xB7; $LOCALIZE[31114, &#xB7; ] $INFO[ListItem.Episode]$INFO[ListItem.Date, &#xB7; ]</label>
 				<font>smallerCaps</font>
 				<textcolor>title2</textcolor>
-				<!--<include>Title2</include>-->
 				<visible>!IsEmpty(ListItem.Season)</visible>
 			</control>
 			<control type="label">
@@ -1330,7 +1239,6 @@
 				<label>$LOCALIZE[31145] &#xB7; $LOCALIZE[31114, &#xB7; ] $INFO[ListItem.Episode]$INFO[ListItem.Date, &#xB7; ]</label>
 				<font>smallerCaps</font>
 				<textcolor>title2</textcolor>
-				<!--<include>Title2</include>-->
 				<visible>IsEmpty(ListItem.Season)</visible>
 			</control>
 			<!-- Unavailable indicator -->
@@ -1361,7 +1269,6 @@
 				<label>$INFO[ListItem.DurationStr]</label>
 				<font>Regular-36</font>
 				<textcolor>white</textcolor>
-				<!--<include>WhiteShadow</include>-->
 				<visible>true</visible>
 			</control>
 			<!-- Star Rating -->
@@ -1446,7 +1353,6 @@
 				<label>$LOCALIZE[41008]</label><!--($INFO[Container(3).NumItems])-->
 				<font>Regular-36</font>
 				<textcolor>white</textcolor>
-				<!--<include>WhiteShadow</include>-->
 			</control>
 			<control type="group">
 				<posy>63</posy>
@@ -1476,7 +1382,6 @@
 					<focusedlayout height="200">
 						<include>ExtraThumb</include>
 						<include>ExtraThumbCard</include>
-						<!--><include>ExtraIconPlay</include>-->
 					<control type="label">
 						<include>ExtraTypeTitle</include>
 						<textcolor>orange</textcolor>
@@ -1528,7 +1433,6 @@
 				<label>$INFO[ListItem.Label]</label>
 				<font>Regular-36</font>
 				<textcolor>white</textcolor>
-				<!--<include>WhiteShadow</include>-->
 				<visible>true</visible>
 			</control>
 			<control type="image">
@@ -1545,7 +1449,6 @@
 			<label>[UPPERCASE]$INFO[ListItem.Genre][/UPPERCASE]</label>
 			<font>Regular-18</font>
 			<textcolor>title2</textcolor>
-			<!--<include>Title2</include>-->
 			<visible>true</visible>
 		</control>
 		<!-- DurationStr -->
@@ -1555,7 +1458,6 @@
 			<label>$INFO[ListItem.DurationStr]</label>
 			<font>Regular-18</font>
 			<textcolor>title2</textcolor>
-			<!--<include>Title2</include>-->
 			<visible>true</visible>
 		</control>
 		<!-- Unavailable indicator -->
@@ -1574,7 +1476,6 @@
 			<label>$INFO[ListItem.Year]</label>
 			<font>Regular-36</font>
 			<textcolor>title2</textcolor>
-			<!--<include>WhiteShadow</include>-->
 			<visible>true</visible>
 		</control>
 		<!-- MPAA flag -->
@@ -1833,7 +1734,6 @@
 				<height>20</height>
 				<texture>$INFO[ListItem.StarRating]</texture>
 				<aspectratio align="right" aligny="center">keep</aspectratio>
-				<!--<colordiffuse>orange</colordiffuse>-->
 				<visible>!IsEmpty(ListItem.Property(hasUserRating))</visible>
 			</control>
 		</control>
