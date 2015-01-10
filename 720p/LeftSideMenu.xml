@@ -1268,7 +1268,6 @@
 			<colordiffuse>80FFFFFF</colordiffuse>
 			<onright>Skin.SetString(pp_helper,1)</onright>
 			<onleft>Skin.SetString(pp_helper,1)</onleft>
-			<onleft>SetFocus(333)</onleft>
 			<onright>SetFocus(3)</onright>
 			<onright>XBMC.NextItem</onright>
 			<onleft>XBMC.PrevItem</onleft>
