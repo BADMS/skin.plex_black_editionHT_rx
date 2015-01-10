@@ -405,47 +405,6 @@
 <include name="PinUserSwitch">
 	<control type="group">
 		<!-- bg's -->
-		<!--<control type="group">
-				<posx>339</posx>
-				<posy>136</posy>
-				<control type="image">
-					<posx>-1</posx>
-					<posy>-1</posy>
-					<width>602</width>
-					<height>442</height>
-					<texture>transparent.png</texture>
-					<bordertexture border="10">border-black.png</bordertexture>
-					<bordersize>1</bordersize>
-					<animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
-				</control>
-				<control type="image">
-					<posy>80</posy>
-					<width>600</width>
-					<height>360</height>
-					<texture border="10">base-rounded-half.png</texture>
-					<colordiffuse>FF000000</colordiffuse>
-					<animation effect="fade" start="0" end="60" time="0" condition="true">Conditional</animation>
-				</control>-->
-		<!-- title bg -->
-		<!--<control type="image">
-					<width>600</width>
-					<height>80</height>
-					<texture border="10" flipy="true">base-rounded-half.png</texture>
-					<colordiffuse>FF111111</colordiffuse>
-				</control>
-				<control type="image">
-					<posy>30</posy>
-					<width>600</width>
-					<height>50</height>
-					<texture>border-bottom-grey.png</texture>
-				</control>
-				<control type="image">
-					<posx>285</posx>
-					<posy>440</posy>
-					<include>ArrowBlackDown</include>
-					<visible>!Window.IsVisible(2901) + !Window.IsVisible(10090)</visible>
-				</control>
-			</control>-->
 		<control type="group">
 			<posx>340</posx>
 			<posy>155</posy>
@@ -472,7 +431,6 @@
 					<scrolltime>200</scrolltime>
 					<texturefocus>-</texturefocus>
 					<itemlayout height="110">
-
 					</itemlayout>
 					<focusedlayout height="110">
 						<include>DialogUserAvatarBg</include>
@@ -858,29 +816,6 @@
 			<effect type="fade" start="100" end="0" time="230"/>
 		</animation>
 		<!-- sub-list backgrounds -->
-		<!--deadeye BUG ?
-			<control type="group">
-				<control type="image">
-					<description>Title bg</description>
-					<posy>-12</posy>
-					<posx>0</posx>
-					<width>246</width>
-					<height>80</height>
-					<texture border="10">base.png</texture>
-					<colordiffuse>FF000000</colordiffuse>
-					<animation effect="fade" start="0" end="40" time="300" condition="true">Conditional</animation>
-				</control>
-				<control type="image">
-					<description>Title bottom line</description>
-					<posy>65</posy>
-					<posx>0</posx>
-					<width>246</width>
-					<height>2</height>
-					<texture border="1">base.png</texture>
-					<colordiffuse>orange</colordiffuse>
-					<animation effect="fade" start="0" end="50" time="300" condition="true">Conditional</animation>
-				</control>
-			</control>-->
 		<!-- sub-list -->
 		<control type="group" id="1400">
 			<posy>44</posy>
@@ -961,14 +896,6 @@
 				<height>252</height>
 				<include>DialogBorder</include>
 			</control>
-			<!--
-				<control type="image">
-					<description>Dialog arrow</description>
-					<posx>285</posx>
-					<posy>250</posy>
-					<include>DialogArrow</include>
-				</control>
-				-->
 		</control>
 		<control type="group">
 			<posy>22</posy>
@@ -1051,14 +978,6 @@
 				<height>242</height>
 				<include>DialogBorder</include>
 			</control>
-			<!--
-				<control type="image">
-					<description>Dialog arrow</description>
-					<posx>285</posx>
-					<posy>240</posy>
-					<include>DialogArrow</include>
-				</control>
-				-->
 		</control>
 		<control type="group">
 			<posy>22</posy>
@@ -1141,8 +1060,6 @@
 				<height>40</height>
 				<include>DialogHeading</include>
 				<label>[UPPERCASE]$LOCALIZE[33063][/UPPERCASE]</label>
-				<!-->
-				<label>$LOCALIZE[31018]</label>-->
 		</control>
 		<control type="grouplist" id="996">
 			<description>grouplist for context buttons</description>
@@ -1191,14 +1108,6 @@
 				<height>482</height>
 				<include>DialogBorder</include>
 			</control>
-			<!--
-				<control type="image">
-					<description>Dialog arrow</description>
-					<posx>335</posx>
-					<posy>480</posy>
-					<include>DialogArrow</include>
-				</control>
-				-->
 		</control>
 		<control type="group">
 			<posx>310</posx>
@@ -1290,14 +1199,6 @@
 				<height>202</height>
 				<include>DialogBorder</include>
 			</control>
-			<!--
-				<control type="image">
-					<description>Dialog arrow</description>
-					<posx>285</posx>
-					<posy>200</posy>
-					<include>DialogArrow</include>
-				</control>
-				-->
 		</control>
 		<control type="group">
 			<posy>22</posy>
@@ -1437,14 +1338,6 @@
 				<height>62</height>
 				<include>DialogBorder</include>
 			</control>
-			<!--
-				<control type="image">
-					<description>Dialog arrow</description>
-					<posx>105</posx>
-					<posy>60</posy>
-					<include>DialogArrow</include>
-				</control>
-				-->
 		</control>
 		<control type="group">
 			<visible>Control.IsVisible(10)</visible>
@@ -1546,14 +1439,6 @@
 				<height>87</height>
 				<include>DialogBorder</include>
 			</control>
-			<!--
-				<control type="image">
-					<description>Dialog arrow</description>
-					<posx>255</posx>
-					<posy>85</posy>
-					<include>DialogArrow</include>
-				</control>
-				-->
 			<control type="group">
 				<posy>20</posy>
 				<control type="label" id="401">
@@ -1610,14 +1495,6 @@
 				<height>137</height>
 				<include>DialogBorder</include>
 			</control>
-			<!--
-				<control type="image">
-					<description>Dialog arrow</description>
-					<posx>255</posx>
-					<posy>135</posy>
-					<include>DialogArrow</include>
-				</control>
-				-->
 			<control type="group">
 				<posy>20</posy>
 				<control type="label" id="406">
