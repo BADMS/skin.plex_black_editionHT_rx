@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.plex_black_editionHT_rx" version="1.0" name="Plex - Black Edition HT_rx" provider-name="DeadEyeFlint, Plex Inc.">
+<addon id="skin.plex_black_editionHT_rx" version="4" name="Plex - Black Edition HT_rx" provider-name="BADAAS, Plex Inc.">
 	<requires>
 		<import addon="xbmc.gui" version="4.0.0"/>
 	</requires>
@@ -8,7 +8,7 @@
 		<res width="1280" height="800" aspect="16:10" default="false" folder="720p"/>
 	</extension>
 	<extension point="xbmc.addon.metadata">
-		<summary lang="en">Plex by DeadEyeFlint (Plex's better skin)</summary>
+		<summary lang="en">Plex by BADAAS (Plex's twin skin)</summary>
 		<description lang="en">"Plex" is the default skin for Plex.</description>
 		<disclaimer lang="en">"Plex" is the default skin for Plex, removing it may cause issues.</disclaimer>
 		<platform>all</platform>
