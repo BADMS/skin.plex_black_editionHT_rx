@@ -536,6 +536,29 @@
 		<visible>IsEmpty(ListItem.Plot)</visible>
 	</control>
 </include>
+<include name="PreplayPlotHack">
+	<control type="textbox">
+		<posy>336</posy>
+		<posx>912</posx>
+		<width>320</width>
+		<height>163</height>
+		<label>$VAR[ListItemFullInfoPlot]</label>
+		<autoscroll delay="10000" time="3000" repeat="5000">true</autoscroll>
+		<include>PlotFormat</include>
+		<visible>!Container.PlexContent(Episode)</visible>
+		<visible>!IsEmpty(ListItem.Plot)</visible>
+	</control>
+	<control type="textbox">
+		<posy>336</posy>
+		<posx>912</posx>
+		<width>320</width>
+		<height>163</height>
+		<include>PlotFormat</include>
+		<include>NoPlotDefault</include>
+		<visible>!Container.PlexContent(Episode)</visible>
+		<visible>IsEmpty(ListItem.Plot)</visible>
+	</control>
+</include>
 <!-- audio/subtitles buttons -->
 <include name="AudioSubtitlesButton">
 	<description>button</description>
@@ -1411,7 +1434,8 @@
 	</control>
 	<!-- extras -->
 	<control type="group">
-		<animation effect="slide" start="0" end="378" time="500" condition="Control.HasFocus(3)">Conditional</animation>
+		<visible>!Skin.HasSetting(AutoShowExtrasHack) + !IsEmpty(ListItem.Property(PlexExtras))</visible>
+		<animation effect="slide" start="0" end="378" time="500" condition="Control.HasFocus(3) | IsEmpty(Skin.String(dsp_helper)) + Skin.HasSetting(AutoShowExtras)">Conditional</animation>
 		<posx>-300</posx>
 		<control type="group">
 			<posx>0</posx>
@@ -1430,6 +1454,8 @@
 				<control type="list" id="3">
 					<width>260</width>
 					<height>600</height>
+					<onleft>Skin.SetString(dsp_helper,1)</onleft>
+					<onright>Skin.SetString(dsp_helper,1)</onright>
 					<onleft>998</onleft>
 					<onright>998</onright>
 					<onup>3</onup>
@@ -1580,6 +1606,7 @@
 			<include>LeftInfoFormatOrange</include>
 		</control>
 		<control type="textbox">
+			<visible>!Skin.HasSetting(AutoShowExtrasHack) | IsEmpty(ListItem.Property(PlexExtras))</visible>
 			<posy>234</posy>
 			<posx>912</posx>
 			<label>$INFO[ListItem.Property(Cast)]</label>
@@ -1588,9 +1615,87 @@
 			<autoscroll delay="10000" time="3000" repeat="5000">!Control.HasFocus(13)</autoscroll>
 			<include>Cast</include>
 		</control>
+		<control type="textbox">
+			<visible>Skin.HasSetting(AutoShowExtrasHack) + !IsEmpty(ListItem.Property(PlexExtras))</visible>
+			<posy>234</posy>
+			<posx>912</posx>
+			<label>$INFO[ListItem.Property(Cast)]</label>
+			<width>320</width>
+			<height>80</height>
+			<autoscroll delay="10000" time="3000" repeat="5000">!Control.HasFocus(13)</autoscroll>
+			<include>Cast</include>
+		</control>
+	</control>
+	<control type="group">
+		<visible>Skin.HasSetting(AutoShowExtrasHack) + !IsEmpty(ListItem.Property(PlexExtras))</visible>
+		<posy>490</posy>
+		<posx>550</posx>
+		<control type="label">
+			<posx>0</posx>
+			<posy>0</posy>
+			<label>[UPPERCASE]$LOCALIZE[41008][/UPPERCASE]</label>
+			<include>LeftInfoFormatOrange</include>
+		</control>
+		<control type="group">
+			<posy>20</posy>
+			<posx>-12</posx>
+			<control type="list" id="3">
+				<width>700</width>
+				<height>250</height>
+				<onleft>3</onleft>
+				<onright>3</onright>
+				<onup>998</onup>
+				<ondown>998</ondown>
+				<pagecontrol>61</pagecontrol>
+				<scrolltime>200</scrolltime>
+				<orientation>horizontal</orientation>
+				<itemlayout height="200" width="231">
+					<include>ExtraThumb</include>
+					<include>ExtraThumbCard</include>
+					<control type="label">
+						<include>ExtraTypeTitle</include>
+					</control>
+					<control type="label">
+						<include>ExtraTitle</include>
+					</control>
+					<include>ExtraSecondTitle</include>
+				</itemlayout>
+				<focusedlayout height="200" width="231">
+					<include>ExtraThumb</include>
+					<include>ExtraThumbCard</include>
+					<control type="label">
+						<include>ExtraTypeTitle</include>
+						<textcolor>orange</textcolor>
+					</control>
+					<control type="label">
+						<include>ExtraTitle</include>
+						<textcolor>orange</textcolor>
+					</control>
+					<include>ExtraSecondTitle</include>
+					<include>ExtraThumbSelectedBorder</include>
+				</focusedlayout>
+			</control>
+			<control type="scrollbar" id="61">
+				<description>Scroll Bar</description>
+				<posy>2</posy>
+				<posx>10</posx>
+				<width>688</width>
+				<height>3</height>
+				<orientation>horizontal</orientation>
+				<texturesliderbar>b-radio-off.png</texturesliderbar>
+				<animation effect="fade" start="0" end="100" time="500" condition="true" delay="500">WindowOpen</animation>
+			</control>
+		</control>
 	</control>
 	<!-- plot -->
-	<include>PreplayPlot</include>
+	<control type="group">
+		<visible>Skin.HasSetting(AutoShowExtrasHack) + !IsEmpty(ListItem.Property(PlexExtras))</visible>
+		<include>PreplayPlotHack</include>
+	</control>
+	<control type="group">
+		<visible>!Skin.HasSetting(AutoShowExtrasHack) | IsEmpty(ListItem.Property(PlexExtras))</visible>
+		<include>PreplayPlot</include>
+	</control>
 	<!-- MediaFlags -->
 	<include>MediaFlags</include>
 </control>

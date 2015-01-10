@@ -13,7 +13,7 @@
 					<posy>135</posy>
 					<posx>120</posx>
 					<width>350</width>
-					<onup>1000</onup>
+					<onup>101</onup>
 					<ondown>101</ondown>
 					<onleft>Plex.ActivateWindow(4997)</onleft>
 					<onright>5</onright>
@@ -234,7 +234,7 @@
 					<control type="radiobutton" id="242">
 						<description>KioskMode</description>
 						<width>625</width>
-						<label>Super Kiosk Mode (Disable Leftside Menu & Context Menu)</label>
+						<label>Super Kiosk Mode (Disable Leftside Menu and Context Menu)</label>
 						<onclick>Skin.ToggleSetting(SuperKioskMode)</onclick>
 						<selected>Skin.HasSetting(SuperKioskMode)</selected>
 					</control>
@@ -796,7 +796,16 @@
 						<width>625</width>
 						<label>Auto show Extras</label>
 						<onclick>Skin.ToggleSetting(AutoShowExtras)</onclick>
+						<onclick>Skin.Reset(AutoShowExtrasHack)</onclick>
 						<selected>Skin.HasSetting(AutoShowExtras)</selected>
+					</control>
+					<control type="radiobutton" id="282">
+						<description>Show Extras on Preplay</description>
+						<width>625</width>
+						<label>Show Extras on Preplay</label>
+						<onclick>Skin.ToggleSetting(AutoShowExtrasHack)</onclick>
+						<onclick>Skin.Reset(AutoShowExtras)</onclick>
+						<selected>Skin.HasSetting(AutoShowExtrasHack)</selected>
 					</control>
 					<control type="radiobutton" id="223">
 						<description>FadeoutUnfocusedThumb</description>

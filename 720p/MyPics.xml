@@ -16,7 +16,8 @@
 		<!-- Channels ID 70 -->
 		<include>Channels</include>
 		<!-- ChannelPhoto ID 72 -->
-		<!--><include>ChannelPhoto</include>-->
+		<!-->
+		<include>ChannelPhoto</include>-->
 	<!-- Channel generic ID 99 -->
 	<include>Channel</include>
 	<!-- LibraryPhoto ID 56 -->

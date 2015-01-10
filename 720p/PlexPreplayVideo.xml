@@ -2,8 +2,8 @@
 <window id="10090">
 	<onload condition="Window.Previous(home)">Skin.SetString(preplay_helper,home)</onload>
 	<onload condition="Window.Previous(videolibrary)">Skin.SetString(preplay_helper,videolibrary)</onload>
-	<onload condition="Container.PlexContent(Movie) + Skin.HasSetting(AutoShowExtras)">SetFocus(3)</onload>
 	<onunload>Skin.Reset(pp_helper)</onunload>
+	<onunload>Skin.Reset(dsp_helper)</onunload>
 	<defaultcontrol always="true">102</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
 	<controls>
