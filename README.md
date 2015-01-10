@@ -25,7 +25,7 @@ SHORTCUTS HOW TO
 
 First 3 channels need a plugin name ie. youtube, iplayer, iTunes, vimeo, lmwt etc (get from plex logs or plugin dir .py code)
 
-Next 3 use complete URL (Of course Plex (Windows Kodi) doesn't let you paste in keyboard box....)
+Next 6 use complete URL (Of course Plex (Windows Kodi) doesn't let you paste in keyboard box....)
 
 OK,so here we go.
 
