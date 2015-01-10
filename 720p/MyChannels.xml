@@ -20,7 +20,7 @@
 		<include>scrollOffset</include>
 		<!-- top-level ui (LeftSidemenu.xml & IncludesGlobals.xml & Debug.xml) -->
 		<include>viewtype_nowplaying_right</include>
-		<include>LeftSideMenu</include>
+		<include condition="!Skin.HasSetting(SuperKioskMode)">LeftSideMenu</include>
 		<!--<include>TopBar</include>-->
 		<include>debugInfos</include>
 		<include>Grid</include>

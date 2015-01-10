@@ -16,7 +16,7 @@
 		</control>
 		<!-- top-level ui (IncludesGlobals.xml & Debug.xml) -->
 		<include>viewtype_nowplaying_right</include>
-		<include>LeftSideMenu</include>
+		<include condition="!Skin.HasSetting(SuperKioskMode)">LeftSideMenu</include>
 		<include>debugInfos</include>
 		<include>Grid</include>
 		<include>WindowFade</include>

@@ -33,7 +33,7 @@
 		<include>ListItemFullInfo</include>
 	</control>
 	<!-- top-level ui (LeftSidemenu.xml & IncludesGlobals.xml & Debug.xml) -->
-	<include>LeftSideMenu</include>
+	<include condition="!Skin.HasSetting(SuperKioskMode)">LeftSideMenu</include>
 	<!--<include>TopBar</include>-->
 	<include>debugInfos</include>
 	<include>Grid</include>

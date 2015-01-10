@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
 <window>
+	<onload>Dialog.Close(all,true)</onload>
 	<defaultcontrol always="true">101</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
 	<controls>
@@ -222,6 +223,20 @@
 						<label>Show small clock</label>
 						<onclick>Skin.ToggleSetting(ShowSmallClock)</onclick>
 						<selected>Skin.HasSetting(ShowSmallClock)</selected>
+					</control>
+					<control type="radiobutton" id="241">
+						<description>KioskMode</description>
+						<width>625</width>
+						<label>Kiosk Mode (Disable Viewmode changes)</label>
+						<onclick>Skin.ToggleSetting(KioskMode)</onclick>
+						<selected>Skin.HasSetting(KioskMode)</selected>
+					</control>
+					<control type="radiobutton" id="242">
+						<description>KioskMode</description>
+						<width>625</width>
+						<label>Super Kiosk Mode (Disable Leftside Menu & Context Menu)</label>
+						<onclick>Skin.ToggleSetting(SuperKioskMode)</onclick>
+						<selected>Skin.HasSetting(SuperKioskMode)</selected>
 					</control>
 				</control>
 				<!-- Home Screen Options-->

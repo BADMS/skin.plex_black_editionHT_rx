@@ -139,7 +139,7 @@
 		</control>
 		<!-- panel -->		
 		<include>PqPlPanel</include>
-		<include>LeftSideMenu</include>
+		<include condition="!Skin.HasSetting(SuperKioskMode)">LeftSideMenu</include>
 		<include>debugInfos</include>
 		<include>Grid</include>
 		<include>WindowFade</include>

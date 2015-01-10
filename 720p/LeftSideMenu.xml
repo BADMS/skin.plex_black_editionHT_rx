@@ -866,7 +866,7 @@
 				<colordiffuse>80FFFFFF</colordiffuse>
 				<onclick>Container.NextViewMode</onclick>
 				<include>leftMenuBarButton</include>
-				<visible>!Container.PlexContent(Channels)+!Control.isVisible(571)</visible>
+				<visible>!Container.PlexContent(Channels)+!Control.isVisible(571)+!Skin.HasSetting(KioskMode)</visible>
 			</control>
 			<control type="button" id="120">
 				<texturefocus>b-skinoption-s.png</texturefocus>
@@ -876,7 +876,7 @@
 				<onclick>Skin.SetString(SelectedDim,$INFO[Skin.String(50_Dim)])</onclick>
 				<onclick>Control.SetFocus(1500)</onclick>
 				<include>leftMenuBarButton</include>
-				<visible>Control.IsVisible(50)</visible>
+				<visible>Control.IsVisible(50)+!Skin.HasSetting(KioskMode)</visible>
 			</control>
 			<control type="button" id="121">
 				<texturefocus>b-skinoption-s.png</texturefocus>
@@ -887,7 +887,7 @@
 				<!--<onclick>Plex.ActivateWindow(1150)</onclick>-->
 				<onclick>Control.SetFocus(1500)</onclick>
 				<include>leftMenuBarButton</include>
-				<visible>Control.IsVisible(51)</visible>
+				<visible>Control.IsVisible(51)+!Skin.HasSetting(KioskMode)</visible>
 			</control>
 			<control type="button" id="122">
 				<texturefocus>b-skinoption-s.png</texturefocus>
@@ -897,7 +897,7 @@
 				<onclick>Skin.SetString(SelectedDim,$INFO[Skin.String(557_Dim)])</onclick>
 				<onclick>Control.SetFocus(1500)</onclick>
 				<include>leftMenuBarButton</include>
-				<visible>Control.IsVisible(557)</visible>
+				<visible>Control.IsVisible(557)+!Skin.HasSetting(KioskMode)</visible>
 			</control>
 			<control type="button" id="123">
 				<texturefocus>b-skinoption-s.png</texturefocus>
@@ -907,7 +907,7 @@
 				<onclick>Skin.SetString(SelectedDim,$INFO[Skin.String(552_Dim)])</onclick>
 				<onclick>Control.SetFocus(1500)</onclick>
 				<include>leftMenuBarButton</include>
-				<visible>Control.IsVisible(552)</visible>
+				<visible>Control.IsVisible(552)+!Skin.HasSetting(KioskMode)</visible>
 			</control>
 			<control type="button" id="124">
 				<texturefocus>b-skinoption-s.png</texturefocus>
@@ -917,7 +917,7 @@
 				<onclick>Skin.SetString(SelectedDim,$INFO[Skin.String(553_Dim)])</onclick>
 				<onclick>Control.SetFocus(1500)</onclick>
 				<include>leftMenuBarButton</include>
-				<visible>Control.IsVisible(553)</visible>
+				<visible>Control.IsVisible(553)+!Skin.HasSetting(KioskMode)</visible>
 			</control>
 			<control type="button" id="125">
 				<texturefocus>b-skinoption-s.png</texturefocus>
@@ -927,7 +927,7 @@
 				<onclick>Skin.SetString(SelectedDim,$INFO[Skin.String(555_Dim)])</onclick>
 				<onclick>Control.SetFocus(1500)</onclick>
 				<include>leftMenuBarButton</include>
-				<visible>Control.IsVisible(555)</visible>
+				<visible>Control.IsVisible(555)+!Skin.HasSetting(KioskMode)</visible>
 			</control>
 			<control type="button" id="126">
 				<texturefocus>b-skinoption-s.png</texturefocus>
@@ -937,7 +937,7 @@
 				<onclick>Skin.SetString(SelectedDim,$INFO[Skin.String(556_Dim)])</onclick>
 				<onclick>Control.SetFocus(1500)</onclick>
 				<include>leftMenuBarButton</include>
-				<visible>Control.IsVisible(556)</visible>
+				<visible>Control.IsVisible(556)+!Skin.HasSetting(KioskMode)</visible>
 			</control>
 			<control type="button" id="127">
 				<texturefocus>b-skinoption-s.png</texturefocus>
@@ -947,7 +947,7 @@
 				<onclick>Skin.SetString(SelectedDim,$INFO[Skin.String(58_Dim)])</onclick>
 				<onclick>Control.SetFocus(1500)</onclick>
 				<include>leftMenuBarButton</include>
-				<visible>Control.IsVisible(58)</visible>
+				<visible>Control.IsVisible(58)+!Skin.HasSetting(KioskMode)</visible>
 			</control>
 			<control type="button" id="128">
 				<texturefocus>b-skinoption-s.png</texturefocus>
@@ -957,7 +957,7 @@
 				<onclick>Skin.SetString(SelectedDim,$INFO[Skin.String(5531_Dim)])</onclick>
 				<onclick>Control.SetFocus(1500)</onclick>
 				<include>leftMenuBarButton</include>
-				<visible>Control.IsVisible(5531)</visible>
+				<visible>Control.IsVisible(5531)+!Skin.HasSetting(KioskMode)</visible>
 			</control>
 			<control type="button" id="129">
 				<texturefocus>b-skinoption-s.png</texturefocus>
@@ -967,7 +967,7 @@
 				<onclick>Skin.SetString(SelectedDim,$INFO[Skin.String(52_Dim)])</onclick>
 				<onclick>Control.SetFocus(1500)</onclick>
 				<include>leftMenuBarButton</include>
-				<visible>Control.IsVisible(52)</visible>
+				<visible>Control.IsVisible(52)+!Skin.HasSetting(KioskMode)</visible>
 			</control>
 			<control type="button" id="130">
 				<texturefocus>b-skinoption-s.png</texturefocus>
@@ -977,7 +977,7 @@
 				<onclick>Skin.SetString(SelectedDim,$INFO[Skin.String(53_Dim)])</onclick>
 				<onclick>Control.SetFocus(1500)</onclick>
 				<include>leftMenuBarButton</include>
-				<visible>Control.IsVisible(53)</visible>
+				<visible>Control.IsVisible(53)+!Skin.HasSetting(KioskMode)</visible>
 			</control>
 			<control type="button" id="131">
 				<texturefocus>b-skinoption-s.png</texturefocus>
@@ -987,7 +987,7 @@
 				<onclick>Skin.SetString(SelectedDim,$INFO[Skin.String(56_Dim)])</onclick>
 				<onclick>Control.SetFocus(1500)</onclick>
 				<include>leftMenuBarButton</include>
-				<visible>Control.IsVisible(56)</visible>
+				<visible>Control.IsVisible(56)+!Skin.HasSetting(KioskMode)</visible>
 			</control>
 			<control type="button" id="132">
 				<texturefocus>b-skinoption-s.png</texturefocus>
@@ -997,7 +997,7 @@
 				<onclick>Skin.SetString(SelectedDim,$INFO[Skin.String(57_Dim)])</onclick>
 				<onclick>Control.SetFocus(1500)</onclick>
 				<include>leftMenuBarButton</include>
-				<visible>Control.IsVisible(57)</visible>
+				<visible>Control.IsVisible(57)+!Skin.HasSetting(KioskMode)</visible>
 			</control>
 			<control type="button" id="133">
 				<texturefocus>b-skinoption-s.png</texturefocus>
@@ -1007,7 +1007,7 @@
 				<onclick>Skin.SetString(SelectedDim,$INFO[Skin.String(561_Dim)])</onclick>
 				<onclick>Control.SetFocus(1500)</onclick>
 				<include>leftMenuBarButton</include>
-				<visible>Control.IsVisible(561)</visible>
+				<visible>Control.IsVisible(561)+!Skin.HasSetting(KioskMode)</visible>
 			</control>
 			<control type="button" id="134">
 				<texturefocus>b-skinoption-s.png</texturefocus>
@@ -1017,7 +1017,7 @@
 				<onclick>Skin.SetString(SelectedDim,$INFO[Skin.String(70_Dim)])</onclick>
 				<onclick>Control.SetFocus(1500)</onclick>
 				<include>leftMenuBarButton</include>
-				<visible>Control.IsVisible(70)</visible>
+				<visible>Control.IsVisible(70)+!Skin.HasSetting(KioskMode)</visible>
 			</control>
 			<control type="button" id="135">
 				<texturefocus>b-skinoption-s.png</texturefocus>
@@ -1027,7 +1027,7 @@
 				<onclick>Skin.SetString(SelectedDim,$INFO[Skin.String(99_Dim)])</onclick>
 				<onclick>Control.SetFocus(1500)</onclick>
 				<include>leftMenuBarButton</include>
-				<visible>Control.IsVisible(99)</visible>
+				<visible>Control.IsVisible(99)+!Skin.HasSetting(KioskMode)</visible>
 			</control>
 			<control type="button" id="136">
 				<texturefocus>b-skinoption-s.png</texturefocus>
@@ -1037,7 +1037,7 @@
 				<onclick>Skin.SetString(SelectedDim,$INFO[Skin.String(60_Dim)])</onclick>
 				<onclick>Control.SetFocus(1500)</onclick>
 				<include>leftMenuBarButton</include>
-				<visible>Control.IsVisible(60)</visible>
+				<visible>Control.IsVisible(60)+!Skin.HasSetting(KioskMode)</visible>
 			</control>
 			<control type="button" id="137">
 				<texturefocus>b-skinoption-s.png</texturefocus>
@@ -1047,7 +1047,7 @@
 				<onclick>Skin.SetString(SelectedDim,$INFO[Skin.String(61_Dim)])</onclick>
 				<onclick>Control.SetFocus(1500)</onclick>
 				<include>leftMenuBarButton</include>
-				<visible>Control.IsVisible(61)</visible>
+				<visible>Control.IsVisible(61)+!Skin.HasSetting(KioskMode)</visible>
 			</control>
 			<control type="button" id="138">
 				<texturefocus>b-skinoption-s.png</texturefocus>
@@ -1057,7 +1057,7 @@
 				<onclick>Skin.SetString(SelectedDim,$INFO[Skin.String(80_Dim)])</onclick>
 				<onclick>Control.SetFocus(1500)</onclick>
 				<include>leftMenuBarButton</include>
-				<visible>Control.IsVisible(80)</visible>
+				<visible>Control.IsVisible(80)+!Skin.HasSetting(KioskMode)</visible>
 			</control>
 			<control type="button" id="139">
 				<texturefocus>b-skinoption-s.png</texturefocus>
@@ -1067,7 +1067,7 @@
 				<onclick>Skin.SetString(SelectedDim,$INFO[Skin.String(54_Dim)])</onclick>
 				<onclick>Control.SetFocus(1500)</onclick>
 				<include>leftMenuBarButton</include>
-				<visible>Control.IsVisible(54)</visible>
+				<visible>Control.IsVisible(54)+!Skin.HasSetting(KioskMode)</visible>
 			</control>
 			<control type="button" id="140">
 				<texturefocus>b-skinoption-s.png</texturefocus>
@@ -1077,7 +1077,7 @@
 				<onclick>Skin.SetString(SelectedDim,$INFO[Skin.String(571_Dim)])</onclick>
 				<onclick>Control.SetFocus(1500)</onclick>
 				<include>leftMenuBarButton</include>
-				<visible>Control.IsVisible(571)</visible>
+				<visible>Control.IsVisible(571)+!Skin.HasSetting(KioskMode)</visible>
 			</control>
 			<control type="button" id="141">
 				<texturefocus>b-skinoption-s.png</texturefocus>
@@ -1087,7 +1087,7 @@
 				<onclick>Skin.SetString(SelectedDim,$INFO[Skin.String(560_Dim)])</onclick>
 				<onclick>Control.SetFocus(1500)</onclick>
 				<include>leftMenuBarButton</include>
-				<visible>Control.IsVisible(560)</visible>
+				<visible>Control.IsVisible(560)+!Skin.HasSetting(KioskMode)</visible>
 			</control>
 			<control type="button" id="142">
 				<texturefocus>b-skinoption-s.png</texturefocus>
@@ -1097,7 +1097,7 @@
 				<onclick>Skin.SetString(SelectedDim,$INFO[Skin.String(554_Dim)])</onclick>
 				<onclick>Control.SetFocus(1500)</onclick>
 				<include>leftMenuBarButton</include>
-				<visible>Control.IsVisible(554)</visible>
+				<visible>Control.IsVisible(554)+!Skin.HasSetting(KioskMode)</visible>
 			</control>
 			<control type="button" id="143">
 				<texturefocus>b-skinoption-s.png</texturefocus>
@@ -1107,7 +1107,7 @@
 				<onclick>Skin.SetString(SelectedDim,$INFO[Skin.String(564_Dim)])</onclick>
 				<onclick>Control.SetFocus(1500)</onclick>
 				<include>leftMenuBarButton</include>
-				<visible>Control.IsVisible(564)</visible>
+				<visible>Control.IsVisible(564)+!Skin.HasSetting(KioskMode)</visible>
 			</control>
 			<control type="button" id="144">
 				<texturefocus>b-skinoption-s.png</texturefocus>
@@ -1117,7 +1117,7 @@
 				<onclick>Skin.SetString(SelectedDim,$INFO[Skin.String(563_Dim)])</onclick>
 				<onclick>Control.SetFocus(1500)</onclick>
 				<include>leftMenuBarButton</include>
-				<visible>Control.IsVisible(563)</visible>
+				<visible>Control.IsVisible(563)+!Skin.HasSetting(KioskMode)</visible>
 			</control>
 		</control>
 		<!-- filters & sorting menu -->
@@ -1388,7 +1388,7 @@
 			<onclick>Skin.SetString(SelectedDim,$INFO[Skin.String(571_Dim)])</onclick>
 			<onclick>Control.SetFocus(1500)</onclick>
 			<include>leftMenuBarButton</include>
-			<visible>Control.IsVisible(571)</visible>
+			<visible>Control.IsVisible(571)+!Skin.HasSetting(KioskMode)</visible>
 		</control>
 		<control type="button" id="121">
 			<texturefocus>b-skinoption-s.png</texturefocus>
@@ -1399,7 +1399,7 @@
 			<onclick>Skin.SetString(SelectedDim,$INFO[Skin.String(572_Dim)])</onclick>
 			<onclick>Control.SetFocus(1500)</onclick>
 			<include>leftMenuBarButton</include>
-			<visible>Control.IsVisible(572)</visible>
+			<visible>Control.IsVisible(572)+!Skin.HasSetting(KioskMode)</visible>
 		</control>
 		<control type="button" id="122">
 			<texturefocus>b-skinoption-s.png</texturefocus>
@@ -1411,7 +1411,7 @@
 			<onclick>Skin.SetString(SelectedDim,$INFO[Skin.String(573_Dim)])</onclick>
 			<onclick>Control.SetFocus(1500)</onclick>
 			<include>leftMenuBarButton</include>
-			<visible>Control.IsVisible(573)</visible>
+			<visible>Control.IsVisible(573)+!Skin.HasSetting(KioskMode)</visible>
 		</control>
 	</control>
 <control type="group">

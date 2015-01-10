@@ -15,7 +15,7 @@
 		<include>ChannelsDirectory</include>
 		<!-- top-level ui (IncludesGlobals.xml & Debug.xml) -->
 		<!--<include>TopBar</include>-->	
-		<include>LeftSideMenu</include>	
+		<include condition="!Skin.HasSetting(SuperKioskMode)">LeftSideMenu</include>	
 		<include>debugInfos</include>
 		<include>Non16x9Cache</include>
 	</controls>
