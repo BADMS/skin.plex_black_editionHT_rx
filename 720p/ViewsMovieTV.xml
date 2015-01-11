@@ -2018,10 +2018,6 @@
 						<include>MovieTVPosterSmall</include>
 						<include>MovieTVPosterSmallUnwatchedOverlayUnder</include>
 					</control>
-					<!-- <control type="label">
-						<include>MovieTVPosterSmallTitle</include>
-						<textcolor>Unfocused</textcolor>
-					</control> -->
 				</itemlayout>
 				<focusedlayout width="133" height="220">
 					<include>MovieTVPosterSmall</include>
@@ -2134,7 +2130,6 @@
 							<textcolor>Unfocused</textcolor>
 						</control>
 						<include>EpisodeDate</include>
-						<!--<include>EpisodeThumbOverlay</include>-->
 						<control type="label">
 							<include>EpisodeThumbOverlayTitle</include>
 							<textcolor>white</textcolor>
@@ -2158,7 +2153,6 @@
 							<textcolor>orange</textcolor>
 						</control>
 						<include>EpisodeDate</include>
-						<!--<include>EpisodeThumbOverlay</include>-->
 						<control type="label">
 							<include>EpisodeThumbOverlayTitle</include>
 							<textcolor>orange</textcolor>
