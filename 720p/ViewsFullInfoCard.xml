@@ -651,7 +651,7 @@
 			</control>
 			<!-- show & episodes & clips infos no filter-->
 			<control type="group">
-				<posx>311</posx>
+				<posx>335</posx>
 				<posy>26</posy>
 				<visible>Container.Content(episodes) | Container.Content(seasons)</visible>
 				<control type="group">
