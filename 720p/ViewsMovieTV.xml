@@ -557,7 +557,6 @@
 							<colordiffuse>mediatag</colordiffuse>
 							<visible>Skin.HasSetting(AllMediaTags)</visible>
 						</control>
-						</control>
 					</control>
 				</control>	
 				<control type="group">
