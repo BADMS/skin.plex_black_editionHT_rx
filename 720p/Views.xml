@@ -226,7 +226,6 @@
 		<control type="group">
 			<include>FadeDialog</include>
 			<include>rightSideSlide</include>
-			<!--	<include>ListItemFullInfoLeftSlide</include>-->
 			<!--BG Dim-->		
 			<control type="group">
 				<visible>Control.IsVisible(58)</visible>
@@ -268,30 +267,7 @@
 					<include>BGDim90</include>
 				</control>
 			</control>
-			<!--
-			<control type="largeimage">
-				<posy>0</posy>
-				<posx>465</posx>
-				<width>815</width>
-				<height>720</height>
-				<aspectratio aligny="top">stretch</aspectratio>
-				<texture background="true">bg_left.png</texture>
-				<visible>Control.IsVisible(58)</visible>
-			</control>
-			-->
 			<visible>!Container.PlexContent(Movie) + !Container.PlexContent(Episode) + !Container.PlexContent(Folders) + !Container.PlexContent(Clip) + !Container.PlexContent(Clips)</visible>
-			<!-- selected item bg -->
-			<!--
-			<control type="image">
-				<posx>465</posx>
-				<posy>330</posy>
-				<width>1000</width>
-				<height>101</height>
-				<include>Base</include>
-				<animation effect="fade" start="0" end="10" time="400" condition="true">Conditional</animation>
-				<visible>Control.IsVisible(58)</visible>
-			</control>
-			-->
 			<control type="group" id="777">
 				<control type="fixedlist" id="58">
 					<viewtype label="List">panel</viewtype>
@@ -330,15 +306,6 @@
 						</control>
 					</itemlayout>
 					<focusedlayout height="100" condition="Container.PlexContent(Movies) | Container.PlexContent(TVShows) | Container.PlexContent(Seasons)">
-						<!--
-						<control type="image">
-							<posx>0</posx>
-							<posy>0</posy>
-							<width>1150</width>
-							<height>100</height>
-							<texture border="10">-black-bottom-grey.png</texture>
-							<animation effect="fade" start="0" end="80" time="0" condition="true">Conditional</animation>
-						</control>-->
 						<control type="image">
 							<posx>0</posx>
 							<posy>0</posy>
@@ -363,24 +330,6 @@
 								<effect type="fade" start="0" end="100" time="650"/>
 							</animation>
 						</control>
-						<!--
-						<control type="label">
-							<posx>100</posx>
-							<posy>0</posy>
-							<width>600</width>
-							<height>100</height>
-							<info>ListItem.Label</info>
-							<aligny>center</aligny>
-							<font>Regular-32</font>
-							<textcolor>orange</textcolor>
-							<shadowcolor>FF222222</shadowcolor>
-							<visible>!Container.PlexContent(TVShows) + !Container.PlexContent(Movies)</visible>
-							<animation type="Focus" reversible="false">
-								<effect type="zoom" center="0,0" start="90" end="100" time="200" tween="Linear" easing="out"/>
-								<effect type="fade" start="0" end="100" time="450"/>
-							</animation>
-						</control>
-						-->
 						<control type="label">
 							<posx>135</posx>
 							<posy>0</posy>
@@ -533,16 +482,6 @@
 						</control>
 					</itemlayout>
 					<focusedlayout height="100" condition="Container.PlexContent(Clips) | Container.PlexContent(Homemovies) | [Container.PlexContent(Episodes) + [IsEmpty(Container.Property(primaryFilterActivated)) | IsEmpty(Container.Property(mixedParents))]]">
-						<!--
-						<control type="image">
-							<posx>0</posx>
-							<posy>0</posy>
-							<width>1150</width>
-							<height>100</height>
-							<texture border="10">-black-bottom-grey.png</texture>
-							<animation effect="fade" start="0" end="80" time="0" condition="true">Conditional</animation>
-						</control>
-						-->
 						<control type="image">
 							<posx>0</posx>
 							<posy>0</posy>
@@ -621,15 +560,6 @@
 						</control>
 					</itemlayout>
 					<focusedlayout height="100" condition="Container.PlexContent(Photos) | Container.PlexContent(PhotoAlbums)">
-						<!--
-						<control type="image">
-							<posx>0</posx>
-							<posy>0</posy>
-							<width>1150</width>
-							<height>100</height>
-							<texture border="10">-black-bottom-grey.png</texture>
-							<animation effect="fade" start="0" end="80" time="0" condition="true">Conditional</animation>
-						</control>-->
 						<control type="image">
 							<posx>0</posx>
 							<posy>0</posy>
@@ -698,16 +628,6 @@
 						</control>
 					</itemlayout>
 					<focusedlayout height="100" condition="Container.PlexContent(Channels) | [Container.PlexContent(Channel) + ListItem.Type(photo)]">
-						<!--
-						<control type="image">
-							<posx>0</posx>
-							<posy>0</posy>
-							<width>1150</width>
-							<height>100</height>
-							<texture border="10">-black-bottom-grey.png</texture>
-							<animation effect="fade" start="0" end="80" time="0" condition="true">Conditional</animation>
-						</control>
-						-->
 						<control type="image">
 							<posx>0</posx>
 							<posy>0</posy>
@@ -775,16 +695,6 @@
 						</control>
 					</itemlayout>
 					<focusedlayout height="100" condition="[Container.PlexContent(Channel) + !ListItem.Type(clip) + !ListItem.Type(episode)]">
-						<!--
-						<control type="image">
-							<posx>0</posx>
-							<posy>0</posy>
-							<width>1150</width>
-							<height>100</height>
-							<texture border="10">-black-bottom-grey.png</texture>
-							<animation effect="fade" start="0" end="80" time="0" condition="true">Conditional</animation>
-						</control>
-						-->
 						<control type="image">
 							<posx>0</posx>
 							<posy>0</posy>
@@ -872,15 +782,6 @@
 						</control>
 					</itemlayout>
 					<focusedlayout height="100" condition="[Container.PlexContent(Channel) + [ListItem.Type(clip) | ListItem.Type(episode)]]">
-						<!--
-						<control type="image">
-							<posx>0</posx>
-							<posy>0</posy>
-							<width>1150</width>
-							<height>100</height>
-							<texture border="10">-black-bottom-grey.png</texture>
-							<animation effect="fade" start="0" end="80" time="0" condition="true">Conditional</animation>
-						</control>-->
 						<control type="image">
 							<posx>0</posx>
 							<posy>0</posy>
@@ -952,14 +853,6 @@
 						</control>
 					</itemlayout>
 					<focusedlayout height="100" condition="Window.IsActive(mysharedcontent)">
-						<!--<control type="image">
-							<posx>0</posx>
-							<posy>0</posy>
-							<width>1150</width>
-							<height>100</height>
-							<texture border="10">-black-bottom-grey.png</texture>
-							<animation effect="fade" start="0" end="80" time="0" condition="true">Conditional</animation>
-						</control>-->
 						<control type="image">
 							<posx>0</posx>
 							<posy>0</posy>
@@ -971,7 +864,6 @@
 							<posx>-27</posx>
 							<posy>-40</posy>
 							<include>ListSelectedArt</include>
-							<!--gernot include missing<include>ListSelectedSquareItemThumb</include>-->
 							<animation type="Focus" reversible="false">
 								<effect type="zoom" center="150,0" start="85" end="100" time="200" tween="Linear" easing="out"/>
 								<effect type="fade" start="0" end="100" time="650"/>
@@ -1052,15 +944,6 @@
 						</control>
 					</itemlayout>
 					<focusedlayout height="100" condition="!Window.IsActive(plexplayqueue) + [Container.PlexContent(Artists) | Container.PlexContent(Albums) | Container.PlexContent(Songs)]">
-						<!--
-						<control type="image">
-							<posx>0</posx>
-							<posy>0</posy>
-							<width>1150</width>
-							<height>100</height>
-							<texture border="10">-black-bottom-grey.png</texture>
-							<animation effect="fade" start="0" end="80" time="0" condition="true">Conditional</animation>
-						</control>-->
 						<control type="image">
 							<posx>0</posx>
 							<posy>0</posy>
@@ -1167,16 +1050,6 @@
 						</control>
 					</itemlayout>
 					<focusedlayout height="100" condition="Window.IsActive(plexplayqueue) + Container.PlexContent(Songs)">
-						<!--
-						<control type="image">
-							<posx>0</posx>
-							<posy>0</posy>
-							<width>1150</width>
-							<height>100</height>
-							<texture border="10">-black-bottom-grey.png</texture>
-							<animation effect="fade" start="0" end="80" time="0" condition="true">Conditional</animation>
-						</control>
-						-->
 						<control type="image">
 							<posx>0</posx>
 							<posy>0</posy>
