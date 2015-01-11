@@ -27,12 +27,6 @@
 					<colordiffuse>FF000000</colordiffuse>
 					<animation effect="fade" start="0" end="50" time="0" condition="true">Conditional</animation>
 				</control>
-				<!-- arrow up -->
-				<!--<control type="image">
-					<posx>156</posx>
-					<posy>-14</posy>
-					<include>ArrowBlackUp</include>
-				</control>-->
 			</control>
 			<!-- right side -->
 			<control type="group">
@@ -55,14 +49,6 @@
 					<colordiffuse>FF000000</colordiffuse>
 					<animation effect="fade" start="0" end="60" time="0" condition="true">Conditional</animation>
 				</control>
-				<!-- arrow left -->
-				<!--
-				<control type="image">
-					<posx>-14</posx>
-					<posy>35</posy>
-					<include>ArrowBlackLeft</include>
-				</control>
-				-->
 			</control>
 		</control>
 	</include>
@@ -87,7 +73,6 @@
 				<posy>135</posy>
 				<posx>120</posx>
 				<width>350</width>
-				<!--<onleft>997</onleft>-->
 				<onleft>Plex.ActivateWindow(4997)</onleft>
 				<onright>301</onright>
 				<onup>3</onup>
