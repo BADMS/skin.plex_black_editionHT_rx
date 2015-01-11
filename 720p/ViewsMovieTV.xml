@@ -396,10 +396,10 @@
 					<posx>0</posx>
 					<control type="label">
 						<visible>Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.PlexContent(HomeMovies) | Container.PlexContent(Channel)</visible>
-						<posx>302</posx>
+						<posx>415</posx>
 						<posy>620</posy>
 						<description>Movie Title</description>
-						<width>676</width>
+						<width>450</width>
 						<height>44</height>
 						<align>center</align>
 						<label>$INFO[ListItem.Label]$INFO[ListItem.Year, &#xB7; ]</label>
@@ -502,7 +502,7 @@
 						<animation effect="fade" start="0" end="60" time="0" condition="true">Conditional</animation>
 						<control type="image">
 							<visible>!IsEmpty(Listitem.Art(mediaTag::videoResolution))</visible>
-							<height>24</height>
+							<height>20</height>
 							<width min="1" max="95">auto</width>
 							<info>Listitem.Art(mediaTag::videoResolution)</info>
 							<aspectratio>keep</aspectratio>
@@ -510,7 +510,7 @@
 						</control>
 						<control type="image">
 							<visible>!SubString(Listitem.Property(mediaTag-audioCodec),ac3)</visible>
-							<height>24</height>
+							<height>20</height>
 							<width min="1" max="95">auto</width>
 							<info>Listitem.Art(mediaTag::audioCodec)</info>
 							<aspectratio>keep</aspectratio>
@@ -519,7 +519,7 @@
 						<control type="image">
 							<visible>SubString(Listitem.Property(mediaTag-audioCodec),ac3)</visible>
 							<width min="1" max="95">auto</width>
-							<height>24</height>
+							<height>20</height>
 							<width min="1" max="95">auto</width>
 							<texture>mediatags/dolby-digital.png</texture>
 							<aspectratio>keep</aspectratio>
@@ -527,7 +527,7 @@
 						</control>
 						<control type="image">
 							<visible>!IsEmpty(Listitem.Art(mediaTag::audioChannels))</visible>
-							<height>24</height>
+							<height>20</height>
 							<width min="1" max="95">auto</width>
 							<info>Listitem.Art(mediaTag::audioChannels)</info>
 							<aspectratio>keep</aspectratio>
@@ -535,7 +535,7 @@
 						</control>
 						<control type="image">
 							<width min="1" max="95">auto</width>
-							<height>24</height>
+							<height>20</height>
 							<texture>$INFO[Listitem.Art(mediaTag::aspectRatio)]</texture>
 							<aspectratio>keep</aspectratio>
 							<colordiffuse>mediatag</colordiffuse>
@@ -543,7 +543,7 @@
 						</control>
 						<control type="image">
 							<width min="1" max="95">auto</width>
-							<height>24</height>
+							<height>20</height>
 							<texture>$INFO[Listitem.Art(mediaTag::videoCodec)]</texture>
 							<aspectratio>keep</aspectratio>
 							<colordiffuse>mediatag</colordiffuse>
@@ -551,7 +551,7 @@
 						</control>
 						<control type="image">
 							<width min="1" max="95">auto</width>
-							<height>24</height>
+							<height>20</height>
 							<texture>$INFO[Listitem.Art(mediaTag::videoFrameRate)]</texture>
 							<aspectratio>keep</aspectratio>
 							<colordiffuse>mediatag</colordiffuse>
