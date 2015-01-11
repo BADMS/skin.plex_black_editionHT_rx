@@ -71,10 +71,6 @@
 						<include>MovieTVPosterMiddle</include>
 						<include>MovieTVPosterMiddleUnwatchedOverlayUnder</include>
 					</control>
-					<control type="label">
-						<!-- <include>MovieTVPosterMiddleTitle</include> -->
-						<textcolor>Unfocused</textcolor>
-					</control>
 				</itemlayout>
 				<focusedlayout width="234" height="335">
 					<include>MovieTVPosterMiddle</include>
@@ -157,10 +153,6 @@
 						<animation effect="fade" start="75" end="75" condition="Skin.HasSetting(FadeoutUnfocusedThumb)">Conditional</animation>
 						<include>MovieTVPosterSmall</include>
 						<include>MovieTVPosterSmallUnwatchedOverlayUnder</include>
-					</control>
-					<control type="label">
-						<!-- <include>MovieTVPosterSmallTitle</include> -->
-						<textcolor>Unfocused</textcolor>
 					</control>
 				</itemlayout>
 				<focusedlayout width="152" height="220">
@@ -260,7 +252,7 @@
 			</control>
 		</control>
 	</include>
-	<!-- poster view with left side info [updated] poster info XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->	
+	<!-- poster view with left side info -->	
 	<include name="view_PosterInfo">
 		<control type="group">
 			<include>BGFanart</include>
@@ -329,10 +321,6 @@
 						<animation effect="fade" start="75" end="75" condition="Skin.HasSetting(FadeoutUnfocusedThumb)">Conditional</animation>
 						<include>MovieTVPosterSmall</include>
 						<include>MovieTVPosterSmallUnwatchedOverlayUnder</include>
-					</control>
-					<control type="label">
-						<!-- <include>MovieTVPosterSmallTitle</include> -->
-						<textcolor>Unfocused</textcolor>
 					</control>
 				</itemlayout>
 				<focusedlayout width="152" height="220">
@@ -507,10 +495,10 @@
 					<posy>654</posy>
 					<control type="grouplist">
 						<posx>0</posx>
-						<width>300</width>
+						<width>447</width>
 						<align>left</align>
 						<orientation>horizontal</orientation>
-						<itemgap>30</itemgap>
+						<itemgap>10</itemgap>
 						<animation effect="fade" start="0" end="60" time="0" condition="true">Conditional</animation>
 						<control type="image">
 							<visible>!IsEmpty(Listitem.Art(mediaTag::videoResolution))</visible>
@@ -544,6 +532,31 @@
 							<info>Listitem.Art(mediaTag::audioChannels)</info>
 							<aspectratio>keep</aspectratio>
 							<colordiffuse>mediatag</colordiffuse>
+						</control>
+						<control type="image">
+							<width min="1" max="95">auto</width>
+							<height>24</height>
+							<texture>$INFO[Listitem.Art(mediaTag::aspectRatio)]</texture>
+							<aspectratio>keep</aspectratio>
+							<colordiffuse>mediatag</colordiffuse>
+							<visible>Skin.HasSetting(AllMediaTags)</visible>
+						</control>
+						<control type="image">
+							<width min="1" max="95">auto</width>
+							<height>24</height>
+							<texture>$INFO[Listitem.Art(mediaTag::videoCodec)]</texture>
+							<aspectratio>keep</aspectratio>
+							<colordiffuse>mediatag</colordiffuse>
+							<visible>true</visible>
+						</control>
+						<control type="image">
+							<width min="1" max="95">auto</width>
+							<height>24</height>
+							<texture>$INFO[Listitem.Art(mediaTag::videoFrameRate)]</texture>
+							<aspectratio>keep</aspectratio>
+							<colordiffuse>mediatag</colordiffuse>
+							<visible>Skin.HasSetting(AllMediaTags)</visible>
+						</control>
 						</control>
 					</control>
 				</control>	
