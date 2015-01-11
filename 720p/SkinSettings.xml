@@ -377,7 +377,7 @@
 						<selected>Skin.HasSetting(HideSearch)</selected>
 					</control>
 					<control type="radiobutton" id="229">
-						<description>Hide  Channel Directory from Submenu</description>
+						<description>Hide Channel Directory from Submenu</description>
 						<width>625</width>
 						<label>Hide Channel Directory from Submenu</label>
 						<onclick>Skin.ToggleSetting(HideChannelDirectoryItem)</onclick>
