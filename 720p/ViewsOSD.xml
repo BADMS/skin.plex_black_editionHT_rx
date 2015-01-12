@@ -205,6 +205,7 @@
 			<enable>System.PlexPlayQueue(music)</enable>
 			<onclick>Dialog.Close(PlayerControls)</onclick>
 			<onclick>ReplaceWindow(10094)</onclick>
+			<onclick>ReplaceWindow(10094, plexserver://playqueue/audio)</onclick>
 			<visible allowhiddenfocus="true">Control.HasFocus(715)</visible>
 			<colordiffuse>ButtonFocused</colordiffuse>
 		</control>
