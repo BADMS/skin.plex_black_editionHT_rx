@@ -907,6 +907,7 @@
 					<ondown>200</ondown>
 					<enable>System.PlexPlayQueue(video)</enable>
 					<onclick>ReplaceWindow(10094)</onclick>
+					<onclick>ReplaceWindow(10094, plexserver://playqueue/video)</onclick>
 					<visible allowhiddenfocus="true">Control.HasFocus(717)</visible>
 					<colordiffuse>ButtonFocused</colordiffuse>
 				</control>
