@@ -549,6 +549,7 @@
 		<visible>Container.Content(empty)</visible>
 		<include>FadeDialog</include>
 		<include>rightSideSlide</include>
+		<include>BGFanart</include>
 		<!-- main list -->
 		<control type="panel" id="66">
 			<visible>Container.Content(empty)</visible>
