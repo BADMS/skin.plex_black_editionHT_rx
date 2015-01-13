@@ -1939,7 +1939,6 @@
 				</control>
 			</control>
 		</control>
-		<include>viewtype_nowplaying_right</include>
 	</include>
 	<!-- full info on top, thumbs bottom INFO CAROUSEL -->
 	<include name="MediaPreview">
@@ -2282,13 +2281,13 @@
 		<font>Regular-26</font>
 		<shadowcolor>ff222222</shadowcolor>
 	</include>
-	<!-- Pre-play Filtered Episodes -->
+	<!-- Pre-play Filtered Episodes
 	<include name="LibraryFilteredEpisodes">
 		<control type="group" id="777">
 			<visible>[Container.PlexContent(Episodes) + IsEmpty(Container.Property(PlexPreplay))] + !IsEmpty(Container.Property(primaryFilterActivated))</visible>
 			<include>FadeDialog</include>
 			<include>rightSideSlide</include>
-			<!-- main list -->
+			<include>BGFanart</include>
 			<control type="panel" id="62">
 				<visible>[Container.PlexContent(Episodes) + IsEmpty(Container.Property(PlexPreplay))] + !IsEmpty(Container.Property(primaryFilterActivated))</visible>
 				<viewtype label="LibraryFilteredEpisodes">panel</viewtype>
@@ -2347,5 +2346,5 @@
 				</focusedlayout>
 			</control>
 		</control>
-	</include>
+	</include> -->
 </includes>

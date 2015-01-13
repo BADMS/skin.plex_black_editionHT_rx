@@ -550,6 +550,21 @@
 		<include>FadeDialog</include>
 		<include>rightSideSlide</include>
 		<include>BGFanart</include>
+		<control type="label">
+			<posy>330</posy>
+			<posx>300</posx>
+			<width>680</width>
+			<align>center</align>
+			<aligny>center</aligny>
+			<height>60</height>
+			<label>The list is empty</label>
+			<font>Bold-52</font>
+			<textcolor>orangeLight</textcolor>
+			<shadowcolor>FF222222</shadowcolor>
+			<visible>Container.Content(empty)</visible>
+			<animation effect="slide" start="0" end="180" time="500" condition="ControlGroup(1300).HasFocus()">Conditional</animation>
+			<animation effect="fade" start="100" end="70" time="0" condition="true">Conditional</animation>
+		</control>
 		<!-- main list -->
 		<control type="panel" id="66">
 			<visible>Container.Content(empty)</visible>
@@ -573,7 +588,7 @@
 					<description>Search</description>
 					<label>$LOCALIZE[137]</label>
 					<onfocus>Control.SendClick(1)</onfocus>
-					<onclick>Control.SetFocus(1300)</onclick>
+					<onclick>ActivateWindow(home)</onclick>
 				</item>
 			</content>
 		</control>
