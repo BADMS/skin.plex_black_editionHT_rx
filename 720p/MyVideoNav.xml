@@ -1,8 +1,7 @@
 <?xml version="1.0"?>
 <window id="6">
 	<defaultcontrol always="false">777</defaultcontrol>
-	<views>40,50,51,557,60,61,62,66,552,553,5531,554,70,71,80,99,555,58,556,560,563,564</views>
-	<!--50,51,61,62,553,-->
+	<views>40,50,51,557,60,61,62,66,552,553,5531,554,70,71,80,99,555,58,556,560,563,564</views><!--50,51,61,62,553,-->
 	<allowoverlay>yes</allowoverlay>
 	<onload condition="Container.PlexContent(Movies)">Skin.SetString(SectionType,movies)</onload>
 	<onload condition="Container.PlexContent(TVShows)">Skin.SetString(SectionType,tvshows)</onload>
@@ -12,7 +11,6 @@
 	<controls>
 		<!-- bg's (Backgrounds.xml) -->
 		<include>BGBlackEdition</include>
-		<!--<include condition="!Skin.hasSetting(HideLibFanart)">BGFanart</include>--><!--<include>BGDarken</include>--><!-- views (Views.xml & ViewsMovieTV.xml & ViewsChannels.xml & ViewsPreplay.xml & ViewsClips.xml) -->
 		<!-- ByFolder ID 40 -->
 		<include>ByFolder</include>
 		<!-- LibraryPosters ID 50 -->
@@ -45,26 +43,25 @@
 		<!-- Channels ID 70 -->
 		<include>Channels</include>
 		<!-- ChannelVideo ID 71 -->
-		<!-->
-		<include>ChannelVideo</include>--><!-- Channel generic ID 99 -->
-	<include>Channel</include>
-	<!-- List ID 58 -->
-	<include>List</include>
-	<!-- List ID 555 -->
-	<include>bottomList</include>
-	<!-- Scroll Offset -->
-	<include>scrollOffset</include>
-	<!-- Item Full Info -->
-	<control type="group">
-		<include>ListItemFullInfo</include>
-	</control>
-	<!-- top-level ui (LeftSidemenu.xml & IncludesGlobals.xml & Debug.xml) -->
-	<include condition="!Skin.HasSetting(SuperKioskMode)">LeftSideMenu</include>
-	<!--<include>TopBar</include>--><!-->
-	<include>CommonSortLetters</include>--><include>viewtype_nowplaying_right</include>
-<include>debugInfos</include>
-<include>Grid</include>
-<include>WindowFade</include>
-<include>Non16x9Cache</include>
-</controls>
+		<!-- <include>ChannelVideo</include>-->
+		<!-- Channel generic ID 99 -->
+		<include>Channel</include>
+		<!-- List ID 58 -->
+		<include>List</include>
+		<!-- List ID 555 -->
+		<include>bottomList</include>
+		<!-- Scroll Offset -->
+		<include>scrollOffset</include>
+		<!-- Item Full Info -->
+		<control type="group">
+			<include>ListItemFullInfo</include>
+		</control>
+		<!-- top-level ui (LeftSidemenu.xml & IncludesGlobals.xml & Debug.xml) -->
+		<include condition="!Skin.HasSetting(SuperKioskMode)">LeftSideMenu</include>
+		<include>viewtype_nowplaying_right</include>
+		<include>debugInfos</include>
+		<include>Grid</include>
+		<include>WindowFade</include>
+		<include>Non16x9Cache</include>
+	</controls>
 </window>
