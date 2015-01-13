@@ -699,7 +699,8 @@
 			<!--BG-->
 			<control type="group">
 				<visible>Control.IsVisible(559)</visible>
-				<include>BGBlackEdition</include>
+				<include>BGFanart</include>
+				<include>viewtype_nowplaying_right</include>
 			</control>
 			<control type="panel" id="559">
 				<viewtype label="Wall">panel</viewtype>
