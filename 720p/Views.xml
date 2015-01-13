@@ -1140,6 +1140,5 @@
 				</control>
 			</control>
 		</control>
-		<include>viewtype_nowplaying_right</include>
 	</include>
 </includes>
