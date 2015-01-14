@@ -128,6 +128,11 @@
 			<size>34</size>
 		</font>
 		<font>
+			<name>Bold-52</name>
+			<filename>Regular.ttf</filename>
+			<size>52</size>
+		</font>
+		<font>
 			<name>Light-52</name>
 			<filename>Light.ttf</filename>
 			<size>52</size>
@@ -396,6 +401,11 @@
 			<name>Regular-36</name>
 			<filename>PlexFont-Regular.ttf</filename>
 			<size>34</size>
+		</font>
+		<font>
+			<name>Bold-52</name>
+			<filename>Regular.ttf</filename>
+			<size>52</size>
 		</font>
 		<font>
 			<name>Light-52</name>
@@ -669,6 +679,11 @@
 			<size>34</size>
 		</font>
 		<font>
+		<font>
+			<name>Bold-52</name>
+			<filename>OpenSans-Regular.ttf</filename>
+			<size>52</size>
+		</font>
 			<name>Light-52</name>
 			<filename>OpenSans-Light.ttf</filename>
 			<size>52</size>

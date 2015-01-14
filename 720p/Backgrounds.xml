@@ -483,6 +483,7 @@
 				<animation effect="fade" end="100" time="300" delay="0">Visible</animation>
 				<animation effect="fade" end="0" time="300" delay="0">Hidden</animation>
 				<texture background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
+				<visible>!IsEmpty(ListItem.Property(Fanart_Image))</visible>
 			</control>	
 		</control>
 		<!-- Clip backgrounds use item thumb, not as pretty so we'll hide them a bit more -->

@@ -552,25 +552,26 @@
 		<include>BGFanart</include>
 		<control type="label">
 			<posy>30</posy>
-			<posx>300</posx>
-			<width>680</width>
+			<posx>0</posx>
+			<width>1280</width>
 			<align>center</align>
 			<aligny>center</aligny>
 			<height>60</height>
-			<label>The list is empty please press select to continue</label>
+			<label>The list is empty please go back</label>
 			<font>Bold-52</font>
 			<textcolor>orangeLight</textcolor>
 			<shadowcolor>FF222222</shadowcolor>
 			<visible>Container.Content(empty)</visible>
-			<animation effect="slide" start="0" end="180" time="500" condition="ControlGroup(1300).HasFocus()">Conditional</animation>
 			<animation effect="fade" start="100" end="70" time="0" condition="true">Conditional</animation>
 		</control>
 		<!-- main list -->
 		<control type="panel" id="66">
 			<visible>Container.Content(empty)</visible>
 			<viewtype label="FilteredEmpty">panel</viewtype>
-			<onup>66</onup>
-			<ondown>66</ondown>
+			<onup>ParentDir</onup>
+			<onup>ParentDir</onup>
+			<ondown>ParentDir</ondown>
+			<ondown>ParentDir</ondown>
 			<onright>ParentDir</onright>
 			<onright>ParentDir</onright>
 			<onleft>ParentDir</onleft>
