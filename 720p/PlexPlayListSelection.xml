@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <window id="10094">
 	<defaultcontrol>58</defaultcontrol>
-	<views>571,58</views>
+	<views>671,58</views>
 	<allowoverlay>yes</allowoverlay>
 	<onload>Skin.SetString(SectionType,playlists)</onload>
 	<onunload>Skin.Reset(SectionType)</onunload>

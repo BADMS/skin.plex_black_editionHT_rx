@@ -2,12 +2,10 @@
 <includes>
 	<!-- playqueues / playlists -->
 	<include name="PqPlMainBG">
-		<!--
 		<control type="largeimage">
 			<include>FullScreenScaled</include>
 			<texture background="true">$INFO[ListItem.CompositeImage(width=1280;height=720;cols=3;rows=2)]</texture>
 		</control>
-		-->
 	</include>
 	<include name="PqPlComp">
 		<control type="image">
@@ -74,24 +72,24 @@
 				<texture background="true">backgrounds/music.jpg</texture>
 				<visible>isEmpty(Skin.String(HomeBGPlaylists))</visible>
 				<visible>ListItem.Type(musicplaylist) | ListItem.Type(musicplayqueue)</visible>
-				<visible>!Skin.String(571_Dim,100)</visible>
-				<visible>Control.IsVisible(571)</visible>
+				<visible>!Skin.String(671_Dim,100)</visible>
+				<visible>Control.IsVisible(671)</visible>
 			</control>
 			<control type="largeimage">
 				<include>BGHomeList</include>
 				<texture background="true">backgrounds/movie.jpg</texture>
 				<visible>isEmpty(Skin.String(HomeBGPlaylists))</visible>
 				<visible>ListItem.Type(videoplaylist) | ListItem.Type(videoplayqueue)</visible>
-				<visible>!Skin.String(571_Dim,100)</visible>
-				<visible>Control.IsVisible(571)</visible>
+				<visible>!Skin.String(671_Dim,100)</visible>
+				<visible>Control.IsVisible(671)</visible>
 			</control>	
 			<!-- Custom Playlists BG -->
 			<control type="largeimage">
 				<include>FullScreenScaled</include>
 				<texture background="true">$INFO[Skin.String(HomeBGPlaylists)]</texture>
 				<visible>!isEmpty(Skin.String(HomeBGPlaylists))</visible>
-				<visible>!Skin.String(571_Dim,100)</visible>
-				<visible>Control.IsVisible(571)</visible>
+				<visible>!Skin.String(671_Dim,100)</visible>
+				<visible>Control.IsVisible(671)</visible>
 			</control>
 			<!-- main list -->
 			<control type="group" id="777">
@@ -99,51 +97,50 @@
 				<include>rightSideSlide</include>
 				<!--BG Dim-->		
 				<control type="group">
-					<visible>Control.IsVisible(571)</visible>
-					<visible>!Skin.String(571_Dim,100)</visible>
+					<visible>Control.IsVisible(671)</visible>
+					<visible>!Skin.String(671_Dim,100)</visible>
 					<control type="group">
-						<visible>Skin.String(571_Dim,10)</visible>
+						<visible>Skin.String(671_Dim,10)</visible>
 						<include>BGDim10</include>
 					</control>
 					<control type="group">
-						<visible>Skin.String(571_Dim,20)</visible>
+						<visible>Skin.String(671_Dim,20)</visible>
 						<include>BGDim20</include>
 					</control>
 					<control type="group">
-						<visible>Skin.String(571_Dim,30)</visible>
+						<visible>Skin.String(671_Dim,30)</visible>
 						<include>BGDim30</include>
 					</control>
 					<control type="group">
-						<visible>Skin.String(571_Dim,40)</visible>
+						<visible>Skin.String(671_Dim,40)</visible>
 						<include>BGDim40</include>
 					</control>
 					<control type="group">
-						<visible>Skin.String(571_Dim,50)</visible>
+						<visible>Skin.String(671_Dim,50)</visible>
 						<include>BGDim50</include>
 					</control>
 					<control type="group">
-						<visible>Skin.String(571_Dim,60) | IsEmpty(Skin.String(571_Dim))</visible>
+						<visible>Skin.String(671_Dim,60) | IsEmpty(Skin.String(671_Dim))</visible>
 						<include>BGDim60</include>
 					</control>
 					<control type="group">
-						<visible>Skin.String(571_Dim,70)</visible>
+						<visible>Skin.String(671_Dim,70)</visible>
 						<include>BGDim70</include>
 					</control>
 					<control type="group">
-						<visible>Skin.String(571_Dim,80)</visible>
+						<visible>Skin.String(671_Dim,80)</visible>
 						<include>BGDim80</include>
 					</control>
 					<control type="group">
-						<visible>Skin.String(571_Dim,90)</visible>
+						<visible>Skin.String(671_Dim,90)</visible>
 						<include>BGDim90</include>
 					</control>
 				</control>
-
-				<control type="panel" id="571">
+				<control type="panel" id="671">
 					<viewtype label="Play List">list</viewtype>
-					<onup>571</onup>
-					<ondown>571</ondown>
-					<onright>571</onright>
+					<onup>671</onup>
+					<ondown>671</ondown>
+					<onright>671</onright>
 					<onleft>998</onleft>
 					<orientation>vertical</orientation>
 					<posx>53</posx>
@@ -173,52 +170,6 @@
 					</focusedlayout>
 				</control>
 			</control>
-			<!-- right side thumbs -->
-			<!--<control type="group">
-				<posx>800</posx>
-				<posy>300</posy>
-				<visible>!Container.OnNext + !Container.OnPrevious</visible>
-				<animation effect="fade" start="0" end="100" time="1000" delay="300" condition="Control.HasFocus(56)" reversible="false">Conditional</animation>
-				<animation effect="fade" start="0" end="100" time="2000" delay="0">WindowOpen</animation>
-				<animation effect="fade" start="0" end="100" time="400" delay="0">Visible</animation>
-				<animation effect="fade" start="0" end="0" time="0">Hidden</animation>
-				<control type="grouplist">
-					<orientation>horizontal</orientation>
-					<itemgap>16</itemgap>					
-					<control type="image">
-						<width max="200">auto</width>
-						<height>350</height>
-						<bordertexture border="14">bigPosterFrameShadow.png</bordertexture>
-						<bordersize>9</bordersize>
-						<texture background="true" diffuse="bigPosterMask.png">$INFO[ListItem(0).Thumb0]</texture>
-						<aspectratio scalediffuse="true" align="center" aligny="center">keep</aspectratio>
-						<visible>!IsEmpty(ListItem(0).Thumb0)</visible>
-					</control>
-					<control type="grouplist">
-						<orientation>vertical</orientation>
-						<itemgap>16</itemgap>
-						<control type="image">
-							<width max="175">auto</width>
-							<height>175</height>
-							<bordertexture border="14">bigPosterFrameShadow.png</bordertexture>
-							<bordersize>9</bordersize>
-							<texture background="true" diffuse="bigPosterMask.png">$INFO[ListItem(0).Thumb1]</texture>
-							<aspectratio scalediffuse="true" align="center" aligny="top">keep</aspectratio>
-							<visible>!IsEmpty(ListItem(0).Thumb1)</visible>
-						</control>
-						<control type="image">
-							<width max="175">auto</width>
-							<height>175</height>
-							<bordertexture border="14">bigPosterFrameShadow.png</bordertexture>
-							<bordersize>9</bordersize>
-							<texture background="true" diffuse="bigPosterMask.png">$INFO[ListItem(0).Thumb2]</texture>
-							<aspectratio scalediffuse="true" align="center" aligny="bottom">keep</aspectratio>
-							<visible>!IsEmpty(ListItem(0).Thumb2)</visible>
-						</control>
-					</control>
-				</control>
-			</control>
-		-->
 		</control>
 	</include>
 	<!-- playqueue / playlist -->

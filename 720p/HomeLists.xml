@@ -696,26 +696,6 @@
 					<visible>true</visible>
 				</control>
 			</control>
-			<!--
-			<control type="label">
-				<visible>Container(11000).ListItem(0).Type(movie)</visible>
-				<include condition="!Skin.HasSetting(ClassicHome)">Home_Description_posx</include>
-				<include condition="Skin.HasSetting(ClassicHome)">Home_Description_posx_ClassicHome</include>
-				<posy>-5</posy>
-				<width>950</width>
-				<label>$INFO[Container(11000).ListItem(0).Date]$INFO[Container(11000).ListItem(0).Genre, [COLOR=orange]&#xB7;[/COLOR] ]$INFO[Container(11000).ListItem(0).Country, [COLOR=orange]&#xB7;[/COLOR] ]$INFO[Container(11000).ListItem(0).Director, [COLOR=orange]&#xB7;[/COLOR] ]</label>
-				<include>list_Label-sub</include>
-			</control>
-				<control type="label">
-				<visible>Container(11000).ListItem(0).Type(episode)</visible>
-				<include condition="!Skin.HasSetting(ClassicHome)">Home_Description_posx</include>
-				<include condition="Skin.HasSetting(ClassicHome)">Home_Description_posx_ClassicHome</include>
-				<posy>-5</posy>
-				<width>950</width>
-				<label>$INFO[Container(11000).ListItem(0).Date]$INFO[Container(11000).ListItem(0).Property(Rating), [COLOR=orange]&#xB7;[/COLOR] ]$INFO[Container(11000).ListItem(0).Director, [COLOR=orange]&#xB7;[/COLOR] ]</label>
-				<include>list_Label-sub</include>
-			</control>
-			-->
 			<control type="grouplist">
 				<visible>Container(11000).ListItem(0).Type(movie) | Container(11000).ListItem(0).Type(episode)</visible>
 				<include condition="!Skin.HasSetting(ClassicHome)">Home_Description_posx</include>
@@ -754,19 +734,6 @@
 					<visible>!IsEmpty(Container(11000).ListItem(0).Property(Rating))</visible>
 				</control>
 			</control>
-			<!--Metadata not available-->
-			<!--
-			<control type="label">
-				<posx>2</posx>
-				<posy>34</posy>
-				<width>950</width>
-				<height>20</height>
-				<label>$LOCALIZE[32203]</label>
-				<visible>IsEmpty(Container(11000).ListItem(0).Plot) + IsEmpty(Container(11000).ListItem(0).Date) + IsEmpty(Container(11000).ListItem(0).Director)  + IsEmpty(Container(11000).ListItem(0).Genre)</visible>
-				<font>descriptionSmall</font>
-				<textcolor>Color0</textcolor>
-			</control>
-			-->
 			<!--Plot -->
 			<control type="textbox">
 				<include condition="!Skin.HasSetting(ClassicHome)">Home_Description_posx</include>
@@ -1348,16 +1315,6 @@
 								<visible>!IsEmpty(Container(11001).ListItem(0).Property(Rating))</visible>
 							</control>
 						</control>
-						<!--
-						<control type="label">
-							<posx>10</posx>
-							<posy>-5</posy>
-							<width>950</width>
-							<label>$LOCALIZE[32203]</label>
-							<visible>IsEmpty(Container(11001).ListItem(0).Plot) + IsEmpty(Container(11001).ListItem(0).Date) + IsEmpty(Container(11001).ListItem(0).Director)  + IsEmpty(Container(11001).ListItem(0).Genre)</visible>
-							<include>list_Label-sub</include>
-						</control>
-						-->
 						<control type="textbox">
 							<include condition="!Skin.HasSetting(ClassicHome)">Home_Description_posx</include>
 							<include condition="Skin.HasSetting(ClassicHome)">Home_Description_posx_ClassicHome</include>
@@ -1402,7 +1359,6 @@
 				</control>
 				<!-- Recently Added (11000) -->
 				<control type="group" id="7001">
-					<!--<visible>![[Container(11000).ListItem(0).Type(episode)+Skin.HasSetting(HideRecentlyAddedEpisode)] | [Container(11000).ListItem(0).Type(movie)+Skin.HasSetting(HideRecentlyAddedEpisode)]]</visible>-->
 					<animation type="Conditional" condition="ControlGroup(7002).HasFocus + !Skin.HasSetting(HomeBigIcons)">
 						<effect type="slide" easing="in" start="0,0" end="0,120" tween="Cubic" time="600"/>
 					</animation>
@@ -1793,27 +1749,21 @@
 									<include>ListItemPoster</include>
 									<include>ListItemPosterSelectedBorder</include>
 									<include>Home_OverlayIMDB</include>
-									<!--<include>Home_Overlay</include>-->
 								</control>
 							</focusedlayout>
-							<!--<height>200</height>-->
 						</control>
 					</control>
 					<!--Description when both list are visible-->
 					<control type="group">
-						<!--<visible>Skin.HasSetting(home.showinfo)</visible>-->
 						<visible>Control.IsVisible(11000) + Control.IsVisible(11001)</visible>
-						<!--<posy>332</posy>-->
 						<include condition="!Skin.HasSetting(ClassicHome)">Home_RecentlyAdded_Description_posy</include>
 						<include condition="Skin.HasSetting(ClassicHome)">Home_RecentlyAdded_Description_posy_ClassicHome</include>
 						<include>Home_RecentlyAddedInfo</include>
 					</control>
 					<!--Description  when only this list is visible-->
 					<control type="group">
-						<!--<visible>Skin.HasSetting(home.showinfo)</visible>-->
 						<visible>Control.IsVisible(11000) + !Control.IsVisible(11001)</visible>
 						<visible>!Container(11000).ListItem(0).Type(album)+!Container(11000).ListItem(0).Type(photo)</visible>
-						<!--<posy>84</posy>-->
 						<include condition="!Skin.HasSetting(ClassicHome)">Home_RecentlyAdded_Description2_posy</include>
 						<include condition="Skin.HasSetting(ClassicHome)">Home_RecentlyAdded_Description2_posy_ClassicHome</include>
 						<include>Home_RecentlyAddedInfo</include>
@@ -1893,7 +1843,6 @@
 						<itemlayout width="211" height="230">
 							<!-- queue -->
 							<control type="group">
-								<!--<visible>Control.IsVisible(11004)</visible>-->
 								<animation effect="fade" start="100" end="40" time="0" condition="!ControlGroup(7003).HasFocus + !Skin.HasSetting(NoTransOnDeck)">Conditional</animation>
 								<posy>0</posy>
 								<visible>ListItem.Type(clip)</visible>
@@ -1906,26 +1855,10 @@
 								<include>ListItemWideTitle</include>
 							</control>
 							<!-- when only this list is visible -->
-							<!--
-							<control type="group">
-								<visible>!Control.IsVisible(11004)</visible>
-								<animation effect="fade" start="100" end="40" time="0" condition="!ControlGroup(7003).HasFocus + !Skin.HasSetting(NoTransOnDeck)">Conditional</animation>
-								<posy>0</posy>
-								<visible>ListItem.Type(clip)</visible>
-								<include>ListItemWideCard</include>
-								<control type="group">
-									<include>ListItemWide</include>
-									<animation effect="fade" start="75" end="75" condition="ControlGroup(7003).HasFocus+Skin.HasSetting(FadeoutUnfocusedThumb)">Conditional</animation>
-								</control>
-								<include>ListItemWideTitleProvider</include>
-								<include>ListItemWideTitle</include>
-							</control>
-							-->
 						</itemlayout>
 						<focusedlayout width="211" height="230">
 							<!-- queue -->
 							<control type="group">
-								<!--<visible>Control.IsVisible(11004)</visible>-->
 								<posy>0</posy>
 								<visible>ListItem.Type(clip)</visible>
 								<include>ListItemWideCard</include>
@@ -1934,26 +1867,6 @@
 								<include>ListItemWideTitle</include>
 								<include>ListItemWideSelectedBorder</include>
 							</control>
-							<!-- when only this list is visible -->
-							<!--
-							<control type="group">
-								<visible>!Control.IsVisible(11004)</visible>
-								<posy>0</posy>
-								<visible>ListItem.Type(clip)</visible>
-								<include>ListItemWideCard</include>
-								<control type="group">
-									<visible>ControlGroup(7003).HasFocus</visible>
-									<include>ListItemWide</include>
-								</control>
-								<control type="group">
-									<visible>!ControlGroup(7003).HasFocus</visible>
-									<include>ListItemWideDimmer</include>
-								</control>
-								<include>ListItemWideTitleProvider</include>
-								<include>ListItemWideTitle</include>
-								<include>ListItemWideSelectedBorder</include>
-							</control>
-							-->
 						</focusedlayout>
 					</control>
 				</control>
