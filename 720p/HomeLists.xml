@@ -914,6 +914,7 @@
 	<!-- lists -->
 	<include name="HomeLists">
 		<control type="group" id="5000">
+			<visible>!Skin.HasSetting(NoHomeDeck)</visible>
 			<!--<posx>284</posx>-->
 			<include condition="!Skin.HasSetting(BiggerHomeMenu)+!Skin.HasSetting(BiggerHomeMenu3)+!Skin.HasSetting(ClassicHome)">HomeMenuListPosx</include>
 			<include condition="Skin.HasSetting(BiggerHomeMenu)+!Skin.HasSetting(ClassicHome)">HomeMenuListPosxBigger</include>

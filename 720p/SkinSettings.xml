@@ -251,12 +251,19 @@
 					<pagecontrol>61</pagecontrol>
 					<visible allowhiddenfocus="false">Container(101).HasFocus(2) | ControlGroup(202).HasFocus()</visible>
 					<orientation>vertical</orientation>
-					<control type="radiobutton" id="211">
+					<control type="radiobutton" id="209">
 						<description>ClassicHome</description>
 						<width>625</width>
 						<label>Classic Homescreen</label>
 						<onclick>Skin.ToggleSetting(ClassicHome)</onclick>
 						<selected>Skin.HasSetting(ClassicHome)</selected>
+					</control>
+					<control type="radiobutton" id="211">
+						<description>No Deck Lists</description>
+						<width>625</width>
+						<label>No Ondeck/Recently Added</label>
+						<onclick>Skin.ToggleSetting(NoHomeDeck)</onclick>
+						<selected>Skin.HasSetting(NoHomeDeck)</selected>
 					</control>
 					<control type="radiobutton" id="212">
 						<description>Show List immediately</description>
@@ -264,7 +271,7 @@
 						<label>Show Ondeck/Recently Added immediately</label>
 						<onclick>Skin.ToggleSetting(showNewLists)</onclick>
 						<selected>Skin.HasSetting(showNewLists)</selected>
-						<!--<enable>Skin.HasSetting(ClassicHome)</enable>-->
+						<enable>!Skin.HasSetting(NoHomeDeck)</enable>
 					</control>
 					<control type="radiobutton" id="213">
 						<description>NoTransOnDeck</description>
@@ -272,6 +279,7 @@
 						<label>Disable transparency for unfocused Ondeck/Recently Added Thumbs</label>
 						<onclick>Skin.ToggleSetting(NoTransOnDeck)</onclick>
 						<selected>Skin.HasSetting(NoTransOnDeck)</selected>
+						<enable>!Skin.HasSetting(NoHomeDeck)</enable>
 					</control>	
 					<control type="radiobutton" id="214">
 						<description>HomeBigIcons</description>
@@ -279,6 +287,7 @@
 						<label>Bigger Ondeck/Recently Added Thumbs (disables Plot/Summary)</label>
 						<onclick>Skin.ToggleSetting(HomeBigIcons)</onclick>
 						<selected>Skin.HasSetting(HomeBigIcons)</selected>
+						<enable>!Skin.HasSetting(NoHomeDeck)</enable>
 					</control>	
 					<control type="radiobutton" id="215">
 						<description>Bigger Home Menu</description>
