@@ -847,10 +847,10 @@
 			</control>
 			<!-- Now Playing -->
 			<control type="button" id="106">
-				<texturefocus>b-pp-play-s2.png</texturefocus>
-				<texturenofocus>b-pp-play2.png</texturenofocus>
+				<texturefocus>left-menu-nowplaying-icon-s.png</texturefocus>
+				<texturenofocus>left-menu-nowplaying-icon-u.png</texturenofocus>
 				<colordiffuse>80FFFFFF</colordiffuse>
-				<animation effect="slide" start="-10,0" end="20,0" time="2000" tween="cubic" easing="inout" pulse="true" condition="true">Conditional</animation>
+				<animation effect="slide" start="-10,0" end="10,0" time="2000" tween="cubic" easing="inout" pulse="true" condition="true">Conditional</animation>
 				<onclick>fullscreen</onclick>
 				<include>leftMenuBarButton</include>
 				<visible>Player.HasAudio | Player.HasVideo</visible>
@@ -1114,6 +1114,16 @@
 				<onclick>Control.SetFocus(1500)</onclick>
 				<include>leftMenuBarButton</include>
 				<visible>Control.IsVisible(563)+!Skin.HasSetting(KioskMode)</visible>
+			</control>
+			<control type="button" id="145">
+				<texturefocus>b-skinoption-s.png</texturefocus>
+				<texturenofocus>b-skinoption-u.png</texturenofocus>
+				<colordiffuse>80FFFFFF</colordiffuse>
+				<onclick>Skin.SetString(ViewmodeID,671)</onclick>
+				<onclick>Skin.SetString(SelectedDim,$INFO[Skin.String(671_Dim)])</onclick>
+				<onclick>Control.SetFocus(1500)</onclick>
+				<include>leftMenuBarButton</include>
+				<visible>Control.IsVisible(671)+!Skin.HasSetting(KioskMode)</visible>
 			</control>
 		</control>
 		<!-- filters & sorting menu -->

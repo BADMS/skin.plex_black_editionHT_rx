@@ -551,13 +551,13 @@
 		<include>rightSideSlide</include>
 		<include>BGFanart</include>
 		<control type="label">
-			<posy>330</posy>
+			<posy>30</posy>
 			<posx>300</posx>
 			<width>680</width>
 			<align>center</align>
 			<aligny>center</aligny>
 			<height>60</height>
-			<label>The list is empty</label>
+			<label>The list is empty please press select to continue</label>
 			<font>Bold-52</font>
 			<textcolor>orangeLight</textcolor>
 			<shadowcolor>FF222222</shadowcolor>
@@ -571,8 +571,10 @@
 			<viewtype label="FilteredEmpty">panel</viewtype>
 			<onup>66</onup>
 			<ondown>66</ondown>
-			<onright>66</onright>
-			<onleft>1300</onleft>
+			<onright>ParentDir</onright>
+			<onright>ParentDir</onright>
+			<onleft>ParentDir</onleft>
+			<onleft>ParentDir</onleft>
 			<orientation>vertical</orientation>
 			<posx>100</posx>
 			<posy>27</posy>
@@ -585,10 +587,8 @@
 			<!-- default empty list item -->
 			<content>
 				<item id="1">
-					<description>Search</description>
-					<label>$LOCALIZE[137]</label>
-					<onfocus>Control.SendClick(1)</onfocus>
-					<onclick>ActivateWindow(home)</onclick>
+					<onclick>ParentDir</onclick>
+					<onclick>ParentDir</onclick>
 				</item>
 			</content>
 		</control>
