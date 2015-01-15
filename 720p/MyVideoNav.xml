@@ -6,6 +6,7 @@
 	<onload condition="Container.PlexContent(Movies)">Skin.SetString(SectionType,movies)</onload>
 	<onload condition="Container.PlexContent(TVShows)">Skin.SetString(SectionType,tvshows)</onload>
 	<onload condition="Container.PlexContent(Clips)">Skin.SetString(SectionType,clips)</onload>
+	<!-- <onload>SendClick(101)</onload> -->
 	<onunload>SetFocus(777)</onunload>
 	<onunload>Skin.Reset(SectionType)</onunload>
 	<controls>

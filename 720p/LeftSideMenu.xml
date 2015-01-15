@@ -815,7 +815,7 @@
 			<ondown>998</ondown>
 			<orientation>vertical</orientation>
 			<itemgap>20</itemgap>
-			<!-- Filters -->
+			<!-- Home -->
 			<control type="button" id="101">
 				<texturefocus>candy/home-s.png</texturefocus>
 				<texturenofocus>candy/home-u.png</texturenofocus>
@@ -823,6 +823,7 @@
 				<colordiffuse>80FFFFFF</colordiffuse>
 				<include>leftMenuBarButton</include>
 			</control>
+			<!-- Filters -->
 			<control type="button" id="102">
 				<texturefocus>left-menu-filters-icon-s.png</texturefocus>
 				<texturenofocus>left-menu-filters-icon-u.png</texturenofocus>
