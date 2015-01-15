@@ -35,7 +35,7 @@
 					<texture>bg-overlay-grainy.png</texture>
 					<aspectratio>stretch</aspectratio>
 					<animation effect="fade" start="0" end="100" time="0" condition="true">Conditional</animation>
-					<visible>true</visible>
+					<visible>Skin.HasSetting(List1_Grain)</visible>
 				</control>
 				<!-- list background -->
 				<control type="image">
@@ -254,6 +254,7 @@
 									<texture>bg-overlay-grainy.png</texture>
 									<aspectratio>stretch</aspectratio>
 									<animation effect="fade" start="0" end="100" time="0" condition="true">Conditional</animation>
+									<visible>Skin.HasSetting(List1_Grain)</visible>
 								</control>
 							</control>
 							<!-- 3 or 6 or 9 covers -->
@@ -286,6 +287,7 @@
 									<texture>bg-overlay-grainy.png</texture>
 									<aspectratio>stretch</aspectratio>
 									<animation effect="fade" start="0" end="100" time="0" condition="true">Conditional</animation>
+									<visible>Skin.HasSetting(List1_Grain)</visible>
 								</control>
 							</control>
 							<!-- 5 or 8 covers -->
@@ -318,6 +320,7 @@
 									<texture>bg-overlay-grainy.png</texture>
 									<aspectratio>stretch</aspectratio>
 									<animation effect="fade" start="0" end="100" time="0" condition="true">Conditional</animation>
+									<visible>Skin.HasSetting(List1_Grain)</visible>
 								</control>
 							</control>
 						</control>
@@ -943,7 +946,7 @@
 							<texture>bg-overlay-grainy.png</texture>
 							<aspectratio>stretch</aspectratio>
 							<animation effect="fade" start="0" end="100" time="0" condition="true">Conditional</animation>
-							<visible>true</visible>
+							<visible>Skin.HasSetting(List1_Grain)</visible>
 						</control>
 						<!-- list background -->
 						<control type="image">
@@ -1020,6 +1023,7 @@
 								<texture>bg-overlay-grainy.png</texture>
 								<aspectratio>stretch</aspectratio>
 								<animation effect="fade" start="0" end="100" time="0" condition="true">Conditional</animation>
+								<visible>Skin.HasSetting(List1_Grain)</visible>
 							</control>
 							<!-- current video PiP -->
 							<control type="group">
