@@ -74,6 +74,7 @@
 				<visible>ListItem.Type(musicplaylist) | ListItem.Type(musicplayqueue)</visible>
 				<visible>!Skin.String(671_Dim,100)</visible>
 				<visible>Control.IsVisible(671)</visible>
+				<visible>![Player.HasVideo + Skin.HasSetting(PIPFull)]</visible>
 			</control>
 			<control type="largeimage">
 				<include>BGHomeList</include>
@@ -82,7 +83,20 @@
 				<visible>ListItem.Type(videoplaylist) | ListItem.Type(videoplayqueue)</visible>
 				<visible>!Skin.String(671_Dim,100)</visible>
 				<visible>Control.IsVisible(671)</visible>
+				<visible>![Player.HasVideo + Skin.HasSetting(PIPFull)]</visible>
 			</control>	
+			<control type="group">
+				<visible>[Player.HasVideo + Skin.HasSetting(PIPFull)]</visible>
+				<include>Animation_CommonFade</include>
+				<control type="videowindow">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>1280</width>
+					<height>720</height>
+					<aspectratio>keep</aspectratio>
+					<fadetime>500</fadetime>
+				</control>
+			</control>
 			<!-- Custom Playlists BG -->
 			<control type="largeimage">
 				<include>FullScreenScaled</include>
@@ -90,6 +104,7 @@
 				<visible>!isEmpty(Skin.String(HomeBGPlaylists))</visible>
 				<visible>!Skin.String(671_Dim,100)</visible>
 				<visible>Control.IsVisible(671)</visible>
+				<visible>![Player.HasVideo + Skin.HasSetting(PIPFull)]</visible>
 			</control>
 			<!-- main list -->
 			<control type="group" id="777">
