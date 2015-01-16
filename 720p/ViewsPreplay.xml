@@ -551,6 +551,19 @@
 			<include>rightSideSlide</include>
 			<include>BGFanart</include>
 			<control type="image">
+				<visible>!Skin.HasSetting(DarkerBG)</visible>
+				<height>720</height>
+				<width>70</width>
+				<texture background="true">home/bg_menu.png</texture>
+				<animation effect="fade" start="100" end="87" time="0" condition="Skin.HasSetting(BrighterBG)">Conditional</animation>
+			</control>
+			<control type="image">
+			<visible>Skin.HasSetting(DarkerBG)</visible>
+				<height>720</height>
+				<width>70</width>
+				<texture background="true">home/bg_menu_dark.png</texture>
+			</control>
+			<control type="image">
 				<posx>22</posx>
 				<posy>39</posy>
 				<width>26</width>
