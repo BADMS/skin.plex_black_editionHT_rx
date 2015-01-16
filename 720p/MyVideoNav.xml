@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <window id="6">
 	<defaultcontrol always="false">777</defaultcontrol>
-	<views>40,50,51,557,60,61,66,552,553,5531,554,70,71,80,99,555,58,556,560,563,564</views><!--50,51,61,62,553,-->
+	<views>40,50,51,557,60,61,66,552,553,5531,554,70,71,80,99,5555,58,556,560,563,564</views><!--50,51,61,62,553,-->
 	<allowoverlay>yes</allowoverlay>
 	<onload condition="Container.PlexContent(Movies)">Skin.SetString(SectionType,movies)</onload>
 	<onload condition="Container.PlexContent(TVShows)">Skin.SetString(SectionType,tvshows)</onload>
@@ -49,7 +49,7 @@
 		<include>Channel</include>
 		<!-- List ID 58 -->
 		<include>List</include>
-		<!-- List ID 555 -->
+		<!-- List ID 5555 -->
 		<include>bottomList</include>
 		<!-- Scroll Offset -->
 		<include>scrollOffset</include>

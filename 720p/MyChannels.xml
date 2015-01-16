@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <window id="99">
 	<defaultcontrol>777</defaultcontrol>
-	<views>70,563,555</views>
+	<views>70,563,5555</views>
 	<allowoverlay>yes</allowoverlay>
 	<onload>Skin.SetString(SectionType,channels)</onload>
 	<onunload>SetFocus(777)</onunload>

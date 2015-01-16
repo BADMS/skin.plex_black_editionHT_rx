@@ -606,7 +606,7 @@
 				<selected>Skin.String(SelectedDim,90)</selected>
 			</control>
 			<control type="radiobutton" id="1513">
-				<visible>Skin.String(ViewmodeID,555) | Skin.String(ViewmodeID,556)</visible>
+				<visible>Skin.String(ViewmodeID,5555) | Skin.String(ViewmodeID,556)</visible>
 				<include>custom_radiobutton</include>
 				<label>Hide Fanart</label>
 				<onclick>Skin.SetString($INFO[Skin.String(ViewmodeID)]_Dim,100)</onclick>
@@ -614,7 +614,7 @@
 				<selected>Skin.String(SelectedDim,100)</selected>
 			</control>
 			<control type="radiobutton" id="1514">
-				<visible>![Skin.String(ViewmodeID,555) | Skin.String(ViewmodeID,556)]</visible>
+				<visible>![Skin.String(ViewmodeID,5555) | Skin.String(ViewmodeID,556)]</visible>
 				<include>custom_radiobutton</include>
 				<label>Hide Fanart</label>
 				<onclick>Skin.SetString($INFO[Skin.String(ViewmodeID)]_Dim,100)</onclick>

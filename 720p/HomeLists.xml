@@ -1889,12 +1889,12 @@
 						<control type="label" id="8001">
 							<visible>ControlGroup(7005).HasFocus</visible>
 							<include>Home_Label</include>
-							<label>Recommended</label>
+							<label></label>
 						</control>
 						<control type="label" id="8001">
 							<visible>!ControlGroup(7005).HasFocus</visible>
 							<include>Home_Label_Unfocused</include>
-							<label>Recommended</label>
+							<label></label>
 						</control>
 					</control>
 					<!--Header Recommendation+queue-->

@@ -936,7 +936,7 @@
 	<!-- low List -->
 	<include name="bottomList">
 		<control type="group">
-			<visible>Control.IsVisible(555)</visible>
+			<visible>Control.IsVisible(5555)</visible>
 			<include>BGFanart</include>
 		</control>
 		<control type="group">
@@ -945,48 +945,48 @@
 			<!--<include>ListItemFullInfoLeftSlide</include>-->
 			<visible>[Container.PlexContent(Movies) | Container.PlexContent(TVShows) | Container.PlexContent(Seasons) | Container.PlexContent(Episodes) | Container.PlexContent(Homemovies) | Container.PlexContent(Channel)]</visible>	
 			<control type="group">
-				<visible>Control.IsVisible(555)</visible>
+				<visible>Control.IsVisible(5555)</visible>
 				<!--BG Dim-->		
 				<control type="group">
-					<visible>Control.IsVisible(555)</visible>
+					<visible>Control.IsVisible(5555)</visible>
 					<control type="group">
-						<visible>Skin.String(555_Dim,10)</visible>
+						<visible>Skin.String(5555_Dim,10)</visible>
 						<include>BGDim10_280</include>
 					</control>
 					<control type="group">
-						<visible>Skin.String(555_Dim,20)</visible>
+						<visible>Skin.String(5555_Dim,20)</visible>
 						<include>BGDim20_280</include>
 					</control>
 					<control type="group">
-						<visible>Skin.String(555_Dim,30)</visible>
+						<visible>Skin.String(5555_Dim,30)</visible>
 						<include>BGDim30_280</include>
 					</control>
 					<control type="group">
-						<visible>Skin.String(555_Dim,40)</visible>
+						<visible>Skin.String(5555_Dim,40)</visible>
 						<include>BGDim40_280</include>
 					</control>
 					<control type="group">
-						<visible>Skin.String(555_Dim,50)</visible>
+						<visible>Skin.String(5555_Dim,50)</visible>
 						<include>BGDim50_280</include>
 					</control>
 					<control type="group">
-						<visible>Skin.String(555_Dim,60) | IsEmpty(Skin.String(555_Dim))</visible>
+						<visible>Skin.String(5555_Dim,60) | IsEmpty(Skin.String(5555_Dim))</visible>
 						<include>BGDim60_280</include>
 					</control>
 					<control type="group">
-						<visible>Skin.String(555_Dim,70)</visible>
+						<visible>Skin.String(5555_Dim,70)</visible>
 						<include>BGDim70_280</include>
 					</control>
 					<control type="group">
-						<visible>Skin.String(555_Dim,80)</visible>
+						<visible>Skin.String(5555_Dim,80)</visible>
 						<include>BGDim80_280</include>
 					</control>
 					<control type="group">
-						<visible>Skin.String(555_Dim,90)</visible>
+						<visible>Skin.String(5555_Dim,90)</visible>
 						<include>BGDim90_280</include>
 					</control>
 					<control type="group">
-						<visible>Skin.String(555_Dim,100)</visible>
+						<visible>Skin.String(5555_Dim,100)</visible>
 						<include>BGDim100_280</include>
 					</control>
 				</control>
@@ -1198,17 +1198,17 @@
 			</control>
 			<visible>!Container.PlexContent(Movie) + !Container.PlexContent(Episode) + !Container.PlexContent(Folders) + !Container.PlexContent(Clip) + !Container.PlexContent(Clips)</visible>
 			<control type="group" id="777">
-				<control type="fixedlist" id="555">
+				<control type="fixedlist" id="5555">
 					<viewtype label="low List">list</viewtype>
 					<visible>[Container.PlexContent(Movies) | Container.PlexContent(TVShows) | Container.PlexContent(Seasons) | Container.PlexContent(Episodes) | Container.PlexContent(Homemovies) | Container.PlexContent(Channel)]</visible>
 					<posy>454</posy>
 					<posx>737</posx>
 					<width>505</width>
 					<height>253</height>
-					<onright>555</onright>
+					<onright>5555</onright>
 					<onleft>998</onleft>
-					<onup>555</onup>
-					<ondown>555</ondown>
+					<onup>5555</onup>
+					<ondown>5555</ondown>
 					<focusposition>2</focusposition>
 					<wraparound>true</wraparound>
 					<scrolltime>200</scrolltime>
