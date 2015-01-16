@@ -141,6 +141,7 @@
 	<!-- panel -->		
 	<include>PqPlPanel</include>
 	<include condition="!Skin.HasSetting(SuperKioskMode)">LeftSideMenu</include>
+	<include>viewtype_nowplaying_right</include>
 	<include>debugInfos</include>
 	<include>Grid</include>
 	<include>WindowFade</include>
