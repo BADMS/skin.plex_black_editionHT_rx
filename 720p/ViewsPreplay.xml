@@ -566,9 +566,14 @@
 			<control type="image">
 				<posx>22</posx>
 				<posy>39</posy>
-				<width>26</width>
-				<height>20</height>
-				<texture>b-menu.png</texture>
+				<texture>icon-arrow-vert.png</texture>
+				<animation effect="fade" start="0" end="90" delay="250" time="500" condition="true">Visible</animation>
+				<animation effect="fade" start="90" end="0" time="250" condition="true">Hidden</animation>
+			</control>
+			<control type="image">
+				<posx>18</posx>
+				<posy>88</posy>
+				<texture background="true" flipx="true">icon-arrow-horiz.png</texture>
 				<animation effect="fade" start="0" end="90" delay="250" time="500" condition="true">Visible</animation>
 				<animation effect="fade" start="90" end="0" time="250" condition="true">Hidden</animation>
 			</control>
