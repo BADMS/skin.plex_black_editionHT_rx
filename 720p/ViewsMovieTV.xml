@@ -1229,6 +1229,7 @@
 							<width>20</width>
 							<height>20</height>
 							<texture>$VAR[ListItemOverlay]</texture>
+							<visible>!Container.PlexContent(Seasons)</visible>
 						</control>
 						<control type="label">
 							<posy>0</posy>
@@ -1313,6 +1314,7 @@
 							<width>20</width>
 							<height>20</height>
 							<texture>$VAR[ListItemOverlay]</texture>
+							<visible>!Container.PlexContent(Seasons)</visible>
 						</control>
 						<control type="label">
 							<posy>0</posy>
@@ -1746,7 +1748,8 @@
 							<width>20</width>
 							<height>20</height>
 							<texture>$VAR[ListItemOverlay]</texture>
-							<visible>![Container.PlexContent(Albums) | Container.PlexContent(Artists) | Container.PlexContent(Songs)]</visible>
+							<visible>![	Container.PlexContent(Seasons) | Container.PlexContent(Albums) | Container.PlexContent(Artists) | Container.PlexContent(Songs)]</visible>
+							<visible>!Container.PlexContent(Seasons)</visible>
 						</control>
 						<control type="label">
 							<posy>0</posy>
@@ -1842,7 +1845,7 @@
 							<width>20</width>
 							<height>20</height>
 							<texture>$VAR[ListItemOverlay]</texture>
-							<visible>![Container.PlexContent(Albums) | Container.PlexContent(Artists) | Container.PlexContent(Songs)]</visible>
+							<visible>![	Container.PlexContent(Seasons) | Container.PlexContent(Albums) | Container.PlexContent(Artists) | Container.PlexContent(Songs)]</visible>
 						</control>
 						<control type="label">
 							<posy>0</posy>

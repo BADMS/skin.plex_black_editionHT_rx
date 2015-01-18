@@ -1270,6 +1270,7 @@
 			<width>27</width>
 			<height>27</height>
 			<texture>$VAR[ListItemOverlay]</texture>
+			<visible>[Container.PlexContent(Movies) | Container.PlexContent(Episodes)]</visible>
 		</control>
 	</control>
 </include>

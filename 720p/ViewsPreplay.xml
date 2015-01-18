@@ -220,6 +220,7 @@
 				<width>28</width>
 				<height>28</height>
 				<texture>$VAR[ListItemOverlay]</texture>
+				<visible>!Container.PlexContent(Seasons)</visible>
 				<!-- <visible>Container.PlexContent(Episodes) | [Container.PlexContent(clips)]</visible> -->
 			</control>
 		</control>
@@ -1267,6 +1268,7 @@
 						<width>30</width>
 						<height>30</height>
 						<texture>$VAR[ListItemOverlay]</texture>
+						<visible>!Container.PlexContent(Seasons)</visible>
 					</control>
 				</control>
 				<!-- Season, Episode -->
@@ -1421,6 +1423,7 @@
 						<width>30</width>
 						<height>30</height>
 						<texture>$VAR[ListItemOverlay]</texture>
+						<visible>!Container.PlexContent(Seasons)</visible>
 					</control>
 				</control>
 				<!-- Genre -->
@@ -1682,6 +1685,7 @@
 						<width>30</width>
 						<height>30</height>
 						<texture>$VAR[ListItemOverlay]</texture>
+						<visible>!Container.PlexContent(Seasons)</visible>
 					</control>
 				</control>
 				<!-- Year / Duration / Source -->
