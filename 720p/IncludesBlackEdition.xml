@@ -1,5 +1,72 @@
 <?xml version="1.0"?>
 <includes>
+	<include name="ExtrasSlide">
+		<control type="group">
+			<visible>!Skin.HasSetting(AutoShowExtrasHack) + !IsEmpty(ListItem.Property(PlexExtras))</visible>
+			<animation effect="slide" start="0" end="378" time="500" condition="Control.HasFocus(3) | IsEmpty(Skin.String(dsp_helper)) + Skin.HasSetting(AutoShowExtras)">Conditional</animation>
+			<posx>-300</posx>
+			<control type="group">
+				<posx>0</posx>
+				<posy>15</posy>
+				<control type="label">
+					<posx>36</posx>
+					<posy>40</posy>
+					<label>$LOCALIZE[41008]</label><!--($INFO[Container(3).NumItems])-->
+					<font>Regular-36</font>
+					<textcolor>white</textcolor>
+				</control>
+				<control type="group">
+					<posy>63</posy>
+					<posx>26</posx>
+					<control type="list" id="3">
+						<width>260</width>
+						<height>600</height>
+						<onleft>Skin.SetString(dsp_helper,1)</onleft>
+						<onright>Skin.SetString(dsp_helper,1)</onright>
+						<onleft>998</onleft>
+						<onright>998</onright>
+						<onup>3</onup>
+						<ondown>3</ondown>
+						<pagecontrol>661</pagecontrol>
+						<scrolltime>200</scrolltime>
+						<itemlayout height="200">
+							<include>ExtraThumb</include>
+							<include>ExtraThumbCard</include>
+							<control type="label">
+								<include>ExtraTypeTitle</include>
+							</control>
+							<control type="label">
+								<include>ExtraTitle</include>
+							</control>
+							<include>ExtraSecondTitle</include>
+						</itemlayout>
+						<focusedlayout height="200">
+							<include>ExtraThumb</include>
+							<include>ExtraThumbCard</include>
+							<control type="label">
+								<include>ExtraTypeTitle</include>
+								<textcolor>orange</textcolor>
+							</control>
+							<control type="label">
+								<include>ExtraTitle</include>
+								<textcolor>orange</textcolor>
+							</control>
+							<include>ExtraSecondTitle</include>
+							<include>ExtraThumbSelectedBorder</include>
+						</focusedlayout>
+					</control>
+					<control type="scrollbar" id="661">
+						<description>Scroll Bar</description>
+						<posy>3</posy>
+						<posx>250</posx>
+						<width>20</width>
+						<height>584</height>
+						<animation effect="fade" start="0" end="100" time="500" condition="true" delay="500">WindowOpen</animation>
+					</control>
+				</control>
+			</control>
+		</control>
+	</include>
 	<variable name="FontHomeMenu">
 		<value condition="!Skin.HasSetting(BiggerFontMenu1) + !Skin.HasSetting(BiggerFontMenu2) + !Skin.HasSetting(BiggerFontMenu3)">22</value>
 		<!--normal-->
