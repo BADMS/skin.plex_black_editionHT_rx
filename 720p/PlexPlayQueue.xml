@@ -973,6 +973,11 @@
 							<include>FullScreenScaled</include>
 							<texture>$INFO[ListItem.Art(fanart)]</texture>
 							<visible>!Player.HasVideo + !Skin.String(75_Dim,100)</visible>
+						</control>$INFO[ListItem.Art(smallThumb)]
+						<control type="largeimage">
+							<include>FullScreenScaled</include>
+							<texture>$INFO[ListItem.Art(smallThumb)]</texture>
+							<visible>ListItem.Type(clip) + !Skin.String(75_Dim,100)</visible>
 						</control>
 						<!-- overlay -->
 						<control type="image">
@@ -1182,7 +1187,7 @@
 							<posx>0</posx>
 							<posy>0</posy>
 							<width>490</width>
-							<height>245</height>
+							<height>214</height>
 							<include>PlotFormat</include>
 							<label>$VAR[ListItemFullInfoPlot]</label>
 						</control>
@@ -1195,7 +1200,7 @@
 							<posx>0</posx>
 							<posy>0</posy>
 							<width>490</width>
-							<height>245</height>
+							<height>214</height>
 							<include>PlotFormat</include>
 							<label>$VAR[ListItemFullInfoPlotOSD]</label>
 						</control>
