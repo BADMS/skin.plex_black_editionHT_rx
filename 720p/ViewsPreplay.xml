@@ -1255,6 +1255,12 @@
 					<usecontrolcoords>true</usecontrolcoords>
 					<orientation>horizontal</orientation>
 					<itemgap>20</itemgap>
+					<control type="image">
+						<posy>5</posy>
+						<width>30</width>
+						<height>30</height>
+						<texture>$VAR[ListItemOverlay]</texture>
+					</control>
 					<control type="label">
 						<width min="29" max="450">auto</width>
 						<height>44</height>
@@ -1262,13 +1268,6 @@
 						<font>Regular-36</font>
 						<textcolor>white</textcolor>
 						<visible>true</visible>
-					</control>
-					<control type="image">
-						<posy>5</posy>
-						<width>30</width>
-						<height>30</height>
-						<texture>$VAR[ListItemOverlay]</texture>
-						<visible>!Container.PlexContent(Seasons)</visible>
 					</control>
 				</control>
 				<!-- Season, Episode -->
@@ -1423,7 +1422,6 @@
 						<width>30</width>
 						<height>30</height>
 						<texture>$VAR[ListItemOverlay]</texture>
-						<visible>!Container.PlexContent(Seasons)</visible>
 					</control>
 				</control>
 				<!-- Genre -->
@@ -1685,7 +1683,6 @@
 						<width>30</width>
 						<height>30</height>
 						<texture>$VAR[ListItemOverlay]</texture>
-						<visible>!Container.PlexContent(Seasons)</visible>
 					</control>
 				</control>
 				<!-- Year / Duration / Source -->
