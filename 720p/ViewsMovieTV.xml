@@ -1748,12 +1748,20 @@
 							<width>20</width>
 							<height>20</height>
 							<texture>$VAR[ListItemOverlay]</texture>
-							<visible>![	Container.PlexContent(Seasons) | Container.PlexContent(Albums) | Container.PlexContent(Artists) | Container.PlexContent(Songs)]</visible>
+							<visible>![	Container.PlexContent(Seasons) | Container.PlexContent(Albums) | Container.PlexContent(Artists) | Container.PlexContent(Songs) | Container.PlexContent(TVShows)]</visible>
 							<visible>!Container.PlexContent(Seasons)</visible>
+						</control>
+						<control type="image">
+							<posy>12</posy>
+							<posx>39</posx>
+							<width>20</width>
+							<height>20</height>
+							<texture>$VAR[ListItemOverlay]</texture>
+							<visible>Container.PlexContent(Seasons) | Container.PlexContent(TVShows)</visible>
 						</control>
 						<control type="label">
 							<posy>0</posy>
-							<posx>23</posx>
+							<posx>30</posx>
 							<width>40</width>
 							<height>43</height>
 							<label>$INFO[ListItem.Property(UnWatchedEpisodes)]</label>
@@ -1845,11 +1853,19 @@
 							<width>20</width>
 							<height>20</height>
 							<texture>$VAR[ListItemOverlay]</texture>
-							<visible>![	Container.PlexContent(Seasons) | Container.PlexContent(Albums) | Container.PlexContent(Artists) | Container.PlexContent(Songs)]</visible>
+							<visible>![	Container.PlexContent(Seasons) | Container.PlexContent(Albums) | Container.PlexContent(Artists) | Container.PlexContent(Songs) | Container.PlexContent(TVShows)]</visible>
+						</control>
+						<control type="image">
+							<posy>12</posy>
+							<posx>39</posx>
+							<width>20</width>
+							<height>20</height>
+							<texture>$VAR[ListItemOverlay]</texture>
+							<visible>Container.PlexContent(Seasons) | Container.PlexContent(TVShows)</visible>
 						</control>
 						<control type="label">
 							<posy>0</posy>
-							<posx>23</posx>
+							<posx>30</posx>
 							<width>40</width>
 							<height>43</height>
 							<label>$INFO[ListItem.Property(UnWatchedEpisodes)]</label>

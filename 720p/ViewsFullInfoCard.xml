@@ -287,7 +287,7 @@
 							<fadetime>300</fadetime>
 							<aspectratio scalediffuse="false" align="center" aligny="top">scale</aspectratio>
 							<texture background="true">$VAR[ListItemVideoPreview]</texture>
-							<visible>IsEmpty(ListItem.Property(Fanart_Image)) | Container.PlexContent(Homemovies) | Container.PlexContent(Photos) | Container.PlexContent(Artists) | [Container.PlexContent(Channel) + ListItem.Type(photo)] | [Container.PlexContent(Channel) + [ListItem.Type(clip) | ListItem.Type(episode)]]</visible>
+							<visible>[Control.IsVisible(58)+ListItem.Type(episode)] | IsEmpty(ListItem.Property(Fanart_Image)) | Container.PlexContent(Homemovies) | Container.PlexContent(Photos) | Container.PlexContent(Artists) | [Container.PlexContent(Channel) + ListItem.Type(photo)] | [Container.PlexContent(Channel) + [ListItem.Type(clip) | ListItem.Type(episode)]]</visible>
 						</control>
 						<include>ListItemFullInfoThumbCardUnwatchedOverlayNoFilter</include>
 					</control>
@@ -422,6 +422,11 @@
 						<visible>!Control.IsVisible(111) + !Control.IsVisible(112) + !Control.IsVisible(113) + [Container.PlexContent(Channels) | Container.PlexContent(Channel) | Window.IsActive(mysharedcontent)]</visible>
 					</control>
 				</control>
+				<!-- media flags -->
+				<control type="group">
+					<posx>-76</posx>
+					<include>MediaFlags</include>
+				</control>
 				<control type="image">
 					<posx>0</posx>
 					<posy>640</posy>
@@ -431,11 +436,6 @@
 					<fadetime>1000</fadetime>
 					<aspectratio scalediffuse="false" align="center">scale</aspectratio>
 					<visible>Skin.HasSetting(ShowTVBanner)</visible>
-				</control>
-				<!-- media flags -->
-				<control type="group">
-					<posx>-76</posx>
-					<include>MediaFlags</include>
 				</control>
 			</control>
 		</control>
