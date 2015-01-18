@@ -219,8 +219,8 @@
 				<posx>176</posx>
 				<width>28</width>
 				<height>28</height>
-				<info>ListItem.Overlay</info>
-				<visible>Container.PlexContent(Episodes) | [Container.PlexContent(clips)]</visible>
+				<texture>$VAR[ListItemOverlay]</texture>
+				<!-- <visible>Container.PlexContent(Episodes) | [Container.PlexContent(clips)]</visible> -->
 			</control>
 		</control>
 	</include>
@@ -602,6 +602,8 @@
 				<onright>ParentDir</onright>
 				<onleft>ParentDir</onleft>
 				<onleft>ParentDir</onleft>
+				<onback>ParentDir</onback>
+				<onback>ParentDir</onback>
 				<orientation>vertical</orientation>
 				<posx>100</posx>
 				<posy>27</posy>
@@ -1264,7 +1266,7 @@
 						<posy>5</posy>
 						<width>30</width>
 						<height>30</height>
-						<texture>$INFO[ListItem.Overlay]</texture>
+						<texture>$VAR[ListItemOverlay]</texture>
 					</control>
 				</control>
 				<!-- Season, Episode -->
@@ -1482,7 +1484,7 @@
 						<posy>5</posy>
 						<width>30</width>
 						<height>30</height>
-						<texture>$INFO[ListItem.Overlay]</texture>
+						<texture>$VAR[ListItemOverlay]</texture>
 					</control>
 				</control>
 				<!-- Genre -->
@@ -1743,7 +1745,7 @@
 						<posy>4</posy>
 						<width>30</width>
 						<height>30</height>
-						<texture>$INFO[ListItem.Overlay]</texture>
+						<texture>$VAR[ListItemOverlay]</texture>
 					</control>
 				</control>
 				<!-- Year / Duration / Source -->

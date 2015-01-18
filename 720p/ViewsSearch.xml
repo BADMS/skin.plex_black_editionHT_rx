@@ -178,7 +178,7 @@
 		<posy>208</posy>
 		<width>15</width>
 		<height>15</height>
-		<info>ListItem.Overlay</info>
+		<texture>$VAR[ListItemOverlay]</texture>
 		<animation effect="fade" start="100" end="50" time="300" condition="ControlGroup(7001).HasFocus">Conditional</animation>
 	</control>
 </include>
@@ -1319,7 +1319,7 @@
 										<posy>194</posy>
 										<width>30</width>
 										<height>30</height>
-										<info>ListItem.Overlay</info>
+										<texture>$VAR[ListItemOverlay]</texture>
 									</control>
 								</control>
 							</control>
@@ -1332,7 +1332,7 @@
 									<posy>194</posy>
 									<width>30</width>
 									<height>30</height>
-									<info>ListItem.Overlay</info>
+									<texture>$VAR[ListItemOverlay]</texture>
 								</control>
 								<control type="image">
 									<posy>47</posy>
@@ -1447,7 +1447,7 @@
 									<posy>194</posy>
 									<width>30</width>
 									<height>30</height>
-									<info>ListItem.Overlay</info>
+									<texture>$VAR[ListItemOverlay]</texture>
 								</control>
 							</control>
 						</itemlayout>
@@ -1459,7 +1459,7 @@
 									<posy>194</posy>
 									<width>30</width>
 									<height>30</height>
-									<info>ListItem.Overlay</info>
+									<texture>$VAR[ListItemOverlay]</texture>
 								</control>
 								<control type="image">
 									<posy>47</posy>
@@ -1592,7 +1592,7 @@
 									<posy>123</posy>
 									<width>29</width>
 									<height>29</height>
-									<info>ListItem.Overlay</info>
+									<texture>$VAR[ListItemOverlay]</texture>
 								</control>
 							</control>
 						</itemlayout>
@@ -1612,7 +1612,7 @@
 									<posy>123</posy>
 									<width>29</width>
 									<height>29</height>
-									<info>ListItem.Overlay</info>
+									<texture>$VAR[ListItemOverlay]</texture>
 								</control>
 								<control type="image">
 									<posy>50</posy>

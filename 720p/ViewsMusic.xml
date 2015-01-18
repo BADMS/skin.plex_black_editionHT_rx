@@ -174,7 +174,6 @@
 			<visible>Control.IsVisible(52)</visible>
 			<visible>!Skin.String(52_Dim,100)</visible>
 			<include>BGFanart</include>
-			<include>viewtype_nowplaying_right</include>
 		</control>
 		<control type="group">
 			<visible>Control.IsVisible(53)</visible>
@@ -687,6 +686,7 @@
 				</focusedlayout>
 			</control>
 		</control>
+		<include>viewtype_nowplaying_right</include>
 	</control>
 </include>
 <include name="LibraryMusicNoSpace">
@@ -700,7 +700,6 @@
 			<control type="group">
 				<visible>Control.IsVisible(559)</visible>
 				<include>BGFanart</include>
-				<include>viewtype_nowplaying_right</include>
 			</control>
 			<control type="panel" id="559">
 				<viewtype label="Wall">panel</viewtype>
@@ -755,6 +754,7 @@
 				</focusedlayout>
 			</control>
 		</control>
+		<include>viewtype_nowplaying_right</include>
 	</control>
 </include>
 </includes>

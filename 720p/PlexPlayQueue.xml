@@ -1335,7 +1335,7 @@
 								<posx>176</posx>
 								<width>28</width>
 								<height>28</height>
-								<info>ListItem.Overlay</info>
+								<texture>$VAR[ListItemOverlay]</texture>
 							</control>
 							<control type="image">
 								<posx>100</posx>
@@ -1454,7 +1454,7 @@
 							<posx>176</posx>
 							<width>28</width>
 							<height>28</height>
-							<info>ListItem.Overlay</info>
+							<texture>$VAR[ListItemOverlay]</texture>
 						</control>
 						<include>EpisodeSelectedBorder</include>
 						<control type="image">
@@ -1482,8 +1482,7 @@
 						<posy>254</posy>
 						<width>30</width>
 						<height>30</height>
-						<info>ListItem.Overlay</info>
-						<visible>[Container.PlexContent(Movies) + [ListItem.Status(Unwatched) | ListItem.Status(InProgress)] + !Skin.HasSetting(HideUnwatchedIconsMovies)]</visible>
+						<texture>$VAR[ListItemOverlay]</texture>
 					</control>
 					<control type="label">
 						<posy>298</posy>
@@ -1504,8 +1503,7 @@
 						<posy>254</posy>
 						<width>30</width>
 						<height>30</height>
-						<info>ListItem.Overlay</info>
-						<visible>[Container.PlexContent(Movies) + [ListItem.Status(Unwatched) | ListItem.Status(InProgress)] + !Skin.HasSetting(HideUnwatchedIconsMovies)]</visible>
+						<texture>$VAR[ListItemOverlay]</texture>
 					</control>
 					<!-- edit mode -->
 					<control type="group">

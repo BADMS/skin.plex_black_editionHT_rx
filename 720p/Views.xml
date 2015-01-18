@@ -36,99 +36,44 @@
 		<control type="group">
 			<visible>Container.PlexContent(Seasons)</visible>
 			<control type="image">
-				<posx>23</posx>
-				<posy>37</posy>
-				<width>79</width>
-				<height>106</height>
-				<aspectratio scalediffuse="true" align="center">stretch</aspectratio>
-				<texture background="true" border="20">shadow.png</texture>
-			</control>
-			<control type="image">
 				<include>PosListItemViews</include>
-				<width>53</width>
-				<height>80</height>
-				<texture background="true">default-poster-small.png</texture>
-			</control>
-			<control type="image">
-				<include>PosListItemViews</include>
-				<width>53</width>
+				<width>80</width>
 				<height>80</height>
 				<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-				<texture background="true">$VAR[ListItemVideoPreview]</texture>
+				<texture diffuse="candy/circle.png" border="0" fallback="default-thumb-small.png" background="true">$VAR[ListItemVideoPreview]</texture>
 			</control>
 		</control>
 		<!-- Episode Thumb -->
 		<control type="group">
 			<visible>Container.PlexContent(Episodes) | Container.PlexContent(HomeMovies) | [Container.PlexContent(Channel) + [ListItem.Type(clip) | ListItem.Type(episode)]]</visible>
 			<control type="image">
-				<posx>23</posx>
-				<posy>37</posy>
-				<width>168</width>
-				<height>106</height>
-				<aspectratio scalediffuse="true" align="center">stretch</aspectratio>
-				<texture background="true" border="20">shadow.png</texture>
-			</control>
-			<control type="image">
 				<include>PosListItemViews</include>
-				<width>142</width>
-				<height>80</height>
-				<texture background="true">default-thumb-small.png</texture>
-			</control>
-			<control type="image">
-				<include>PosListItemViews</include>
-				<width>142</width>
+				<width>80</width>
 				<height>80</height>
 				<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-				<texture diffuse="mask-wide-big.png" background="true">$VAR[ListItemVideoPreview]</texture>
+				<texture diffuse="candy/circle.png" border="0" fallback="default-thumb-small.png" background="true">$VAR[ListItemVideoPreview]</texture>
 			</control>
 		</control>
 		<!-- Movies Poster -->
 		<control type="group">
 			<visible>Container.PlexContent(Movies)</visible>
 			<control type="image">
-				<posx>23</posx>
-				<posy>37</posy>
-				<width>79</width>
-				<height>106</height>
-				<aspectratio scalediffuse="true" align="center">stretch</aspectratio>
-				<texture background="true" border="20">shadow.png</texture>
-			</control>
-			<control type="image">
 				<include>PosListItemViews</include>
-				<width>53</width>
-				<height>80</height>
-				<texture background="true">default-poster-small.png</texture>
-			</control>
-			<control type="image">
-				<include>PosListItemViews</include>
-				<width>53</width>
+				<width>80</width>
 				<height>80</height>
 				<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-				<texture background="true">$VAR[ListItemVideoPreview]</texture>
+				<texture diffuse="candy/circle.png" border="0" fallback="default-thumb-small.png" background="true">$VAR[ListItemVideoPreview]</texture>
 			</control>
 		</control>
 		<!-- Music/Photos/Channels Square Art -->
 		<control type="group">
 			<visible>Container.PlexContent(Artists) | Container.PlexContent(Albums) | Container.PlexContent(Songs) | Container.PlexContent(Photos) | Container.PlexContent(PhotoAlbums) | [Container.PlexContent(Channels) | [Container.PlexContent(Channel) + ListItem.Type(photo)]] | [Container.PlexContent(Channel) + !ListItem.Type(clip) + !ListItem.Type(episode)]</visible>
 			<control type="image">
-				<posx>23</posx>
-				<posy>37</posy>
-				<width>106</width>
-				<height>106</height>
-				<include>Shadow</include>
-			</control>
-			<control type="image">
-				<include>PosListItemViews</include>
-				<width>80</width>
-				<height>80</height>
-				<texture background="true">default-square-small.png</texture>
-			</control>
-			<control type="image">
 				<include>PosListItemViews</include>
 				<width>80</width>
 				<height>80</height>
 				<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-				<texture diffuse="mask-square.png" background="true">$VAR[ListItemVideoPreview]</texture>
+				<texture diffuse="candy/circle.png" border="0" fallback="default-thumb-small.png" background="true">$VAR[ListItemVideoPreview]</texture>
 			</control>
 		</control>
 	</include>
@@ -137,14 +82,8 @@
 			<include>PosListItemViews</include>
 			<width>30</width>
 			<height>30</height>
-			<texture background="true">default-square-small.png</texture>
-		</control>
-		<control type="image">
-			<include>PosListItemViews</include>
-			<width>30</width>
-			<height>30</height>
 			<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-			<texture diffuse="mask-square.png" background="true">$VAR[ListItemVideoPreview]</texture>
+			<texture diffuse="candy/circle.png" border="0" fallback="default-thumb-small.png" background="true">$VAR[ListItemVideoPreview]</texture>
 		</control>
 	</include>
 	<include name="ListPlayQueueSquareItemThumb">
@@ -152,14 +91,8 @@
 			<include>PosListItemViews</include>
 			<width>40</width>
 			<height>40</height>
-			<texture background="true">default-square-small.png</texture>
-		</control>
-		<control type="image">
-			<include>PosListItemViews</include>
-			<width>40</width>
-			<height>40</height>
 			<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-			<texture diffuse="mask-square.png" background="true">$VAR[ListItemVideoPreview]</texture>
+			<texture diffuse="candy/circle.png" border="0" fallback="default-thumb-small.png" background="true">$VAR[ListItemVideoPreview]</texture>
 		</control>
 	</include>
 	<include name="ListChannelTypeIcon">
@@ -201,7 +134,7 @@
 				<posx>28</posx>
 				<width>20</width>
 				<height>20</height>
-				<info>ListItem.Overlay</info>
+				<texture>$VAR[ListItemOverlay]</texture>
 			</control>
 			<control type="label">
 				<posy>1</posy>
@@ -331,7 +264,7 @@
 							</animation>
 						</control>
 						<control type="label">
-							<posx>135</posx>
+							<posx>162</posx>
 							<posy>0</posy>
 							<width>600</width>
 							<height>100</height>
@@ -361,7 +294,7 @@
 							<posx>28</posx>
 							<width>20</width>
 							<height>20</height>
-							<info>ListItem.Overlay</info>
+							<texture>$VAR[ListItemOverlay]</texture>
 						</control>
 						<control type="label">
 							<width>840</width>
@@ -389,7 +322,7 @@
 								<posx>28</posx>
 								<width>20</width>
 								<height>20</height>
-								<info>ListItem.Overlay</info>
+								<texture>$VAR[ListItemOverlay]</texture>
 							</control>
 							<animation type="Focus" reversible="false">
 								<effect type="zoom" center="150,0" start="85" end="100" time="200" tween="Linear" easing="out"/>
@@ -448,7 +381,7 @@
 							<posx>28</posx>
 							<width>20</width>
 							<height>20</height>
-							<info>ListItem.Overlay</info>
+							<texture>$VAR[ListItemOverlay]</texture>
 						</control>
 						<control type="label">
 							<posy>-1</posy>
@@ -505,7 +438,7 @@
 								<posx>28</posx>
 								<width>20</width>
 								<height>20</height>
-								<info>ListItem.Overlay</info>
+								<texture>$VAR[ListItemOverlay]</texture>
 							</control>
 							<animation type="Focus" reversible="false">
 								<effect type="zoom" center="150,0" start="85" end="100" time="200" tween="Linear" easing="out"/>
@@ -751,7 +684,7 @@
 							<posy>15</posy>
 							<width>20</width>
 							<height>20</height>
-							<texture>$INFO[ListItem.Overlay]</texture>
+							<texture>$VAR[ListItemOverlay]</texture>
 						</control>
 						<control type="label">
 							<width>840</width>
@@ -805,7 +738,7 @@
 								<posx>28</posx>
 								<width>20</width>
 								<height>20</height>
-								<info>ListItem.Overlay</info>
+								<texture>$VAR[ListItemOverlay]</texture>
 							</control>
 							<animation type="Focus" reversible="false">
 								<effect type="zoom" center="150,0" start="85" end="100" time="200" tween="Linear" easing="out"/>
@@ -1139,6 +1072,7 @@
 					</focusedlayout>
 				</control>
 			</control>
+			<include>viewtype_nowplaying_right</include>
 		</control>
 	</include>
 </includes>

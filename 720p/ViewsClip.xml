@@ -106,7 +106,7 @@
 			<posy>120</posy>
 			<width>28</width>
 			<height>28</height>
-			<info>ListItem.Overlay</info>
+			<texture>$VAR[ListItemOverlay]</texture>
 		</control>
 	</include>
 	<!-- Library -->

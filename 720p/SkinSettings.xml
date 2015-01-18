@@ -831,9 +831,9 @@
 						<selected>Skin.HasSetting(FadeoutUnfocusedThumb)</selected>
 					</control>
 					<control type="radiobutton" id="405">
-						<description>Hide Unwatched indicators for Movies</description>
+						<description>Hide Unwatched indicators</description>
 						<width>625</width>
-						<label>$LOCALIZE[32115]</label>
+						<label>Hide Unwatched/In Progress/Watched Overlay</label>
 						<onclick>Skin.ToggleSetting(HideUnwatchedIconsMovies)</onclick>
 						<selected>Skin.HasSetting(HideUnwatchedIconsMovies)</selected>
 					</control>
@@ -893,7 +893,7 @@
 					<control type="radiobutton" id="413">
 						<description>Hide IMDB Poster Overlay</description>
 						<width>625</width>
-						<label>Hide star rating overlay</label>
+						<label>Hide Star Rating Overlay</label>
 						<onclick>Skin.ToggleSetting(disableOverlayIMDB)</onclick>
 						<selected>Skin.HasSetting(disableOverlayIMDB)</selected>
 					</control>

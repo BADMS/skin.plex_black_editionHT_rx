@@ -1228,7 +1228,7 @@
 							<posx>29</posx>
 							<width>20</width>
 							<height>20</height>
-							<info>ListItem.Overlay</info>
+							<texture>$VAR[ListItemOverlay]</texture>
 						</control>
 						<control type="label">
 							<posy>0</posy>
@@ -1312,7 +1312,7 @@
 							<posx>29</posx>
 							<width>20</width>
 							<height>20</height>
-							<info>ListItem.Overlay</info>
+							<texture>$VAR[ListItemOverlay]</texture>
 						</control>
 						<control type="label">
 							<posy>0</posy>
@@ -1745,16 +1745,8 @@
 							<posx>19</posx>
 							<width>20</width>
 							<height>20</height>
-							<info>ListItem.Overlay</info>
-							<visible>Container.PlexContent(Movies)|Container.PlexContent(Episodes)</visible>
-						</control>
-						<control type="image">
-							<posy>12</posy>
-							<posx>29</posx>
-							<width>20</width>
-							<height>20</height>
-							<info>ListItem.Overlay</info>
-							<visible>!Container.PlexContent(Movies)+!Container.PlexContent(Episodes)</visible>
+							<texture>$VAR[ListItemOverlay]</texture>
+							<visible>![Container.PlexContent(Albums) | Container.PlexContent(Artists) | Container.PlexContent(Songs)]</visible>
 						</control>
 						<control type="label">
 							<posy>0</posy>
@@ -1849,16 +1841,8 @@
 							<posx>19</posx>
 							<width>20</width>
 							<height>20</height>
-							<info>ListItem.Overlay</info>
-							<visible>Container.PlexContent(Movies)|Container.PlexContent(Episodes)</visible>
-						</control>
-						<control type="image">
-							<posy>12</posy>
-							<posx>29</posx>
-							<width>20</width>
-							<height>20</height>
-							<info>ListItem.Overlay</info>
-							<visible>!Container.PlexContent(Movies)+!Container.PlexContent(Episodes)</visible>
+							<texture>$VAR[ListItemOverlay]</texture>
+							<visible>![Container.PlexContent(Albums) | Container.PlexContent(Artists) | Container.PlexContent(Songs)]</visible>
 						</control>
 						<control type="label">
 							<posy>0</posy>
@@ -2318,7 +2302,7 @@
 						<posy>86</posy>
 						<width>30</width>
 						<height>30</height>
-						<info>ListItem.Overlay</info>
+						<texture>$VAR[ListItemOverlay]</texture>
 					</control>
 				</itemlayout>
 				<focusedlayout width="285" height="165">
@@ -2340,7 +2324,7 @@
 						<posy>86</posy>
 						<width>30</width>
 						<height>30</height>
-						<info>ListItem.Overlay</info>
+						<texture>$VAR[ListItemOverlay]</texture>
 					</control>
 					<include>EpisodeSelectedBorderFiltered</include>
 				</focusedlayout>

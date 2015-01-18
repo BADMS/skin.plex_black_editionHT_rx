@@ -782,7 +782,7 @@
 			<posy>168</posy>
 			<width>27</width>
 			<height>27</height>
-			<info>ListItem.Overlay</info>
+			<texture>$VAR[ListItemOverlay]</texture>
 			<visible>!Skin.HasSetting(HomeBigIcons)</visible>
 		</control>
 		<control type="image">
@@ -790,7 +790,7 @@
 			<posy>208</posy>
 			<width>27</width>
 			<height>27</height>
-			<info>ListItem.Overlay</info>
+			<texture>$VAR[ListItemOverlay]</texture>
 			<visible>Skin.HasSetting(HomeBigIcons)</visible>
 		</control>
 	</include>
@@ -801,8 +801,7 @@
 			<width>124</width>
 			<height>21</height>
 			<texture>home/imdbBackground.png</texture>
-			<visible>!IsEmpty(ListItem.Property(Rating))</visible>
-			<visible>!Skin.HasSetting(disableOverlayIMDB)</visible>
+			<visible>![Skin.HasSetting(disableOverlayIMDB) + Skin.HasSetting(HideUnwatchedIconsMovies)]</visible>
 			<visible>!Skin.HasSetting(HomeBigIcons)</visible>
 		</control>
 		<control type="image">
@@ -834,8 +833,7 @@
 			<width>151</width>
 			<height>21</height>
 			<texture>home/imdbBackground.png</texture>
-			<visible>!IsEmpty(ListItem.Property(Rating))</visible>
-			<visible>!Skin.HasSetting(disableOverlayIMDB)</visible>
+			<visible>![Skin.HasSetting(disableOverlayIMDB) + Skin.HasSetting(HideUnwatchedIconsMovies)]</visible>
 			<visible>Skin.HasSetting(HomeBigIcons)</visible>
 		</control>
 		<control type="image">
