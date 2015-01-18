@@ -1123,7 +1123,6 @@
 					<texture>$INFO[Listitem.Art(mediaTag::videoResolution)]</texture>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
 					<colordiffuse>mediatag</colordiffuse>
-					<visible>true</visible>
 				</control>
 				<control type="image">
 					<visible>!SubString(Listitem.Property(mediaTag-audioCodec),ac3)</visible>
@@ -1132,7 +1131,6 @@
 					<info>Listitem.Art(mediaTag::audioCodec)</info>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
 					<colordiffuse>mediatag</colordiffuse>
-					<visible>true</visible>
 				</control>
 				<control type="image">
 					<visible>SubString(Listitem.Property(mediaTag-audioCodec),ac3)</visible>
@@ -1141,7 +1139,6 @@
 					<texture>mediatags/dolby-digital-small.png</texture>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
 					<colordiffuse>mediatag</colordiffuse>
-					<visible>true</visible>
 				</control>
 				<control type="image">
 					<width min="29" max="100">auto</width>
@@ -1149,7 +1146,6 @@
 					<texture>$INFO[Listitem.Art(mediaTag::audioChannels)]</texture>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
 					<colordiffuse>mediatag</colordiffuse>
-					<visible>true</visible>
 				</control>
 				<control type="image">
 					<width min="29" max="100">auto</width>
@@ -1165,7 +1161,6 @@
 					<texture>$INFO[Listitem.Art(mediaTag::videoCodec)]</texture>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
 					<colordiffuse>mediatag</colordiffuse>
-					<visible>true</visible>
 				</control>
 				<control type="image">
 					<width min="29" max="100">auto</width>
