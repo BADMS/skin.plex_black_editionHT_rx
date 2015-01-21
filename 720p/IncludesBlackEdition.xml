@@ -67,16 +67,6 @@
 			</control>
 		</control>
 	</include>
-	<variable name="FontHomeMenu">
-		<value condition="!Skin.HasSetting(BiggerFontMenu1) + !Skin.HasSetting(BiggerFontMenu2) + !Skin.HasSetting(BiggerFontMenu3)">22</value>
-		<!--normal-->
-		<value condition="Skin.HasSetting(BiggerFontMenu1)">32</value>
-		<!-- small -->
-		<value condition="Skin.HasSetting(BiggerFontMenu2)">42</value>
-		<!-- medium -->
-		<value condition="Skin.HasSetting(BiggerFontMenu3)">52</value>
-		<!-- biggest -->
-	</variable>
 	<include name="Objects_OSDButton">
 		<width>42</width>
 		<height>22</height>
@@ -203,14 +193,6 @@
 		<font>homeMenuBig3</font>
 		<!-- focused -->
 		<height>50</height>
-	</include>
-	<include name="BGMultiRoll">
-		<control type="multiimage">
-			<width>1280</width>
-			<height>720</height>
-			<imagepath>bgmultiroll</imagepath>
-			<visible>Skin.HasSetting(CerberosSmoke)</visible>
-		</control>
 	</include>
 	<include name="BiggerHomeMenuAnalogWatchPosx">
 		<posx>25</posx>
