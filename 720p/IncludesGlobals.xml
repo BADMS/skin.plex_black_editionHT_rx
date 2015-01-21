@@ -16,9 +16,6 @@
 	<include name="BaseRoundedRight">
 		<texture border="5">base-rounded-half-horiz.png</texture>
 	</include>
-	<include name="BaseArrowInsert">
-		<texture border="5">base-arrow-insert.png</texture>
-	</include>
 	<include name="Black">
 		<include>Base</include>
 		<colordiffuse>FF000000</colordiffuse>
@@ -42,20 +39,6 @@
 	<include name="BlackRoundedRight">
 		<include>BaseRoundedRight</include>
 		<colordiffuse>FF101010</colordiffuse>
-	</include>
-	<include name="BlackArrowInsertRight">
-		<include>BaseArrowInsert</include>
-		<colordiffuse>FF000000</colordiffuse>
-	</include>
-	<include name="BlackArrowInsertLeft">
-		<texture flipx="true">base-arrow-insert.png</texture>
-		<colordiffuse>FF000000</colordiffuse>
-	</include>
-	<include name="WhiteArrowInsertRight">
-		<include>BaseArrowInsert</include>
-	</include>
-	<include name="WhiteArrowInsertLeft">
-		<texture flipx="true">base-arrow-insert.png</texture>
 	</include>
 	<include name="Shadow">
 		<!-- add +26 in width & length of thumb size -->
@@ -279,9 +262,6 @@
 		<aligny>center</aligny>
 		<label>$INFO[ListItem.Label]</label>
 		<font>Regular-17</font>
-		<!--
-		<shadowcolor>FF222222</shadowcolor>
-		-->
 	</include>
 	<include name="SmallUnwatchedOverlay">
 		<control type="group">
@@ -436,31 +416,6 @@
 			</control>
 		</control>
 	</include>
-	<!--Wall-->
-	<include name="MovieTVPosterWallx">
-		<control type="image">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>152</width>
-			<height>220</height>
-			<include>Shadow</include>
-		</control>
-		<control type="image">
-			<posx>13</posx>
-			<posy>13</posy>
-			<width>144</width>
-			<height>216</height>
-			<texture background="true">default-poster-middle.png</texture>
-		</control>
-		<control type="image">
-			<posx>13</posx>
-			<posy>13</posy>
-			<width>144</width>
-			<height>216</height>
-			<texture background="true">$VAR[ListItemVideoPreviewSmall]</texture>
-			<aspectratio scalediffuse="false" align="center" aligny="top">scale</aspectratio>	
-		</control>
-	</include>
 	<!-- Middle size posters -->
 	<include name="MovieTVPosterMiddle">
 		<control type="group">
@@ -558,9 +513,6 @@
 		<aligny>center</aligny>
 		<label>$INFO[ListItem.Label]</label>
 		<font>Regular-20</font>
-		<!--
-		<shadowcolor>FF222222</shadowcolor>
-		-->
 	</include>
 	<include name="MiddleUnwatchedOverlay">
 		<control type="group">
@@ -849,44 +801,6 @@
 		<value condition="Window.IsActive(mysharedcontent)">$LOCALIZE[32108]</value>
 		<value>Item</value>
 	</variable>
-	<include name="TopBar">
-		<!-- bg -->
-		<control type="largeimage">
-			<posy>0</posy>
-			<posx>0</posx>
-			<width>1280</width>
-			<height>50</height>
-			<include>Black</include>
-		</control>
-		<!-- Clock -->
-		<include>Clock</include>
-		<!-- Selected title -->
-		<control type="group">
-			<posy>0</posy>
-			<posx>300</posx>
-			<control type="label">
-				<width>680</width>
-				<height>49</height>
-				<align>center</align>
-				<font>Regular-17</font>
-				<label>$VAR[TopBarSelectedItemStrings]</label>
-				<textcolor>FF999999</textcolor>
-			</control>
-		</control>
-		<!-- item count -->
-		<control type="group">
-			<posy>0</posy>
-			<posx>30r</posx>
-			<control type="label">
-				<width>500</width>
-				<height>49</height>
-				<align>right</align>
-				<font>Regular-17</font>
-				<label>$VAR[TopBarItemCountStrings]</label>
-				<textcolor>FF999999</textcolor>
-			</control>
-		</control>
-	</include>
 	<!-- global search-->
 	<include name="GlobalSearch">
 		<control type="image">
@@ -910,10 +824,6 @@
 		<!--<shadowcolor>ff111111</shadowcolor>-->
 		<autoscroll delay="10000" time="3000" repeat="5000">!Control.HasFocus(13)</autoscroll>
 	</include>
-	<include name="Plot">
-		<label>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</label>
-		<autoscroll delay="10000" time="3000" repeat="5000">!Control.HasFocus(13)</autoscroll>
-	</include>
 	<include name="NoPlotDefault">
 		<label>$LOCALIZE[32103]$VAR[NoPlotDefaultItem]. $LOCALIZE[32104]</label>
 	</include>
@@ -927,18 +837,6 @@
 				<width>200</width>
 				<height>49</height>
 				<font>Regular-17</font>
-				<textcolor>FF999999</textcolor>
-			</control>
-		</control>
-	</include>
-	<include name="HomeClock">
-		<control type="group">
-			<posx>20</posx>
-			<control type="label">
-				<label>$INFO[System.Time(short_no_meridian)]</label>
-				<width>200</width>
-				<height>49</height>
-				<font>smallCaps</font>
 				<textcolor>FF999999</textcolor>
 			</control>
 		</control>
@@ -1026,24 +924,6 @@
 			<animation effect="fade" start="0" end="100" time="100" condition="true">WindowClose</animation>
 		</control>
 	</include>
-	<include name="transition2">
-		<animation type="WindowOpen">
-			<effect type="zoom" time="400" center="640,360" start="180" end="100" tween="cubic" easing="out"/>
-			<effect type="fade" time="400" center="640,360" start="0" easing="out" end="100"/>
-		</animation>
-		<animation type="WindowClose">
-			<effect type="zoom" time="250" center="640,360" start="100" end="180" tween="cubic" easing="in"/>
-			<effect type="fade" time="250" center="640,360" start="100" easing="in" end="0"/>
-		</animation>
-		<animation type="Visible" condition="Window.IsActive(movieinformation) | Window.IsActive(musicinformation)">
-			<effect type="zoom" time="400" center="640,360" start="180" end="100" tween="cubic" easing="out"/>
-			<effect type="fade" time="400" center="640,360" start="0" easing="out" end="100"/>
-		</animation>
-		<animation type="Hidden" condition="Window.IsActive(movieinformation) | Window.IsActive(musicinformation)">
-			<effect type="zoom" time="250" center="640,360" start="100" end="180" tween="cubic" easing="in"/>
-			<effect type="fade" time="250" center="640,360" start="100" easing="in" end="0"/>
-		</animation>
-	</include>
 	<include name="info_Title">
 		<height>28</height>
 		<aligny>center</aligny>
@@ -1072,38 +952,5 @@
 				<textcolor>title2</textcolor>
 			</control>
 		</control>
-	</include>
-	<include name="BottomRightClock">
-		<control type="group">
-			<posx>0</posx>
-			<posy>0</posy>
-			<!-- clock -->
-			<control type="label">
-				<posy>671</posy>
-				<posx>1022</posx>
-				<width>200</width>
-				<align>right</align>
-				<font>Regular-16</font>
-				<label>$INFO[System.Time(short_no_meridian)]</label>
-				<textcolor>title2</textcolor>
-			</control>
-		</control>
-	</include>
-	<include name="BottomRightClockNG">
-		<!-- clock -->
-		<control type="label">
-			<posy>671</posy>
-			<posx>1022</posx>
-			<width>200</width>
-			<align>right</align>
-			<font>Regular-16</font>
-			<label>$INFO[System.Time(short_no_meridian)]</label>
-			<textcolor>title2</textcolor>
-		</control>
-	</include>
-	<include name="focus_ThumbPosterInfo">
-		<!--deadeye von 130 auf 115-->
-		<animation effect="zoom" tween="Quadratic" start="100" end="115" center="65,90" time="200">Focus</animation>
-		<animation effect="zoom" tween="Quadratic" start="115" end="100" center="65,90" time="100">UnFocus</animation>
 	</include>
 </includes>
