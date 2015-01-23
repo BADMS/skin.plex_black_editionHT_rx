@@ -1304,8 +1304,7 @@
 				<texturefocus>b-pp-play-s.png</texturefocus>
 				<texturenofocus>b-pp-play.png</texturenofocus>
 				<colordiffuse>80FFFFFF</colordiffuse>
-				<onright>Skin.SetString(pp_helper,1)</onright>
-				<onleft>Skin.SetString(pp_helper,1)</onleft>
+				<onfocus>Skin.SetString(pp_helper,1)</onfocus>
 				<onright>SetFocus(3)</onright>
 				<onright>XBMC.NextItem</onright>
 				<onleft>XBMC.PrevItem</onleft>
@@ -1316,6 +1315,7 @@
 			<control type="button" id="103">
 				<texturefocus>b-pp-audio-s2.png</texturefocus>
 				<texturenofocus>b-pp-audio2.png</texturenofocus>
+				<onfocus>Skin.SetString(pp_helper,1)</onfocus>
 				<colordiffuse>80FFFFFF</colordiffuse>
 				<onright>SetFocus(3)</onright>
 				<onright>XBMC.NextItem</onright>
@@ -1330,6 +1330,7 @@
 				<texturefocus>b-pp-subtitles-s.png</texturefocus>
 				<texturenofocus>b-pp-subtitles.png</texturenofocus>
 				<colordiffuse>80FFFFFF</colordiffuse>
+				<onfocus>Skin.SetString(pp_helper,1)</onfocus>
 				<onright>SetFocus(3)</onright>
 				<onright>XBMC.NextItem</onright>
 				<onleft>XBMC.PrevItem</onleft>
@@ -1343,6 +1344,7 @@
 				<texturefocus>b-pp-extras-s.png</texturefocus>
 				<texturenofocus>b-pp-extras.png</texturenofocus>
 				<colordiffuse>80FFFFFF</colordiffuse>
+				<onfocus>Skin.SetString(pp_helper,1)</onfocus>
 				<onright>SetFocus(3)</onright>
 				<onright>XBMC.NextItem</onright>
 				<onleft>XBMC.PrevItem</onleft>
@@ -1356,6 +1358,7 @@
 				<texturenofocus>b-pp-rate.png</texturenofocus>
 				<colordiffuse>80FFFFFF</colordiffuse>
 				<onright>SetFocus(3)</onright>
+				<onfocus>Skin.SetString(pp_helper,1)</onfocus>
 				<onright>XBMC.NextItem</onright>
 				<onleft>XBMC.PrevItem</onleft>
 				<onclick>ActivateWindow(10200,$INFO[ListItem(0).Path])</onclick>
@@ -1379,6 +1382,7 @@
 				<texturefocus>b-pp-share-s.png</texturefocus>
 				<texturenofocus>b-pp-share.png</texturenofocus>
 				<colordiffuse>80FFFFFF</colordiffuse>
+				<onfocus>Skin.SetString(pp_helper,1)</onfocus>
 				<onright>SetFocus(3)</onright>
 				<onright>XBMC.NextItem</onright>
 				<onleft>XBMC.PrevItem</onleft>
@@ -1391,6 +1395,7 @@
 			<control type="button" id="108">
 				<texturefocus>b-pp-watched-s.png</texturefocus>
 				<texturenofocus>b-pp-watched.png</texturenofocus>
+				<onfocus>Skin.SetString(pp_helper,1)</onfocus>
 				<colordiffuse>80FFFFFF</colordiffuse>
 				<onright>SetFocus(3)</onright>
 				<onright>XBMC.NextItem</onright>
@@ -1402,6 +1407,7 @@
 			<control type="button" id="109">
 				<texturefocus>b-pp-unwatched-s.png</texturefocus>
 				<texturenofocus>b-pp-unwatched.png</texturenofocus>
+				<onfocus>Skin.SetString(pp_helper,1)</onfocus>
 				<colordiffuse>80FFFFFF</colordiffuse>
 				<onright>SetFocus(3)</onright>
 				<onright>XBMC.NextItem</onright>
