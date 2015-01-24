@@ -428,14 +428,44 @@
 					<include>MediaFlags</include>
 				</control>
 				<control type="image">
+					<visible>Container.Content(TVShows) + Skin.HasSetting(ShowTVBanner)</visible>
 					<posx>0</posx>
 					<posy>640</posy>
 					<width>464</width>
 					<height>80</height>
-					<texture>$INFO[ListItem.Art(banner)]</texture>
+					<aspectratio scalediffuse="false" align="center">keep</aspectratio>
+					<texture background="true">$INFO[ListItem.Art(banner)]</texture>
 					<fadetime>1000</fadetime>
-					<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-					<visible>Skin.HasSetting(ShowTVBanner)</visible>
+					</control>
+				<control type="image">
+					<visible>Container.Content(TVShows) + Skin.HasSetting(ShowTVClearart)</visible>
+					<posx>0</posx>
+					<posy>640</posy>
+					<width>464</width>
+					<height>80</height>
+					<aspectratio scalediffuse="false" align="center">keep</aspectratio>
+					<texture background="true">tvlogos/$INFO[ListItem.Title].png</texture>
+					<fadetime>1000</fadetime>
+					</control>
+				<control type="image">
+					<visible>Container.Content(movies) + Skin.HasSetting(ShowMovieClearart)</visible>
+					<posx>0</posx>
+					<posy>640</posy>
+					<width>464</width>
+					<height>80</height>
+					<aspectratio scalediffuse="false" align="center">keep</aspectratio>
+					<texture background="true">movielogos/$INFO[ListItem.Title].png</texture>
+					<fadetime>1000</fadetime>
+				</control>
+				<control type="image">
+					<visible>Container.Content(movies) + Skin.HasSetting(ShowMovieBanner)</visible>
+					<posx>0</posx>
+					<posy>640</posy>
+					<width>464</width>
+					<height>80</height>
+					<aspectratio scalediffuse="false" align="center">keep</aspectratio>
+					<texture background="true">movielogos/$INFO[ListItem.Title].jpg</texture>
+					<fadetime>1000</fadetime>
 				</control>
 			</control>
 		</control>
