@@ -902,37 +902,62 @@
 						<width>625</width>
 						<label>Show TV Banner Decoration</label>
 						<onclick>Skin.ToggleSetting(ShowTVBanner)</onclick>
+						<onclick>Skin.Reset(ShowTVClearart)</onclick>
 						<selected>Skin.HasSetting(ShowTVBanner)</selected>
 					</control>
 					<control type="radiobutton" id="415">
+						<description>Show TV Clearart</description>
+						<width>625</width>
+						<label>Show TV Clearart Decoration</label>
+						<onclick>Skin.ToggleSetting(ShowTVClearart)</onclick>
+						<onclick>Skin.Reset(ShowTVBanner)</onclick>
+						<selected>Skin.HasSetting(ShowTVClearart)</selected>
+					</control>
+					<control type="radiobutton" id="416">
+						<description>Show Movie Banner</description>
+						<width>625</width>
+						<label>Show Movie Banner Decoration</label>
+						<onclick>Skin.ToggleSetting(ShowMovieBanner)</onclick>
+						<onclick>Skin.Reset(ShowMovieClearart)</onclick>
+						<selected>Skin.HasSetting(ShowMovieBanner)</selected>
+					</control>
+					<control type="radiobutton" id="417">
+						<description>Show Movie Clearart</description>
+						<width>625</width>
+						<label>Show Movie Clearart Decoration</label>
+						<onclick>Skin.ToggleSetting(ShowMovieClearart)</onclick>
+						<onclick>Skin.Reset(ShowMovieBanner)</onclick>
+						<selected>Skin.HasSetting(ShowMovieClearart)</selected>
+					</control>
+					<control type="radiobutton" id="418">
 						<description>Show Clearart</description>
 						<width>625</width>
 						<label>Show Clearart in Banner View</label>
 						<onclick>Skin.ToggleSetting(ShowClearart)</onclick>
 						<selected>Skin.HasSetting(ShowClearart)</selected>
 					</control>
-					<control type="radiobutton" id="416">
+					<control type="radiobutton" id="419">
 						<description>Disable preplay</description>
 						<width>625</width>
 						<label>Disable Movie Preplay View</label>
 						<onclick>Skin.ToggleSetting(DisablePreplayMovie)</onclick>
 						<selected>Skin.HasSetting(DisablePreplayMovie)</selected>
 					</control>
-					<control type="radiobutton" id="417">
+					<control type="radiobutton" id="420">
 						<description>Disable preplay</description>
 						<width>625</width>
 						<label>Disable TV Preplay View</label>
 						<onclick>Skin.ToggleSetting(DisablePreplayTV)</onclick>
 						<selected>Skin.HasSetting(DisablePreplayTV)</selected>
 					</control>
-					<control type="radiobutton" id="418">
+					<control type="radiobutton" id="421">
 						<description>Disable preplay</description>
 						<width>625</width>
 						<label>Disable Clip Preplay View</label>
 						<onclick>Skin.ToggleSetting(DisablePreplayClip)</onclick>
 						<selected>Skin.HasSetting(DisablePreplayClip)</selected>
 					</control>
-					<control type="radiobutton" id="419">
+					<control type="radiobutton" id="422">
 						<description>Disable preplay</description>
 						<width>625</width>
 						<label>Disable Empty/Hidden Plot Preplay View</label>
