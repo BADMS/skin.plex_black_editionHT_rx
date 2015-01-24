@@ -490,14 +490,12 @@
 				</control>
 				<!-- media flags -->
 				<control type="group">
-					<visible>Container.Content(TVShows) + ![Skin.HasSetting(ShowTVBanner) | Skin.HasSetting(ShowTVClearart)]</visible>
-					<visible>Container.Content(movies) + ![Skin.HasSetting(ShowTMovieBanner) | Skin.HasSetting(ShowMovieClearart)]</visible>
-					<posx>36</posx>
-					<posy>654</posy>
+					<posx>4</posx>
+					<posy>668</posy>
 					<control type="grouplist">
 						<posx>0</posx>
 						<width>447</width>
-						<align>left</align>
+						<align>center</align>
 						<orientation>horizontal</orientation>
 						<itemgap>10</itemgap>
 						<animation effect="fade" start="0" end="60" time="0" condition="true">Conditional</animation>
@@ -511,7 +509,7 @@
 						</control>
 						<control type="image">
 							<visible>!SubString(Listitem.Property(mediaTag-audioCodec),ac3)</visible>
-							<height>20</height>
+							<height>18</height>
 							<width min="1" max="95">auto</width>
 							<info>Listitem.Art(mediaTag::audioCodec)</info>
 							<aspectratio>keep</aspectratio>
@@ -520,7 +518,7 @@
 						<control type="image">
 							<visible>SubString(Listitem.Property(mediaTag-audioCodec),ac3)</visible>
 							<width min="1" max="95">auto</width>
-							<height>20</height>
+							<height>18</height>
 							<width min="1" max="95">auto</width>
 							<texture>mediatags/dolby-digital.png</texture>
 							<aspectratio>keep</aspectratio>
@@ -528,7 +526,7 @@
 						</control>
 						<control type="image">
 							<visible>!IsEmpty(Listitem.Art(mediaTag::audioChannels))</visible>
-							<height>20</height>
+							<height>18</height>
 							<width min="1" max="95">auto</width>
 							<info>Listitem.Art(mediaTag::audioChannels)</info>
 							<aspectratio>keep</aspectratio>
@@ -536,7 +534,7 @@
 						</control>
 						<control type="image">
 							<width min="1" max="95">auto</width>
-							<height>20</height>
+							<height>18</height>
 							<texture>$INFO[Listitem.Art(mediaTag::aspectRatio)]</texture>
 							<aspectratio>keep</aspectratio>
 							<colordiffuse>mediatag</colordiffuse>
@@ -544,7 +542,7 @@
 						</control>
 						<control type="image">
 							<width min="1" max="95">auto</width>
-							<height>20</height>
+							<height>18</height>
 							<texture>$INFO[Listitem.Art(mediaTag::videoCodec)]</texture>
 							<aspectratio>keep</aspectratio>
 							<colordiffuse>mediatag</colordiffuse>
@@ -552,7 +550,7 @@
 						</control>
 						<control type="image">
 							<width min="1" max="95">auto</width>
-							<height>20</height>
+							<height>18</height>
 							<texture>$INFO[Listitem.Art(mediaTag::videoFrameRate)]</texture>
 							<aspectratio>keep</aspectratio>
 							<colordiffuse>mediatag</colordiffuse>
@@ -563,40 +561,40 @@
 				<control type="group">
 					<control type="image">
 						<visible>Container.Content(TVShows) + Skin.HasSetting(ShowTVBanner)</visible>
-						<posx>36</posx>
-						<posy>628</posy>
-						<width>260</width>
-						<height>75</height>
+						<posx>4</posx>
+						<posy>614</posy>
+						<width>447</width>
+						<height>50</height>
 						<aspectratio scalediffuse="false" align="center">keep</aspectratio>
 						<texture background="true">$INFO[ListItem.Art(banner)]</texture>
 						<fadetime>300</fadetime>
 					</control>
 					<control type="image">
 						<visible>Container.Content(TVShows) + Skin.HasSetting(ShowTVClearart)</visible>
-						<posx>36</posx>
-						<posy>628</posy>
-						<width>260</width>
-						<height>75</height>
+						<posx>4</posx>
+						<posy>614</posy>
+						<width>447</width>
+						<height>50</height>
 						<aspectratio scalediffuse="false" align="center">keep</aspectratio>
 						<texture background="true">tvlogos/$INFO[ListItem.Title].png</texture>
 						<fadetime>300</fadetime>
 					</control>
 					<control type="image">
-						<visible>Container.Content(movies) + Skin.HasSetting(ShowMovieClearart)</visible>
-						<posx>36</posx>
-						<posy>628</posy>
-						<width>260</width>
-						<height>75</height>
+						<visible>Container.PlexContent(Movies) + Skin.HasSetting(ShowMovieClearart)</visible>
+						<posx>4</posx>
+						<posy>614</posy>
+						<width>447</width>
+						<height>50</height>
 						<aspectratio scalediffuse="false" align="center">keep</aspectratio>
 						<texture background="true">movielogos/$INFO[ListItem.Title].png</texture>
 						<fadetime>300</fadetime>
 					</control>
 					<control type="image">
-						<visible>Container.Content(movies) + Skin.HasSetting(ShowMovieBanner)</visible>
-						<posx>36</posx>
-						<posy>628</posy>
-						<width>260</width>
-						<height>75</height>
+						<visible>Container.PlexContent(Movies) + Skin.HasSetting(ShowMovieBanner)</visible>
+						<posx>4</posx>
+						<posy>614</posy>
+						<width>447</width>
+						<height>50</height>
 						<aspectratio scalediffuse="false" align="center">keep</aspectratio>
 						<texture background="true">movielogos/$INFO[ListItem.Title].jpg</texture>
 						<fadetime>300</fadetime>

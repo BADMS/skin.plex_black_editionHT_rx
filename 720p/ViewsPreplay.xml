@@ -765,6 +765,26 @@
 					<include>NoPlotDefault</include>
 					<visible>IsEmpty(Container.ShowPlot)</visible>
 				</control>
+				<control type="image">
+					<visible>Skin.HasSetting(ShowTVBanner)</visible>
+					<posx>0</posx>
+					<posy>632</posy>
+					<width>514</width>
+					<height>88</height>
+					<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+					<texture background="true">$INFO[ListItem.Art(banner)]</texture>
+					<fadetime>1000</fadetime>
+				</control>
+				<control type="image">
+					<visible>Skin.HasSetting(ShowTVClearart)</visible>
+					<posx>0</posx>
+					<posy>632</posy>
+					<width>514</width>
+					<height>88</height>
+					<aspectratio scalediffuse="false" align="center">keep</aspectratio>
+					<texture background="true">tvlogos/$INFO[Container.SecondTitle].png</texture>
+					<fadetime>1000</fadetime>
+				</control>
 			</control>
 			<!-- main list -->
 			<control type="panel" id="60">

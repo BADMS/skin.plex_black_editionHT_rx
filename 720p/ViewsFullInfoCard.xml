@@ -425,7 +425,7 @@
 				<!-- media flags -->
 				<control type="group">
 					<visible>Container.Content(TVShows) + ![Skin.HasSetting(ShowTVBanner) | Skin.HasSetting(ShowTVClearart)]</visible>
-					<visible>Container.Content(movies) + ![Skin.HasSetting(ShowTMovieBanner) | Skin.HasSetting(ShowMovieClearart)]</visible>
+					<visible>Container.PlexContent(Movies) + ![Skin.HasSetting(ShowTMovieBanner) | Skin.HasSetting(ShowMovieClearart)]</visible>
 					<posx>-76</posx>
 					<include>MediaFlags</include>
 				</control>
@@ -435,10 +435,10 @@
 					<posy>640</posy>
 					<width>464</width>
 					<height>80</height>
-					<aspectratio scalediffuse="false" align="center">keep</aspectratio>
+					<aspectratio scalediffuse="false" align="center">scale</aspectratio>
 					<texture background="true">$INFO[ListItem.Art(banner)]</texture>
 					<fadetime>1000</fadetime>
-					</control>
+				</control>
 				<control type="image">
 					<visible>Container.Content(TVShows) + Skin.HasSetting(ShowTVClearart)</visible>
 					<posx>0</posx>
@@ -448,9 +448,9 @@
 					<aspectratio scalediffuse="false" align="center">keep</aspectratio>
 					<texture background="true">tvlogos/$INFO[ListItem.Title].png</texture>
 					<fadetime>1000</fadetime>
-					</control>
+				</control>
 				<control type="image">
-					<visible>Container.Content(movies) + Skin.HasSetting(ShowMovieClearart)</visible>
+					<visible>Container.PlexContent(Movies) + Skin.HasSetting(ShowMovieClearart)</visible>
 					<posx>0</posx>
 					<posy>640</posy>
 					<width>464</width>
@@ -460,12 +460,12 @@
 					<fadetime>1000</fadetime>
 				</control>
 				<control type="image">
-					<visible>Container.Content(movies) + Skin.HasSetting(ShowMovieBanner)</visible>
+					<visible>Container.PlexContent(Movies) + Skin.HasSetting(ShowMovieBanner)</visible>
 					<posx>0</posx>
 					<posy>640</posy>
 					<width>464</width>
 					<height>80</height>
-					<aspectratio scalediffuse="false" align="center">keep</aspectratio>
+					<aspectratio scalediffuse="false" align="center">scale</aspectratio>
 					<texture background="true">movielogos/$INFO[ListItem.Title].jpg</texture>
 					<fadetime>1000</fadetime>
 				</control>
