@@ -490,7 +490,7 @@
 				</control>
 				<!-- media flags -->
 				<control type="group">
-					<visible>Container.Content(movies)</visible>
+					<visible>Container.Content(movies) + !Skin.HasSetting(ShowMovieClearart) + !Skin.HasSetting(ShowMovieBanner)</visible>
 					<posx>36</posx>
 					<posy>654</posy>
 					<control type="grouplist">
