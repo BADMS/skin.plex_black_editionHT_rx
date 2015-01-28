@@ -1275,6 +1275,7 @@
 					<orientation>horizontal</orientation>
 					<itemgap>20</itemgap>
 					<control type="image">
+						<visible>!Skin.HasSetting(HideUnwatchedIconsGlobal)</visible>
 						<posy>5</posy>
 						<width>30</width>
 						<height>30</height>
@@ -1429,6 +1430,7 @@
 					<orientation>horizontal</orientation>
 					<itemgap>20</itemgap>
 					<control type="image">
+						<visible>![Skin.HasSetting(HideUnwatchedIconsGlobal) | Skin.HasSetting(HideUnwatchedIconsMovies)]</visible>
 						<posy>5</posy>
 						<width>30</width>
 						<height>30</height>

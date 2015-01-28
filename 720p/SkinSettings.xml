@@ -833,32 +833,41 @@
 					<control type="radiobutton" id="405">
 						<description>Hide Unwatched indicators</description>
 						<width>625</width>
-						<label>Hide Unwatched/In Progress/Watched Overlay</label>
-						<onclick>Skin.ToggleSetting(HideUnwatchedIconsMovies)</onclick>
-						<selected>Skin.HasSetting(HideUnwatchedIconsMovies)</selected>
+						<label>Hide Unwatched/In Progress/Watched Overlay Global</label>
+						<onclick>Skin.ToggleSetting(HideUnwatchedIconsGlobal)</onclick>
+						<onclick>Skin.Reset(HideUnwatchedIconsMovies)</onclick>
+						<selected>Skin.HasSetting(HideUnwatchedIconsGlobal)</selected>
 					</control>
 					<control type="radiobutton" id="406">
+						<description>Hide Unwatched indicators</description>
+						<width>625</width>
+						<label>Hide Unwatched/In Progress/Watched Overlay Movies</label>
+						<onclick>Skin.ToggleSetting(HideUnwatchedIconsMovies)</onclick>
+						<onclick>Skin.Reset(HideUnwatchedIconsGlobal)</onclick>
+						<selected>Skin.HasSetting(HideUnwatchedIconsMovies)</selected>
+					</control>
+					<control type="radiobutton" id="407">
 						<description>ShowThumbBorder</description>
 						<width>625</width>
 						<label>Show Thumb Border</label>
 						<onclick>Skin.ToggleSetting(ShowThumbBorder)</onclick>
 						<selected>Skin.HasSetting(ShowThumbBorder)</selected>
 					</control>	
-					<control type="radiobutton" id="407">
+					<control type="radiobutton" id="408">
 						<description>Hide plot/preview for Unwatched/In Progress</description>
 						<width>625</width>
 						<label>$LOCALIZE[32114]</label>
 						<onclick>Skin.ToggleSetting(HidePlotForUnwatched)</onclick>
 						<selected>Skin.HasSetting(HidePlotForUnwatched)</selected>
 					</control>
-					<control type="radiobutton" id="408">
+					<control type="radiobutton" id="409">
 						<description>Hide Unwatched Episodes Count</description>
 						<width>625</width>
 						<label>Hide Unwatched Episodes Count</label>
 						<onclick>Skin.ToggleSetting(HideUnwatchedIconsTVShows)</onclick>
 						<selected>Skin.HasSetting(HideUnwatchedIconsTVShows)</selected>
 					</control> 
-					<control type="radiobutton" id="409">
+					<control type="radiobutton" id="410">
 						<description>AltUnwatchedEpisodes</description>
 						<width>625</width>
 						<label>Unwatched Episodes Overlay Count</label>
@@ -866,7 +875,7 @@
 						<selected>Skin.HasSetting(AltUnwatchedEpisodes)</selected>
 						<enable>!Skin.HasSetting(HideUnwatchedIconsTVShows)</enable>
 					</control> 
-					<control type="radiobutton" id="410">
+					<control type="radiobutton" id="411">
 						<description>Unwatched Episodes Overlay Background</description>
 						<width>625</width>
 						<label>Unwatched Episodes Overlay Background</label>
@@ -874,7 +883,7 @@
 						<selected>Skin.HasSetting(OverlayUnwatchedEpisodes)</selected>
 						<enable>Skin.HasSetting(AltUnwatchedEpisodes) + !Skin.HasSetting(HideUnwatchedIconsTVShows)</enable>
 					</control> 
-					<control type="radiobutton" id="411">
+					<control type="radiobutton" id="412">
 						<description>Unwatched Episodes StandardUnwatchedEpisodes</description>
 						<width>625</width>
 						<label>Unwatched Episodes Standard</label>
@@ -882,7 +891,7 @@
 						<selected>Skin.HasSetting(StandardUnwatchedEpisodes)</selected>
 						<enable>!Skin.HasSetting(AltUnwatchedEpisodes) + !Skin.HasSetting(LargerUnwatchedEpisodes) + !Skin.HasSetting(HideUnwatchedIconsTVShows)</enable>
 					</control> 
-					<control type="radiobutton" id="412">
+					<control type="radiobutton" id="413">
 						<description>Unwatched Episodes LargerUnwatchedEpisodes</description>
 						<width>625</width>
 						<label>Unwatched Episodes Larger</label>
@@ -890,14 +899,14 @@
 						<selected>Skin.HasSetting(LargerUnwatchedEpisodes)</selected>
 						<enable>!Skin.HasSetting(AltUnwatchedEpisodes) + !Skin.HasSetting(StandardUnwatchedEpisodes) + !Skin.HasSetting(HideUnwatchedIconsTVShows)</enable>
 					</control> 
-					<control type="radiobutton" id="413">
+					<control type="radiobutton" id="414">
 						<description>Hide IMDB Poster Overlay</description>
 						<width>625</width>
 						<label>Hide Star Rating Overlay</label>
 						<onclick>Skin.ToggleSetting(disableOverlayIMDB)</onclick>
 						<selected>Skin.HasSetting(disableOverlayIMDB)</selected>
 					</control>
-					<control type="radiobutton" id="414">
+					<control type="radiobutton" id="415">
 						<description>Show TV Banner</description>
 						<width>625</width>
 						<label>Show TV Banner Decoration</label>
@@ -905,7 +914,7 @@
 						<onclick>Skin.Reset(ShowTVClearart)</onclick>
 						<selected>Skin.HasSetting(ShowTVBanner)</selected>
 					</control>
-					<control type="radiobutton" id="415">
+					<control type="radiobutton" id="416">
 						<description>Show TV Clearart</description>
 						<width>625</width>
 						<label>Show TV Clearart Decoration</label>
@@ -913,7 +922,7 @@
 						<onclick>Skin.Reset(ShowTVBanner)</onclick>
 						<selected>Skin.HasSetting(ShowTVClearart)</selected>
 					</control>
-					<control type="radiobutton" id="416">
+					<control type="radiobutton" id="417">
 						<description>Show Movie Banner</description>
 						<width>625</width>
 						<label>Show Movie Banner Decoration</label>
@@ -921,7 +930,7 @@
 						<onclick>Skin.Reset(ShowMovieClearart)</onclick>
 						<selected>Skin.HasSetting(ShowMovieBanner)</selected>
 					</control>
-					<control type="radiobutton" id="417">
+					<control type="radiobutton" id="418">
 						<description>Show Movie Clearart</description>
 						<width>625</width>
 						<label>Show Movie Clearart Decoration</label>
@@ -929,35 +938,35 @@
 						<onclick>Skin.Reset(ShowMovieBanner)</onclick>
 						<selected>Skin.HasSetting(ShowMovieClearart)</selected>
 					</control>
-					<control type="radiobutton" id="418">
+					<control type="radiobutton" id="419">
 						<description>Show Clearart</description>
 						<width>625</width>
 						<label>Show Clearart in Banner View</label>
 						<onclick>Skin.ToggleSetting(ShowClearart)</onclick>
 						<selected>Skin.HasSetting(ShowClearart)</selected>
 					</control>
-					<control type="radiobutton" id="419">
+					<control type="radiobutton" id="420">
 						<description>Disable preplay</description>
 						<width>625</width>
 						<label>Disable Movie Preplay View</label>
 						<onclick>Skin.ToggleSetting(DisablePreplayMovie)</onclick>
 						<selected>Skin.HasSetting(DisablePreplayMovie)</selected>
 					</control>
-					<control type="radiobutton" id="420">
+					<control type="radiobutton" id="421">
 						<description>Disable preplay</description>
 						<width>625</width>
 						<label>Disable TV Preplay View</label>
 						<onclick>Skin.ToggleSetting(DisablePreplayTV)</onclick>
 						<selected>Skin.HasSetting(DisablePreplayTV)</selected>
 					</control>
-					<control type="radiobutton" id="421">
+					<control type="radiobutton" id="422">
 						<description>Disable preplay</description>
 						<width>625</width>
 						<label>Disable Clip Preplay View</label>
 						<onclick>Skin.ToggleSetting(DisablePreplayClip)</onclick>
 						<selected>Skin.HasSetting(DisablePreplayClip)</selected>
 					</control>
-					<control type="radiobutton" id="422">
+					<control type="radiobutton" id="423">
 						<description>Disable preplay</description>
 						<width>625</width>
 						<label>Disable Empty/Hidden Plot Preplay View</label>

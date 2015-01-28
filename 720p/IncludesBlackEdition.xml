@@ -255,7 +255,7 @@
 			<width>118</width>
 			<height>19</height>
 			<texture>home/imdbBackground.png</texture>
-			<visible>![Skin.HasSetting(disableOverlayIMDB) + Skin.HasSetting(HideUnwatchedIconsMovies)]</visible>
+			<visible>![Skin.HasSetting(disableOverlayIMDB) + [[Container.PlexContent(Movies) + Skin.HasSetting(HideUnwatchedIconsMovies)] | Skin.HasSetting(HideUnwatchedIconsGlobal)]]</visible>
 		</control>
 		<control type="label">
 			<posx>10</posx>

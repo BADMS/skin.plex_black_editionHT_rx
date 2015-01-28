@@ -801,7 +801,7 @@
 			<width>124</width>
 			<height>21</height>
 			<texture>home/imdbBackground.png</texture>
-			<visible>![Skin.HasSetting(disableOverlayIMDB) + Skin.HasSetting(HideUnwatchedIconsMovies)]</visible>
+			<visible>![Skin.HasSetting(disableOverlayIMDB) + [[Container.PlexContent(Movies) + Skin.HasSetting(HideUnwatchedIconsMovies)] | Skin.HasSetting(HideUnwatchedIconsGlobal)]]</visible>
 			<visible>!Skin.HasSetting(HomeBigIcons)</visible>
 		</control>
 		<control type="image">
@@ -833,7 +833,7 @@
 			<width>151</width>
 			<height>21</height>
 			<texture>home/imdbBackground.png</texture>
-			<visible>![Skin.HasSetting(disableOverlayIMDB) + Skin.HasSetting(HideUnwatchedIconsMovies)]</visible>
+			<visible>![Skin.HasSetting(disableOverlayIMDB) + [[Container.PlexContent(Movies) + Skin.HasSetting(HideUnwatchedIconsMovies)] | Skin.HasSetting(HideUnwatchedIconsGlobal)]]</visible>
 			<visible>Skin.HasSetting(HomeBigIcons)</visible>
 		</control>
 		<control type="image">

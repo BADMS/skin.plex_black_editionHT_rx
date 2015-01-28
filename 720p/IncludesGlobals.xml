@@ -328,7 +328,7 @@
 				<height>21</height>
 				<posx>13</posx>
 				<posy>169</posy>
-				<visible>![Skin.HasSetting(disableOverlayIMDB) + Skin.HasSetting(HideUnwatchedIconsMovies)]</visible>
+				<visible>![Skin.HasSetting(disableOverlayIMDB) + [[Container.PlexContent(Movies) + Skin.HasSetting(HideUnwatchedIconsMovies)] | Skin.HasSetting(HideUnwatchedIconsGlobal)]]</visible>
 			</control>
 			<control type="image">
 				<posx>14</posx>
@@ -370,7 +370,7 @@
 				<height>21</height>
 				<posx>13</posx>
 				<posy>196</posy>
-				<visible>![Skin.HasSetting(disableOverlayIMDB) + Skin.HasSetting(HideUnwatchedIconsMovies)]</visible>
+				<visible>![Skin.HasSetting(disableOverlayIMDB) + [[Container.PlexContent(Movies) + Skin.HasSetting(HideUnwatchedIconsMovies)] | Skin.HasSetting(HideUnwatchedIconsGlobal)]]</visible>
 			</control>
 			<control type="image">
 				<posx>14</posx>
@@ -578,7 +578,7 @@
 				<height>24</height>
 				<posx>13</posx>
 				<posy>257</posy>
-				<visible>![Skin.HasSetting(disableOverlayIMDB) + Skin.HasSetting(HideUnwatchedIconsMovies)]</visible>
+				<visible>![Skin.HasSetting(disableOverlayIMDB) + [[Container.PlexContent(Movies) + Skin.HasSetting(HideUnwatchedIconsMovies)] | Skin.HasSetting(HideUnwatchedIconsGlobal)]]</visible>
 			</control>
 			<control type="image">
 				<posx>17</posx>
@@ -633,7 +633,7 @@
 				<height>24</height>
 				<posx>13</posx>
 				<posy>294</posy>		
-				<visible>![Skin.HasSetting(disableOverlayIMDB) + Skin.HasSetting(HideUnwatchedIconsMovies)]</visible>
+				<visible>![Skin.HasSetting(disableOverlayIMDB) + [[Container.PlexContent(Movies) + Skin.HasSetting(HideUnwatchedIconsMovies)] | Skin.HasSetting(HideUnwatchedIconsGlobal)]]</visible>
 			</control>
 			<control type="image">
 				<posx>17</posx>
