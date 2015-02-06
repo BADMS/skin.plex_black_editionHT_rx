@@ -772,7 +772,7 @@
 					<width>514</width>
 					<aspectratio scalediffuse="false" align="center">keep</aspectratio>
 					<texture background="true">$INFO[ListItem.Art(banner)]</texture>
-					<fadetime>1000</fadetime>
+					<fadetime>200</fadetime>
 				</control>
 				<control type="image">
 					<visible>Skin.HasSetting(ShowTVClearart)</visible>
@@ -782,7 +782,7 @@
 					<height>88</height>
 					<aspectratio scalediffuse="false" align="center">keep</aspectratio>
 					<texture background="true">tvlogos/$INFO[Container.SecondTitle].png</texture>
-					<fadetime>1000</fadetime>
+					<fadetime>200</fadetime>
 				</control>
 			</control>
 			<!-- main list -->

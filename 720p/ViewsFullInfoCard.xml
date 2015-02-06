@@ -446,7 +446,7 @@
 					<height>80</height>
 					<aspectratio scalediffuse="false" align="center">scale</aspectratio>
 					<texture background="true">$INFO[ListItem.Art(banner)]</texture>
-					<fadetime>1000</fadetime>
+					<fadetime>300</fadetime>
 				</control>
 				<control type="image">
 					<visible>Container.Content(TVShows) + Skin.HasSetting(ShowTVClearart)</visible>
@@ -456,7 +456,7 @@
 					<height>80</height>
 					<aspectratio scalediffuse="false" align="center">keep</aspectratio>
 					<texture background="true">tvlogos/$INFO[ListItem.Title].png</texture>
-					<fadetime>1000</fadetime>
+					<fadetime>300</fadetime>
 				</control>
 				<control type="image">
 					<visible>Container.PlexContent(Movies) + Skin.HasSetting(ShowMovieClearart)</visible>
@@ -466,7 +466,7 @@
 					<height>80</height>
 					<aspectratio scalediffuse="false" align="center">keep</aspectratio>
 					<texture background="true">movielogos/$INFO[ListItem.Title].png</texture>
-					<fadetime>1000</fadetime>
+					<fadetime>300</fadetime>
 				</control>
 				<control type="image">
 					<visible>Container.PlexContent(Movies) + Skin.HasSetting(ShowMovieBanner)</visible>
@@ -476,7 +476,7 @@
 					<height>80</height>
 					<aspectratio scalediffuse="false" align="center">scale</aspectratio>
 					<texture background="true">movielogos/$INFO[ListItem.Title].jpg</texture>
-					<fadetime>1000</fadetime>
+					<fadetime>300</fadetime>
 				</control>
 			</control>
 		</control>
