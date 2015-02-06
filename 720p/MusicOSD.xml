@@ -2,7 +2,7 @@
 <window id="120">
 	<defaultcontrol always="true">711</defaultcontrol>
 	<controls>
-		<include condition="Skin.HasSetting(ShowPausedInfos)+Player.Paused">AudioPresentation</include>
+		<include>AudioPresentation</include>
 		<control type="group">
 			<animation effect="slide" end="0,30" time="0" condition="Skin.String(AspectRatio,16:10)">Conditional</animation>
 			<visible>![Window.IsActive(OSDVideoSettings) | Window.IsActive(OSDAudioSettings)]</visible>

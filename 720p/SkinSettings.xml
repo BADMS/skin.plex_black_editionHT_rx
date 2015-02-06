@@ -455,16 +455,16 @@
 						<width>625</width>
 						<label>Darker Homescreen Background Overlay</label>
 						<onclick>Skin.ToggleSetting(DarkerBG)</onclick>
+						<onclick>Skin.reset(BrighterBG)</onclick>
 						<selected>Skin.HasSetting(DarkerBG)</selected>
-						<enable>!Skin.HasSetting(BrighterBG)</enable>
 					</control>
 					<control type="radiobutton" id="213">
 						<description>Brighter Backgrounds</description>
 						<width>625</width>
 						<label>Brighter Homescreen Background Overlay</label>
 						<onclick>Skin.ToggleSetting(BrighterBG)</onclick>
+						<onclick>Skin.reset(DarkerBG)</onclick>
 						<selected>Skin.HasSetting(BrighterBG)</selected>
-						<enable>!Skin.HasSetting(DarkerBG)</enable>
 					</control>
 					<control type="radiobutton" id="220">
 						<width>625</width>

@@ -213,7 +213,7 @@
 	<!-- DialogFullScreenInfo.xml -->
 	<include name="VideoPresentation">
 		<control type="group">
-			<visible>!Window.IsVisible(2901) | Skin.HasSetting(ShowPausedInfos)</visible>
+			<visible>Skin.HasSetting(ShowPausedInfos)</visible>
 			<control type="group">
 				<posx>0</posx>
 				<posy>524</posy>
@@ -330,8 +330,8 @@
 		</control>
 	</include>
 	<include name="AudioPresentation">
-		<visible>Skin.HasSetting(ShowPausedInfos)</visible>
 		<control type="group">
+			<visible>Skin.HasSetting(ShowPausedInfos)</visible>
 			<control type="group">
 				<posx>0</posx>
 				<posy>529</posy>
@@ -1027,7 +1027,7 @@
 			</control>
 			<control type="group">
 				<posy>-660</posy>
-				<include condition="Skin.HasSetting(ShowPausedInfos)+Player.Paused">VideoPresentation</include>
+				<include>VideoPresentation</include>
 			</control>
 		</control>
 	</include>
