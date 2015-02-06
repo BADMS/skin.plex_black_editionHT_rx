@@ -24,4 +24,5 @@
 	<include file="ViewsPlayQueue.xml"/>
 	<include file="ViewsPlayListSelection.xml"/>
 	<include file="ViewsMovieTV.xml"/>
+	<include file="ViewsUserSwitchLogin.xml"/>
 </includes>
