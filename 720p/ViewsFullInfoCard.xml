@@ -197,8 +197,8 @@
 		<value condition="IsEmpty(VideoPlayer.Plot)]">NoPlotDefault</value>
 	</variable>
 	<variable name="ListItemOverlay">
+		<value condition="!ListItem.Status(Unwatched) + !ListItem.Status(InProgress) + ![[Container.PlexContent(Movies) + Skin.HasSetting(HideUnwatchedIconsMovies)] | Skin.HasSetting(HideUnwatchedIconsGlobal)]">candy/overlaywatched.png</value>
 		<value condition="[ListItem.Status(Unwatched) | ListItem.Status(InProgress)] + ![[Container.PlexContent(Movies) + Skin.HasSetting(HideUnwatchedIconsMovies)] | Skin.HasSetting(HideUnwatchedIconsGlobal)]">$INFO[ListItem.Overlay]</value>
-		<value condition="!ListItem.Status(Unwatched) + !ListItem.Status(InProgress) + ![[Container.PlexContent(Movies) + Skin.HasSetting(HideUnwatchedIconsMovies)] | Skin.HasSetting(HideUnwatchedIconsGlobal])">candy/overlaywatched.png</value>
 	</variable>
 	<variable name="ListItemVideoPreview">
 		<value condition="!ListItem.Type(episode)">$INFO[ListItem.Art(thumb)]</value>
