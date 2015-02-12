@@ -35,7 +35,7 @@
 		<width>985</width>
 	</include>
 	<include name="HomeListWidthSlide">
-		<width>1163</width>
+		<width>1280</width>
 	</include>
 	<include name="HomeListWidthQueue">
 		<width>1015</width>
@@ -2030,7 +2030,6 @@
 				<visible>true</visible>
 				<posx>0</posx>
 				<posy>13</posy>
-				<width>1280</width>
 				<height>720</height>
 				<ondown>-</ondown>
 				<onup>-</onup>
@@ -2078,9 +2077,9 @@
 						</control>
 					</control>
 					<height>230</height>
-					<control type="fixedlist" id="11002">
+					<control type="panel" id="11002">
 						<visible allowhiddenfocus="false">false</visible>
-						<orientation>horizontal</orientation>
+						<orientation>vertical</orientation>
 						<ondown>300</ondown>
 						<onup>300</onup>
 						<onright>-</onright>
@@ -2088,7 +2087,7 @@
 						<posx>2</posx>
 						<posy>106</posy>
 						<include>HomeListWidthSlide</include>
-						<height>400</height>
+						<height>720</height>
 						<itemlayout width="167" height="230">
 							<!-- channel -->
 							<control type="group">
@@ -2121,7 +2120,6 @@
 				<visible>true</visible>
 				<posx>0</posx>
 				<posy>13</posy>
-				<width>1280</width>
 				<height>720</height>
 				<ondown>300</ondown>
 				<onup>300</onup>
@@ -2130,7 +2128,7 @@
 				<orientation>vertical</orientation>
 				<!-- All (11005) -->
 				<control type="group" id="7005">
-					<height>230</height>
+					<height>720</height>
 					<!-- title BG + Arrow when only this list is visible-->
 					<control type="group">
 						<posy>72</posy>
@@ -2169,9 +2167,9 @@
 							<visible>ControlGroup(7005).HasFocus</visible>
 						</control>
 					</control>
-					<control type="fixedlist" id="11005">
+					<control type="panel" id="11005">
 						<visible allowhiddenfocus="false">false</visible>
-						<orientation>horizontal</orientation>
+						<orientation>vertical</orientation>
 						<ondown>300</ondown>
 						<onup>300</onup>
 						<onright>-</onright>
@@ -2179,7 +2177,7 @@
 						<posx>2</posx>
 						<posy>106</posy>
 						<include>HomeListWidthSlide</include>
-						<height>330</height>
+						<height>720</height>
 						<itemlayout width="167" height="330">
 							<control type="group">
 								<animation effect="fade" start="100" end="40" time="0" condition="!ControlGroup(7005).HasFocus + !Skin.HasSetting(NoTransOnDeck)">Conditional</animation>
