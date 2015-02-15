@@ -1371,6 +1371,7 @@
 		</control>
 	</control>
 </include>
+<!-- zombian -->
 <include name="MovieTVPosterWallSelectedBorder">
 	<control type="image">
 		<posx>128</posx>
@@ -1505,6 +1506,7 @@
 		<include>BorderBlack</include>
 	</control>
 </include>
+<!-- zombian -->
 <include name="Animation_CommonFade">
 	<animation effect="fade" start="0" end="100" time="200">WindowOpen</animation>
 	<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
