@@ -1844,7 +1844,6 @@
 							<control type="group">
 								<animation effect="fade" start="100" end="40" time="0" condition="!ControlGroup(7003).HasFocus + !Skin.HasSetting(NoTransOnDeck)">Conditional</animation>
 								<posy>0</posy>
-								<visible>ListItem.Type(clip)</visible>
 								<include>ListItemWideCard</include>
 								<control type="group">
 									<include>ListItemWide</include>
@@ -1859,7 +1858,6 @@
 							<!-- queue -->
 							<control type="group">
 								<posy>0</posy>
-								<visible>ListItem.Type(clip)</visible>
 								<include>ListItemWideCard</include>
 								<include>ListItemWide</include>
 								<include>ListItemWideTitleProvider</include>
@@ -1970,7 +1968,6 @@
 								<visible>Control.IsVisible(11003)</visible>
 								<animation effect="fade" start="100" end="40" time="0" condition="!ControlGroup(7005).HasFocus + !Skin.HasSetting(NoTransOnDeck)">Conditional</animation>
 								<posy>230</posy>
-								<visible>ListItem.Type(clip)</visible>
 								<include>ListItemWideCard</include>
 								<control type="group">
 									<include>ListItemWide</include>
@@ -1999,7 +1996,6 @@
 							<control type="group">
 								<visible>Control.IsVisible(11003)</visible>
 								<posy>230</posy>
-								<visible>ListItem.Type(clip)</visible>
 								<include>ListItemWideCard</include>
 								<control type="group">
 									<include>ListItemWide</include>
