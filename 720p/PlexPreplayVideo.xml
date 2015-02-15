@@ -4,6 +4,7 @@
 	<onload condition="Window.Previous(videolibrary)">Skin.SetString(preplay_helper,videolibrary)</onload>
 	<onload condition="Window.Previous(51)">Skin.SetString(preplay_helper,51)</onload>
 	<onload condition="Window.Previous(99)">Skin.SetString(preplay_helper,99)</onload>
+	<onload condition="Skin.Hassetting(disableEpAutoAdv) + Window.Previous(fullscreenvideo) + ![ListItem.Status(InProgress) | ListItem.Status(UnWatched)]">XBMC.NextItem</onload>
 	<onunload>Skin.Reset(pp_helper)</onunload>
 	<onunload>Skin.Reset(dsp_helper)</onunload>
 	<defaultcontrol always="true">102</defaultcontrol>

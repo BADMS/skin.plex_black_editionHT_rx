@@ -956,16 +956,19 @@
 					<control type="radiobutton" id="421">
 						<description>Disable preplay</description>
 						<width>625</width>
-						<label>Disable TV Preplay/Postplay View</label>
-						<onclick>Skin.ToggleSetting(DisablePreplayTV)</onclick>
-						<selected>Skin.HasSetting(DisablePreplayTV)</selected>
+						<label>Enable TV Postplay Episode Auto Advance</label>
+						<onclick>Skin.ToggleSetting(disableEpAutoAdv)</onclick>
+						<onclick>Skin.Reset(DisablePreplayTV)</onclick>
+						<onclick>Skin.Reset(DisablePreplayEmptyPlot)</onclick>
+						<selected>Skin.HasSetting(disableEpAutoAdv)</selected>
 					</control>
 					<control type="radiobutton" id="422">
 						<description>Disable preplay</description>
 						<width>625</width>
-						<label>Disable Clip Preplay/Postplay View</label>
-						<onclick>Skin.ToggleSetting(DisablePreplayClip)</onclick>
-						<selected>Skin.HasSetting(DisablePreplayClip)</selected>
+						<label>Disable TV Preplay/Postplay View</label>
+						<onclick>Skin.ToggleSetting(DisablePreplayTV)</onclick>
+						<selected>Skin.HasSetting(DisablePreplayTV)</selected>
+						<enable>!Skin.HasSetting(disableEpAutoAdv)</enable>
 					</control>
 					<control type="radiobutton" id="423">
 						<description>Disable preplay</description>
@@ -973,6 +976,14 @@
 						<label>Disable TV Preplay for Empty/Hidden Plots</label>
 						<onclick>Skin.ToggleSetting(DisablePreplayEmptyPlot)</onclick>
 						<selected>Skin.HasSetting(DisablePreplayEmptyPlot)</selected>
+						<enable>!Skin.HasSetting(disableEpAutoAdv)</enable>
+					</control>
+					<control type="radiobutton" id="424">
+						<description>Disable preplay</description>
+						<width>625</width>
+						<label>Disable Clip Preplay/Postplay View</label>
+						<onclick>Skin.ToggleSetting(DisablePreplayClip)</onclick>
+						<selected>Skin.HasSetting(DisablePreplayClip)</selected>
 					</control>
 				</control>
 				<!-- Scrollbar -->
