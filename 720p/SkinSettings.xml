@@ -985,6 +985,13 @@
 						<onclick>Skin.ToggleSetting(DisablePreplayClip)</onclick>
 						<selected>Skin.HasSetting(DisablePreplayClip)</selected>
 					</control>
+					<control type="radiobutton" id="425">
+						<description>Disable wall fanart bg</description>
+						<width>625</width>
+						<label>Disable Fanart Background in Wall Fanout</label>
+						<onclick>Skin.ToggleSetting(DisableFanBG)</onclick>
+						<selected>Skin.HasSetting(DisableFanBG)</selected>
+					</control>
 				</control>
 				<!-- Scrollbar -->
 				<control type="scrollbar" id="61">

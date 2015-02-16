@@ -1378,8 +1378,19 @@
 		<posy>0</posy>
 		<width>256</width>
 		<height>180</height>
-		<texture>candy/selected.png</texture>
-		<colordiffuse>black</colordiffuse>
+		<texture background="true">candy/selected.png</texture>
+		<colordiffuse>orange</colordiffuse>
+	</control>
+	<control type="image">
+		<posx>128</posx>
+		<posy>0</posy>
+		<width>256</width>
+		<height>180</height>
+		<texture background="true">$INFO[ListItem.Art(fanart)]</texture>
+		<aspectratio scalediffuse="false" align="center" aligny="top">stretch</aspectratio>
+		<fadetime>300</fadetime>
+		<colordiffuse>orange</colordiffuse>
+		<visible>!Skin.HasSetting(DisableFanBG)</visible>
 	</control>
 	<control type="group">
 		<posx>128</posx>
@@ -1436,7 +1447,7 @@
 		<posy>0</posy>
 		<width>384</width>
 		<height>180</height>
-		<include>BorderBlack</include>
+		<include>Border</include>
 	</control>
 </include>
 <include name="MovieTVPosterWallSelectedBorderLeft">
@@ -1446,7 +1457,18 @@
 		<width>256</width>
 		<height>180</height>
 		<texture>candy/selected.png</texture>
-		<colordiffuse>black</colordiffuse>
+		<colordiffuse>orange</colordiffuse>
+	</control>
+	<control type="image">
+		<posx>-256</posx>
+		<posy>0</posy>
+		<width>256</width>
+		<height>180</height>
+		<texture background="true">$INFO[ListItem.Art(fanart)]</texture>
+		<aspectratio scalediffuse="false" align="center" aligny="top">stretch</aspectratio>
+		<fadetime>300</fadetime>
+		<colordiffuse>orange</colordiffuse>
+		<visible>!Skin.HasSetting(DisableFanBG)</visible>
 	</control>
 	<control type="group">
 		<posx>-256</posx>
@@ -1503,7 +1525,7 @@
 		<posy>0</posy>
 		<width>384</width>
 		<height>180</height>
-		<include>BorderBlack</include>
+		<include>Border</include>
 	</control>
 </include>
 <!-- zombian -->
