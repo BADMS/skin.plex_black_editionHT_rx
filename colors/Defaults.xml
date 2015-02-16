@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
 <colors>
+	<color name="border">FFe6b83c</color>
 	<color name="orange">FFe6b83c</color>
 	<color name="orangeLight">FFe6b83c</color>
 	<color name="Selected">FFe6b83c</color>

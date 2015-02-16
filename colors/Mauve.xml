@@ -1,8 +1,9 @@
 <?xml version="1.0"?>
 <colors>
-	<color name="orange">FF5A18C3</color>
-	<color name="orangeLight">FF5A18C3</color>
-	<color name="Selected">FF5A18C3</color>
+	<color name="border">FF5A18C3</color>
+	<color name="orange">FFe6b83c</color>
+	<color name="orangeLight">FFe6b83c</color>
+	<color name="Selected">FFe6b83c</color>
 	
 	<color name="greyLight">FFa5a4a4</color>
 	<color name="greyLighter">FFbfbdbd</color>

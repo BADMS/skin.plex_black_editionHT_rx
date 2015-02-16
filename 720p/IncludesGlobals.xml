@@ -53,7 +53,7 @@
 		<posy>10</posy>
 		<texture>transparent.png</texture>
 		<bordertexture border="10">border.png</bordertexture>
-		<colordiffuse>orange</colordiffuse>
+		<colordiffuse>border</colordiffuse>
 		<bordersize>3</bordersize>
 	</include>
 	<include name="BorderBlack">

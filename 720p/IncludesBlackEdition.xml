@@ -1371,7 +1371,6 @@
 		</control>
 	</control>
 </include>
-<!-- zombian -->
 <include name="MovieTVPosterWallSelectedBorder">
 	<control type="image">
 		<posx>128</posx>
@@ -1379,7 +1378,7 @@
 		<width>256</width>
 		<height>180</height>
 		<texture background="true">candy/selected.png</texture>
-		<colordiffuse>orange</colordiffuse>
+		<colordiffuse>border</colordiffuse>
 	</control>
 	<control type="image">
 		<posx>128</posx>
@@ -1389,7 +1388,7 @@
 		<texture background="true">$INFO[ListItem.Art(fanart)]</texture>
 		<aspectratio scalediffuse="false" align="center" aligny="top">stretch</aspectratio>
 		<fadetime>300</fadetime>
-		<colordiffuse>orange</colordiffuse>
+		<colordiffuse>border</colordiffuse>
 		<visible>!Skin.HasSetting(DisableFanBG)</visible>
 	</control>
 	<control type="group">
@@ -1457,7 +1456,7 @@
 		<width>256</width>
 		<height>180</height>
 		<texture>candy/selected.png</texture>
-		<colordiffuse>orange</colordiffuse>
+		<colordiffuse>border</colordiffuse>
 	</control>
 	<control type="image">
 		<posx>-256</posx>
@@ -1467,7 +1466,7 @@
 		<texture background="true">$INFO[ListItem.Art(fanart)]</texture>
 		<aspectratio scalediffuse="false" align="center" aligny="top">stretch</aspectratio>
 		<fadetime>300</fadetime>
-		<colordiffuse>orange</colordiffuse>
+		<colordiffuse>border</colordiffuse>
 		<visible>!Skin.HasSetting(DisableFanBG)</visible>
 	</control>
 	<control type="group">
@@ -1528,7 +1527,6 @@
 		<include>Border</include>
 	</control>
 </include>
-<!-- zombian -->
 <include name="Animation_CommonFade">
 	<animation effect="fade" start="0" end="100" time="200">WindowOpen</animation>
 	<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
