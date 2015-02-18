@@ -30,7 +30,6 @@
 		<include>MediaPreview</include>
 		<include>MediaPreviewTV</include>
 		<include>view_bottomPoster</include>
-		<include>ListBE</include>
 		<!-- Clips ID 80 -->
 		<include>ClipThumbs</include>
 		<!-- PreplayShow ID 60 -->

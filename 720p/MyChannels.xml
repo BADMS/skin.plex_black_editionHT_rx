@@ -14,7 +14,6 @@
 		<!-- views (ViewsChannels.xml) -->
 		<!-- Channels ID 70 -->
 		<include>Channels</include>
-		<include>ListBE</include>
 		<include>bottomList</include>
 		<!-- Scroll Offset -->
 		<include>scrollOffset</include>
