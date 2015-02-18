@@ -1528,6 +1528,61 @@
 			<width>236</width>
 			<fadetime>300</fadetime>
 		</control>
+		<control type="group">
+		<visible>!skin.hassetting(disableWallPlot)</visible>
+		<control type="label">
+			<posx>10</posx>
+			<posy>10</posy>
+			<description>Movie Title</description>
+			<width>236</width>
+			<height>26</height>
+			<align>left</align>
+			<label>$INFO[ListItem.Label]$INFO[ListItem.Year, &#xB7; ]</label>
+			<font>Regular-24</font>
+			<scroll>true</scroll>
+			<fadetime>300</fadetime>
+		</control>
+		<control type="label">
+			<description>Duration</description>
+			<posx>10</posx>
+			<posy>40</posy>
+			<label fallback="31047">$INFO[Listitem.duration,,mins ]$INFO[Listitem.Rating, &#xB7; ,/10]</label>
+			<align>left</align>
+			<aligny>center</aligny>
+			<height>30</height>
+			<font>smallCaps</font>
+			<width>236</width>
+			<fadetime>300</fadetime>
+		</control>
+		</control>
+		<control type="group">
+		<visible>skin.hassetting(disableWallPlot)</visible>
+			<posy>104</posy>
+		<control type="label">
+			<posx>10</posx>
+			<posy>10</posy>
+			<description>Movie Title</description>
+			<width>236</width>
+			<height>26</height>
+			<align>left</align>
+			<label>$INFO[ListItem.Label]$INFO[ListItem.Year, &#xB7; ]</label>
+			<font>Regular-24</font>
+			<scroll>true</scroll>
+			<fadetime>300</fadetime>
+		</control>
+		<control type="label">
+			<description>Duration</description>
+			<posx>10</posx>
+			<posy>40</posy>
+			<label fallback="31047">$INFO[Listitem.duration,,mins ]$INFO[Listitem.Rating, &#xB7; ,/10]</label>
+			<align>left</align>
+			<aligny>center</aligny>
+			<height>30</height>
+			<font>smallCaps</font>
+			<width>236</width>
+			<fadetime>300</fadetime>
+		</control>
+		</control>
 		<control type="textbox">
 			<posx>10</posx>
 			<posy>70</posy>
@@ -1537,6 +1592,7 @@
 			<label>$INFO[Listitem.PlotOutline]</label>
 			<autoscroll delay="5000" time="1000" repeat="3000"/>
 			<fadetime>300</fadetime>
+			<visible>!skin.hassetting(disableWallPlot)</visible>
 		</control>
 	</control>
 	<!--<control type="group">
