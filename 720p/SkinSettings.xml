@@ -992,6 +992,13 @@
 						<onclick>Skin.ToggleSetting(DisableFanBG)</onclick>
 						<selected>Skin.HasSetting(DisableFanBG)</selected>
 					</control>
+					<control type="radiobutton" id="426">
+						<description>Disable wall plot</description>
+						<width>625</width>
+						<label>Disable Plot in Wall Fanout</label>
+						<onclick>Skin.ToggleSetting(disableWallPlot)</onclick>
+						<selected>Skin.HasSetting(disableWallPlot)</selected>
+					</control>
 				</control>
 				<!-- Scrollbar -->
 				<control type="scrollbar" id="61">
