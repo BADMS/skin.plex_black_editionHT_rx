@@ -1425,6 +1425,7 @@
 			<font>Regular-18</font>
 			<label>$INFO[Listitem.PlotOutline]</label>
 			<fadetime>300</fadetime>
+			<autoscroll delay="5000" time="1000" repeat="3000"/>
 		</control>
 	</control>
 	<!--<control type="group">
@@ -1502,6 +1503,7 @@
 			<height>98</height>
 			<font>Regular-18</font>
 			<label>$INFO[Listitem.PlotOutline]</label>
+			<autoscroll delay="5000" time="1000" repeat="3000"/>
 			<fadetime>300</fadetime>
 		</control>
 	</control>

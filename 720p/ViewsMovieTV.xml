@@ -238,14 +238,12 @@
 					<control type="group">
 						<animation effect="fade" start="75" end="75" condition="Skin.HasSetting(FadeoutUnfocusedThumb)">Conditional</animation>
 						<include>MovieTVPosterWall</include>
-						<include>MovieTVPosterWallUnwatchedOverlay</include>
 					</control>
 				</itemlayout>
 				<focusedlayout condition="!Container.Column(8) + !Container.Column(9)" width="128" height="180">
 					<control type="group">
 						<include>MovieTVPosterWall</include>
 						<animation effect="zoom" start="100" end="103" center="84,120" time="300">Focus</animation>
-						<include>MovieTVPosterWallUnwatchedOverlay</include>
 						<include>MovieTVPosterWallSelectedBorder</include>
 					</control>
 				</focusedlayout>
@@ -253,7 +251,6 @@
 					<control type="group">
 						<include>MovieTVPosterWall</include>
 						<animation effect="zoom" start="100" end="103" center="84,120" time="300">Focus</animation>
-						<include>MovieTVPosterWallUnwatchedOverlay</include>
 						<include>MovieTVPosterWallSelectedBorderLeft</include>
 					</control>
 				</focusedlayout>
@@ -261,7 +258,6 @@
 					<control type="group">
 						<include>MovieTVPosterWall</include>
 						<animation effect="zoom" start="100" end="103" center="84,120" time="300">Focus</animation>
-						<include>MovieTVPosterWallUnwatchedOverlay</include>
 						<include>MovieTVPosterWallSelectedBorderLeft</include>
 					</control>
 				</focusedlayout>
