@@ -184,11 +184,13 @@
 	</include>
 	<variable name="ListItemFullInfoPlot">
 		<value condition="Container.PlexContent(Channel)">$INFO[ListItem.Plot]</value>
+		<value condition="Container.PlexContent(Seasons) + IsEmpty(ListItem.Plot)">$INFO[Container.ShowPlot]</value>
 		<value condition="!ListItem.Type(episode)">$INFO[ListItem.Plot]</value>
 		<value condition="ListItem.Type(episode) + [ListItem.Status(Watched) | [!Skin.HasSetting(HidePlotForUnwatched) + [ListItem.Status(InProgress) | ListItem.Status(UnWatched)]]]">$INFO[ListItem.Plot]</value>
 		<value condition="[Container.PlexContent(Episodes) + !IsEmpty(Container.Property(primaryFilterActivated))] + [ListItem.Status(Watched) | [!Skin.HasSetting(HidePlotForUnwatched) + [ListItem.Status(InProgress) | ListItem.Status(UnWatched)]]]">$INFO[ListItem.Plot]</value>
 		<value condition="ListItem.Type(episode) + [Skin.HasSetting(HidePlotForUnwatched) + [ListItem.Status(InProgress) | ListItem.Status(UnWatched)] + !IsEmpty(ListItem.Plot)]">$LOCALIZE[32105]</value>
-		<value condition="IsEmpty(ListItem.Plot)]">NoPlotDefault</value>
+		<value condition="IsEmpty(ListItem.Plot)">NoPlotDefault</value>
+		<value condition="IsEmpty(ListItem.Plot) + IsEmpty(Container.ShowPlot)">NoPlotDefault</value>
 	</variable>
 	<variable name="ListItemFullInfoPlotOSD">
 		<value condition="IsEmpty(VideoPlayer.TVShowTitle)">$INFO[VideoPlayer.Plot]</value>

@@ -1198,18 +1198,6 @@
 					<height>160</height>
 					<label>$VAR[ListItemFullInfoPlot]</label>
 					<font>descriptionSmall</font>
-					<visible>!IsEmpty(ListItem.Plot)</visible>
-				</control>
-				<!-- plot Seasons -->
-				<control type="textbox">
-					<description>Plot/Details</description>
-					<posy>530</posy>
-					<posx>311</posx>
-					<width>393</width>
-					<height>160</height>
-					<label>$INFO[Container.ShowPlot]</label>
-					<font>descriptionSmall</font>
-					<visible>Container.PlexContent(Seasons)</visible>
 				</control>
 				<control type="textbox">
 					<posy>530</posy>
