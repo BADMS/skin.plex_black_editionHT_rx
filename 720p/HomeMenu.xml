@@ -546,12 +546,6 @@
 						<onclick>Plex.UpdateAndRestart</onclick>
 						<visible>System.UpdateIsAvailable</visible>
 					</item>
-                    <item id="115">
-                        <description>my channel</description>
-                        <label>YTMV</label>
-						<onclick>Skin.SetString(dsp_helper,1)</onclick>
-                        <onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://be947b30de7253a24261cb4fc15db35684dffb09/video/youtube/parsefeed?url=http%3A%2F%2Fgdata.youtube.com%2Ffeeds%2Fapi%2Fstandardfeeds%2FREGIONID%2Fmost_viewed%3Ftime%3Dtoday&title=Most+Viewed,return)</onclick>
-                    </item> 
 					</content>
 			</control>
 		</control>
