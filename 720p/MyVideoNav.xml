@@ -10,6 +10,7 @@
 	<!-- <onload>SendClick(101)</onload> -->
 	<onunload>SetFocus(777)</onunload>
 	<onunload>Skin.Reset(SectionType)</onunload>
+	<onunload>Skin.Reset(dsp_helper)</onunload>
 	<controls>
 		<!-- bg's (Backgrounds.xml) -->
 		<include>BGBlackEdition</include>
