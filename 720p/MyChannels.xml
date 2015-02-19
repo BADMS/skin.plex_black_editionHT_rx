@@ -4,6 +4,7 @@
 	<views>70,563,5555</views>
 	<allowoverlay>yes</allowoverlay>
 	<onload>Skin.SetString(SectionType,channels)</onload>
+	<onload condition="skin.string(dsp_helper,1)">parentdir</onload>
 	<onunload>SetFocus(777)</onunload>
 	<onunload>Skin.Reset(SectionType)</onunload>
 	<controls>
