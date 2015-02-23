@@ -561,7 +561,7 @@
 			<!-- generic autopopulated fanart slideshow -->
 			<visible>!Skin.HasSetting(HideFanart)</visible>
 			<control type="multiimage" id="10101">
-				<visible>isEmpty(Skin.String(HomeBGMulti)) + !Container(300).hasFocus(560) + !Container(300).hasFocus(561) + !Container(300).hasFocus(562) + !Container(300).hasFocus(563) + !Container(300).hasFocus(564) + !Container(300).hasFocus(565)</visible>
+				<visible>isEmpty(Skin.String(HomeBGMulti)) + !Container(300).hasFocus(560) + !Container(300).hasFocus(561) + !Container(300).hasFocus(562) + !Container(300).hasFocus(563) + !Container(300).hasFocus(564) + !Container(300).hasFocus(565) + !Container(300).hasFocus(566) + !Container(300).hasFocus(567) + !Container(300).hasFocus(568)</visible>
 				<include>FullScreenScaled</include>
 				<timeperimage>8000</timeperimage>
 				<fadetime>1000</fadetime>
@@ -572,6 +572,7 @@
 				<animation type="WindowClose">
 					<effect type="fade" start="100" end="0" time="800"/>
 				</animation>
+				<visible>!skin.hassetting(enableImagePerType)</visible>
 			</control>
 			<control type="largeimage">
 				<include condition="Skin.HasSetting(List1_Kenburns)">BGHomeList</include>
@@ -704,6 +705,7 @@
 			<animation effect="fade" start="0" end="30" time="400" condition="Skin.HasSetting(HomeBGSingleOverlay30)">Conditional</animation>
 			<animation effect="fade" start="0" end="40" time="400" condition="Skin.HasSetting(HomeBGSingleOverlay40)">Conditional</animation>
 			<animation effect="fade" start="0" end="50" time="400" condition="Skin.HasSetting(HomeBGSingleOverlay50)">Conditional</animation>
+			<visible>!skin.hassetting(enableImagePerType)</visible>
 		</control>
 		<!-- Custom Multi -->
 		<control type="multiimage">
@@ -720,11 +722,27 @@
 				<effect type="fade" start="100" end="0" time="800"/>
 			</animation>
 			<visible>isEmpty(Skin.String(HomeBGSingle)) + !isEmpty(Skin.String(HomeBGMulti))</visible>
+			<visible>!skin.hassetting(enableImagePerType)</visible>
+		</control>
+		<!-- Custom Multi Per Item -->
+		<control type="image">
+			<visible>![Player.HasVideo + Skin.HasSetting(PIPFull)]</visible>
+			<visible>skin.hassetting(enableImagePerType)</visible>
+			<visible>!Container(300).hasFocus(560) + !Container(300).hasFocus(561) + !Container(300).hasFocus(562) + !Container(300).hasFocus(563) + !Container(300).hasFocus(564) + !Container(300).hasFocus(565) + !Container(300).hasFocus(566) + !Container(300).hasFocus(567) + !Container(300).hasFocus(568)</visible>
+			<include>FullScreenScaled</include>
+			<texture>$VAR[imagePerType]</texture>
+			<fadetime>1000</fadetime>
+			<include condition="Skin.HasSetting(List1_Kenburns)">background_kenburns</include>
+			<animation effect="fade" start="100" end="0" time="400" condition="ControlGroup(5000).HasFocus">Conditional</animation>
+			<animation type="WindowClose">
+				<effect type="fade" start="100" end="0" time="800"/>
+			</animation>
 		</control>
 		<include condition="Skin.HasSetting(List1_Grain) + ![Player.HasVideo + Skin.HasSetting(PIPFull)]">BGGrainy</include>
 	</include>
 	<include name="SlideshowDimmed">
 		<control type="multiimage">
+			<visible>!skin.hassetting(enableImagePerType)</visible>
 			<visible>!Skin.HasSetting(HideFanart)</visible>
 			<include>FullScreenScaled</include>
 			<timeperimage>8000</timeperimage>

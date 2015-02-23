@@ -56,6 +56,15 @@
 		<colordiffuse>border</colordiffuse>
 		<bordersize>3</bordersize>
 	</include>
+	<include name="BorderNF">
+		<!-- BORDER: add 6px in width and height when applied -->
+		<posx>0</posx>
+		<posy>0</posy>
+		<texture>transparent.png</texture>
+		<bordertexture border="10">border.png</bordertexture>
+		<colordiffuse>border</colordiffuse>
+		<bordersize>3</bordersize>
+	</include>
 	<include name="BorderBlack">
 		<posx>10</posx>
 		<posy>10</posy>

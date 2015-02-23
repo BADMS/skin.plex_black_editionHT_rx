@@ -588,6 +588,13 @@
 						<label> - Reset</label>
 						<onclick>Skin.Reset(BGSharedContent)</onclick>	
 					</control>
+					<control type="radiobutton" id="228">
+						<description>Custom Type Content Images</description>
+						<width>625</width>
+						<label>Section Type Background Fanart</label>
+						<onclick>Skin.ToggleSetting(enableImagePerType)</onclick>
+						<selected>Skin.HasSetting(enableImagePerType)</selected>
+					</control>
 				</control>
 				<!-- Channel Screen Options-->
 				<control type="grouplist" id="204">
@@ -986,18 +993,27 @@
 						<selected>Skin.HasSetting(DisablePreplayClip)</selected>
 					</control>
 					<control type="radiobutton" id="425">
+						<description>Disable wall fanout</description>
+						<width>625</width>
+						<label>Disable Wall Fanout</label>
+						<onclick>Skin.ToggleSetting(DisableFanout)</onclick>
+						<selected>Skin.HasSetting(DisableFanout)</selected>
+					</control>
+					<control type="radiobutton" id="426">
 						<description>Disable wall fanart bg</description>
 						<width>625</width>
 						<label>Disable Fanart Background in Wall Fanout</label>
 						<onclick>Skin.ToggleSetting(DisableFanBG)</onclick>
 						<selected>Skin.HasSetting(DisableFanBG)</selected>
+						<enable>!Skin.HasSetting(DisableFanout)</enable>
 					</control>
-					<control type="radiobutton" id="426">
+					<control type="radiobutton" id="427">
 						<description>Disable wall plot</description>
 						<width>625</width>
 						<label>Disable Plot in Wall Fanout</label>
 						<onclick>Skin.ToggleSetting(disableWallPlot)</onclick>
 						<selected>Skin.HasSetting(disableWallPlot)</selected>
+						<enable>!Skin.HasSetting(DisableFanout)</enable>
 					</control>
 				</control>
 				<!-- Scrollbar -->

@@ -171,56 +171,10 @@
 	</include>
 	<include name="LibraryPostersWall">
 		<!-- Library Movies & TV Shows -->
-		<control type="group">
-			<include>BGFanart</include>
-			<visible>!Skin.String(557_Dim,100)</visible>
-			<visible>Control.IsVisible(557)</visible>
-		</control>
 		<control type="group" id="777">
 			<include>FadeDialog</include>
 			<visible>!Container.PlexContent(Secondary) + [Container.PlexContent(Movies) | Container.PlexContent(TVShows) | Container.PlexContent(Seasons) | Container.PlexContent(HomeMovies)]</visible>
 			<include>rightSideSlide</include>
-			<!--BG Dim-->		
-			<control type="group">
-				<visible>Control.IsVisible(557)</visible>
-				<visible>!Skin.String(557_Dim,100)</visible>
-				<control type="group">
-					<visible>Skin.String(557_Dim,10)</visible>
-					<include>BGDim10</include>
-				</control>
-				<control type="group">
-					<visible>Skin.String(557_Dim,20)</visible>
-					<include>BGDim20</include>
-				</control>
-				<control type="group">
-					<visible>Skin.String(557_Dim,30)</visible>
-					<include>BGDim30</include>
-				</control>
-				<control type="group">
-					<visible>Skin.String(557_Dim,40)</visible>
-					<include>BGDim40</include>
-				</control>
-				<control type="group">
-					<visible>Skin.String(557_Dim,50)</visible>
-					<include>BGDim50</include>
-				</control>
-				<control type="group">
-					<visible>Skin.String(557_Dim,60) | IsEmpty(Skin.String(557_Dim))</visible>
-					<include>BGDim60</include>
-				</control>
-				<control type="group">
-					<visible>Skin.String(557_Dim,70)</visible>
-					<include>BGDim70</include>
-				</control>
-				<control type="group">
-					<visible>Skin.String(557_Dim,80)</visible>
-					<include>BGDim80</include>
-				</control>
-				<control type="group">
-					<visible>Skin.String(557_Dim,90)</visible>
-					<include>BGDim90</include>
-				</control>
-			</control>
 			<control type="panel" id="557">
 				<visible>!Container.PlexContent(Secondary) + [Container.PlexContent(Movies) | Container.PlexContent(TVShows) | Container.PlexContent(Seasons) | Container.PlexContent(HomeMovies)]</visible>
 				<viewtype label="Wall">panel</viewtype>
@@ -236,29 +190,32 @@
 				<height>720</height>
 				<itemlayout width="128" height="180">
 					<control type="group">
-						<animation effect="fade" start="75" end="75" condition="Skin.HasSetting(FadeoutUnfocusedThumb)">Conditional</animation>
+						<animation effect="fade" start="65" end="65" condition="Skin.HasSetting(FadeoutUnfocusedThumb)">Conditional</animation>
 						<include>MovieTVPosterWall</include>
 					</control>
 				</itemlayout>
 				<focusedlayout condition="!Container.Column(8) + !Container.Column(9)" width="128" height="180">
 					<control type="group">
 						<include>MovieTVPosterWall</include>
-						<animation effect="zoom" start="100" end="103" center="84,120" time="300">Focus</animation>
-						<include>MovieTVPosterWallSelectedBorder</include>
+						<animation effect="zoom" start="100" end="103" center="64,90" time="300">Focus</animation>
+						<include condition="!Skin.HasSetting(DisableFanout)">MovieTVPosterWallSelectedBorder</include>
+						<include condition="Skin.HasSetting(DisableFanout)">MovieTVPosterWallSelectedBorderNF</include>
 					</control>
 				</focusedlayout>
 				<focusedlayout condition="Container.Column(8)" width="128" height="180">
 					<control type="group">
 						<include>MovieTVPosterWall</include>
-						<animation effect="zoom" start="100" end="103" center="84,120" time="300">Focus</animation>
-						<include>MovieTVPosterWallSelectedBorderLeft</include>
+						<animation effect="zoom" start="100" end="103" center="64,90" time="300">Focus</animation>
+						<include condition="!Skin.HasSetting(DisableFanout)">MovieTVPosterWallSelectedBorderLeft</include>
+						<include condition="Skin.HasSetting(DisableFanout)">MovieTVPosterWallSelectedBorderNF</include>
 					</control>
 				</focusedlayout>
 				<focusedlayout condition="Container.Column(9)" width="128" height="180">
 					<control type="group">
 						<include>MovieTVPosterWall</include>
-						<animation effect="zoom" start="100" end="103" center="84,120" time="300">Focus</animation>
-						<include>MovieTVPosterWallSelectedBorderLeft</include>
+						<animation effect="zoom" start="100" end="103" center="64,90" time="300">Focus</animation>
+						<include condition="!Skin.HasSetting(DisableFanout)">MovieTVPosterWallSelectedBorderLeft</include>
+						<include condition="Skin.HasSetting(DisableFanout)">MovieTVPosterWallSelectedBorderNF</include>
 					</control>
 				</focusedlayout>
 			</control>
