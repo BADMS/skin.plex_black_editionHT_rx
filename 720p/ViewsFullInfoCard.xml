@@ -28,10 +28,13 @@
 		</control>11005
 	</include>11006
 	<variable name="imagePerType">
+		<value condition="stringcompare(Container(300).ListItem(0).Label,Channels)">backgrounds/channeltype.jpg</value>
+		<value condition="stringcompare(Container(300).ListItem(0).Label,Playlists)">backgrounds/listtype.jpg</value>
+		<value condition="stringcompare(Container(300).ListItem(0).Label,Watch Later)">backgrounds/queuetype.jpg</value>
+		<value condition="stringcompare(Container(300).ListItem(0).Label,Shared Content)">backgrounds/sharedtype.jpg</value>
 		<value condition="Container(11000).HasFocus(0) + Container(11000).ListItem(0).Type(album) | !IsEmpty(Container(11000).ListItem(0).Artist)">backgrounds/musictype.jpg</value>
 		<value condition="Container(11000).HasFocus(0) + Container(11000).ListItem(0).Type(episode)">backgrounds/tvtype.jpg</value>
 		<value condition="Container(11000).HasFocus(0) + Container(11000).ListItem(0).Type(movie)">backgrounds/movietype.jpg</value>
-		<value condition="Container(11002).HasFocus(0)">backgrounds/channeltype.jpg</value>
 		<value condition="Container(11000).ListItem(0).Type(clip)">backgrounds/cliptype.jpg</value>
 		<value condition="Container(11000).ListItem(0).Type(photo) | Container(11001).ListItem(0).Type(photo)">backgrounds/phototype.jpg</value>
 		<value>backgrounds/generictype.jpg</value>
