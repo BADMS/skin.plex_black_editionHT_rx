@@ -3,7 +3,7 @@
 	<defaultcontrol always="false">777</defaultcontrol>
 	<views>40,50,51,557,60,61,66,552,553,5531,554,70,71,80,99,5555,58,556,560,563,564</views><!--50,51,61,62,553,-->
 	<allowoverlay>yes</allowoverlay>
-	<onload condition="skin.string(dsp_helper,1)">parentdir</onload>
+	<!--<onload condition="skin.string(dsp_helper,1)">parentdir</onload>-->
 	<onload condition="Container.PlexContent(Movies)">Skin.SetString(SectionType,movies)</onload>
 	<onload condition="Container.PlexContent(TVShows)">Skin.SetString(SectionType,tvshows)</onload>
 	<onload condition="Container.PlexContent(Clips)">Skin.SetString(SectionType,clips)</onload>
