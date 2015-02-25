@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <window id="10094">
 	<defaultcontrol always="true">74,75</defaultcontrol>
-	<views>74,75</views>
+	<views>74,75</views><!--50,51,61,62,553,-->
 	<allowoverlay>yes</allowoverlay>
 	<onload>Skin.SetString(SectionType,playqueue)</onload>
 	<onunload>Skin.Reset(SectionType)</onunload>
@@ -14,12 +14,12 @@
 				<!-- fanart -->
 				<control type="largeimage">
 					<include>FullScreenScaled</include>
-					<texture>$INFO[Player.Art(fanart)]</texture>
+					<texture fallback="$INFO[ListItem.Art(smallThumb)]">$INFO[Player.Art(fanart)]</texture>
 					<visible>Player.HasAudio + !Skin.String(74_Dim,100)</visible>
 				</control>
 				<control type="largeimage">
 					<include>FullScreenScaled</include>
-					<texture>$INFO[ListItem.Art(fanart)]</texture>
+					<texture fallback="$INFO[ListItem.Art(smallThumb)]">$INFO[ListItem.Art(fanart)]</texture>
 					<visible>!Player.HasAudio + !Skin.String(74_Dim,100)</visible>
 				</control>
 				<!-- overlay -->
@@ -869,7 +869,6 @@
 					<control type="group" id="300">
 						<posx>0</posx>
 						<posy>0</posy>
-						<defaultcontrol always="true">711</defaultcontrol>
 						<!-- same artist and/or album -->
 						<animation effect="slide" start="0,0" end="0,294" time="0" condition="[Container.UniformProperty(Artist) | Container.UniformProperty(Album)] | [!MusicPlayer.Offset(1).Exists] | [MusicPlayer.Offset(1).Exists + !MusicPlayer.Offset(2).Exists]">Conditional</animation>
 						<!-- 3 or 6 or 9 covers -->
@@ -898,6 +897,7 @@
 							</control>
 							<control type="group" id="300">
 								<posy>0</posy>
+								<defaultcontrol always="true">711</defaultcontrol>
 								<posx>-50</posx>
 								<!-- repeat -->
 								<control type="group">
@@ -966,17 +966,22 @@
 						<!-- fanart -->
 						<control type="largeimage">
 							<include>FullScreenScaled</include>
-							<texture>$INFO[Player.Art(fanart)]</texture>
+							<texture fallback="$INFO[ListItem.Art(smallThumb)]">$INFO[Player.Art(fanart)]</texture>
 							<visible>Player.HasVideo + !Skin.String(75_Dim,100)</visible>
 						</control>
 						<control type="largeimage">
 							<include>FullScreenScaled</include>
-							<texture>$INFO[ListItem.Art(fanart)]</texture>
+							<texture fallback="$INFO[ListItem.Art(smallThumb)]">$INFO[ListItem.Art(fanart)]</texture>
 							<visible>!Player.HasVideo + !Skin.String(75_Dim,100)</visible>
-						</control>$INFO[ListItem.Art(smallThumb)]
+						</control>
 						<control type="largeimage">
 							<include>FullScreenScaled</include>
-							<texture>$INFO[ListItem.Art(smallThumb)]</texture>
+							<texture fallback="$INFO[ListItem.Art(Thumb)]">$INFO[ListItem.Art(smallThumb)]</texture>
+							<visible>!Player.HasVideo + !Skin.String(75_Dim,100) + isempty(Player.Art(fanart))</visible>
+						</control>
+						<control type="largeimage">
+							<include>FullScreenScaled</include>
+							<texture fallback="$INFO[ListItem.Art(Thumb)]">$INFO[ListItem.Art(smallThumb)]</texture>
 							<visible>ListItem.Type(clip) + !Skin.String(75_Dim,100)</visible>
 						</control>
 						<!-- overlay -->
@@ -1059,7 +1064,7 @@
 							<control type="largeimage">
 								<width>570</width>
 								<height>400</height>
-								<texture>$INFO[Player.Art(fanart)]</texture>
+								<texture fallback="$INFO[ListItem.Art(smallThumb)]">$INFO[Player.Art(fanart)]</texture>
 								<fadetime>400</fadetime>
 								<aspectratio scalediffuse="false" align="center" aligny="top">scale</aspectratio>
 								<visible>!Container.PlexContent(clip) | !Container.PlexContent(clips)</visible>
@@ -1067,7 +1072,7 @@
 							<control type="largeimage">
 								<width>570</width>
 								<height>400</height>
-								<texture>$INFO[Player.Art(thumb)]</texture>
+								<texture fallback="$INFO[ListItem.Art(smallThumb)]">$INFO[Player.Art(thumb)]</texture>
 								<fadetime>400</fadetime>
 								<aspectratio scalediffuse="false" align="center" aligny="top">scale</aspectratio>
 								<visible>Container.PlexContent(clip) | Container.PlexContent(clips)</visible>
@@ -1075,7 +1080,7 @@
 							<control type="largeimage">
 								<width>570</width>
 								<height>400</height>
-								<texture>$INFO[ListItem.Art(fanart)]</texture>
+								<texture fallback="$INFO[ListItem.Art(smallThumb)]">$INFO[ListItem.Art(fanart)]</texture>
 								<fadetime>400</fadetime>
 								<aspectratio scalediffuse="false" align="center" aligny="top">scale</aspectratio>
 								<visible>!Player.HasVideo</visible>
@@ -1084,7 +1089,7 @@
 							<control type="largeimage">
 								<width>570</width>
 								<height>400</height>
-								<texture>$INFO[ListItem.Art(thumb)]</texture>
+								<texture fallback="$INFO[ListItem.Art(smallThumb)]">$INFO[Player.Art(thumb)]</texture>
 								<fadetime>400</fadetime>
 								<aspectratio scalediffuse="false" align="center" aligny="top">scale</aspectratio>
 								<visible>!Player.HasVideo</visible>
