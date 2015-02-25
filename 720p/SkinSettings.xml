@@ -1015,6 +1015,20 @@
 						<selected>Skin.HasSetting(disableWallPlot)</selected>
 						<enable>!Skin.HasSetting(DisableFanout)</enable>
 					</control>
+					<control type="radiobutton" id="428">
+						<description>Enable Watched Fadeout in Wall</description>
+						<width>625</width>
+						<label>Enable Watched Fadeout in Wall</label>
+						<onclick>Skin.ToggleSetting(FadeoutUnfocusedThumbWatched)</onclick>
+						<selected>Skin.HasSetting(FadeoutUnfocusedThumbWatched)</selected>
+					</control>
+					<control type="radiobutton" id="429">
+						<description>Enable Square Icon Movie List</description>
+						<width>625</width>
+						<label>Enable Square Icon Movie List</label>
+						<onclick>Skin.ToggleSetting(squareMovieList)</onclick>
+						<selected>Skin.HasSetting(squareMovieList)</selected>
+					</control>
 				</control>
 				<!-- Scrollbar -->
 				<control type="scrollbar" id="61">

@@ -43,6 +43,16 @@
 		<control type="group">
 			<visible>Container.PlexContent(Movies)</visible>
 			<control type="image">
+				<visible>skin.hassetting(squareMovieList)</visible>
+				<include>PosListItemViews</include>
+				<width>79</width>
+				<height>106</height>
+				<aspectratio scalediffuse="true" align="center">stretch</aspectratio>
+				<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+				<texture border="0" fallback="default-thumb-small.png" background="true">$VAR[ListItemVideoPreview]</texture>
+			</control>
+			<control type="image">
+				<visible>!skin.hassetting(squareMovieList)</visible>
 				<include>PosListItemViews</include>
 				<width>80</width>
 				<height>80</height>
@@ -232,8 +242,19 @@
 							<texture border="5">border-bottom-grey.png</texture>
 						</control>
 						<control type="group">
+							<visible>Container.PlexContent(TVShows) | Container.PlexContent(Seasons) | [Container.PlexContent(Movies) + !skin.hassetting(squareMovieList)]</visible>
 							<posx>28</posx>
 							<posy>-41</posy>
+							<include>ListSelectedArt</include>
+							<animation type="Focus" reversible="false">
+								<effect type="zoom" center="150,0" start="85" end="100" time="200" tween="Linear" easing="out"/>
+								<effect type="fade" start="0" end="100" time="650"/>
+							</animation>
+						</control>
+						<control type="group">
+							<visible>Container.PlexContent(Movies) + skin.hassetting(squareMovieList)</visible>
+							<posx>28</posx>
+							<posy>-54</posy>
 							<include>ListSelectedArt</include>
 							<animation type="Focus" reversible="false">
 								<effect type="zoom" center="150,0" start="85" end="100" time="200" tween="Linear" easing="out"/>

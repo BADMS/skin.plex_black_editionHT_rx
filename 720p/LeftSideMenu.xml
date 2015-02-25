@@ -1153,6 +1153,16 @@
 					<include>leftMenuBarButton</include>
 					<visible>Control.IsVisible(75)+!Skin.HasSetting(KioskMode)</visible>
 				</control>
+				<control type="button" id="148">
+					<texturefocus>b-skinoption-s.png</texturefocus>
+					<texturenofocus>b-skinoption-u.png</texturenofocus>
+					<colordiffuse>80FFFFFF</colordiffuse>
+					<onclick>Skin.SetString(ViewmodeID,559)</onclick>
+					<onclick>Skin.SetString(SelectedDim,$INFO[Skin.String(559_Dim)])</onclick>
+					<onclick>Control.SetFocus(1500)</onclick>
+					<include>leftMenuBarButton</include>
+					<visible>Control.IsVisible(559)+!Skin.HasSetting(KioskMode)</visible>
+				</control>
 			</control>
 			<!-- filters & sorting menu -->
 			<control type="group" id="1300">

@@ -262,6 +262,32 @@
 			<include>Border</include>
 		</control>
 	</include>
+	<include name="MovieTVPosterSmallNoBorderJK">
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>427</width>
+			<height>626</height>
+			<texture background="true">default-poster-middle.png</texture>      		
+		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>427</width>
+			<height>626</height>
+			<texture background="true">$VAR[ListItemVideoPreviewSmall]</texture>
+			<aspectratio scalediffuse="false" align="center" aligny="top">scale</aspectratio>	
+		</control>	
+	</include>
+	<include name="MovieTVPosterSmallSelectedBorderJK">
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>427</width>
+			<height>626</height>
+			<include>Border</include>
+		</control>
+	</include>
 	<include name="MovieTVPosterSmallTitle">
 		<posy>202</posy>
 		<posx>73</posx>

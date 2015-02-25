@@ -169,6 +169,45 @@
 			</control>
 		</control>
 	</include>
+	<include name="vJK">
+		<!-- Library Movies & TV Shows JK-->
+		<control type="group" id="777">
+			<include>FadeDialog</include>
+			<visible>!Container.PlexContent(Secondary) + [Container.PlexContent(Movies) | Container.PlexContent(TVShows) | Container.PlexContent(Seasons) | Container.PlexContent(HomeMovies)]</visible>
+			<include>rightSideSlide</include>
+			<control type="wraplist" id="590">
+				<visible>!Container.PlexContent(Secondary) + [Container.PlexContent(Movies) | Container.PlexContent(TVShows) | Container.PlexContent(Seasons) | Container.PlexContent(HomeMovies)]</visible>
+				<viewtype label="vJK">list</viewtype>
+				<onup>998</onup>
+				<ondown>998</ondown>
+				<onright>559</onright>
+				<onleft>559</onleft>
+				<scrolltime>200</scrolltime>
+				<pagecontrol>-</pagecontrol>
+				<orientation>horizontal</orientation>
+				<focusposition>1</focusposition>
+				<!--<posx>100</posx>-->
+				<posx>0</posx>
+				<posy>47</posy>
+				<width>1280</width>
+				<height>720</height>
+				<itemlayout width="427" height="626">
+					<control type="group">
+						<animation effect="fade" start="100" end="75" condition="Skin.HasSetting(FadeoutUnfocusedThumb)">Conditional</animation>
+						<animation effect="fade" start="100" end="25" condition="Skin.HasSetting(FadeoutUnfocusedThumbWatched) + !ListItem.Status(Unwatched) + !ListItem.Status(InProgress)">Conditional</animation>
+						<include>MovieTVPosterSmallNoBorderJK</include>
+					</control>
+				</itemlayout>
+				<focusedlayout width="427" height="626">
+					<control type="group">
+						<include>MovieTVPosterWall</include>
+						<animation effect="zoom" start="100" end="101" center="180,360" time="300">Focus</animation>
+						<include>MovieTVPosterSmallNoBorderJK</include>
+					</control>
+				</focusedlayout>
+			</control>
+		</control>
+	</include>
 	<include name="LibraryPostersWall">
 		<!-- Library Movies & TV Shows -->
 		<control type="group" id="777">
@@ -178,9 +217,9 @@
 			<control type="panel" id="557">
 				<visible>!Container.PlexContent(Secondary) + [Container.PlexContent(Movies) | Container.PlexContent(TVShows) | Container.PlexContent(Seasons) | Container.PlexContent(HomeMovies)]</visible>
 				<viewtype label="Wall">panel</viewtype>
-				<onup>50</onup>
-				<ondown>50</ondown>
-				<onright>50</onright>
+				<onup>557</onup>
+				<ondown>557</ondown>
+				<onright>557</onright>
 				<onleft>998</onleft>
 				<orientation>vertical</orientation>
 				<!--<posx>100</posx>-->
@@ -190,7 +229,8 @@
 				<height>720</height>
 				<itemlayout width="128" height="180">
 					<control type="group">
-						<animation effect="fade" start="65" end="65" condition="Skin.HasSetting(FadeoutUnfocusedThumb)">Conditional</animation>
+						<animation effect="fade" start="100" end="75" condition="Skin.HasSetting(FadeoutUnfocusedThumb)">Conditional</animation>
+						<animation effect="fade" start="100" end="25" condition="Skin.HasSetting(FadeoutUnfocusedThumbWatched) + !ListItem.Status(Unwatched) + !ListItem.Status(InProgress)">Conditional</animation>
 						<include>MovieTVPosterWall</include>
 					</control>
 				</itemlayout>
