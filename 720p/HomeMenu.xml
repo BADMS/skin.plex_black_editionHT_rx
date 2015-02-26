@@ -304,15 +304,14 @@
 						<visible>StringCompare(ListItem.Label,$LOCALIZE[44021])</visible>
 					</control>
 					<control type="label">
-						<posy>20</posy>
-						<posx>15</posx>
-						<include condition="!Skin.HasSetting(BiggerHomeMenu)+!Skin.HasSetting(BiggerHomeMenu3)">HomeMenuLabelWidth</include>
-						<include condition="Skin.HasSetting(BiggerHomeMenu)">HomeMenuLabelWidthBigger</include>
-						<include condition="Skin.HasSetting(BiggerHomeMenu3)">HomeMenuLabelWidthBigger3</include>
+							<textoffsetx>-3</textoffsetx>
+							<posy>35</posy>
+							<angle>90</angle>
+							<label>  [LOWERCASE]$INFO[ListItem.Label2][/LOWERCASE]</label>
+							<width>730</width>
 						<include>HomeMenuLabelFontDefault</include>
 						<align>left</align>
 						<textcolor>Color3</textcolor>
-						<label>[LOWERCASE]$INFO[ListItem.Label2][/LOWERCASE]</label>
 						<visible>!IsEmpty(ListItem.Property(SectionNameCollision))</visible>
 					</control>
 				</focusedlayout>
@@ -355,15 +354,14 @@
 						<visible>StringCompare(ListItem.Label,$LOCALIZE[44021])</visible>
 					</control>
 					<control type="label">
-						<posy>20</posy>
-						<posx>15</posx>
-						<include condition="!Skin.HasSetting(BiggerHomeMenu)+!Skin.HasSetting(BiggerHomeMenu3)">HomeMenuLabelWidth</include>
-						<include condition="Skin.HasSetting(BiggerHomeMenu)">HomeMenuLabelWidthBigger</include>
-						<include condition="Skin.HasSetting(BiggerHomeMenu3)">HomeMenuLabelWidthBigger3</include>
+							<textoffsetx>-3</textoffsetx>
+							<posy>35</posy>
+							<angle>90</angle>
+							<label>  [LOWERCASE]$INFO[ListItem.Label2][/LOWERCASE]</label>
+							<width>730</width>
 						<include>HomeMenuLabelFont</include>
 						<align>left</align>
 						<textcolor>Color3</textcolor>
-						<label>[LOWERCASE]$INFO[ListItem.Label2][/LOWERCASE]</label>
 						<visible>!IsEmpty(ListItem.Property(SectionNameCollision))</visible>
 					</control>
 				</focusedlayout>
@@ -406,15 +404,14 @@
 						<visible>StringCompare(ListItem.Label,$LOCALIZE[44021])</visible>
 					</control>
 					<control type="label">
-						<posy>20</posy>
-						<posx>15</posx>
-						<include condition="!Skin.HasSetting(BiggerHomeMenu)+!Skin.HasSetting(BiggerHomeMenu3)">HomeMenuLabelWidth</include>
-						<include condition="Skin.HasSetting(BiggerHomeMenu)">HomeMenuLabelWidthBigger</include>
-						<include condition="Skin.HasSetting(BiggerHomeMenu3)">HomeMenuLabelWidthBigger3</include>
+							<textoffsetx>-3</textoffsetx>
+							<posy>35</posy>
+							<angle>90</angle>
+							<label>  [LOWERCASE]$INFO[ListItem.Label2][/LOWERCASE]</label>
+							<width>730</width>
 						<include>HomeMenuLabelFontBigger</include>
 						<align>left</align>
 						<textcolor>Color3</textcolor>
-						<label>[LOWERCASE]$INFO[ListItem.Label2][/LOWERCASE]</label>
 						<visible>!IsEmpty(ListItem.Property(SectionNameCollision))</visible>
 					</control>
 				</focusedlayout>
@@ -457,15 +454,14 @@
 						<visible>StringCompare(ListItem.Label,$LOCALIZE[44021])</visible>
 					</control>
 					<control type="label">
-						<posy>20</posy>
-						<posx>15</posx>
-						<include condition="!Skin.HasSetting(BiggerHomeMenu)+!Skin.HasSetting(BiggerHomeMenu3)">HomeMenuLabelWidth</include>
-						<include condition="Skin.HasSetting(BiggerHomeMenu)">HomeMenuLabelWidthBigger</include>
-						<include condition="Skin.HasSetting(BiggerHomeMenu3)">HomeMenuLabelWidthBigger3</include>
+							<textoffsetx>-3</textoffsetx>
+							<posy>35</posy>
+							<angle>90</angle>
+							<label>  [LOWERCASE]$INFO[ListItem.Label2][/LOWERCASE]</label>
+							<width>730</width>
 						<include>HomeMenuLabelFontBigger3</include>
 						<align>left</align>
 						<textcolor>Color3</textcolor>
-						<label>[LOWERCASE]$INFO[ListItem.Label2][/LOWERCASE]</label>
 						<visible>!IsEmpty(ListItem.Property(SectionNameCollision))</visible>
 					</control>
 				</focusedlayout>
