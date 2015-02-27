@@ -304,8 +304,8 @@
 						<visible>StringCompare(ListItem.Label,$LOCALIZE[44021])</visible>
 					</control>
 					<control type="label">
-							<textoffsetx>-3</textoffsetx>
-							<posy>35</posy>
+							<textoffsetx>6</textoffsetx>
+							<posy>16</posy>
 							<angle>90</angle>
 							<label>  [LOWERCASE]$INFO[ListItem.Label2][/LOWERCASE]</label>
 							<width>730</width>
@@ -354,8 +354,8 @@
 						<visible>StringCompare(ListItem.Label,$LOCALIZE[44021])</visible>
 					</control>
 					<control type="label">
-							<textoffsetx>-3</textoffsetx>
-							<posy>35</posy>
+							<textoffsetx>1</textoffsetx>
+							<posy>26</posy>
 							<angle>90</angle>
 							<label>  [LOWERCASE]$INFO[ListItem.Label2][/LOWERCASE]</label>
 							<width>730</width>
@@ -454,8 +454,8 @@
 						<visible>StringCompare(ListItem.Label,$LOCALIZE[44021])</visible>
 					</control>
 					<control type="label">
-							<textoffsetx>-3</textoffsetx>
-							<posy>35</posy>
+							<textoffsetx>-6</textoffsetx>
+							<posy>46</posy>
 							<angle>90</angle>
 							<label>  [LOWERCASE]$INFO[ListItem.Label2][/LOWERCASE]</label>
 							<width>730</width>
