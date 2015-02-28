@@ -204,15 +204,14 @@
 					<posx>505</posx>
 					<width>805</width>
 					<height>655</height>
-					<onright condition="Container.PlexContent(Movies) | Container.PlexContent(TVShows) | Container.PlexContent(Seasons) | Container.PlexContent(Episodes) | Container.PlexContent(HomeMovies) | Container.PlexContent(Artists) | Container.PlexContent(Albums) | Container.PlexContent(Photos)">58</onright>
-					<onright condition="![Container.PlexContent(Movies) | Container.PlexContent(TVShows) | Container.PlexContent(Seasons) | Container.PlexContent(Episodes) | Container.PlexContent(HomeMovies) | Container.PlexContent(Artists) | Container.PlexContent(Albums) | Container.PlexContent(Photos)]">Container.NextViewMode</onright>
+					<onright>17</onright>
 					<onleft>998</onleft>
 					<onup>58</onup>
 					<ondown>58</ondown>
 					<focusposition>6</focusposition>
 					<wraparound>true</wraparound>
 					<scrolltime>200</scrolltime>
-					<pagecontrol>61</pagecontrol>
+					<pagecontrol>17</pagecontrol>
 					<!-- movies & tv shows -->
 					<itemlayout height="50" condition="Container.PlexContent(Movies) | Container.PlexContent(TVShows) | Container.PlexContent(Seasons)">
 						<control type="image">
@@ -1076,6 +1075,16 @@
 							</animation>
 						</control>
 					</focusedlayout>
+				</control>
+				<control type="scrollbar" id="17">
+					<description>Scroll Bar</description>
+					<posy>3</posy>
+					<posx>23r</posx>
+					<width>20</width>
+					<height>714</height>
+					<animation effect="fade" start="0" end="100" time="500" condition="true" delay="500">WindowOpen</animation>
+					<onright>58</onright>
+					<onleft>58</onleft>
 				</control>
 			</control>
 			<include>viewtype_nowplaying_right</include>

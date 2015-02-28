@@ -86,7 +86,7 @@
 		<orientation>vertical</orientation>
 		<texturesliderbar border="0,14,0,14">scrollbar-back.png</texturesliderbar>
 		<textureslidernib border="0,14,0,14">-</textureslidernib>
-		<textureslidernibfocus border="0,14,0,14">-</textureslidernibfocus>
+		<textureslidernibfocus border="0,14,0,14">candy/selected.png</textureslidernibfocus>
 		<showonepage>false</showonepage>
 		<visible allowhiddenfocus="true">true</visible>
 	</default>
