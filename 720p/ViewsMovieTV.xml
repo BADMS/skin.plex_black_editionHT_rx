@@ -1416,6 +1416,7 @@
 					</focusedlayout>
 				</control>
 				<control type="scrollbar" id="19">
+					<visible>Control.IsVisible(5555)</visible>
 					<description>Scroll Bar</description>
 					<posy>448</posy>
 					<posx>23r</posx>
