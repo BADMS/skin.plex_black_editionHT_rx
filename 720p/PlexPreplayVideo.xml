@@ -7,6 +7,7 @@
 	<onload condition="Skin.Hassetting(disableEpAutoAdv) + Window.Previous(fullscreenvideo) + ![ListItem.Status(InProgress) | ListItem.Status(UnWatched)]">XBMC.NextItem</onload>
 	<onunload>Skin.Reset(pp_helper)</onunload>
 	<onunload>Skin.Reset(dsp_helper)</onunload>
+	<onunload>CancelAlarm(controlPlayer,true)</onunload>
 	<defaultcontrol always="true">102</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
 	<controls>
@@ -14,20 +15,20 @@
 			<visible>IsEmpty(Skin.String(pp_helper))</visible>
 			<visible>Window.Previous(home) | Window.Previous(videolibrary) | Window.Previous(51) | Window.Previous(99)</visible>
 			<control type="button" id="102">
-				<onfocus>Plex.PlayWith(VideoDefaultPlayer)</onfocus>
+				<onfocus>AlarmClock(controlPlayer,Plex.PlayWith(VideoDefaultPlayer),00:03,silent)</onfocus>
 				<visible>Container.PlexContent(Movie) + [Skin.HasSetting(DisablePreplayMovie) | [Skin.HasSetting(DisablePreplayEmptyPlot) + IsEmpty(ListItem.Plot)]]</visible>
 			</control>
 			<control type="button" id="102">
-				<onfocus>Plex.PlayWith(VideoDefaultPlayer)</onfocus>
+				<onfocus>AlarmClock(controlPlayer,Plex.PlayWith(VideoDefaultPlayer),00:03,silent)</onfocus>
 				<visible>Container.Content(episode) + [Skin.HasSetting(DisablePreplayTV) | [Skin.HasSetting(DisablePreplayEmptyPlot) + IsEmpty(ListItem.Plot)]]</visible>
 			</control>
 			<control type="button" id="102">
 				<onfocus>Skin.SetString(preplay_helper_watched,1)</onfocus>
-				<onfocus>Plex.PlayWith(VideoDefaultPlayer)</onfocus>
+				<onfocus>AlarmClock(controlPlayer,Plex.PlayWith(VideoDefaultPlayer),00:03,silent)</onfocus>
 				<visible>Container.Content(episode) + Skin.HasSetting(DisablePreplayEmptyPlot) + Skin.HasSetting(HidePlotForUnwatched) + [ListItem.Status(InProgress) | ListItem.Status(UnWatched)]</visible>
 			</control>
 			<control type="button" id="102">
-				<onfocus>Plex.PlayWith(VideoDefaultPlayer)</onfocus>
+				<onfocus>AlarmClock(controlPlayer,Plex.PlayWith(VideoDefaultPlayer),00:03,silent)</onfocus>
 				<visible>Container.PlexContent(Clip) + [Skin.HasSetting(DisablePreplayClip) | [Skin.HasSetting(DisablePreplayEmptyPlot) + IsEmpty(ListItem.Plot)]]</visible>
 			</control>
 		</control>
@@ -59,6 +60,17 @@
 		</control>
 		<control type="group">
 			<include>BGFanart</include>
+			<!-- MPAA flag -->
+			<control type="image">
+				<posy>20</posy>
+				<posx>120r</posx>
+				<height>auto</height>
+				<width>100</width>
+				<align>right</align>
+				<texture>$INFO[Listitem.Art(mediaTag::contentRating)]</texture>
+				<aspectratio align="right" aligny="center">keep</aspectratio>
+				<colordiffuse>mediatag</colordiffuse>
+			</control>	
 			<visible>[ Container.Content(movie) + [Skin.HasSetting(DisablePreplayMovie) | [Skin.HasSetting(DisablePreplayEmptyPlot) + IsEmpty(ListItem.Plot)]] + !Window.Previous(fullscreenvideo) | Container.Content(episode) + [Skin.HasSetting(DisablePreplayTV) | [Skin.HasSetting(DisablePreplayEmptyPlot) + IsEmpty(ListItem.Plot)]] + !Window.Previous(fullscreenvideo) | Container.Content(clip) + [Skin.HasSetting(DisablePreplayClip) | [Skin.HasSetting(DisablePreplayEmptyPlot) + IsEmpty(ListItem.Plot)]] + !Window.Previous(fullscreenvideo) ] | Container.Content(episode) + Skin.HasSetting(DisablePreplayEmptyPlot) + !Window.Previous(fullscreenvideo) + [Skin.HasSetting(HidePlotForUnwatched) + [ListItem.Status(InProgress) | ListItem.Status(UnWatched)]]</visible>
 		</control>
 		<control type="group">

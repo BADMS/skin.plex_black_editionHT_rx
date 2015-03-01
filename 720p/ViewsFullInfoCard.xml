@@ -28,6 +28,7 @@
 		</control>11005
 	</include>11006
 	<variable name="imagePerType">
+		<value condition="stringcompare(Container(300).ListItem(0).Label,Now Playing)">backgrounds/playingtype.jpg</value>
 		<value condition="stringcompare(Container(300).ListItem(0).Label,Channels)">backgrounds/channeltype.jpg</value>
 		<value condition="stringcompare(Container(300).ListItem(0).Label,Playlists)">backgrounds/listtype.jpg</value>
 		<value condition="stringcompare(Container(300).ListItem(0).Label,Watch Later)">backgrounds/queuetype.jpg</value>
