@@ -151,7 +151,7 @@
 			<visible>!Skin.String(58_DIM,100)</visible>
 			<include>BGFanart</include>
 		</control>
-		<control type="group">
+		<control type="group" id="777">
 			<include>FadeDialog</include>
 			<include>rightSideSlide</include>
 			<!--BG Dim-->		
@@ -196,7 +196,7 @@
 				</control>
 			</control>
 			<visible>!Container.PlexContent(Movie) + !Container.PlexContent(Episode) + !Container.PlexContent(Folders) + !Container.PlexContent(Clip) + !Container.PlexContent(Clips)</visible>
-			<control type="group" id="777">
+			<control type="group">
 				<control type="fixedlist" id="58">
 					<viewtype label="List">panel</viewtype>
 					<visible>!Container.PlexContent(Movie) + !Container.PlexContent(Episode) + !Container.PlexContent(Folders) + !Container.PlexContent(Clip) + !Container.PlexContent(Clips)</visible>
@@ -1075,16 +1075,6 @@
 							</animation>
 						</control>
 					</focusedlayout>
-				</control>
-				<control type="scrollbar" id="17">
-					<description>Scroll Bar</description>
-					<posy>3</posy>
-					<posx>23r</posx>
-					<width>20</width>
-					<height>714</height>
-					<animation effect="fade" start="0" end="100" time="500" condition="true" delay="500">WindowOpen</animation>
-					<onright>58</onright>
-					<onleft>58</onleft>
 				</control>
 			</control>
 			<include>viewtype_nowplaying_right</include>

@@ -3,6 +3,8 @@
 	<defaultcontrol always="true">301</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
 	<onload>Skin.SetString(AspectRatio,$INFO[Skin.AspectRatio])</onload>
+	<onload>Skin.Reset(pp_helper)</onload>
+	<onunload>Skin.Reset(pp_helper)</onunload>
 	<onload>Skin.Reset(dsp_helper)</onload>
 	<controls>
 		<!-- PHT NoFocus Bug Workaround -->
@@ -13,6 +15,7 @@
 			<height>0</height>
 			<texturenofocus>-</texturenofocus>
 			<texturefocus>-</texturefocus>
+			<onfocus>Skin.Reset(pp_helper)</onfocus>
 			<onfocus>SetFocus(300)</onfocus>
 		</control>
 		<include condition="Skin.HasSetting(HideFanart)">BGBlackEdition</include>
