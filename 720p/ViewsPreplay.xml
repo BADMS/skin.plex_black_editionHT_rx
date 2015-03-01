@@ -669,6 +669,7 @@
 						<label>$INFO[Container.SecondTitle]</label>
 						<label>Seasons view</label>
 						<include>sectionTitleMiddle</include>
+						<scroll>true</scroll>
 					</control>
 					<!-- Genre -->
 					<control type="label">
@@ -951,6 +952,7 @@
 						<label>$INFO[Container.FirstTitle]</label>
 						<include>sectionTitleMiddle</include>
 						<visible>IsEmpty(Container.Property(mixedParents))</visible>
+						<scroll>true</scroll>
 					</control>
 					<control type="label">
 						<width>310</width>
@@ -958,6 +960,7 @@
 						<label>$INFO[Container.Property(parentTitle)]</label>
 						<include>sectionTitleMiddle</include>
 						<visible>!IsEmpty(Container.Property(mixedParents))</visible>
+						<scroll>true</scroll>
 					</control>
 					<control type="label">
 						<posy>53</posy>
@@ -966,6 +969,7 @@
 						<label>$INFO[Container.SecondTitle]</label>
 						<include>sectionTitleSub</include>
 						<visible>IsEmpty(Container.Property(mixedParents))</visible>
+						<scroll>true</scroll>
 					</control>
 					<control type="label">
 						<posy>53</posy>
@@ -974,6 +978,7 @@
 						<label>$LOCALIZE[32102]</label>
 						<include>sectionTitleSub</include>
 						<visible>!IsEmpty(Container.Property(mixedParents))</visible>
+						<scroll>true</scroll>
 					</control>
 					<!-- Year -->
 					<control type="label">
@@ -1194,6 +1199,7 @@
 					<font>Regular-36</font>
 					<textcolor>white</textcolor>
 					<visible>true</visible>
+					<scroll>true</scroll>
 				</control>
 				<!-- Title Episode & Watched/Unwatched indicator -->
 				<control type="grouplist">
@@ -1372,6 +1378,7 @@
 						<font>Regular-36</font>
 						<textcolor>white</textcolor>
 						<visible>true</visible>
+						<scroll>true</scroll>
 					</control>
 				</control>
 				<!-- Genre -->

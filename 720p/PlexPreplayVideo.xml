@@ -69,7 +69,7 @@
 				<align>right</align>
 				<texture>$INFO[Listitem.Art(mediaTag::contentRating)]</texture>
 				<aspectratio align="right" aligny="top">keep</aspectratio>
-				<colordiffuse>mediatag</colordiffuse>
+				<colordiffuse>black</colordiffuse>
 			</control>	
 			<visible>[ Container.Content(movie) + [Skin.HasSetting(DisablePreplayMovie) | [Skin.HasSetting(DisablePreplayEmptyPlot) + IsEmpty(ListItem.Plot)]] + !Window.Previous(fullscreenvideo) | Container.Content(episode) + [Skin.HasSetting(DisablePreplayTV) | [Skin.HasSetting(DisablePreplayEmptyPlot) + IsEmpty(ListItem.Plot)]] + !Window.Previous(fullscreenvideo) | Container.Content(clip) + [Skin.HasSetting(DisablePreplayClip) | [Skin.HasSetting(DisablePreplayEmptyPlot) + IsEmpty(ListItem.Plot)]] + !Window.Previous(fullscreenvideo) ] | Container.Content(episode) + Skin.HasSetting(DisablePreplayEmptyPlot) + !Window.Previous(fullscreenvideo) + [Skin.HasSetting(HidePlotForUnwatched) + [ListItem.Status(InProgress) | ListItem.Status(UnWatched)]]</visible>
 		</control>
