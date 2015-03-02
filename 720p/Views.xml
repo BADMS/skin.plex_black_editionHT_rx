@@ -204,15 +204,14 @@
 					<posx>505</posx>
 					<width>805</width>
 					<height>655</height>
-					<onright condition="Container.PlexContent(Movies) | Container.PlexContent(TVShows) | Container.PlexContent(Seasons) | Container.PlexContent(Episodes) | Container.PlexContent(HomeMovies) | Container.PlexContent(Artists) | Container.PlexContent(Albums) | Container.PlexContent(Photos)">58</onright>
-					<onright condition="![Container.PlexContent(Movies) | Container.PlexContent(TVShows) | Container.PlexContent(Seasons) | Container.PlexContent(Episodes) | Container.PlexContent(HomeMovies) | Container.PlexContent(Artists) | Container.PlexContent(Albums) | Container.PlexContent(Photos)]">Container.NextViewMode</onright>
+					<onright>17</onright>
 					<onleft>998</onleft>
 					<onup>58</onup>
 					<ondown>58</ondown>
 					<focusposition>6</focusposition>
 					<wraparound>true</wraparound>
 					<scrolltime>200</scrolltime>
-					<pagecontrol>61</pagecontrol>
+					<pagecontrol>17</pagecontrol>
 					<!-- movies & tv shows -->
 					<itemlayout height="50" condition="Container.PlexContent(Movies) | Container.PlexContent(TVShows) | Container.PlexContent(Seasons)">
 						<control type="image">
