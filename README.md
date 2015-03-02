@@ -39,6 +39,6 @@ Close PHT, goto log and find the URL, something like this:
 
 then we need this bit plexserver://be947b30de7253zzzzzzcb4fc15db35684dffb09/video/youtube/parsefeed?url=http%3A%2F%2Fgdata.youtube.com%2Ffeeds%2Fapi%2Fstandardfeeds%2FREGIONID%2Fmost_viewed%3Ftime%3Dtoday&title=Most+Viewed
 
-Open Hot app, new macro, choose paste, paste your URL, choose hot key. Repeat for others.
+Open Hot app, new macro, choose paste, select play keys, paste your URL, choose hot key. Repeat for others.
 
 Enter PHT settings, channels, use URL type channels, use hotkey to paste. Done!
