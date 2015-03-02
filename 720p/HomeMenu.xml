@@ -475,7 +475,7 @@
 					<item id="560">
 						<description>Channel1</description>
 						<label>$INFO[Skin.String(Channel1_Name_Menu)]</label>
-						
+						<onclick>Skin.SetString(dsp_helper,1)</onclick>
 						<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://best/video/$INFO[Skin.String(Channel1_Name)]|containerSize=50&amp;containerStart=0,return)</onclick>
 						<thumb>$INFO[Skin.String(Channel1_Name_Art)]</thumb>
 						<visible>!isEmpty(Skin.String(Channel1_Name)) + !System.UserIsRestricted</visible>
@@ -483,56 +483,56 @@
 					<item id="561">
 						<description>Channel2</description>
 						<label>$INFO[Skin.String(Channel2_Name_Menu)]</label>
-						
+						<onclick>Skin.SetString(dsp_helper,1)</onclick>
 						<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://best/video/$INFO[Skin.String(Channel2_Name)]|containerSize=50&amp;containerStart=0,return)</onclick>
 						<visible>!isEmpty(Skin.String(Channel2_Name)) + !System.UserIsRestricted</visible>
 					</item>
 					<item id="562">
 						<description>Channel3</description>
 						<label>$INFO[Skin.String(Channel3_Name_Menu)]</label>
-						
+						<onclick>Skin.SetString(dsp_helper,1)</onclick>
 						<onclick>XBMC.ActivateWindow(MyVideoFiles,plexserver://best/video/$INFO[Skin.String(Channel3_Name)]|containerSize=50&amp;containerStart=0,return)</onclick>
 						<visible>!isEmpty(Skin.String(Channel3_Name)) + !System.UserIsRestricted</visible>
 					</item>
 					<item id="563">
 						<description>Channel4</description>
 						<label>$INFO[Skin.String(Channel4_Name_Menu)]</label>
-						
+						<onclick>Skin.SetString(dsp_helper,1)</onclick>
 						<onclick>XBMC.ActivateWindow(MyVideoFiles,$INFO[Skin.String(Channel4_Name)],return)</onclick>
 						<visible>!isEmpty(Skin.String(Channel4_Name)) + !System.UserIsRestricted</visible>
 					</item>
 					<item id="564">
 						<description>Channel5</description>
 						<label>$INFO[Skin.String(Channel5_Name_Menu)]</label>
-						
+						<onclick>Skin.SetString(dsp_helper,1)</onclick>
 						<onclick>XBMC.ActivateWindow(MyVideoFiles,$INFO[Skin.String(Channel5_Name)],return)</onclick>
 						<visible>!isEmpty(Skin.String(Channel5_Name)) + !System.UserIsRestricted</visible>
 					</item>
 					<item id="565">
 						<description>Channel6</description>
 						<label>$INFO[Skin.String(Channel6_Name_Menu)]</label>
-						
+						<onclick>Skin.SetString(dsp_helper,1)</onclick>
 						<onclick>XBMC.ActivateWindow(MyVideoFiles,$INFO[Skin.String(Channel6_Name)],return)</onclick>
 						<visible>!isEmpty(Skin.String(Channel6_Name)) + !System.UserIsRestricted</visible>
 					</item>
 					<item id="566">
 						<description>Channel7</description>
 						<label>$INFO[Skin.String(Channel7_Name_Menu)]</label>
-						
+						<onclick>Skin.SetString(dsp_helper,1)</onclick>
 						<onclick>XBMC.ActivateWindow(MyVideoFiles,$INFO[Skin.String(Channel7_Name)],return)</onclick>
 						<visible>!isEmpty(Skin.String(Channel7_Name))</visible>
 					</item>
 					<item id="567">
 						<description>Channel8</description>
 						<label>$INFO[Skin.String(Channel8_Name_Menu)]</label>
-						
+						<onclick>Skin.SetString(dsp_helper,1)</onclick>
 						<onclick>XBMC.ActivateWindow(MyVideoFiles,$INFO[Skin.String(Channel8_Name)],return)</onclick>
 						<visible>!isEmpty(Skin.String(Channel8_Name))</visible>
 					</item>
 					<item id="568">
 						<description>Channel9</description>
 						<label>$INFO[Skin.String(Channel9_Name_Menu)]</label>
-						
+						<onclick>Skin.SetString(dsp_helper,1)</onclick>
 						<onclick>XBMC.ActivateWindow(MyVideoFiles,$INFO[Skin.String(Channel9_Name)],return)</onclick>
 						<visible>!isEmpty(Skin.String(Channel9_Name))</visible>
 					</item>

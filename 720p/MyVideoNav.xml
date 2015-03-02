@@ -8,7 +8,6 @@
 	<onload condition="Container.PlexContent(TVShows)">Skin.SetString(SectionType,tvshows)</onload>
 	<onload condition="Container.PlexContent(Clips)">Skin.SetString(SectionType,clips)</onload>
 	<!-- <onload>SendClick(101)</onload> -->
-	<onload>SetFocus(777)</onload>
 	<onunload>SetFocus(777)</onunload>
 	<onunload>Skin.Reset(SectionType)</onunload>
 	<onunload>Skin.Reset(dsp_helper)</onunload>
@@ -51,41 +50,16 @@
 		<!-- <include>ChannelVideo</include>-->
 		<!-- Channel generic ID 99 -->
 		<include>Channel</include>
-		<!-- List ID 5555 -->
-		<control type="group">
-		<include>bottomList</include>
-			<control type="group" id="8000">
-				<control type="scrollbar" id="19">
-					<description>Scroll Bar</description>
-					<posy>448</posy>
-					<posx>23r</posx>
-					<width>20</width>
-					<height>254</height>
-					<animation effect="fade" start="0" end="100" time="500" condition="true" delay="500">WindowOpen</animation>
-					<onright>5555</onright>
-					<onleft>5555</onleft>
-				</control>
-				</control>
-				</control>
-		<!-- Item Full Info -->
-		<control type="group">
 		<!-- List ID 58 -->
 		<include>List</include>
-				<control type="scrollbar" id="17">
-			<visible>Control.IsVisible(58)</visible>
-					<description>Scroll Bar</description>
-					<posy>3</posy>
-					<posx>23r</posx>
-					<width>20</width>
-					<height>714</height>
-					<animation effect="fade" start="0" end="100" time="500" condition="true" delay="500">WindowOpen</animation>
-					<onright>58</onright>
-					<onleft>58</onleft>
-				</control>
-			<include>ListItemFullInfo</include>
-		</control>
+		<!-- List ID 5555 -->
+		<include>bottomList</include>
 		<!-- Scroll Offset -->
 		<include>scrollOffset</include>
+		<!-- Item Full Info -->
+		<control type="group">
+			<include>ListItemFullInfo</include>
+		</control>
 		<!-- top-level ui (LeftSidemenu.xml & IncludesGlobals.xml & Debug.xml) -->
 		<include condition="!Skin.HasSetting(SuperKioskMode)">LeftSideMenu</include>
 		<include>viewtype_nowplaying_right</include>
