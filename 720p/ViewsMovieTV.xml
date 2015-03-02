@@ -180,8 +180,8 @@
 				<viewtype label="vJK">list</viewtype>
 				<onup>998</onup>
 				<ondown>998</ondown>
-				<onright>559</onright>
-				<onleft>559</onleft>
+				<onright>590</onright>
+				<onleft>590</onleft>
 				<scrolltime>200</scrolltime>
 				<pagecontrol>-</pagecontrol>
 				<orientation>horizontal</orientation>
@@ -1426,6 +1426,7 @@
 			<include>BGFanart</include>
 		</control>
 		<control type="group" id="777">
+			<visible>[Container.PlexContent(Movies) | Container.PlexContent(TVShows) | Container.PlexContent(HomeMovies)]</visible>	
 			<!--BG Dim-->		
 			<control type="group">
 				<visible>Control.IsVisible(553)</visible>
@@ -1472,7 +1473,6 @@
 			<visible>[Container.PlexContent(Movies) | Container.PlexContent(TVShows) | Container.PlexContent(HomeMovies)]</visible>
 			<include>rightSideSlide</include>
 			<control type="wraplist" id="553">
-				<visible>[Container.PlexContent(Movies) | Container.PlexContent(TVShows) | Container.PlexContent(HomeMovies)]</visible>
 				<viewtype label="Info Carousel">list</viewtype>
 				<posx>34</posx>
 				<posy>483</posy>
@@ -1483,7 +1483,6 @@
 				<onup>553</onup>
 				<ondown>998</ondown>
 				<scrolltime>200</scrolltime>
-				<pagecontrol>-</pagecontrol>
 				<orientation>horizontal</orientation>
 				<focusposition>4</focusposition>
 				<include>MediaViewFade</include>

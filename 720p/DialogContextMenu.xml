@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 <window id="106">
-	<onload condition="Skin.HasSetting(SuperKioskMode)">Dialog.Close(all,true)</onload>
+	<onload condition="Skin.HasSetting(SuperKioskMode) + !Window.isVisible(10090)">Dialog.Close(all,true)</onload>
 	<defaultcontrol>1000</defaultcontrol>
 	<!-- ViewsDialog.xml -->
-	<include condition="!Skin.HasSetting(SuperKioskMode)">DialogFadeInOut</include>
+	<include condition="!Skin.HasSetting(SuperKioskMode) | Window.isVisible(10090)">DialogFadeInOut</include>
 	<controls>
 		<!-- ViewsDialog.xml -->
-		<include condition="!Skin.HasSetting(SuperKioskMode)">DialogContextMenu</include>
+		<include condition="!Skin.HasSetting(SuperKioskMode) | Window.isVisible(10090)">DialogContextMenu</include>
 	</controls>
 </window>
