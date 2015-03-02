@@ -1415,16 +1415,6 @@
 						</control>
 					</focusedlayout>
 				</control>
-				<control type="scrollbar" id="19">
-					<description>Scroll Bar</description>
-					<posy>448</posy>
-					<posx>23r</posx>
-					<width>20</width>
-					<height>254</height>
-					<animation effect="fade" start="0" end="100" time="500" condition="true" delay="500">WindowOpen</animation>
-					<onright>5555</onright>
-					<onleft>5555</onleft>
-				</control>
 			</control>
 		</control>
 	</include>
