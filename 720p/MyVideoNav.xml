@@ -3,7 +3,6 @@
 	<defaultcontrol always="false">777</defaultcontrol>
 	<views>40,50,51,557,60,61,66,552,553,5531,554,70,71,80,99,5555,58,556,590,559,560,563,564</views><!--50,51,61,62,553,-->
 	<allowoverlay>yes</allowoverlay>
-	<!--<onload condition="skin.string(dsp_helper,1)">parentdir</onload>-->
 	<onload condition="Container.PlexContent(Movies)">Skin.SetString(SectionType,movies)</onload>
 	<onload condition="Container.PlexContent(TVShows)">Skin.SetString(SectionType,tvshows)</onload>
 	<onload condition="Container.PlexContent(Clips)">Skin.SetString(SectionType,clips)</onload>
@@ -51,37 +50,14 @@
 		<!-- <include>ChannelVideo</include>-->
 		<!-- Channel generic ID 99 -->
 		<include>Channel</include>
-		<!-- List ID 5555 -->
-		<control type="group">
-		<include>bottomList</include>
-			<control type="group" id="8000">
-				<control type="scrollbar" id="19">
-					<description>Scroll Bar</description>
-					<posy>448</posy>
-					<posx>23r</posx>
-					<width>20</width>
-					<height>254</height>
-					<animation effect="fade" start="0" end="100" time="500" condition="true" delay="500">WindowOpen</animation>
-					<onright>5555</onright>
-					<onleft>5555</onleft>
-				</control>
-				</control>
-				</control>
-		<!-- Item Full Info -->
-		<control type="group">
 		<!-- List ID 58 -->
 		<include>List</include>
-				<control type="scrollbar" id="17">
-			<visible>Control.IsVisible(58)</visible>
-					<description>Scroll Bar</description>
-					<posy>3</posy>
-					<posx>23r</posx>
-					<width>20</width>
-					<height>714</height>
-					<animation effect="fade" start="0" end="100" time="500" condition="true" delay="500">WindowOpen</animation>
-					<onright>58</onright>
-					<onleft>58</onleft>
-				</control>
+	<!-- List ID 555 -->
+		<include>bottomList</include>
+		<!-- Scroll Offset -->
+		<include>scrollOffset</include>
+		<!-- Item Full Info -->
+		<control type="group">
 			<include>ListItemFullInfo</include>
 		</control>
 		<!-- Scroll Offset -->

@@ -542,7 +542,7 @@
 						<onclick>Plex.UpdateAndRestart</onclick>
 						<visible>System.UpdateIsAvailable</visible>
 					</item>
-					</content>
+				</content>
 			</control>
 		</control>
 	</include>

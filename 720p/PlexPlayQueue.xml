@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <window id="10094">
 	<defaultcontrol always="true">74,75</defaultcontrol>
-	<views>74,75</views><!--50,51,61,62,553,-->
+	<views>74,75</views>
 	<allowoverlay>yes</allowoverlay>
 	<onload>Skin.SetString(SectionType,playqueue)</onload>
 	<onunload>Skin.Reset(SectionType)</onunload>

@@ -90,7 +90,7 @@
 			<include>LeftSideMenuPreplay</include>
 			<visible>!IsEmpty(Skin.String(pp_helper)) | ![ Container.Content(movie) + [Skin.HasSetting(DisablePreplayMovie) | [Skin.HasSetting(DisablePreplayEmptyPlot) + IsEmpty(ListItem.Plot)]] | Container.Content(episode) + [Skin.HasSetting(DisablePreplayTV) | [Skin.HasSetting(DisablePreplayEmptyPlot) + IsEmpty(ListItem.Plot)]] | Container.Content(clip) + [Skin.HasSetting(DisablePreplayClip) | [Skin.HasSetting(DisablePreplayEmptyPlot) + IsEmpty(ListItem.Plot)]] ]</visible>
 			<visible>!IsEmpty(Skin.String(pp_helper)) | ![Container.Content(episode) + Skin.HasSetting(DisablePreplayEmptyPlot) + [Skin.HasSetting(HidePlotForUnwatched) + [ListItem.Status(InProgress) | ListItem.Status(UnWatched)]]]</visible>
-			<include>viewtype_nowplaying_right</include>
+		<include>viewtype_nowplaying_right</include>
 		</control>
 		<include>FadeQuickPP</include>
 		<include>Non16x9Cache</include>
