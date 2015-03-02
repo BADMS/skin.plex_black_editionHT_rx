@@ -976,7 +976,7 @@
 			<visible>Control.IsVisible(5555)</visible>
 			<include>BGFanart</include>
 		</control>
-		<control type="group" id="777">
+		<control type="group">
 			<include>FadeDialog</include>
 			<include>rightSideSlide</include>
 			<!--<include>ListItemFullInfoLeftSlide</include>-->
@@ -1222,7 +1222,7 @@
 				</control>
 			</control>
 			<visible>!Container.PlexContent(Movie) + !Container.PlexContent(Episode) + !Container.PlexContent(Folders) + !Container.PlexContent(Clip) + !Container.PlexContent(Clips)</visible>
-			<control type="group">
+			<control type="group" id="777">
 				<control type="fixedlist" id="5555">
 					<viewtype label="low List">list</viewtype>
 					<visible>[Container.PlexContent(Movies) | Container.PlexContent(TVShows) | Container.PlexContent(Seasons) | Container.PlexContent(Episodes) | Container.PlexContent(Homemovies) | Container.PlexContent(Channel)]</visible>
@@ -1230,14 +1230,14 @@
 					<posx>737</posx>
 					<width>505</width>
 					<height>253</height>
-					<onright>19</onright>
+					<onright>5555</onright>
 					<onleft>998</onleft>
 					<onup>5555</onup>
 					<ondown>5555</ondown>
 					<focusposition>2</focusposition>
 					<wraparound>true</wraparound>
 					<scrolltime>200</scrolltime>
-					<pagecontrol>19</pagecontrol>
+					<pagecontrol>61</pagecontrol>
 					<preloaditems>2</preloaditems>
 					<!-- movies & tv shows -->
 					<itemlayout height="43">
