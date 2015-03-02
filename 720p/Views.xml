@@ -151,7 +151,7 @@
 			<visible>!Skin.String(58_DIM,100)</visible>
 			<include>BGFanart</include>
 		</control>
-		<control type="group" id="777">
+		<control type="group">
 			<include>FadeDialog</include>
 			<include>rightSideSlide</include>
 			<!--BG Dim-->		
@@ -196,7 +196,7 @@
 				</control>
 			</control>
 			<visible>!Container.PlexContent(Movie) + !Container.PlexContent(Episode) + !Container.PlexContent(Folders) + !Container.PlexContent(Clip) + !Container.PlexContent(Clips)</visible>
-			<control type="group">
+			<control type="group" id="777">
 				<control type="fixedlist" id="58">
 					<viewtype label="List">panel</viewtype>
 					<visible>!Container.PlexContent(Movie) + !Container.PlexContent(Episode) + !Container.PlexContent(Folders) + !Container.PlexContent(Clip) + !Container.PlexContent(Clips)</visible>
@@ -211,7 +211,6 @@
 					<focusposition>6</focusposition>
 					<wraparound>true</wraparound>
 					<scrolltime>200</scrolltime>
-					<pagecontrol>17</pagecontrol>
 					<!-- movies & tv shows -->
 					<itemlayout height="50" condition="Container.PlexContent(Movies) | Container.PlexContent(TVShows) | Container.PlexContent(Seasons)">
 						<control type="image">

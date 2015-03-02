@@ -92,8 +92,6 @@
 			<visible>!IsEmpty(Skin.String(pp_helper)) | ![Container.Content(episode) + Skin.HasSetting(DisablePreplayEmptyPlot) + [Skin.HasSetting(HidePlotForUnwatched) + [ListItem.Status(InProgress) | ListItem.Status(UnWatched)]]]</visible>
 			<include>viewtype_nowplaying_right</include>
 		</control>
-		<include>debugInfos</include>
-		<include>Grid</include>
 		<include>FadeQuickPP</include>
 		<include>Non16x9Cache</include>
 	</controls>
