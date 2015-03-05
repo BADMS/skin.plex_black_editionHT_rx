@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
 <window id="1">
+	<onload>Skin.SetString(SectionType,programs)</onload>
 	<defaultcontrol>777</defaultcontrol>
 	<views>40,74</views>
 	<allowoverlay>yes</allowoverlay>

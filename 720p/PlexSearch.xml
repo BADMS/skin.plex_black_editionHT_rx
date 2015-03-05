@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
 <window id="51">
+	<onload>Skin.SetString(SectionType,search)</onload>
 	<defaultcontrol always="true">65</defaultcontrol>
 	<backgroundcolor>black</backgroundcolor>
 	<controls>
