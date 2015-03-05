@@ -29,15 +29,15 @@
 	</include>11006
 	<variable name="imagePerType">
 		<value condition="stringcompare(Container(300).ListItem(0).Label,Now Playing)">backgrounds/playingtype.jpg</value>
-		<value condition="stringcompare(Container(300).ListItem(0).Label,Channels)">backgrounds/channeltype.jpg</value>
-		<value condition="stringcompare(Container(300).ListItem(0).Label,Playlists)">backgrounds/listtype.jpg</value>
-		<value condition="stringcompare(Container(300).ListItem(0).Label,Watch Later)">backgrounds/queuetype.jpg</value>
-		<value condition="stringcompare(Container(300).ListItem(0).Label,Shared Content)">backgrounds/sharedtype.jpg</value>
-		<value condition="Container(11000).HasFocus(0) + Container(11000).ListItem(0).Type(album) | !IsEmpty(Container(11000).ListItem(0).Artist)">backgrounds/musictype.jpg</value>
-		<value condition="Container(11000).HasFocus(0) + Container(11000).ListItem(0).Type(episode)">backgrounds/tvtype.jpg</value>
-		<value condition="Container(11000).HasFocus(0) + Container(11000).ListItem(0).Type(movie)">backgrounds/movietype.jpg</value>
-		<value condition="Container(11000).ListItem(0).Type(clip)">backgrounds/cliptype.jpg</value>
-		<value condition="Container(11000).ListItem(0).Type(photo) | Container(11001).ListItem(0).Type(photo)">backgrounds/phototype.jpg</value>
+		<value condition="stringcompare(Container(300).ListItem(0).Label,Channels) | Skin.String(SectionType,channels)">backgrounds/channeltype.jpg</value>
+		<value condition="stringcompare(Container(300).ListItem(0).Label,Playlists) | Skin.String(SectionType,playlists)">backgrounds/listtype.jpg</value>
+		<value condition="stringcompare(Container(300).ListItem(0).Label,Watch Later) | Skin.String(SectionType,playqueue)">backgrounds/queuetype.jpg</value>
+		<value condition="stringcompare(Container(300).ListItem(0).Label,Shared Content) | Skin.String(SectionType,sharedcontent)">backgrounds/sharedtype.jpg</value>
+		<value condition="Container(11000).HasFocus(0) + Container(11000).ListItem(0).Type(album) | !IsEmpty(Container(11000).ListItem(0).Artist) | Skin.String(SectionType,music)">backgrounds/musictype.jpg</value>
+		<value condition="Container(11000).HasFocus(0) + Container(11000).ListItem(0).Type(episode) | Skin.String(SectionType,tvshows)">backgrounds/tvtype.jpg</value>
+		<value condition="Container(11000).HasFocus(0) + Container(11000).ListItem(0).Type(movie) | Skin.String(SectionType,movies)">backgrounds/movietype.jpg</value>
+		<value condition="Container(11000).ListItem(0).Type(clip) | Skin.String(SectionType,clips)">backgrounds/cliptype.jpg</value>
+		<value condition="Container(11000).ListItem(0).Type(photo) | Container(11001).ListItem(0).Type(photo) | Skin.String(SectionType,photos)">backgrounds/phototype.jpg</value>
 		<value>backgrounds/generictype.jpg</value>
 	</variable>
 	<include name="ListItemFullInfoThumbCardNoFilter">
@@ -188,7 +188,7 @@
 		<value condition="[Container.PlexContent(Episodes) + !IsEmpty(Container.Property(primaryFilterActivated))] + [ListItem.Status(Watched) | [!Skin.HasSetting(HidePlotForUnwatched) + [ListItem.Status(InProgress) | ListItem.Status(UnWatched)]]]">$INFO[ListItem.Art(thumb)]</value>
 		<value condition="IsEmpty(ListItem.Art(thumb))]">$INFO[ListItem.Property(Fanart_Image)]</value>
 		<value>$INFO[ListItem.Property(Fanart_Image)]</value>
-</variable>
+	</variable>
 	<variable name="ListItemVideoPreviewSmall">
 		<value condition="!ListItem.Type(episode)">$INFO[ListItem.Art(smallThumb)]</value>
 		<value condition="ListItem.Type(episode) + [ListItem.Status(Watched) | [!Skin.HasSetting(HidePlotForUnwatched) + [ListItem.Status(InProgress) | ListItem.Status(UnWatched)]]]">$INFO[ListItem.Art(smallThumb)]</value>

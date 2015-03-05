@@ -2,10 +2,12 @@
 <window id="0">
 	<defaultcontrol always="true">301</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
+	<onload>AlarmClock(controlType,Skin.Reset(SectionType),00:01,silent)</onload>
 	<onload>Skin.SetString(AspectRatio,$INFO[Skin.AspectRatio])</onload>
 	<onload>Skin.Reset(pp_helper)</onload>
 	<onunload>Skin.Reset(pp_helper)</onunload>
 	<onload>Skin.Reset(dsp_helper)</onload>
+	<onunload>CancelAlarm(controlType,true)</onunload>
 	<controls>
 		<!-- PHT NoFocus Bug Workaround -->
 		<control type="button" id="301">

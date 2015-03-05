@@ -4,7 +4,7 @@
 	<views>671,58</views>
 	<allowoverlay>yes</allowoverlay>
 	<onload>Skin.SetString(SectionType,playlists)</onload>
-	<onunload>Skin.Reset(SectionType)</onunload>
+	<!-- <onunload>Skin.Reset(SectionType)</onunload> -->
 	<controls>
 		<!--
 		<control type="largeimage">
