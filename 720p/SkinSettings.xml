@@ -1029,6 +1029,13 @@
 						<onclick>Skin.ToggleSetting(squareMovieList)</onclick>
 						<selected>Skin.HasSetting(squareMovieList)</selected>
 					</control>
+					<control type="radiobutton" id="430">
+						<description>debug</description>
+						<width>625</width>
+						<label>Enable Debug Overlay</label>
+						<onclick>Skin.ToggleSetting(showdebug)</onclick>
+						<selected>Skin.HasSetting(showdebug)</selected>
+					</control>
 				</control>
 				<!-- Scrollbar -->
 				<control type="scrollbar" id="61">
