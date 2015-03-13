@@ -1286,7 +1286,7 @@
 		<width>128</width>
 		<height>180</height>
 		<texture background="true">$VAR[ListItemVideoPreviewSmall]</texture>
-		<aspectratio scalediffuse="false" align="center" aligny="top">scale</aspectratio>
+		<aspectratio scalediffuse="false" align="center" aligny="top">stretch</aspectratio>
 	</control>
 </include>
 <include name="MovieTVPosterWallUnwatchedOverlay">
