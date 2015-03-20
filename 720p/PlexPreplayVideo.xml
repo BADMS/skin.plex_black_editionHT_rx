@@ -18,20 +18,20 @@
 			<visible>IsEmpty(Skin.String(pp_helper))</visible>
 			<visible>Window.Previous(home) | Window.Previous(videolibrary) | Window.Previous(51) | Window.Previous(99)</visible>
 			<control type="button" id="102">
-				<onfocus>AlarmClock(controlPlayer,Plex.PlayWith(VideoDefaultPlayer),00:03,silent)</onfocus>
+				<onfocus>AlarmClock(controlPlayer,Plex.PlayWith(VideoDefaultPlayer),00:02,silent)</onfocus>
 				<visible>Container.PlexContent(Movie) + [Skin.HasSetting(DisablePreplayMovie) | [Skin.HasSetting(DisablePreplayEmptyPlot) + IsEmpty(ListItem.Plot)]]</visible>
 			</control>
 			<control type="button" id="102">
-				<onfocus>AlarmClock(controlPlayer,Plex.PlayWith(VideoDefaultPlayer),00:03,silent)</onfocus>
+				<onfocus>AlarmClock(controlPlayer,Plex.PlayWith(VideoDefaultPlayer),00:02,silent)</onfocus>
 				<visible>Container.Content(episode) + [Skin.HasSetting(DisablePreplayTV) | [Skin.HasSetting(DisablePreplayEmptyPlot) + IsEmpty(ListItem.Plot)]]</visible>
 			</control>
 			<control type="button" id="102">
 				<onfocus>Skin.SetString(preplay_helper_watched,1)</onfocus>
-				<onfocus>AlarmClock(controlPlayer,Plex.PlayWith(VideoDefaultPlayer),00:03,silent)</onfocus>
+				<onfocus>AlarmClock(controlPlayer,Plex.PlayWith(VideoDefaultPlayer),00:02,silent)</onfocus>
 				<visible>Container.Content(episode) + Skin.HasSetting(DisablePreplayEmptyPlot) + Skin.HasSetting(HidePlotForUnwatched) + [ListItem.Status(InProgress) | ListItem.Status(UnWatched)]</visible>
 			</control>
 			<control type="button" id="102">
-				<onfocus>AlarmClock(controlPlayer,Plex.PlayWith(VideoDefaultPlayer),00:03,silent)</onfocus>
+				<onfocus>AlarmClock(controlPlayer,Plex.PlayWith(VideoDefaultPlayer),00:02,silent)</onfocus>
 				<visible>Container.PlexContent(Clip) + [Skin.HasSetting(DisablePreplayClip) | [Skin.HasSetting(DisablePreplayEmptyPlot) + IsEmpty(ListItem.Plot)]]</visible>
 			</control>
 		</control>
