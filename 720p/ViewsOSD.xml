@@ -319,10 +319,19 @@
 						<label>$INFO[VideoPlayer.VideoCodec] $INFO[VideoPlayer.VideoResolution]$INFO[VideoPlayer.AudioStream, [COLOR=orange]&#xB7;[/COLOR] ]</label>
 					</control>	
 					<control type="textbox" id="8">
+						<visible>IsEmpty(Skin.String(playerPlot))</visible>
 						<posy>40</posy>
 						<width>1040</width>
 						<height>84</height>
-						<label>$VAR[ListItemFullInfoPlotOSD]</label>
+						<label fallback="31009">$INFO[Videoplayer.plot]</label>
+						<font>descriptionSmall</font>
+					</control>
+					<control type="textbox" id="8">
+						<visible>!IsEmpty(Skin.String(playerPlot))</visible>
+						<posy>40</posy>
+						<width>1040</width>
+						<height>84</height>
+						<label fallback="31009">$INFO[Skin.String(playerPlot)]</label>
 						<font>descriptionSmall</font>
 					</control>
 				</control>

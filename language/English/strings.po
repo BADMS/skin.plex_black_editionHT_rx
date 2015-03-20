@@ -49,6 +49,10 @@ msgctxt "#31008"
 msgid "TV Shows"
 msgstr ""
 
+msgctxt "#31009"
+msgid "There is no description available for this. You can add one for it in the Media Manager."
+msgstr ""
+
 #empty strings from id 31009 to 31010
 
 msgctxt "#31011"
