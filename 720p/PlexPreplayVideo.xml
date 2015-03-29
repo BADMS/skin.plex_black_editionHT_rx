@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="10090">
-	<onload condition="!Container.PlexContent(Episode) | Container.PlexContent(Episode) + [ListItem.Status(Watched) | [!Skin.HasSetting(HidePlotForUnwatched) + [ListItem.Status(InProgress) | ListItem.Status(UnWatched)]]]">Skin.Reset(playerPlot)</onload>
-	<onload condition="Container.PlexContent(Episode) + [Skin.HasSetting(HidePlotForUnwatched) + [ListItem.Status(InProgress) | ListItem.Status(UnWatched)] + !IsEmpty(ListItem.Plot)]">Skin.SetString(playerPlot,$LOCALIZE[32105])</onload>
-	<onload condition="Container.PlexContent(Episode) + IsEmpty(ListItem.Plot)">Skin.SetString(playerPlot,There is no description available for this. You can add one for it in the Media Manager.)</onload>
+	<onunload condition="!Container.PlexContent(Episode) | Container.PlexContent(Episode) + [ListItem.Status(Watched) | [!Skin.HasSetting(HidePlotForUnwatched) + [ListItem.Status(InProgress) | ListItem.Status(UnWatched)]]]">Skin.Reset(playerPlot)</onunload>
+	<onunload condition="Container.PlexContent(Episode) + [Skin.HasSetting(HidePlotForUnwatched) + [ListItem.Status(InProgress) | ListItem.Status(UnWatched)] + !IsEmpty(ListItem.Plot)]">Skin.SetString(playerPlot,$LOCALIZE[32105])</onunload>
+	<onunload condition="Container.PlexContent(Episode) + IsEmpty(ListItem.Plot)">Skin.SetString(playerPlot,There is no description available for this. You can add one for it in the Media Manager.)</onunload>
 	<onload condition="Window.Previous(home)">Skin.SetString(preplay_helper,home)</onload>
 	<onload condition="Window.Previous(videolibrary)">Skin.SetString(preplay_helper,videolibrary)</onload>
 	<onload condition="Window.Previous(51)">Skin.SetString(preplay_helper,51)</onload>

@@ -654,8 +654,20 @@
 						<width>185</width>
 						<height>274</height>
 						<fadetime>160</fadetime>
+						<texture background="true">$INFO[Listitem.art(poster)]</texture>
+						<aspectratio scalediffuse="false" align="center" aligny="top">scale</aspectratio>
+						<visible>isempty(Container.FolderThumb)</visible>
+					</control>
+					<control type="image">
+						<description>Poster image</description>
+						<posx>13</posx>
+						<posy>13</posy>
+						<width>185</width>
+						<height>274</height>
+						<fadetime>160</fadetime>
 						<texture background="true">$INFO[Container.FolderThumb]</texture>
 						<aspectratio scalediffuse="false" align="center" aligny="top">scale</aspectratio>
+						<visible>!isempty(Container.FolderThumb)</visible>
 					</control>
 				</control>
 				<!-- Infos Left -->
@@ -928,7 +940,17 @@
 						<height>274</height>
 						<texture background="true">$INFO[Container.Thumb]</texture>
 						<aspectratio scalediffuse="false" align="center" aligny="top">scale</aspectratio>
-						<visible>IsEmpty(Container.Property(mixedParents))</visible>
+						<visible>!IsEmpty(Container.Thumb) + IsEmpty(Container.Property(mixedParents))</visible>
+					</control>
+					<control type="image">
+						<description>Poster image</description>
+						<posx>13</posx>
+						<posy>13</posy>
+						<width>182</width>
+						<height>274</height>
+						<texture background="true">$INFO[Listitem.art(poster)]</texture>
+						<aspectratio scalediffuse="false" align="center" aligny="top">scale</aspectratio>
+						<visible>IsEmpty(Container.Thumb) + IsEmpty(Container.Property(mixedParents))</visible>
 					</control>
 					<control type="image">
 						<description>Poster image</description>
