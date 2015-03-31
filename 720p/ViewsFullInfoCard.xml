@@ -189,6 +189,11 @@
 		<value condition="IsEmpty(ListItem.Art(thumb))]">$INFO[ListItem.Property(Fanart_Image)]</value>
 		<value>$INFO[ListItem.Property(Fanart_Image)]</value>
 	</variable>
+	<variable name="ListItemVideoPreviewIC">
+		<value condition="!ListItem.Type(episode)">$INFO[ListItem.Art(thumb)]</value>
+		<value condition="ListItem.Type(episode)">$INFO[Listitem.art(poster)]</value>
+		<value>$INFO[ListItem.Property(Fanart_Image)]</value>
+	</variable>
 	<variable name="ListItemVideoPreviewSmall">
 		<value condition="!ListItem.Type(episode)">$INFO[ListItem.Art(smallThumb)]</value>
 		<value condition="ListItem.Type(episode) + [ListItem.Status(Watched) | [!Skin.HasSetting(HidePlotForUnwatched) + [ListItem.Status(InProgress) | ListItem.Status(UnWatched)]]]">$INFO[ListItem.Art(smallThumb)]</value>
@@ -503,7 +508,7 @@
 							<posx>5</posx>
 							<width>284</width>
 							<height>428</height>
-							<texture background="true">$VAR[ListItemVideoPreview]</texture>
+							<texture background="true">$VAR[ListItemVideoPreviewIC]</texture>
 							<aspectratio scalediffuse="false" align="center" aligny="top">scale</aspectratio>
 							<fadetime>300</fadetime>
 						</control>
@@ -535,7 +540,7 @@
 							<posx>-14</posx>
 							<width>303</width>
 							<height>428</height>
-							<texture background="true">$VAR[ListItemVideoPreview]</texture>
+							<texture background="true">$VAR[ListItemVideoPreviewIC]</texture>
 							<aspectratio scalediffuse="false" align="center" aligny="top">scale</aspectratio>
 							<fadetime>300</fadetime>
 						</control>

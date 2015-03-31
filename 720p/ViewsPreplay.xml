@@ -554,14 +554,12 @@
 				<visible>Container.Content(empty)</visible>
 				<viewtype label="FilteredEmpty">panel</viewtype>
 				<onup>ActivateWindow(home)</onup>
-				<ondown>ParentDir</ondown>
-				<ondown>ParentDir</ondown>
-				<onright>ParentDir</onright>
-				<onright>ParentDir</onright>
-				<onleft>ParentDir</onleft>
-				<onleft>ParentDir</onleft>
-				<onback>ParentDir</onback>
-				<onback>ParentDir</onback>
+				<ondown>back</ondown>
+				<ondown>back</ondown>
+				<onright>back</onright>
+				<onright>back</onright>
+				<onleft>back</onleft>
+				<onleft>back</onleft>
 				<orientation>vertical</orientation>
 				<posx>100</posx>
 				<posy>27</posy>
@@ -574,8 +572,8 @@
 				<!-- default empty list item -->
 				<content>
 					<item id="1">
-						<onclick>ParentDir</onclick>
-						<onclick>ParentDir</onclick>
+						<onclick>back</onclick>
+						<onclick>back</onclick>
 					</item>
 				</content>
 			</control>
@@ -651,7 +649,7 @@
 						<description>Poster image</description>
 						<posx>13</posx>
 						<posy>13</posy>
-						<width>185</width>
+						<width>182</width>
 						<height>274</height>
 						<fadetime>160</fadetime>
 						<texture background="true">$INFO[Listitem.art(poster)]</texture>
@@ -662,7 +660,7 @@
 						<description>Poster image</description>
 						<posx>13</posx>
 						<posy>13</posy>
-						<width>185</width>
+						<width>182</width>
 						<height>274</height>
 						<fadetime>160</fadetime>
 						<texture background="true">$INFO[Container.FolderThumb]</texture>
