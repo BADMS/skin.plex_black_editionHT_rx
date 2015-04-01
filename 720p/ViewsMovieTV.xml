@@ -876,12 +876,22 @@
 					</control>
 				</itemlayout>
 				<focusedlayout width="422" height="135" condition="!Skin.HasSetting(ShowClearart)">	
-					<include>TVPosterBanner</include>
-					<include>TVPosterBannerSelectedBorder</include>
+					<control type="group">
+						<posx>0</posx>
+						<posy>0</posy>
+						<include>TVPosterBanner</include>
+						<include>TVPosterBannerSelectedBorder</include>
+						<animation effect="zoom" start="100" end="103" center="211,67" time="300">Focus</animation>
+					</control>
 				</focusedlayout>
 				<focusedlayout width="422" height="135" condition="Skin.HasSetting(ShowClearart)">	
-					<include>TVPosterClearart</include>
-					<include>TVPosterClearartSelectedBorder</include>
+					<control type="group">
+						<posx>0</posx>
+						<posy>0</posy>
+						<include>TVPosterClearart</include>
+						<include>TVPosterClearartSelectedBorder</include>
+						<animation effect="zoom" start="100" end="103" center="211,67" time="300">Focus</animation>
+					</control>
 				</focusedlayout>
 			</control>
 		</control>
