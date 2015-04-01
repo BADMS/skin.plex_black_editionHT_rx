@@ -582,8 +582,8 @@
 			<control type="group">
 				<visible>Skin.HasSetting(AltUnwatchedEpisodes)</visible>
 				<control type="image">
-					<posx>153</posx>
-					<posy>253</posy>
+					<posx>156</posx>
+					<posy>11</posy>
 					<width>45</width>
 					<height>34</height>
 					<texture>unwatchedcount_overlay4.png</texture>
@@ -592,8 +592,8 @@
 					<animation effect="fade" start="95" end="95" time="0" condition="true">Conditional</animation>
 				</control>
 				<control type="label">
-					<posx>176</posx>
-					<posy>257</posy>
+					<posx>178</posx>
+					<posy>15</posy>
 					<width>40</width>
 					<height>27</height>
 					<label>$INFO[ListItem.Property(UnWatchedEpisodes)]</label>
