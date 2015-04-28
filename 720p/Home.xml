@@ -5,6 +5,46 @@
 	<onload>AlarmClock(controlType,Skin.Reset(SectionType),00:01,silent)</onload>
 	<onload>Skin.SetString(AspectRatio,$INFO[Skin.AspectRatio])</onload>
 	<onload>Skin.Reset(pp_helper)</onload>
+	<onload>Skin.Reset(TVFAOD1)</onload>
+	<onload>Skin.Reset(TVFAOD2)</onload>
+	<onload>Skin.Reset(TVFAOD3)</onload>
+	<onload>Skin.Reset(TVFAOD4)</onload>
+	<onload>Skin.Reset(TVFAOD5)</onload>
+	<onload>Skin.Reset(TVFAOD6)</onload>
+	<onload>Skin.Reset(TVFAOD7)</onload>
+	<onload>Skin.Reset(TVFAOD8)</onload>
+	<onload>Skin.Reset(TVFAOD9)</onload>
+	<onload>Skin.Reset(TVFAOD10)</onload>
+	<onload>Skin.Reset(TVFARA1)</onload>
+	<onload>Skin.Reset(TVFARA2)</onload>
+	<onload>Skin.Reset(TVFARA3)</onload>
+	<onload>Skin.Reset(TVFARA4)</onload>
+	<onload>Skin.Reset(TVFARA5)</onload>
+	<onload>Skin.Reset(TVFARA6)</onload>
+	<onload>Skin.Reset(TVFARA7)</onload>
+	<onload>Skin.Reset(TVFARA8)</onload>
+	<onload>Skin.Reset(TVFARA9)</onload>
+	<onload>Skin.Reset(TVFARA10)</onload>
+	<onload>AlarmClock(artType1,Skin.SetString(TVFAOD1,$INFO[Container(11001).ListItem(0).Art(smallGrandparentThumb)]),00:03,silent)</onload>
+	<onload>AlarmClock(artType2,Skin.SetString(TVFAOD2,$INFO[Container(11001).ListItem(1).Art(smallGrandparentThumb)]),00:03,silent)</onload>
+	<onload>AlarmClock(artType3,Skin.SetString(TVFAOD3,$INFO[Container(11001).ListItem(2).Art(smallGrandparentThumb)]),00:03,silent)</onload>
+	<onload>AlarmClock(artType4,Skin.SetString(TVFAOD4,$INFO[Container(11001).ListItem(3).Art(smallGrandparentThumb)]),00:03,silent)</onload>
+	<onload>AlarmClock(artType5,Skin.SetString(TVFAOD5,$INFO[Container(11001).ListItem(4).Art(smallGrandparentThumb)]),00:03,silent)</onload>
+	<onload>AlarmClock(artType6,Skin.SetString(TVFAOD6,$INFO[Container(11001).ListItem(5).Art(smallGrandparentThumb)]),00:03,silent)</onload>
+	<onload>AlarmClock(artType7,Skin.SetString(TVFAOD7,$INFO[Container(11001).ListItem(6).Art(smallGrandparentThumb)]),00:03,silent)</onload>
+	<onload>AlarmClock(artType8,Skin.SetString(TVFAOD8,$INFO[Container(11001).ListItem(7).Art(smallGrandparentThumb)]),00:03,silent)</onload>
+	<onload>AlarmClock(artType9,Skin.SetString(TVFAOD9,$INFO[Container(11001).ListItem(8).Art(smallGrandparentThumb)]),00:03,silent)</onload>
+	<onload>AlarmClock(artType10,Skin.SetString(TVFAOD10,$INFO[Container(11001).ListItem(9).Art(smallGrandparentThumb)]),00:03,silent)</onload>
+	<onload>AlarmClock(artrType1,Skin.SetString(TVFARA1,$INFO[Container(11000).ListItem(0).Art(smallGrandparentThumb)]),00:03,silent)</onload>
+	<onload>AlarmClock(artrType2,Skin.SetString(TVFARA2,$INFO[Container(11000).ListItem(1).Art(smallGrandparentThumb)]),00:03,silent)</onload>
+	<onload>AlarmClock(artrType3,Skin.SetString(TVFARA3,$INFO[Container(11000).ListItem(2).Art(smallGrandparentThumb)]),00:03,silent)</onload>
+	<onload>AlarmClock(artrType4,Skin.SetString(TVFARA4,$INFO[Container(11000).ListItem(3).Art(smallGrandparentThumb)]),00:03,silent)</onload>
+	<onload>AlarmClock(artrType5,Skin.SetString(TVFARA5,$INFO[Container(11000).ListItem(4).Art(smallGrandparentThumb)]),00:03,silent)</onload>
+	<onload>AlarmClock(artrType6,Skin.SetString(TVFARA6,$INFO[Container(11000).ListItem(5).Art(smallGrandparentThumb)]),00:03,silent)</onload>
+	<onload>AlarmClock(artrType7,Skin.SetString(TVFARA7,$INFO[Container(11000).ListItem(6).Art(smallGrandparentThumb)]),00:03,silent)</onload>
+	<onload>AlarmClock(artrType8,Skin.SetString(TVFARA8,$INFO[Container(11000).ListItem(7).Art(smallGrandparentThumb)]),00:03,silent)</onload>
+	<onload>AlarmClock(artrType9,Skin.SetString(TVFARA9,$INFO[Container(11000).ListItem(8).Art(smallGrandparentThumb)]),00:03,silent)</onload>
+	<onload>AlarmClock(artrType10,Skin.SetString(TVFARA10,$INFO[Container(11000).ListItem(9).Art(smallGrandparentThumb)]),00:03,silent)</onload>
 	<onunload>Skin.Reset(pp_helper)</onunload>
 	<onload>Skin.Reset(dsp_helper)</onload>
 	<onunload>CancelAlarm(controlType,true)</onunload>

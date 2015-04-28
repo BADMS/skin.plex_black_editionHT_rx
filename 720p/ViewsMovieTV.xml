@@ -172,6 +172,7 @@
 	<include name="vJK">
 		<!-- Library Movies & TV Shows JK-->
 		<control type="group" id="777">
+			<visible>Control.IsVisible(590)</visible>
 			<include>FadeDialog</include>
 			<visible>!Container.PlexContent(Secondary) + [Container.PlexContent(Movies) | Container.PlexContent(TVShows) | Container.PlexContent(Seasons) | Container.PlexContent(HomeMovies)]</visible>
 			<include>rightSideSlide</include>
@@ -211,6 +212,7 @@
 	<include name="LibraryPostersWall">
 		<!-- Library Movies & TV Shows -->
 		<control type="group" id="777">
+			<visible>Control.IsVisible(557)</visible>
 			<include>FadeDialog</include>
 			<visible>!Container.PlexContent(Secondary) + [Container.PlexContent(Movies) | Container.PlexContent(TVShows) | Container.PlexContent(Seasons) | Container.PlexContent(HomeMovies)]</visible>
 			<include>rightSideSlide</include>
@@ -227,6 +229,280 @@
 				<posy>0</posy>
 				<width>1280</width>
 				<height>720</height>
+				<itemlayout width="128" height="180">
+					<control type="group">
+						<animation effect="fade" start="100" end="75" condition="Skin.HasSetting(FadeoutUnfocusedThumb)">Conditional</animation>
+						<animation effect="fade" start="100" end="25" condition="Skin.HasSetting(FadeoutUnfocusedThumbWatched) + !ListItem.Status(Unwatched) + !ListItem.Status(InProgress)">Conditional</animation>
+						<include>MovieTVPosterWall</include>
+					</control>
+				</itemlayout>
+				<focusedlayout condition="!Container.Column(8) + !Container.Column(9)" width="128" height="180">
+					<control type="group">
+						<include>MovieTVPosterWall</include>
+						<animation effect="zoom" start="100" end="103" center="64,90" time="300">Focus</animation>
+						<include condition="!Skin.HasSetting(DisableFanout)">MovieTVPosterWallSelectedBorder</include>
+						<include condition="Skin.HasSetting(DisableFanout)">MovieTVPosterWallSelectedBorderNF</include>
+					</control>
+				</focusedlayout>
+				<focusedlayout condition="Container.Column(8)" width="128" height="180">
+					<control type="group">
+						<include>MovieTVPosterWall</include>
+						<animation effect="zoom" start="100" end="103" center="64,90" time="300">Focus</animation>
+						<include condition="!Skin.HasSetting(DisableFanout)">MovieTVPosterWallSelectedBorderLeft</include>
+						<include condition="Skin.HasSetting(DisableFanout)">MovieTVPosterWallSelectedBorderNF</include>
+					</control>
+				</focusedlayout>
+				<focusedlayout condition="Container.Column(9)" width="128" height="180">
+					<control type="group">
+						<include>MovieTVPosterWall</include>
+						<animation effect="zoom" start="100" end="103" center="64,90" time="300">Focus</animation>
+						<include condition="!Skin.HasSetting(DisableFanout)">MovieTVPosterWallSelectedBorderLeft</include>
+						<include condition="Skin.HasSetting(DisableFanout)">MovieTVPosterWallSelectedBorderNF</include>
+					</control>
+				</focusedlayout>
+			</control>
+		</control>
+	</include>
+	<include name="LibraryPostersWallSplit">
+		<!-- Library Movies & TV Shows -->
+		<control type="group" id="777">
+			<control type="largeimage">
+				<posx>0</posx>
+				<posy>360</posy>
+				<width>128</width>
+				<height>180</height>
+				<fadetime>400</fadetime>
+				<animation effect="fade" end="100" time="300" delay="0">Visible</animation>
+				<animation effect="fade" end="0" time="300" delay="0">Hidden</animation>
+				<texture background="true">$INFO[Skin.String(TVFAOD1)]</texture>
+			<aspectratio>stretch</aspectratio>
+			</control>	
+			<control type="largeimage">
+				<posx>128</posx>
+				<posy>360</posy>
+				<width>128</width>
+				<height>180</height>
+				<fadetime>400</fadetime>
+				<animation effect="fade" end="100" time="300" delay="0">Visible</animation>
+				<animation effect="fade" end="0" time="300" delay="0">Hidden</animation>
+				<texture background="true">$INFO[Skin.String(TVFAOD2)]</texture>
+			<aspectratio>stretch</aspectratio>
+			</control>	
+			<control type="largeimage">
+				<posx>256</posx>
+				<posy>360</posy>
+				<width>128</width>
+				<height>180</height>
+				<fadetime>400</fadetime>
+				<animation effect="fade" end="100" time="300" delay="0">Visible</animation>
+				<animation effect="fade" end="0" time="300" delay="0">Hidden</animation>
+				<texture background="true">$INFO[Skin.String(TVFAOD3)]</texture>
+			<aspectratio>stretch</aspectratio>
+			</control>	
+			<control type="largeimage">
+				<posx>384</posx>
+				<posy>360</posy>
+				<width>128</width>
+				<height>180</height>
+				<fadetime>400</fadetime>
+				<animation effect="fade" end="100" time="300" delay="0">Visible</animation>
+				<animation effect="fade" end="0" time="300" delay="0">Hidden</animation>
+				<texture background="true">$INFO[Skin.String(TVFAOD4)]</texture>
+			<aspectratio>stretch</aspectratio>
+			</control>	
+			<control type="largeimage">
+				<posx>512</posx>
+				<posy>360</posy>
+				<width>128</width>
+				<height>180</height>
+				<fadetime>400</fadetime>
+				<animation effect="fade" end="100" time="300" delay="0">Visible</animation>
+				<animation effect="fade" end="0" time="300" delay="0">Hidden</animation>
+				<texture background="true">$INFO[Skin.String(TVFAOD5)]</texture>
+			<aspectratio>stretch</aspectratio>
+			</control>	
+			<control type="largeimage">
+				<posx>640</posx>
+				<posy>360</posy>
+				<width>128</width>
+				<height>180</height>
+				<fadetime>400</fadetime>
+				<animation effect="fade" end="100" time="300" delay="0">Visible</animation>
+				<animation effect="fade" end="0" time="300" delay="0">Hidden</animation>
+				<texture background="true">$INFO[Skin.String(TVFAOD6)]</texture>
+			<aspectratio>stretch</aspectratio>
+			</control>	
+			<control type="largeimage">
+				<posx>768</posx>
+				<posy>360</posy>
+				<width>128</width>
+				<height>180</height>
+				<fadetime>400</fadetime>
+				<animation effect="fade" end="100" time="300" delay="0">Visible</animation>
+				<animation effect="fade" end="0" time="300" delay="0">Hidden</animation>
+				<texture background="true">$INFO[Skin.String(TVFAOD7)]</texture>
+			<aspectratio>stretch</aspectratio>
+			</control>	
+			<control type="largeimage">
+				<posx>896</posx>
+				<posy>360</posy>
+				<width>128</width>
+				<height>180</height>
+				<fadetime>400</fadetime>
+				<animation effect="fade" end="100" time="300" delay="0">Visible</animation>
+				<animation effect="fade" end="0" time="300" delay="0">Hidden</animation>
+				<texture background="true">$INFO[Skin.String(TVFAOD8)]</texture>
+			<aspectratio>stretch</aspectratio>
+			</control>	
+			<control type="largeimage">
+				<posx>1024</posx>
+				<posy>360</posy>
+				<width>128</width>
+				<height>180</height>
+				<fadetime>400</fadetime>
+				<animation effect="fade" end="100" time="300" delay="0">Visible</animation>
+				<animation effect="fade" end="0" time="300" delay="0">Hidden</animation>
+				<texture background="true">$INFO[Skin.String(TVFAOD9)]</texture>
+			<aspectratio>stretch</aspectratio>
+			</control>	
+			<control type="largeimage">
+				<posx>1152</posx>
+				<posy>360</posy>
+				<width>128</width>
+				<height>180</height>
+				<fadetime>400</fadetime>
+				<animation effect="fade" end="100" time="300" delay="0">Visible</animation>
+				<animation effect="fade" end="0" time="300" delay="0">Hidden</animation>
+				<texture background="true">$INFO[Skin.String(TVFAOD10)]</texture>
+			<aspectratio>stretch</aspectratio>
+			</control>	
+			<control type="largeimage">
+				<posx>0</posx>
+				<posy>540</posy>
+				<width>128</width>
+				<height>180</height>
+				<fadetime>400</fadetime>
+				<animation effect="fade" end="100" time="300" delay="0">Visible</animation>
+				<animation effect="fade" end="0" time="300" delay="0">Hidden</animation>
+				<texture background="true">$INFO[Skin.String(TVFARA1)]</texture>
+			<aspectratio>stretch</aspectratio>
+			</control>	
+			<control type="largeimage">
+				<posx>128</posx>
+				<posy>540</posy>
+				<width>128</width>
+				<height>180</height>
+				<fadetime>400</fadetime>
+				<animation effect="fade" end="100" time="300" delay="0">Visible</animation>
+				<animation effect="fade" end="0" time="300" delay="0">Hidden</animation>
+				<texture background="true">$INFO[Skin.String(TVFARA2)]</texture>
+			<aspectratio>stretch</aspectratio>
+			</control>	
+			<control type="largeimage">
+				<posx>256</posx>
+				<posy>540</posy>
+				<width>128</width>
+				<height>180</height>
+				<fadetime>400</fadetime>
+				<animation effect="fade" end="100" time="300" delay="0">Visible</animation>
+				<animation effect="fade" end="0" time="300" delay="0">Hidden</animation>
+				<texture background="true">$INFO[Skin.String(TVFARA3)]</texture>
+			<aspectratio>stretch</aspectratio>
+			</control>	
+			<control type="largeimage">
+				<posx>384</posx>
+				<posy>540</posy>
+				<width>128</width>
+				<height>180</height>
+				<fadetime>400</fadetime>
+				<animation effect="fade" end="100" time="300" delay="0">Visible</animation>
+				<animation effect="fade" end="0" time="300" delay="0">Hidden</animation>
+				<texture background="true">$INFO[Skin.String(TVFARA4)]</texture>
+			<aspectratio>stretch</aspectratio>
+			</control>	
+			<control type="largeimage">
+				<posx>512</posx>
+				<posy>540</posy>
+				<width>128</width>
+				<height>180</height>
+				<fadetime>400</fadetime>
+				<animation effect="fade" end="100" time="300" delay="0">Visible</animation>
+				<animation effect="fade" end="0" time="300" delay="0">Hidden</animation>
+				<texture background="true">$INFO[Skin.String(TVFARA5)]</texture>
+			<aspectratio>stretch</aspectratio>
+			</control>	
+			<control type="largeimage">
+				<posx>640</posx>
+				<posy>540</posy>
+				<width>128</width>
+				<height>180</height>
+				<fadetime>400</fadetime>
+				<animation effect="fade" end="100" time="300" delay="0">Visible</animation>
+				<animation effect="fade" end="0" time="300" delay="0">Hidden</animation>
+				<texture background="true">$INFO[Skin.String(TVFARA6)]</texture>
+			<aspectratio>stretch</aspectratio>
+			</control>	
+			<control type="largeimage">
+				<posx>768</posx>
+				<posy>540</posy>
+				<width>128</width>
+				<height>180</height>
+				<fadetime>400</fadetime>
+				<animation effect="fade" end="100" time="300" delay="0">Visible</animation>
+				<animation effect="fade" end="0" time="300" delay="0">Hidden</animation>
+				<texture background="true">$INFO[Skin.String(TVFARA7)]</texture>
+			<aspectratio>stretch</aspectratio>
+			</control>	
+			<control type="largeimage">
+				<posx>896</posx>
+				<posy>540</posy>
+				<width>128</width>
+				<height>180</height>
+				<fadetime>400</fadetime>
+				<animation effect="fade" end="100" time="300" delay="0">Visible</animation>
+				<animation effect="fade" end="0" time="300" delay="0">Hidden</animation>
+				<texture background="true">$INFO[Skin.String(TVFARA8)]</texture>
+			<aspectratio>stretch</aspectratio>
+			</control>	
+			<control type="largeimage">
+				<posx>1024</posx>
+				<posy>540</posy>
+				<width>128</width>
+				<height>180</height>
+				<fadetime>400</fadetime>
+				<animation effect="fade" end="100" time="300" delay="0">Visible</animation>
+				<animation effect="fade" end="0" time="300" delay="0">Hidden</animation>
+				<texture background="true">$INFO[Skin.String(TVFARA9)]</texture>
+			<aspectratio>stretch</aspectratio>
+			</control>	
+			<control type="largeimage">
+				<posx>1152</posx>
+				<posy>540</posy>
+				<width>128</width>
+				<height>180</height>
+				<fadetime>400</fadetime>
+				<animation effect="fade" end="100" time="300" delay="0">Visible</animation>
+				<animation effect="fade" end="0" time="300" delay="0">Hidden</animation>
+				<texture background="true">$INFO[Skin.String(TVFARA10)]</texture>
+			<aspectratio>stretch</aspectratio>
+			</control>	
+			<visible>Control.IsVisible(558)</visible>
+			<include>FadeDialog</include>
+			<visible>!Container.PlexContent(Secondary) + [Container.PlexContent(Movies) | Container.PlexContent(TVShows) | Container.PlexContent(Seasons) | Container.PlexContent(HomeMovies)]</visible>
+			<include>rightSideSlide</include>
+			<control type="panel" id="558">
+				<visible>!Container.PlexContent(Secondary) + [Container.PlexContent(Movies) | Container.PlexContent(TVShows) | Container.PlexContent(Seasons) | Container.PlexContent(HomeMovies)]</visible>
+				<viewtype label="Wall">panel</viewtype>
+				<onup>558</onup>
+				<ondown>558</ondown>
+				<onright>558</onright>
+				<onleft>998</onleft>
+				<orientation>vertical</orientation>
+				<!--<posx>100</posx>-->
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>360</height>
 				<itemlayout width="128" height="180">
 					<control type="group">
 						<animation effect="fade" start="100" end="75" condition="Skin.HasSetting(FadeoutUnfocusedThumb)">Conditional</animation>

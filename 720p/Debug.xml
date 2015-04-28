@@ -159,10 +159,7 @@
 				<include>FullScreenScaled</include>
 				<texture>black.png</texture>
 			</control>
-			<control type="image">
-				<include>FullScreenScaled</include>
-				<texture>bg-overlay-grainy.png</texture>
-			</control>
+
 		</control>
 		<!-- left list -->
 		<control type="grouplist">
@@ -186,7 +183,7 @@
 			</control>
 			<control type="label">
 				<include>debugFont</include>
-				<label>System.Screenresolution : [COLOR=orangeLight]$INFO[System.Screenresolution][/COLOR]</label>
+				<label>odtv : [COLOR=orangeLight]$INFO[Skin.String(TVFAOD1)][/COLOR]</label>
 			</control>
 			<control type="label">
 				<include>debugFont</include>
@@ -913,6 +910,14 @@
 	<control type="label">
 		<include>debugFont</include>
 		<label>HomeListSelectedItemType : [COLOR=orangeLight]$VAR[HomeListSelectedItemType][/COLOR]</label>
+	</control>
+	<control type="label">
+		<include>debugFont</include>
+		<label>HomeListItemFullInfoTitle : [COLOR=orangeLight]$VAR[HomeListItemFullInfoTitle][/COLOR]</label>
+	</control>
+	<control type="label">
+		<include>debugFont</include>
+		<label>Container(11001).ListItem.Art(parentThumb) : [COLOR=orangeLight]$INFO[Container(11001).ListItem.Art(parentThumb)][/COLOR]</label>
 	</control>
 	<control type="label">
 		<include>debugFont</include>
