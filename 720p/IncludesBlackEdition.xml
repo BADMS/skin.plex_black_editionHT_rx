@@ -921,7 +921,7 @@
 		<posx>11</posx>
 		<posy>11</posy>
 		<width>380</width>
-		<height>197</height>
+		<height>195</height>
 		<include>Border</include>
 	</control>
 </include>

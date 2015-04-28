@@ -29,7 +29,6 @@
 			<include>Border</include>
 		</control>
 	</include>
-
 	<include name="SelectedBorderBig">
 		<control type="image">
 			<posx>10</posx>
@@ -179,7 +178,6 @@
 				<height>39</height>
 				<include>Black</include>
 				<animation effect="fade" start="0" end="40" time="0" condition="true">Conditional</animation>
-
 			</control>
 		</control>
 	</include>
@@ -220,7 +218,6 @@
 			</control>
 		</control>
 	</include>
-
 	<include name="PhotoAlbumIconBig">
 		<posx>120</posx>
 		<posy>81</posy>
@@ -238,8 +235,7 @@
 		<aligny>center</aligny>
 		<label>$INFO[ListItem.Label]</label>
 		<font>Regular-17</font>
-		<!--<shadowcolor>ff222222</shadowcolor>-->
-	</include>
+		<!--<shadowcolor>ff222222</shadowcolor>--></include>
 	<include name="PhotoLabelBig">
 		<posy>125</posy>
 		<posx>85</posx>
@@ -249,8 +245,7 @@
 		<aligny>center</aligny>
 		<label>$INFO[ListItem.Label]</label>
 		<font>Regular-18</font>
-		<!--<shadowcolor>ff222222</shadowcolor>-->
-		<visible>ListItem.Type(photoAlbum)</visible>
+		<!--<shadowcolor>ff222222</shadowcolor>--><visible>ListItem.Type(photoAlbum)</visible>
 	</include>
 	<!-- LibraryPhoto -->
 	<include name="AlbumTitleLibrary">
@@ -267,9 +262,7 @@
 				<label>$INFO[Container.SecondTitle]</label>
 				<font>Regular-36</font>
 				<textcolor>white</textcolor>
-
 			</control>
-
 		</control>
 	</include>
 	<include name="AlbumIconsLibrary">
@@ -331,7 +324,7 @@
 			<visible>!Container.PlexContent(PhotoAlbums) + !Container.PlexContent(Channel)</visible>
 			<include>FadeDialog</include>
 			<include>rightSideSlide</include>
-			<!--BG Dim-->		
+			<!--BG Dim-->
 			<control type="group">
 				<visible>Control.IsVisible(56)</visible>
 				<visible>!Skin.String(56_Dim,100)</visible>
@@ -388,9 +381,9 @@
 					<height>600</height>
 					<itemlayout width="150" height="150">
 						<include>PhotoThumbBig</include>
-						<include>PhotoAlbumCoverBig</include>		
+						<include>PhotoAlbumCoverBig</include>
 						<control type="image">
-							<include>PhotoAlbumIconBig</include>	
+							<include>PhotoAlbumIconBig</include>
 						</control>
 						<control type="label">
 							<include>PhotoLabelBig</include>
@@ -398,18 +391,20 @@
 						</control>
 					</itemlayout>
 					<focusedlayout width="150" height="150">
-						<!--<include>PhotoThumbCard</include>-->
-						<include>PhotoThumbBig</include>
-						<include>PhotoAlbumCoverBig</include>
-						<control type="image">
-							<include>PhotoAlbumIconBig</include>	
-							<colordiffuse>orange</colordiffuse>
+						<control type="group">
+							<!--<include>PhotoThumbCard</include>--><include>PhotoThumbBig</include>
+							<include>PhotoAlbumCoverBig</include>
+							<control type="image">
+								<include>PhotoAlbumIconBig</include>
+								<colordiffuse>orange</colordiffuse>
+							</control>
+							<control type="label">
+								<include>PhotoLabelBig</include>
+								<textcolor>orange</textcolor>
+							</control>
+							<include>SelectedBorderBig</include>
+							<animation effect="slide" tween="circle" easing="out" start="0,0" end="0,-07" time="350" condition="true">Conditional</animation>
 						</control>
-						<control type="label">
-							<include>PhotoLabelBig</include>
-							<textcolor>orange</textcolor>
-						</control>
-						<include>SelectedBorderBig</include>
 					</focusedlayout>
 				</control>
 			</control>
@@ -426,7 +421,7 @@
 			<visible>Container.PlexContent(PhotoAlbums)</visible>
 			<include>FadeDialog</include>
 			<include>rightSideSlide</include>
-			<!--BG Dim-->		
+			<!--BG Dim-->
 			<control type="group">
 				<visible>Control.IsVisible(57)</visible>
 				<visible>!Skin.String(57_Dim,100)</visible>
@@ -468,7 +463,7 @@
 				</control>
 			</control>
 			<control type="group">
-				<visible>Control.IsVisible(57)</visible>				
+				<visible>Control.IsVisible(57)</visible>
 				<include>AlbumTitleLibrary</include>
 			</control>
 			<!-- main list -->
@@ -489,7 +484,7 @@
 						<include>PhotoThumbBig</include>
 						<include>PhotoAlbumCoverBig</include>
 						<control type="image">
-							<include>PhotoAlbumIconBig</include>	
+							<include>PhotoAlbumIconBig</include>
 						</control>
 						<control type="label">
 							<include>PhotoLabelBig</include>
@@ -497,17 +492,20 @@
 						</control>
 					</itemlayout>
 					<focusedlayout width="150" height="150">
-						<include>PhotoThumbBig</include>
-						<include>PhotoAlbumCoverBig</include>	
-						<control type="image">
-							<include>PhotoAlbumIconBig</include>	
-							<colordiffuse>orange</colordiffuse>
+						<control type="group">
+							<include>PhotoThumbBig</include>
+							<include>PhotoAlbumCoverBig</include>
+							<control type="image">
+								<include>PhotoAlbumIconBig</include>
+								<colordiffuse>orange</colordiffuse>
+							</control>
+							<control type="label">
+								<include>PhotoLabelBig</include>
+								<textcolor>orangeLight</textcolor>
+							</control>
+							<include>SelectedBorderBig</include>
+							<animation effect="slide" tween="circle" easing="out" start="0,0" end="0,-07" time="350" condition="true">Conditional</animation>
 						</control>
-						<control type="label">
-							<include>PhotoLabelBig</include>
-							<textcolor>orangeLight</textcolor>
-						</control>
-						<include>SelectedBorderBig</include>
 					</focusedlayout>
 				</control>
 			</control>
@@ -524,7 +522,7 @@
 			<visible>Container.PlexContent(PhotoAlbums)</visible>
 			<include>FadeDialog</include>
 			<include>rightSideSlide</include>
-			<!--BG Dim-->		
+			<!--BG Dim-->
 			<control type="group">
 				<visible>Control.IsVisible(561)</visible>
 				<visible>!Skin.String(561_Dim,100)</visible>
@@ -578,7 +576,6 @@
 					<fadetime>300</fadetime>
 					<visible>!ListItem.Type(photoAlbum)</visible>
 				</control>
-
 				<control type="image">
 					<description>Poster image</description>
 					<posx>25</posx>
@@ -590,7 +587,6 @@
 					<fadetime>300</fadetime>
 					<visible>ListItem.Type(photoAlbum)</visible>
 				</control>
-
 			</control>
 			<!-- main list -->
 			<control type="group" id="777">
@@ -623,27 +619,30 @@
 							<posy>105</posy>
 							<include>PhotoLabel</include>
 							<textcolor>white</textcolor>
-						</control>	
+						</control>
 					</itemlayout>
 					<focusedlayout width="140" height="140">
-						<include>PhotoThumb</include>
-						<include>PhotoAlbumCover</include>	
-						<control type="image">
-							<posx>100</posx>
-							<posy>62</posy>
-							<width>30</width>
-							<height>30</height>
-							<texture>icon-photoalbum.png</texture>
-							<colordiffuse>orange</colordiffuse>
-							<visible>ListItem.Type(photoAlbum)</visible>
+						<control type="group">
+							<include>PhotoThumb</include>
+							<include>PhotoAlbumCover</include>
+							<control type="image">
+								<posx>100</posx>
+								<posy>62</posy>
+								<width>30</width>
+								<height>30</height>
+								<texture>icon-photoalbum.png</texture>
+								<colordiffuse>orange</colordiffuse>
+								<visible>ListItem.Type(photoAlbum)</visible>
+							</control>
+							<control type="label">
+								<posy>105</posy>
+								<visible>ListItem.Type(photoAlbum)</visible>
+								<include>PhotoLabel</include>
+								<textcolor>orange</textcolor>
+							</control>
+							<include>SelectedBorderNoCard</include>
+							<animation effect="slide" tween="circle" easing="out" start="0,0" end="0,-07" time="350" condition="true">Conditional</animation>
 						</control>
-						<control type="label">
-							<posy>105</posy>
-							<visible>ListItem.Type(photoAlbum)</visible>
-							<include>PhotoLabel</include>
-							<textcolor>orange</textcolor>
-						</control>
-						<include>SelectedBorderNoCard</include>
 					</focusedlayout>
 				</control>
 			</control>

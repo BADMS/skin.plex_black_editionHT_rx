@@ -57,7 +57,7 @@
 		<textcolor>Color3</textcolor>
 		<font>Regular-17</font>
 		<shadowcolor>FF222222</shadowcolor>
-	</include>	
+	</include>
 	<include name="SharedContent">
 		<control type="group">
 			<control type="group">
@@ -68,7 +68,7 @@
 			<!-- main list -->
 			<control type="group" id="777">
 				<include>rightSideSlide</include>
-				<!--BG Dim-->		
+				<!--BG Dim-->
 				<control type="group">
 					<visible>Control.IsVisible(54)</visible>
 					<visible>!Skin.String(54_Dim,100)</visible>
@@ -131,15 +131,18 @@
 						</control>
 					</itemlayout>
 					<focusedlayout width="304" height="320">
-						<include>SharedContentLeafs</include>
-						<control type="label">
-							<include>SharedContentLeafsTitle</include>
-							<textcolor>Focused</textcolor>
+						<control type="group">
+							<include>SharedContentLeafs</include>
+							<control type="label">
+								<include>SharedContentLeafsTitle</include>
+								<textcolor>Focused</textcolor>
+							</control>
+							<control type="label">
+								<include>SharedContentLeafsTitle2</include>
+							</control>
+							<include>SharedContentLeafsSelectedBorder</include>
+							<animation effect="slide" tween="circle" easing="out" start="0,0" end="0,-07" time="350" condition="true">Conditional</animation>
 						</control>
-						<control type="label">
-							<include>SharedContentLeafsTitle2</include>
-						</control>
-						<include>SharedContentLeafsSelectedBorder</include>
 					</focusedlayout>
 				</control>
 			</control>

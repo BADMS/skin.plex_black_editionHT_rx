@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
 <window id="106">
+	<onload>CancelAlarm(controlFocusmode,true)</onload>
 	<onload condition="Skin.HasSetting(SuperKioskMode) + !Window.isVisible(10090)">Dialog.Close(all,true)</onload>
 	<defaultcontrol>1000</defaultcontrol>
 	<!-- ViewsDialog.xml -->

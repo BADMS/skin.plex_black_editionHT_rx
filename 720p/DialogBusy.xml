@@ -1,5 +1,10 @@
 <?xml version="1.0"?>
 <window id="136">
+	<onload condition="![Container.PlexContent(Episodes) + Container.PlexContent(Seasons) + Container.PlexContent(TVShows)] | [Container.PlexContent(Episodes) | Container.PlexContent(Seasons) | Container.PlexContent(TVShows)] + [ListItem.Status(Watched) | [!Skin.HasSetting(HidePlotForUnwatched) + [ListItem.Status(InProgress) | ListItem.Status(UnWatched)]]]">Skin.Reset(playerPlot)</onload>
+	<onload condition="[Container.PlexContent(Episodes) | Container.PlexContent(Seasons) | Container.PlexContent(TVShows)] + [Skin.HasSetting(HidePlotForUnwatched) + [ListItem.Status(InProgress) | ListItem.Status(UnWatched)] + !IsEmpty(ListItem.Plot)]">Skin.SetString(playerPlot,$LOCALIZE[32105])</onload>
+	<onload condition="[Container.PlexContent(Episodes) | Container.PlexContent(Seasons) | Container.PlexContent(TVShows)] + IsEmpty(ListItem.Plot)">Skin.SetString(playerPlot,$LOCALIZE[32103]. $LOCALIZE[32104].)</onload>
+ 	<onunload condition="!Window.IsActive(10090) + [Skin.String(SectionType,channels) | Container.PlexContent(Channels) | Container.PlexContent(Channel)]">AlarmClock(controlFocusmode,SetFocus(777),00:01,silent)</onunload>
+ 	<onunload condition="![Window.IsActive(0) | Window.IsActive(10090)] + [Window.IsActive(6) | Window.IsActive(2)]">AlarmClock(controlFocusmode,SetFocus(777),00:01,silent)</onunload>
 	<coordinates>
 		<system>1</system>
 		<posx>0</posx>

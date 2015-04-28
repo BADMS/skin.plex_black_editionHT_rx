@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
 <window id="107">
+    <onload condition="[!Window.IsActive(0) + !Window.IsActive(10090)] + [Window.isactive(videolibrary) | window.isactive(videoplaylist) | window.isactive(musiclibrary) | window.isactive(musicfiles) | window.isactive(musicplaylist)]">AlarmClock(controlViewmode,SetFocus(777),00:01,silent)</onload>
 	<coordinates>
 		<system>1</system>
 		<posx>0</posx>

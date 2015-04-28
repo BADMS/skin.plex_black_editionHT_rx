@@ -1,5 +1,7 @@
 <?xml version="1.0"?>
 <window id="0">
+	<onload>CancelAlarm(controlFocusmode,true)</onload>
+	<onload>CancelAlarm(controlViewmode,true)</onload>
 	<defaultcontrol always="true">301</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
 	<onload>AlarmClock(controlType,Skin.Reset(SectionType),00:01,silent)</onload>

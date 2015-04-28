@@ -73,7 +73,7 @@
 				<posy>12</posy>
 				<width>168</width>
 				<height>168</height>
-				<texture background="true">default-square-small.png</texture>	
+				<texture background="true">default-square-small.png</texture>
 			</control>
 			<control type="image">
 				<description>Poster image</description>
@@ -95,7 +95,7 @@
 				<height>166</height>
 				<texture background="true">default-square-small.png</texture>
 				<bordertexture border="1">thumb_border.png</bordertexture>
-				<bordersize>1</bordersize>	
+				<bordersize>1</bordersize>
 			</control>
 			<control type="image">
 				<description>Poster image</description>
@@ -106,7 +106,7 @@
 				<texture background="true">$INFO[ListItem.Art(smallThumb)]</texture>
 				<aspectratio scalediffuse="false" align="center" aligny="top">scale</aspectratio>
 				<bordertexture border="1">thumb_border.png</bordertexture>
-				<bordersize>1</bordersize>	
+				<bordersize>1</bordersize>
 			</control>
 		</control>
 	</include>
@@ -132,7 +132,8 @@
 			<posy>13</posy>
 			<width>162</width>
 			<height>162</height>
-			<texture background="true">$INFO[ListItem.Art(smallThumb)]</texture><!-- diffuse="base.png"-->
+			<texture background="true">$INFO[ListItem.Art(smallThumb)]</texture>
+			<!-- diffuse="base.png"-->
 			<aspectratio scalediffuse="false" align="center" aligny="top">scale</aspectratio>
 		</control>
 	</include>
@@ -166,8 +167,7 @@
 		<label>$INFO[ListItem.Artist]</label>
 		<font>Regular-17</font>
 	</include>
-	<include name="MusicPlotBG">
-	</include>
+	<include name="MusicPlotBG"/>
 	<!-- Library -->
 	<include name="LibraryMusic">
 		<control type="group">
@@ -184,7 +184,7 @@
 			<visible>!Container.Content(addons) + !Container.Content(plugins) + !Container.PlexContent(Channel)</visible>
 			<include>FadeDialog</include>
 			<include>rightSideSlide</include>
-			<!--BG Dim 52-->		
+			<!--BG Dim 52-->
 			<control type="group">
 				<visible>Control.IsVisible(52)</visible>
 				<visible>!Skin.String(52_Dim,100)</visible>
@@ -225,7 +225,7 @@
 					<include>BGDim90</include>
 				</control>
 			</control>
-			<!--BG Dim 53-->		
+			<!--BG Dim 53-->
 			<control type="group">
 				<visible>Control.IsVisible(53)</visible>
 				<visible>!Skin.String(53_Dim,100)</visible>
@@ -281,22 +281,22 @@
 					<onleft>998</onleft>
 					<orientation>vertical</orientation>
 					<itemlayout width="196" height="220">
-						<!--<include>MusicThumbCard</include>-->
-						<include>MusicThumb</include>
+						<!--<include>MusicThumbCard</include>--><include>MusicThumb</include>
 						<control type="label">
 							<include>MusicLabel</include>
 							<textcolor>Unfocused</textcolor>
 						</control>
 					</itemlayout>
 					<focusedlayout width="196" height="220">
-						<!--<include>MusicThumbCard</include>-->
-						<include>MusicThumb</include>
-						<control type="label">
-							<include>MusicLabel</include>
-							<textcolor>Focused</textcolor>
-							<!--<animation effect="rotate" center="360,640" start="-1" end="1" time="110" tween="cubic" easing="inout" pulse="true"  condition="Skin.HasSetting(List1_Rotate)">Conditional</animation>-->
+						<control type="group">
+							<!--<include>MusicThumbCard</include>--><include>MusicThumb</include>
+							<control type="label">
+								<include>MusicLabel</include>
+								<textcolor>Focused</textcolor>
+								<!--<animation effect="rotate" center="360,640" start="-1" end="1" time="110" tween="cubic" easing="inout" pulse="true"  condition="Skin.HasSetting(List1_Rotate)">Conditional</animation>--></control>
+							<include>MusicSelectedBorder</include>
+							<animation effect="slide" tween="circle" easing="out" start="0,0" end="0,-07" time="350" condition="true">Conditional</animation>
 						</control>
-						<include>MusicSelectedBorder</include>
 					</focusedlayout>
 				</control>
 			</control>
@@ -308,10 +308,8 @@
 				<control type="group">
 					<posx>0</posx>
 					<!-- backgrounds -->
-					<control type="group">				
-						<!--gernot include missing<include>MusicRightBG</include>-->
-						<!--<include>MusicPlotBG</include>-->
-						<visible>Control.IsVisible(53)</visible>
+					<control type="group">
+						<!--gernot include missing<include>MusicRightBG</include>--><!--<include>MusicPlotBG</include>--><visible>Control.IsVisible(53)</visible>
 						<!-- artist thumb -->
 						<control type="group">
 							<posx>27</posx>
@@ -376,28 +374,7 @@
 							<include>sectionTitleMiddle</include>
 						</control>
 						<!-- Genre -->
-						<!--<control type="grouplist">
-							<posy>63</posy>
-							<orientation>horizontal</orientation>
-							<itemgap>10</itemgap>
-							<control type="label">
-								<width min="29" max="200">auto</width>
-								<height>15</height>
-								<label>[UPPERCASE]$LOCALIZE[31131][/UPPERCASE]</label>
-								<font>Regular-18</font>
-								<include>Grey1</include>
-								<visible>true</visible>
-							</control>
-							<control type="label">
-								<width min="29" max="600">auto</width>
-								<height>15</height>
-								<label>$INFO[Container.Genre]</label>
-								<font>Regular-18</font>
-								<include>WhiteShadow</include>
-								<visible>true</visible>
-							</control>
-						</control>-->
-						<!-- Count -->
+						<!--<control type="grouplist"><posy>63</posy><orientation>horizontal</orientation><itemgap>10</itemgap><control type="label"><width min="29" max="200">auto</width><height>15</height><label>[UPPERCASE]$LOCALIZE[31131][/UPPERCASE]</label><font>Regular-18</font><include>Grey1</include><visible>true</visible></control><control type="label"><width min="29" max="600">auto</width><height>15</height><label>$INFO[Container.Genre]</label><font>Regular-18</font><include>WhiteShadow</include><visible>true</visible></control></control>--><!-- Count -->
 						<control type="grouplist">
 							<posy>63</posy>
 							<orientation>horizontal</orientation>
@@ -411,7 +388,8 @@
 							</control>
 						</control>
 						<!-- Members -->
-						<!--><control type="grouplist">
+						<!-->
+						<control type="grouplist">
 							<posy>121</posy>
 							<orientation>horizontal</orientation>
 							<itemgap>10</itemgap>
@@ -429,8 +407,7 @@
 								<include>sectionTitleSub</include>
 								<visible>true</visible>
 							</control>
-						</control>-->
-				</control>
+						</control>--></control>
 			</control>
 			<!-- list -->
 			<control type="panel" id="53">
@@ -454,13 +431,16 @@
 					</control>
 				</itemlayout>
 				<focusedlayout width="235" height="223">
-					<include>MusicThumbCard</include>
-					<include>MusicThumb</include>
-					<control type="label">
-						<include>MusicLabel</include>
-						<textcolor>orangeLight</textcolor>
+					<control type="group">
+						<include>MusicThumbCard</include>
+						<include>MusicThumb</include>
+						<control type="label">
+							<include>MusicLabel</include>
+							<textcolor>orangeLight</textcolor>
+						</control>
+						<include>MusicSelectedBorder</include>
+						<animation effect="slide" tween="circle" easing="out" start="0,0" end="0,-07" time="350" condition="true">Conditional</animation>
 					</control>
-					<include>MusicSelectedBorder</include>
 				</focusedlayout>
 			</control>
 		</control>
@@ -549,8 +529,7 @@
 					<label>$INFO[ListItem.Artist]</label>
 					<font>Regular-30</font>
 					<textcolor>white</textcolor>
-					<!--<shadowcolor>ff333333</shadowcolor>-->
-					<visible>true</visible>
+					<!--<shadowcolor>ff333333</shadowcolor>--><visible>true</visible>
 				</control>
 				<control type="label">
 					<posy>40</posy>
@@ -559,36 +538,10 @@
 					<label>$INFO[ListItem.Album]</label>
 					<font>Regular-30</font>
 					<textcolor>white</textcolor>
-					<!--<shadowcolor>ff333333</shadowcolor>-->
-					<visible>true</visible>
+					<!--<shadowcolor>ff333333</shadowcolor>--><visible>true</visible>
 				</control>
 				<!-- Genre -->
-				<!--
-					<control type="grouplist">
-						<posy>85</posy>
-						<orientation>horizontal</orientation>
-						<itemgap>10</itemgap>
-						<control type="label">
-							<width min="29" max="200">auto</width>
-							<height>40</height>
-							<label>[UPPERCASE]$LOCALIZE[31131][/UPPERCASE]</label>
-							<font>smallCaps</font>
-							<textcolor>title2</textcolor>
-							<shadowcolor>ff333333</shadowcolor>
-							<visible>true</visible>
-						</control>
-						<control type="label">
-							<width min="29" max="600">auto</width>
-							<height>40</height>
-							<label>$INFO[ListItem.Property(Genre)]</label>
-							<font>smallCaps</font>
-							<textcolor>title2</textcolor>
-							<shadowcolor>ff333333</shadowcolor>
-							<visible>true</visible>
-						</control>
-					</control>
-					-->
-				<!-- Count -->
+				<!--<control type="grouplist"><posy>85</posy><orientation>horizontal</orientation><itemgap>10</itemgap><control type="label"><width min="29" max="200">auto</width><height>40</height><label>[UPPERCASE]$LOCALIZE[31131][/UPPERCASE]</label><font>smallCaps</font><textcolor>title2</textcolor><shadowcolor>ff333333</shadowcolor><visible>true</visible></control><control type="label"><width min="29" max="600">auto</width><height>40</height><label>$INFO[ListItem.Property(Genre)]</label><font>smallCaps</font><textcolor>title2</textcolor><shadowcolor>ff333333</shadowcolor><visible>true</visible></control></control>--><!-- Count -->
 				<control type="grouplist">
 					<posy>95</posy>
 					<orientation>horizontal</orientation>
@@ -599,8 +552,7 @@
 						<label>$VAR[TopBarItemCountStrings]</label>
 						<font>smallCaps</font>
 						<textcolor>title2</textcolor>
-						<!--<shadowcolor>ff333333</shadowcolor>-->
-						<visible>true</visible>
+						<!--<shadowcolor>ff333333</shadowcolor>--><visible>true</visible>
 					</control>
 				</control>
 				<!-- Unavailable indicator -->

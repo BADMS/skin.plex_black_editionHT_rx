@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="10090">
+	<onload>CancelAlarm(controlViewmode,true)</onload>
+	<onload>CancelAlarm(controlFocusmode,true)</onload>
 	<onunload condition="!Container.PlexContent(Episode) | Container.PlexContent(Episode) + [ListItem.Status(Watched) | [!Skin.HasSetting(HidePlotForUnwatched) + [ListItem.Status(InProgress) | ListItem.Status(UnWatched)]]]">Skin.Reset(playerPlot)</onunload>
 	<onunload condition="Container.PlexContent(Episode) + [Skin.HasSetting(HidePlotForUnwatched) + [ListItem.Status(InProgress) | ListItem.Status(UnWatched)] + !IsEmpty(ListItem.Plot)]">Skin.SetString(playerPlot,$LOCALIZE[32105])</onunload>
 	<onunload condition="Container.PlexContent(Episode) + IsEmpty(ListItem.Plot)">Skin.SetString(playerPlot,There is no description available for this. You can add one for it in the Media Manager.)</onunload>

@@ -162,15 +162,7 @@
 				<include>Black</include>
 				<animation effect="fade" start="0" end="50" time="0" condition="true">Conditional</animation>
 			</control>
-			<!--
-			<control type="image">
-				<posx>355</posx>
-				<posy>500</posy>
-				<include>ArrowBlack</include>
-				<animation effect="fade" start="0" end="60" time="0" condition="true">Conditional</animation>
-			</control>
-			-->
-		</control>
+			<!--<control type="image"><posx>355</posx><posy>500</posy><include>ArrowBlack</include><animation effect="fade" start="0" end="60" time="0" condition="true">Conditional</animation></control>--></control>
 	</include>
 	<include name="ChannelPlot">
 		<control type="group">
@@ -253,7 +245,6 @@
 	<!-- views -->
 	<!-- channel directory -->
 	<include name="ChannelsDirectory">
-
 		<control type="group" id="777">
 			<visible>Window.IsActive(1) + !IsEmpty(Container.SecondTitle)</visible>
 			<include>FadeDialog</include>
@@ -284,12 +275,15 @@
 					</control>
 				</itemlayout>
 				<focusedlayout width="196" height="216">
-					<include>ChannelThumb</include>
-					<control type="label">
-						<include>ChannelLabel</include>
-						<textcolor>orangeLight</textcolor>
+					<control type="group">
+						<include>ChannelThumb</include>
+						<control type="label">
+							<include>ChannelLabel</include>
+							<textcolor>orangeLight</textcolor>
+						</control>
+						<include>ChannelSelectedBorder</include>
+						<animation effect="slide" tween="circle" easing="out" start="0,0" end="0,-07" time="350" condition="true">Conditional</animation>
 					</control>
-					<include>ChannelSelectedBorder</include>
 				</focusedlayout>
 			</control>
 		</control>
@@ -302,7 +296,7 @@
 			<visible>Control.IsVisible(70)</visible>
 		</control>
 		<control type="group" id="777">
-			<!--BG Dim-->		
+			<!--BG Dim-->
 			<control type="group">
 				<visible>Control.IsVisible(70)</visible>
 				<visible>!Skin.String(70_Dim,100)</visible>
@@ -344,7 +338,6 @@
 				</control>
 			</control>
 			<visible>Container.PlexContent(Channels)</visible>
-
 			<include>FadeDialog</include>
 			<include>rightSideSlide</include>
 			<!-- main list -->
@@ -371,15 +364,18 @@
 					<include>ChannelTypeIcon</include>
 				</itemlayout>
 				<focusedlayout width="206" height="228">
-					<include>ChannelThumbCard</include>
-					<include>ChannelThumb</include>
-					<control type="label">
-						<include>ChannelLabel</include>
-						<textcolor>orangeLight</textcolor>
+					<control type="group">
+						<include>ChannelThumbCard</include>
+						<include>ChannelThumb</include>
+						<control type="label">
+							<include>ChannelLabel</include>
+							<textcolor>orangeLight</textcolor>
+						</control>
+						<include>ChannelServer</include>
+						<include>ChannelTypeIcon</include>
+						<include>ChannelSelectedBorder</include>
+						<animation effect="slide" tween="circle" easing="out" start="0,0" end="0,-07" time="350" condition="true">Conditional</animation>
 					</control>
-					<include>ChannelServer</include>
-					<include>ChannelTypeIcon</include>
-					<include>ChannelSelectedBorder</include>
 				</focusedlayout>
 			</control>
 		</control>
@@ -398,7 +394,7 @@
 			<include>rightSideSlide</include>
 			<!-- main list -->
 			<control type="group" id="777">
-				<!--BG Dim-->		
+				<!--BG Dim-->
 				<control type="group">
 					<visible>Control.IsVisible(99)</visible>
 					<visible>!Skin.String(99_Dim,100)</visible>
@@ -449,8 +445,7 @@
 					<orientation>vertical</orientation>
 					<posx>30</posx>
 					<posy>28</posy>
-					<!--<animation effect="slide" start="0" end="70" time="0" condition="ListItem.Type(episode) | ListItem.Type(clip)">Conditional</animation>-->
-					<width>1300</width>
+					<!--<animation effect="slide" start="0" end="70" time="0" condition="ListItem.Type(episode) | ListItem.Type(clip)">Conditional</animation>--><width>1300</width>
 					<height>662</height>
 					<!-- generic square thumb -->
 					<itemlayout condition="!ListItem.Type(episode) + !ListItem.Type(clip)" width="153" height="164">
@@ -462,13 +457,16 @@
 						</control>
 					</itemlayout>
 					<focusedlayout condition="!ListItem.Type(episode) + !ListItem.Type(clip)" width="153" height="164">
-						<include>PhotoThumbCard</include>
-						<include>ChannelContentThumb</include>
-						<control type="label">
-							<include>PhotoLabel</include>
-							<textcolor>orangeLight</textcolor>
+						<control type="group">
+							<include>PhotoThumbCard</include>
+							<include>ChannelContentThumb</include>
+							<control type="label">
+								<include>PhotoLabel</include>
+								<textcolor>orangeLight</textcolor>
+							</control>
+							<include>SelectedBorder</include>
+							<animation effect="slide" tween="circle" easing="out" start="0,0" end="0,-07" time="350" condition="true">Conditional</animation>
 						</control>
-						<include>SelectedBorder</include>
 					</focusedlayout>
 					<!-- episode layout -->
 					<itemlayout condition="ListItem.Type(episode) | ListItem.Type(clip)" width="153" height="164">
@@ -490,6 +488,7 @@
 								<textcolor>orangeLight</textcolor>
 							</control>
 							<include>SelectedBorder</include>
+							<animation effect="slide" tween="circle" easing="out" start="0,0" end="0,-07" time="350" condition="true">Conditional</animation>
 						</control>
 					</focusedlayout>
 				</control>
@@ -497,15 +496,10 @@
 		</control>
 	</include>
 	<include name="_Channel">
-
 		<control type="group">
 			<visible>Container.PlexContent(Channel)</visible>
 			<include>FadeDialog</include>
-			<!--<include>rightSideSlide</include>
-			<include>ChannelPlotBG</include>
-			<include>ChannelPlot</include>
-			<include>ChannelIcon</include>-->
-			<!-- main list -->
+			<!--<include>rightSideSlide</include><include>ChannelPlotBG</include><include>ChannelPlot</include><include>ChannelIcon</include>--><!-- main list -->
 			<control type="group" id="777">
 				<control type="panel" id="71">
 					<viewtype label="ChannelVideo">panel</viewtype>
@@ -551,11 +545,7 @@
 			<visible>Container.PlexContent(Channel)</visible>
 			<include>FadeDialog</include>
 			<include>rightSideSlide</include>
-			<!--
-			<include>ChannelPlotBG</include>
-			<include>ChannelPlot</include>
-			<include>ChannelIcon</include>-->
-			<!-- main list -->
+			<!--<include>ChannelPlotBG</include><include>ChannelPlot</include><include>ChannelIcon</include>--><!-- main list -->
 			<control type="group" id="777">
 				<control type="group">
 					<visible>Control.IsVisible(72)</visible>
@@ -582,11 +572,14 @@
 						</control>
 					</itemlayout>
 					<focusedlayout width="150" height="160">
-						<include>PhotoThumbCard</include>
-						<include>PhotoThumb</include>
-						<control type="label">
-							<include>PhotoLabel</include>
-							<textcolor>orangeLight</textcolor>
+						<control type="group">
+							<include>PhotoThumbCard</include>
+							<include>PhotoThumb</include>
+							<control type="label">
+								<include>PhotoLabel</include>
+								<textcolor>orangeLight</textcolor>
+							</control>
+							<animation effect="slide" tween="circle" easing="out" start="0,0" end="0,-07" time="350" condition="true">Conditional</animation>
 						</control>
 						<include>SelectedBorder</include>
 					</focusedlayout>
@@ -634,13 +627,16 @@
 						</control>
 					</itemlayout>
 					<focusedlayout width="144" height="164" condition="ListItem.Type(song) | ListItem.Type(album)">
-						<include>PhotoThumbCard</include>
-						<include>ChannelContentThumb</include>
-						<control type="label">
-							<include>PhotoLabel</include>
-							<textcolor>orangeLight</textcolor>
+						<control type="group">
+							<include>PhotoThumbCard</include>
+							<include>ChannelContentThumb</include>
+							<control type="label">
+								<include>PhotoLabel</include>
+								<textcolor>orangeLight</textcolor>
+							</control>
+							<include>SelectedBorder</include>
+							<animation effect="slide" tween="circle" easing="out" start="0,0" end="0,-07" time="350" condition="true">Conditional</animation>
 						</control>
-						<include>SelectedBorder</include>
 					</focusedlayout>
 				</control>
 			</control>

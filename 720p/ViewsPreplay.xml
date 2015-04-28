@@ -221,8 +221,7 @@
 				<height>28</height>
 				<texture>$VAR[ListItemOverlay]</texture>
 				<visible>!Container.PlexContent(Seasons)</visible>
-				<!-- <visible>Container.PlexContent(Episodes) | [Container.PlexContent(clips)]</visible> -->
-			</control>
+				<!-- <visible>Container.PlexContent(Episodes) | [Container.PlexContent(clips)]</visible> --></control>
 		</control>
 	</include>
 	<!-- extras -->
@@ -516,7 +515,7 @@
 				<animation effect="fade" start="100" end="87" time="0" condition="Skin.HasSetting(BrighterBG)">Conditional</animation>
 			</control>
 			<control type="image">
-			<visible>Skin.HasSetting(DarkerBG)</visible>
+				<visible>Skin.HasSetting(DarkerBG)</visible>
 				<height>720</height>
 				<width>70</width>
 				<texture background="true">home/bg_menu_dark.png</texture>
@@ -565,10 +564,8 @@
 				<posy>27</posy>
 				<width>1280</width>
 				<height>665</height>
-				<itemlayout width="285" height="165">
-				</itemlayout>
-				<focusedlayout width="285" height="165">
-				</focusedlayout>
+				<itemlayout width="285" height="165"/>
+				<focusedlayout width="285" height="165"/>
 				<!-- default empty list item -->
 				<content>
 					<item id="1">
@@ -811,55 +808,58 @@
 					</control>
 				</itemlayout>
 				<focusedlayout width="223" height="335">
-					<include>MovieTVPosterMiddle</include>
-					<control type="image">
-						<posx>13</posx>
-						<posy>243</posy>
-						<width>185</width>
-						<height>44</height>
-						<texture>home/imdbBackgroundBig.png</texture>
+					<control type="group">
+						<include>MovieTVPosterMiddle</include>
+						<control type="image">
+							<posx>13</posx>
+							<posy>243</posy>
+							<width>185</width>
+							<height>44</height>
+							<texture>home/imdbBackgroundBig.png</texture>
+						</control>
+						<include>MovieTVPosterMiddleSelectedBorder</include>
+						<control type="label">
+							<posy>252</posy>
+							<posx>21</posx>
+							<width>180</width>
+							<height>30</height>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>[UPPERCASE]$LOCALIZE[593][/UPPERCASE]</label>
+							<font>Regular-24</font>
+							<textcolor>white</textcolor>
+							<shadowcolor>ff222222</shadowcolor>
+							<visible>IsEmpty(ListItem.Season) + !ListItem.Type(season)</visible>
+						</control>
+						<control type="label">
+							<posy>252</posy>
+							<posx>21</posx>
+							<width>180</width>
+							<height>30</height>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>[UPPERCASE]$LOCALIZE[31145][/UPPERCASE]</label>
+							<font>Regular-24</font>
+							<textcolor>white</textcolor>
+							<shadowcolor>ff222222</shadowcolor>
+							<visible>IsEmpty(ListItem.Season) + ListItem.Type(season)</visible>
+						</control>
+						<control type="label">
+							<posy>252</posy>
+							<posx>21</posx>
+							<width>180</width>
+							<height>30</height>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>S$INFO[ListItem.Season]</label>
+							<font>Regular-24</font>
+							<textcolor>white</textcolor>
+							<shadowcolor>ff222222</shadowcolor>
+							<visible>ListItem.Type(season) + !IsEmpty(ListItem.Season)</visible>
+						</control>
+						<include>PosterThumbUnwatchedOverlay</include>
+						<animation effect="slide" tween="circle" easing="out" start="0,0" end="0,-07" time="350" condition="true">Conditional</animation>
 					</control>
-					<include>MovieTVPosterMiddleSelectedBorder</include>
-					<control type="label">
-						<posy>252</posy>
-						<posx>21</posx>
-						<width>180</width>
-						<height>30</height>
-						<align>left</align>
-						<aligny>center</aligny>
-						<label>[UPPERCASE]$LOCALIZE[593][/UPPERCASE]</label>
-						<font>Regular-24</font>
-						<textcolor>white</textcolor>
-						<shadowcolor>ff222222</shadowcolor>
-						<visible>IsEmpty(ListItem.Season) + !ListItem.Type(season)</visible>
-					</control>
-					<control type="label">
-						<posy>252</posy>
-						<posx>21</posx>
-						<width>180</width>
-						<height>30</height>
-						<align>left</align>
-						<aligny>center</aligny>
-						<label>[UPPERCASE]$LOCALIZE[31145][/UPPERCASE]</label>
-						<font>Regular-24</font>
-						<textcolor>white</textcolor>
-						<shadowcolor>ff222222</shadowcolor>
-						<visible>IsEmpty(ListItem.Season) + ListItem.Type(season)</visible>
-					</control>
-					<control type="label">
-						<posy>252</posy>
-						<posx>21</posx>
-						<width>180</width>
-						<height>30</height>
-						<align>left</align>
-						<aligny>center</aligny>
-						<label>S$INFO[ListItem.Season]</label>
-						<font>Regular-24</font>
-						<textcolor>white</textcolor>
-						<shadowcolor>ff222222</shadowcolor>
-						<visible>ListItem.Type(season) + !IsEmpty(ListItem.Season)</visible>
-					</control>
-					<include>PosterThumbUnwatchedOverlay</include>
 				</focusedlayout>
 			</control>
 		</control>
@@ -1105,26 +1105,29 @@
 					<include>PosterThumbUnwatchedOverlay</include>
 				</itemlayout>
 				<focusedlayout width="226" height="165">
-					<include>EpisodeThumbCard</include>
-					<include>EpisodeThumb</include>
-					<control type="label">
-						<include>EpisodeTitle</include>
-						<textcolor>orange</textcolor>
+					<control type="group">
+						<include>EpisodeThumbCard</include>
+						<include>EpisodeThumb</include>
+						<control type="label">
+							<include>EpisodeTitle</include>
+							<textcolor>orange</textcolor>
+						</control>
+						<include>EpisodeDate</include>
+						<include>EpisodeThumbOverlay</include>
+						<control type="label">
+							<include>EpisodeThumbOverlayTitle</include>
+							<textcolor>orange</textcolor>
+							<visible>IsEmpty(Container.Property(mixedParents))</visible>
+						</control>
+						<control type="label">
+							<include>EpisodeThumbOverlayTitle2</include>
+							<textcolor>orangeLight</textcolor>
+							<visible>!IsEmpty(Container.Property(mixedParents))</visible>
+						</control>
+						<include>PosterThumbUnwatchedOverlay</include>
+						<include>EpisodeSelectedBorder</include>
+						<animation effect="slide" tween="circle" easing="out" start="0,0" end="0,-07" time="350" condition="true">Conditional</animation>
 					</control>
-					<include>EpisodeDate</include>
-					<include>EpisodeThumbOverlay</include>
-					<control type="label">
-						<include>EpisodeThumbOverlayTitle</include>
-						<textcolor>orange</textcolor>
-						<visible>IsEmpty(Container.Property(mixedParents))</visible>
-					</control>
-					<control type="label">
-						<include>EpisodeThumbOverlayTitle2</include>
-						<textcolor>orangeLight</textcolor>
-						<visible>!IsEmpty(Container.Property(mixedParents))</visible>
-					</control>
-					<include>PosterThumbUnwatchedOverlay</include>
-					<include>EpisodeSelectedBorder</include>
 				</focusedlayout>
 			</control>
 		</control>

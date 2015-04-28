@@ -121,7 +121,7 @@
 			<include>FadeDialog</include>
 			<include>rightSideSlide</include>
 			<visible>Container.PlexContent(Clips) | Container.PlexContent(Homemovies)</visible>
-			<!--BG Dim-->		
+			<!--BG Dim-->
 			<control type="group">
 				<visible>Control.IsVisible(80)</visible>
 				<visible>!Skin.String(80_Dim,100)</visible>
@@ -185,16 +185,19 @@
 					<include>ClipThumbUnwatchedOverlay</include>
 				</itemlayout>
 				<focusedlayout width="292" height="224">
-					<include>ClipThumbCard</include>
-					<include>ClipThumb</include>
-					<include>ClipSourceIcon</include>
-					<control type="label">
-						<include>ClipTitle</include>
-						<textcolor>orangeLight</textcolor>
+					<control type="group">
+						<include>ClipThumbCard</include>
+						<include>ClipThumb</include>
+						<include>ClipSourceIcon</include>
+						<control type="label">
+							<include>ClipTitle</include>
+							<textcolor>orangeLight</textcolor>
+						</control>
+						<include>ClipSecondTitle</include>
+						<include>ClipThumbSelectedBorder</include>
+						<include>ClipThumbUnwatchedOverlay</include>
+						<animation effect="slide" tween="circle" easing="out" start="0,0" end="0,-07" time="350" condition="true">Conditional</animation>
 					</control>
-					<include>ClipSecondTitle</include>
-					<include>ClipThumbSelectedBorder</include>
-					<include>ClipThumbUnwatchedOverlay</include>
 				</focusedlayout>
 			</control>
 		</control>
@@ -247,28 +250,31 @@
 						</control>
 					</itemlayout>
 					<focusedlayout height="50">
-						<control type="image">
-							<posx>0</posx>
-							<posy>0</posy>
-							<width>1150</width>
-							<height>50</height>
-							<texture border="5">black-bottom-grey.png</texture>
-						</control>
-						<control type="image">
-							<posx>20</posx>
-							<posy>4</posy>
-							<width>40</width>
-							<height>40</height>
-							<texture>icon-folder.png</texture>
-							<aspectratio>keep</aspectratio>
-							<animation effect="fade" start="0" end="80" time="0" condition="true">Conditional</animation>
-						</control>
-						<control type="label">
-							<width>1150</width>
-							<height>50</height>
-							<info>ListItem.Label</info>
-							<textcolor>Focused</textcolor>
-							<textoffsetx>80</textoffsetx>
+						<control type="group">
+							<control type="image">
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>1150</width>
+								<height>50</height>
+								<texture border="5">black-bottom-grey.png</texture>
+							</control>
+							<control type="image">
+								<posx>20</posx>
+								<posy>4</posy>
+								<width>40</width>
+								<height>40</height>
+								<texture>icon-folder.png</texture>
+								<aspectratio>keep</aspectratio>
+								<animation effect="fade" start="0" end="80" time="0" condition="true">Conditional</animation>
+							</control>
+							<control type="label">
+								<width>1150</width>
+								<height>50</height>
+								<info>ListItem.Label</info>
+								<textcolor>Focused</textcolor>
+								<textoffsetx>80</textoffsetx>
+							</control>
+							<animation effect="slide" tween="circle" easing="out" start="0,0" end="0,-07" time="350" condition="true">Conditional</animation>
 						</control>
 					</focusedlayout>
 				</control>

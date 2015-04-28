@@ -23,7 +23,7 @@
 			<texture fallback="default-square-big.png" background="true" diffuse="mask-square-big.png">$INFO[ListItem.CompositeImage(width=720;height=720;cols=2;rows=2)]</texture>
 			<aspectratio scalediffuse="false" align="center" aligny="middle">scale</aspectratio>
 			<visible>ListItem.Type(musicplaylist) | ListItem.Type(musicplayqueue)</visible>
-		</control>		
+		</control>
 		<control type="image">
 			<posx>13</posx>
 			<posy>13</posy>
@@ -51,7 +51,7 @@
 		<label>$INFO[ListItem.Label]</label>
 		<font>LightCaps-26</font>
 		<shadowcolor>ff222222</shadowcolor>
-	</include>	
+	</include>
 	<include name="PqPlCompTitle2">
 		<posy>288</posy>
 		<posx>134</posx>
@@ -63,7 +63,7 @@
 		<textcolor>Color3</textcolor>
 		<font>Regular-17</font>
 		<shadowcolor>ff222222</shadowcolor>
-	</include>	
+	</include>
 	<include name="PqPlPanel">
 		<control type="group">
 			<!--Background-->
@@ -84,7 +84,7 @@
 				<visible>!Skin.String(671_Dim,100)</visible>
 				<visible>Control.IsVisible(671)</visible>
 				<visible>![Player.HasVideo + Skin.HasSetting(PIPFull)]</visible>
-			</control>	
+			</control>
 			<control type="group">
 				<visible>[Player.HasVideo + Skin.HasSetting(PIPFull)]</visible>
 				<include>Animation_CommonFade</include>
@@ -110,7 +110,7 @@
 			<control type="group" id="777">
 				<include>FadeDialog</include>
 				<include>rightSideSlide</include>
-				<!--BG Dim-->		
+				<!--BG Dim-->
 				<control type="group">
 					<visible>Control.IsVisible(671)</visible>
 					<visible>!Skin.String(671_Dim,100)</visible>
@@ -173,15 +173,18 @@
 						</control>
 					</itemlayout>
 					<focusedlayout width="223" height="335">
-						<include>PqPlComp</include>
-						<control type="label">
-							<include>PqPlCompTitle</include>
-							<textcolor>Focused</textcolor>
+						<control type="group">
+							<include>PqPlComp</include>
+							<control type="label">
+								<include>PqPlCompTitle</include>
+								<textcolor>Focused</textcolor>
+							</control>
+							<control type="label">
+								<include>PqPlCompTitle2</include>
+							</control>
+							<include>PqPlCompSelectedBorder</include>
+							<animation effect="slide" tween="circle" easing="out" start="0,0" end="0,-07" time="350" condition="true">Conditional</animation>
 						</control>
-						<control type="label">
-							<include>PqPlCompTitle2</include>
-						</control>
-						<include>PqPlCompSelectedBorder</include>
 					</focusedlayout>
 				</control>
 			</control>
