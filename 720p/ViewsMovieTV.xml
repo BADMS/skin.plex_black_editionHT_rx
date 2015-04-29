@@ -73,13 +73,16 @@
 					</control>
 				</itemlayout>
 				<focusedlayout width="234" height="335">
-					<include>MovieTVPosterMiddle</include>
-					<control type="label">
-						<include>MovieTVPosterMiddleTitle</include>
-						<textcolor>Focused</textcolor>
+					<control type="group">
+						<include>MovieTVPosterMiddle</include>
+						<control type="label">
+							<include>MovieTVPosterMiddleTitle</include>
+							<textcolor>Focused</textcolor>
+						</control>
+						<include>MovieTVPosterMiddleUnwatchedOverlay</include>
+						<include>MovieTVPosterMiddleSelectedBorder</include>
+						<animation effect="slide" tween="circle" easing="out" start="0,0" end="0,-07" time="350" condition="true">Conditional</animation>
 					</control>
-					<include>MovieTVPosterMiddleUnwatchedOverlay</include>
-					<include>MovieTVPosterMiddleSelectedBorder</include>
 				</focusedlayout>
 			</control>
 		</control>
@@ -164,6 +167,7 @@
 						</control>
 						<include>MovieTVPosterSmallUnwatchedOverlay</include>
 						<include>MovieTVPosterSmallSelectedBorder</include>
+						<animation effect="slide" tween="circle" easing="out" start="0,0" end="0,-07" time="350" condition="true">Conditional</animation>
 					</control>
 				</focusedlayout>
 			</control>
