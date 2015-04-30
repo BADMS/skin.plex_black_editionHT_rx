@@ -784,7 +784,7 @@
 			<label>$LOCALIZE[31961]</label>
 			<onclick>Dialog.Close(4998)</onclick>
 			<onclick>Plex.Powerdown</onclick>
-			<visible>!System.UserIsRestricted</visible>
+			<!--<visible>!System.UserIsRestricted</visible>-->
 		</item>
 	</include>
 	<include name="HideRestartItem">
