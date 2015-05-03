@@ -8,30 +8,31 @@
 	<onunload>SetFocus(777)</onunload>
 	<!-- <onunload>Skin.Reset(SectionType)</onunload> -->
 	<controls>
-		<!-- bg's (Backgrounds.xml) -->
-		<include>BGBlackEdition</include>
-		<!--<include condition="!Skin.hasSetting(HideLibFanart)">BGFanart</include>
-		<include>BGDarken2</include>-->
-		<!-- views (ViewsMusic.xml & ViewsChannels.xml) -->
-		<!-- ByFolder ID 40 -->
-		<include>ByFolder</include>
-		<!-- Channels ID 70 -->
-		<include>Channels</include>
-		<!-- Channel generic ID 99 -->
-		<include>Channel</include>
-		<!-- Channel music ID 73 -->
-		<include>ChannelMusic</include>
-		<!-- LibraryMusic ID 52 -->
-		<include>LibraryMusic</include>
-		<include>LibraryMusicNoSpace</include>
-		<!-- List ID 58 -->
-		<include>List</include>
-		<!-- bottomList ID 5555 -->
-		<!--<include>bottomList</include>-->
-		<!-- Scroll Offset -->
-		<include>scrollOffset</include>
-		<!-- Item Full Info -->
 		<control type="group">
+			<!-- bg's (Backgrounds.xml) -->
+			<include>BGBlackEdition</include>
+			<!--<include condition="!Skin.hasSetting(HideLibFanart)">BGFanart</include>
+			<include>BGDarken2</include>-->
+			<!-- views (ViewsMusic.xml & ViewsChannels.xml) -->
+			<!-- ByFolder ID 40 -->
+			<include>ByFolder</include>
+			<!-- Channels ID 70 -->
+			<include>Channels</include>
+			<!-- Channel generic ID 99 -->
+			<include>Channel</include>
+			<!-- Channel music ID 73 -->
+			<include>ChannelMusic</include>
+			<!-- LibraryMusic ID 52 -->
+			<include>LibraryMusic</include>
+			<include>LibraryMusicNoSpace</include>
+			<!-- List ID 58 -->
+			<include>List</include>
+			<!-- bottomList ID 5555 -->
+			<!--<include>bottomList</include>-->
+			<!-- Scroll Offset -->
+			<include>scrollOffset</include>
+			<!-- Item Full Info -->
+			<animation effect="slide" start="0" end="394" time="500" condition="Control.HasFocus(3)">Conditional</animation>
 			<include>ListItemFullInfo</include>
 		</control>
 		<!-- top-level ui (LeftSidemenu.xml & IncludesGlobals.xml & Debug.xml) -->
