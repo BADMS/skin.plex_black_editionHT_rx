@@ -29,7 +29,7 @@
 		<animation effect="zoom" start="100" end="62" time="500" center="1140,360" condition="ControlGroup(1300).HasFocus() | ControlGroup(998).HasFocus() | ControlGroup(1500).HasFocus()">Conditional</animation>
 	</include>
 	<include name="rightSideSlideExtras">
-		<animation effect="zoom" start="100" end="79" time="500" center="1432,40" condition="IsEmpty(Skin.String(dsp_helper)) + Skin.HasSetting(AutoShowExtras) + !IsEmpty(ListItem.Property(PlexExtras)) | Control.HasFocus(30) + !Skin.HasSetting(AutoShowExtrasHack)">Conditional</animation>
+		<animation effect="zoom" start="100" end="79" time="500" center="1432,40" condition="IsEmpty(Skin.String(dsp_helper)) + Skin.HasSetting(AutoShowExtras) + !IsEmpty(ListItem.Property(PlexExtras)) | Control.HasFocus(3) + !Skin.HasSetting(AutoShowExtrasHack)">Conditional</animation>
 	</include>
 	<include name="leftMenuBg">
 		<control type="group">
@@ -1315,7 +1315,7 @@
 				<texturenofocus>b-pp-play.png</texturenofocus>
 				<colordiffuse>80FFFFFF</colordiffuse>
 				<onfocus>Skin.SetString(pp_helper,1)</onfocus>
-				<onright>SetFocus(30)</onright>
+				<onright>SetFocus(3)</onright>
 				<onright>XBMC.NextItem</onright>
 				<onleft>XBMC.PrevItem</onleft>
 				<onclick>Plex.PlayWith(VideoDefaultPlayer)</onclick>
@@ -1327,7 +1327,7 @@
 				<texturenofocus>b-pp-audio2.png</texturenofocus>
 				<onfocus>Skin.SetString(pp_helper,1)</onfocus>
 				<colordiffuse>80FFFFFF</colordiffuse>
-				<onright>SetFocus(30)</onright>
+				<onright>SetFocus(3)</onright>
 				<onright>XBMC.NextItem</onright>
 				<onleft>XBMC.PrevItem</onleft>
 				<onclick>ActivateWindow(10205)</onclick>
@@ -1341,7 +1341,7 @@
 				<texturenofocus>b-pp-subtitles.png</texturenofocus>
 				<colordiffuse>80FFFFFF</colordiffuse>
 				<onfocus>Skin.SetString(pp_helper,1)</onfocus>
-				<onright>SetFocus(30)</onright>
+				<onright>SetFocus(3)</onright>
 				<onright>XBMC.NextItem</onright>
 				<onleft>XBMC.PrevItem</onleft>
 				<onclick>ActivateWindow(10204)</onclick>
@@ -1355,10 +1355,10 @@
 				<texturenofocus>b-pp-extras.png</texturenofocus>
 				<colordiffuse>80FFFFFF</colordiffuse>
 				<onfocus>Skin.SetString(pp_helper,1)</onfocus>
-				<onright>SetFocus(30)</onright>
+				<onright>SetFocus(3)</onright>
 				<onright>XBMC.NextItem</onright>
 				<onleft>XBMC.PrevItem</onleft>
-				<onclick>SetFocus(30)</onclick>
+				<onclick>SetFocus(3)</onclick>
 				<include>leftMenuBarButton</include>
 				<visible>!Skin.HasSetting(AutoShowExtrasHack) + Container.PlexContent(Movie) + !IsEmpty(ListItem.Property(PlexExtras))</visible>
 			</control>
@@ -1367,7 +1367,7 @@
 				<texturefocus>b-pp-rate-s.png</texturefocus>
 				<texturenofocus>b-pp-rate.png</texturenofocus>
 				<colordiffuse>80FFFFFF</colordiffuse>
-				<onright>SetFocus(30)</onright>
+				<onright>SetFocus(3)</onright>
 				<onfocus>Skin.SetString(pp_helper,1)</onfocus>
 				<onright>XBMC.NextItem</onright>
 				<onleft>XBMC.PrevItem</onleft>
@@ -1393,7 +1393,7 @@
 				<texturenofocus>b-pp-share.png</texturenofocus>
 				<colordiffuse>80FFFFFF</colordiffuse>
 				<onfocus>Skin.SetString(pp_helper,1)</onfocus>
-				<onright>SetFocus(30)</onright>
+				<onright>SetFocus(3)</onright>
 				<onright>XBMC.NextItem</onright>
 				<onleft>XBMC.PrevItem</onleft>
 				<include>leftMenuBarButton</include>
@@ -1407,7 +1407,7 @@
 				<texturenofocus>b-pp-watched.png</texturenofocus>
 				<onfocus>Skin.SetString(pp_helper,1)</onfocus>
 				<colordiffuse>80FFFFFF</colordiffuse>
-				<onright>SetFocus(30)</onright>
+				<onright>SetFocus(3)</onright>
 				<onright>XBMC.NextItem</onright>
 				<onleft>XBMC.PrevItem</onleft>
 				<onclick>markasunwatched</onclick>
@@ -1419,7 +1419,7 @@
 				<texturenofocus>b-pp-unwatched.png</texturenofocus>
 				<onfocus>Skin.SetString(pp_helper,1)</onfocus>
 				<colordiffuse>80FFFFFF</colordiffuse>
-				<onright>SetFocus(30)</onright>
+				<onright>SetFocus(3)</onright>
 				<onright>XBMC.NextItem</onright>
 				<onleft>XBMC.PrevItem</onleft>
 				<onclick>markaswatched</onclick>
@@ -1429,7 +1429,7 @@
 				<texturefocus>b-skinoption-s.png</texturefocus>
 				<texturenofocus>b-skinoption-u.png</texturenofocus>
 				<colordiffuse>80FFFFFF</colordiffuse>
-				<onright>SetFocus(30)</onright>
+				<onright>SetFocus(3)</onright>
 				<onright>XBMC.NextItem</onright>
 				<onleft>XBMC.PrevItem</onleft>
 				<onclick>Skin.SetString(ViewmodeID,571)</onclick>
@@ -1442,7 +1442,7 @@
 				<texturefocus>b-skinoption-s.png</texturefocus>
 				<texturenofocus>b-skinoption-u.png</texturenofocus>
 				<colordiffuse>80FFFFFF</colordiffuse>
-				<onright>SetFocus(30)</onright>
+				<onright>SetFocus(3)</onright>
 				<onright>XBMC.NextItem</onright>
 				<onleft>XBMC.PrevItem</onleft>
 				<onclick>Skin.SetString(ViewmodeID,572)</onclick>
@@ -1455,7 +1455,7 @@
 				<texturefocus>b-skinoption-s.png</texturefocus>
 				<texturenofocus>b-skinoption-u.png</texturenofocus>
 				<colordiffuse>80FFFFFF</colordiffuse>
-				<onright>SetFocus(30)</onright>
+				<onright>SetFocus(3)</onright>
 				<onright>XBMC.NextItem</onright>
 				<onleft>XBMC.PrevItem</onleft>
 				<onclick>Skin.SetString(ViewmodeID,573)</onclick>

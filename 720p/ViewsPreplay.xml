@@ -1502,11 +1502,11 @@
 				<control type="group">
 					<posy>20</posy>
 					<posx>-12</posx>
-					<control type="list" id="30">
+					<control type="list" id="3">
 						<width>700</width>
 						<height>250</height>
-						<onleft>30</onleft>
-						<onright>30</onright>
+						<onleft>3</onleft>
+						<onright>3</onright>
 						<onup>998</onup>
 						<ondown>998</ondown>
 						<pagecontrol>61</pagecontrol>
