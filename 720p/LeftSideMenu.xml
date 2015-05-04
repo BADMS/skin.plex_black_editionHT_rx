@@ -805,6 +805,75 @@
 			<include>leftMenuSlide2</include>
 			<!-- global search-->
 			<!-- sidebar global -->
+			<!-- Music Extras -->
+			<control type="group">
+				<visible>!Controlgroup(1300).hasfocus()</visible>
+				<!-- extras bg's -->
+				<!-- extras -->
+				<include>leftMenuBg</include>
+				<control type="group">
+					<animation effect="slide" start="0" end="697" time="500" condition="Control.HasFocus(3)">Conditional</animation>
+					<posx>-624</posx>
+					<control type="group">
+						<posx>0</posx>
+						<posy>20</posy>
+						<control type="label">
+							<posx>36</posx>
+							<posy>40</posy>
+							<label>$LOCALIZE[41008] ($INFO[Container(3).NumItems])</label>
+							<font>Bold-36</font>
+							<include>WhiteShadow</include>
+						</control>
+						<control type="group">
+							<posy>68</posy>
+							<posx>26</posx>
+							<control type="list" id="3">
+								<width>260</width>
+								<height>600</height>
+								<onleft>777</onleft>
+								<onright>777</onright>
+								<onup>3</onup>
+								<ondown>3</ondown>
+								<pagecontrol>611</pagecontrol>
+								<scrolltime>200</scrolltime>
+								<itemlayout height="200">
+									<include>ExtraThumb</include>
+									<include>ExtraThumbCard</include>
+									<control type="label">
+										<include>ExtraTypeTitle</include>
+									</control>
+									<control type="label">
+										<include>ExtraTitle</include>
+									</control>
+									<include>ExtraSecondTitle</include>
+								</itemlayout>
+								<focusedlayout height="200">
+									<include>ExtraThumb</include>
+									<include>ExtraThumbCard</include>
+									<control type="label">
+										<include>ExtraTypeTitle</include>
+										<textcolor>orange</textcolor>
+									</control>
+									<control type="label">
+										<include>ExtraTitle</include>
+										<textcolor>orange</textcolor>
+									</control>
+									<include>ExtraSecondTitle</include>
+									<include>ExtraThumbSelectedBorder</include>
+								</focusedlayout>
+							</control>
+							<control type="scrollbar" id="611">
+								<description>Scroll Bar</description>
+								<posy>3</posy>
+								<posx>250</posx>
+								<width>20</width>
+								<height>584</height>
+								<animation effect="fade" start="0" end="100" time="500" condition="true" delay="500">WindowOpen</animation>
+							</control>
+						</control>
+					</control>
+				</control>
+			</control>		
 			<control type="grouplist" id="998">
 				<visible>!Container.PlexContent(Movie) + !Container.PlexContent(Episode) + !Container.PlexContent(Clip) + Control.IsVisible(995)</visible>
 				<posy>40</posy>
@@ -852,6 +921,19 @@
 					<include>leftMenuBarButton</include>
 					<visible>!Container.PlexContent(Channel)+!Container.PlexContent(Channels)+!Control.isVisible(54)+!Control.isVisible(571)</visible>
 					<visible>![Window.IsActive(501) + Container.PlexFilter(recentlyAdded)] + !Container.PlexFilter(recentlyViewedShows)</visible>
+				</control>
+				<!-- Extras -->
+				<control type="button" id="110">
+					<texturefocus>b-pp-extras-s.png</texturefocus>
+					<texturenofocus>b-pp-extras.png</texturenofocus>
+					<onright>XBMC.NextItem</onright>
+					<onleft>XBMC.PrevItem</onleft>
+					<onclick>SetFocus(3)</onclick>
+					<onright>SetFocus(3)</onright>
+					<colordiffuse>80FFFFFF</colordiffuse>
+					<include>leftMenuBarButton</include>
+					<visible>!IsEmpty(Container.Property(PlexExtras))</visible>
+					<!--<animation effect="rotate" end="360" center="auto" time="1000">Focus</animation>-->
 				</control>
 				<!-- Now Playing -->
 				<control type="button" id="106">
